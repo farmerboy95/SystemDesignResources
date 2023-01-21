@@ -1,0 +1,93 @@
+site_name: farmerboy's System Design Resources
+docs_dir: src
+repo_url: https://github.com/farmerboy95/SystemDesignResources
+site_url: https://farmerboy95.github.io/SystemDesignResources/
+edit_uri: 'edit/main/src/'
+repo_name: farmerboy95/SystemDesignResources
+theme:
+  name: material
+  custom_dir: overrides
+  logo: img/logo.jpg
+  favicon: img/logo.jpg
+  features:
+    - navigation.tabs
+    - navigation.top
+  icon:
+    repo: fontawesome/brands/git-alt
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - lightgallery
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+copyright: Copyright &copy; 2022 farmerboy
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/farmerboy95
+  analytics:
+    provider: google
+    property: G-W9EFM7GCX7
+    feedback:
+      title: Bài viết này có tốt không?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: Bài viết rất hay
+          data: 1
+          note: >-
+            Cảm ơn phản hồi tích cực của bạn!
+        - icon: material/thumb-down-outline
+          name: Bài viết cần được cải thiện
+          data: 0
+          note: >- 
+            Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào 
+            <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
+
+plugins:
+  - literate-nav:
+      nav_file: navigation.md
+  - search
+  - git-authors:
+      show_contribution: true
+      exclude:
+        - index.md
+        - navigation.md
+  - git-revision-date-localized:
+      type: custom
+      custom_format: "%d/%m/%Y (GMT%Z)"
+      timezone: Asia/Ho_Chi_Minh
+      locale: vi
+      enable_creation_date: true
+      enabled: true
+      exclude:
+        - index.md
+        - navigation.md
