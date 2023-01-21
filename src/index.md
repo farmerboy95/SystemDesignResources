@@ -7,7 +7,7 @@ hide:
 
 Xin chào, mình là **farmerboy**.
 
-Đây là nơi mình lưu trữ các tài liệu về System Design bằng tiếng Việt
+Đây là nơi mình lưu trữ các tài liệu về System Design bằng tiếng Việt.
 
 Dịch thuật là một công việc rất khó khăn, nên nếu các bạn thấy bản dịch không thực sự tốt, hãy đề xuất chỉnh sửa tại [đây](https://github.com/farmerboy95/SystemDesignResources).
 

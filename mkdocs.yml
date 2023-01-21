@@ -17,14 +17,14 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: deep purple
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
 
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
+      primary: blue grey
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -48,7 +48,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-copyright: Copyright &copy; 2022 farmerboy
+copyright: Copyright &copy; 2023 farmerboy
 
 extra:
   social:
