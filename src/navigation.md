@@ -12,3 +12,4 @@ hide:
     - [HTTP/1 đến HTTP/2 đến HTTP/3](ByteByteGo/http_versions/http_versions.md)
     - [REST API là gì?](ByteByteGo/rest_api/rest_api.md)
     - [SSL, TLS và HTTPS](ByteByteGo/ssl_tls_https/ssl_tls_https.md)
+    - [Scan to Pay là gì?](ByteByteGo/scan_to_pay/scan_to_pay.md)
