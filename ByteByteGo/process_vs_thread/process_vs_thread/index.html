@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/what_happen_when_access_url/what_happen_when_access_url/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/process_vs_thread/process_vs_thread/">
       
       
-        <link rel="prev" href="../../../navigation/">
+        <link rel="prev" href="../../scan_to_pay/scan_to_pay/">
       
-      
-        <link rel="next" href="../../latency_numbers/latency_numbers/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
     
     
       
-        <title>Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt? - farmerboy's System Design Resources</title>
+        <title>Process vs. Thread - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chuyen-gi-se-xay-ra-khi-ta-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet" class="md-skip">
+        <a href="#process-vs-thread" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
+              Process vs. Thread
             
           </span>
         </div>
@@ -239,7 +237,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../what_happen_when_access_url/what_happen_when_access_url/" class="md-tabs__link md-tabs__link--active">
         ByteByteGo
       </a>
     </li>
@@ -387,73 +385,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../what_happen_when_access_url/what_happen_when_access_url/" class="md-nav__link">
         Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#url-la-gi" class="md-nav__link">
-    URL là gì?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dns-la-gi" class="md-nav__link">
-    DNS là gì?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vay-chuyen-gi-se-xay-ra-khi-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet" class="md-nav__link">
-    Vậy chuyện gì sẽ xảy ra khi truy cập vào một đường dẫn (URL) trên trình duyệt?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -533,11 +469,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../process_vs_thread/process_vs_thread/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Process vs. Thread
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Process vs. Thread
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chuong-trinh-program-la-gi" class="md-nav__link">
+    Chương trình (Program) là gì?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tien-trinh-process-la-gi" class="md-nav__link">
+    Tiến trình (Process) là gì?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luong-thread-la-gi" class="md-nav__link">
+    Luồng (Thread) là gì?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#he-ieu-hanh-khoi-chay-thread-hoac-process-tren-cpu-nhu-the-nao" class="md-nav__link">
+    Hệ điều hành khởi chạy thread hoặc process trên CPU như thế nào?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -583,22 +588,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#url-la-gi" class="md-nav__link">
-    URL là gì?
+  <a href="#chuong-trinh-program-la-gi" class="md-nav__link">
+    Chương trình (Program) là gì?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dns-la-gi" class="md-nav__link">
-    DNS là gì?
+  <a href="#tien-trinh-process-la-gi" class="md-nav__link">
+    Tiến trình (Process) là gì?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vay-chuyen-gi-se-xay-ra-khi-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet" class="md-nav__link">
-    Vậy chuyện gì sẽ xảy ra khi truy cập vào một đường dẫn (URL) trên trình duyệt?
+  <a href="#luong-thread-la-gi" class="md-nav__link">
+    Luồng (Thread) là gì?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#he-ieu-hanh-khoi-chay-thread-hoac-process-tren-cpu-nhu-the-nao" class="md-nav__link">
+    Hệ điều hành khởi chạy thread hoặc process trên CPU như thế nào?
   </a>
   
 </li>
@@ -622,41 +634,50 @@
   
 
 
-<h1 id="chuyen-gi-se-xay-ra-khi-ta-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet">Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?</h1>
+<h1 id="process-vs-thread">Process vs. Thread</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=AlkDbnbv7dk">What happens when you type a URL into your browser?</a></p>
-<h2 id="url-la-gi">URL là gì?</h2>
-<p><strong>URL</strong>, hay tên đầy đủ là <strong>Universal Resources Locator</strong>, bao gồm 4 phần. Ví dụ với URL sau:</p>
+<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=4rLW7zg21gI">FANG Interview Question | Process vs Thread
+</a></p>
+<h2 id="chuong-trinh-program-la-gi">Chương trình (Program) là gì?</h2>
+<p>Một <strong>chương trình</strong> (Program) là một file thực thi (executable). Nó chứa mã nguồn, hoặc một tập các hướng dẫn xử lý được lưu trữ thành một file trên ổ đĩa.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Trong đó:</p>
-<ul>
-<li><strong>Scheme</strong> cho trình duyệt biết rằng ta sẽ kết nối đến một server bằng giao thức trong scheme (ở đây là giao thức HTTP). Một scheme phổ biến khác là HTTPS, với sự khác biệt là kết nối đến server sẽ được mã hoá.</li>
-<li><strong>Domain</strong> là tên miền của website.</li>
-<li><strong>Path</strong> và <strong>Resource</strong> thường không có sự khác biệt rõ ràng. Có thể xem chúng lần lượt là thư mục và tập tin trong một ổ cứng bình thường. Chúng kết hợp với nhau tạo thành tài nguyên và ta muốn tải về trình duyệt.</li>
-</ul>
-<h2 id="dns-la-gi">DNS là gì?</h2>
-<p><strong>DNS</strong>, hay tên đầy đủ là <strong>Domain Name System</strong>, được xem như cuốn danh bạ trên internet. DNS có tác dụng chuyển đổi tên miền thành địa chỉ IP giúp trình duyệt có thể xác định được tài nguyên cần tìm nằm ở đâu trên mạng internet.</p>
-<p>Thông thường, địa chỉ IP ứng với tên miền được cached lại ngay tại trình duyệt trong một khoảng thời gian ngắn sau khi trình duyệt truy cập vào một URL. Cache này cũng hiện diện trong hệ điều hành để lấy được IP nhanh hơn là khi phải tra trong DNS.</p>
-<h2 id="vay-chuyen-gi-se-xay-ra-khi-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet">Vậy chuyện gì sẽ xảy ra khi truy cập vào một đường dẫn (URL) trên trình duyệt?</h2>
+<h2 id="tien-trinh-process-la-gi">Tiến trình (Process) là gì?</h2>
+<p>Khi mã nguồn của chương trình được đưa vào trong bộ nhớ và được thực thi bởi bộ xử lý, nó trở thành một <strong>tiến trình</strong> (Process).</p>
 <p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Đầu tiên, người dùng sẽ gõ URL vào thanh địa chỉ (Address) trên trình duyệt.</p>
-<p>Sau đó, trình duyệt sẽ thử tìm IP ứng với tên miền của URL trong cache của nó. Nếu không tìm ra, trình duyệt sẽ hỏi cache của hệ điều hành để lấy được địa chỉ IP. Nếu vẫn không tìm ra, ta đến bước tiếp theo.</p>
-<p>Trình duyệt sẽ gửi truy vấn lên DNS Resolver để tìm ra địa chỉ IP. Việc này bao gồm một chuỗi các yêu cầu cho đến khi có được địa chỉ IP. DNS Resolver sẽ tìm trong các DNS Server trên internet để giúp trình duyệt tìm IP. Lưu ý là mỗi yêu cầu trong chuỗi các yêu cầu đều được cached lại nhằm giúp cho DNS Resolver cũng như các DNS Server thuận tiện hơn cho những lần tìm kiếm tiếp theo.</p>
-<p>Sau bước 2, giờ ta đã có địa chỉ IP của URL. Trình duyệt lúc này sẽ tạo ra một kết nối TCP đến server ứng với địa chỉ IP này. Quá trình bắt tay giữa trình duyệt và server cũng sẽ xảy ra ở đây (thường là bắt tay 3 bước). Để giúp cho việc kết nối diễn ra nhanh hơn, các trình duyệt ngày nay dùng một thứ gọi là kết nối keep-alive để sử dụng lại kết nối TCP đã được tạo nhiều nhất có thể.</p>
-<p>Nếu giao thức là HTTPS, quá trình kết nối sẽ có nhiều bước hơn. Nó yêu cầu một quá trình bắt tay phức tạp hơn gọi là bắt tay SSL/TLS để tạo ra kết nối an toàn (đã được mã hoá) giữa trình duyệt và server. Quá trình bắt tay này tốn kha khá tài nguyên và trình duyệt thường sử dụng một trick gọi là SSL session resumption để tiết kiệm tài nguyên.</p>
-<p>Ở bước 4, trình duyệt gửi HTTP request lên server với kết nối TCP trước đó. HTTP là một giao thức khá đơn giản. Server xử lý request và trả về response ở bước 5. Trình duyệt nhận response và render HTML content cho chúng ta.</p>
-<p>Ngoài ra ta còn có thêm những tài nguyên khác để tải về như JS bundles hay hình ảnh. Trình duyệt sẽ thực hiện lại các bước trên để lấy tất cả các tài nguyên đó về.</p>
+<p>Một process đang hoạt động cũng cần tài nguyên mà chương trình cần để chạy. Tài nguyên này được quản lý bởi hệ điều hành. Một số ví dụ như thanh ghi xử lý, bộ đếm chương trình, con trỏ stack, các trang bộ nhớ được chỉ định cho stack và heap của process, vân vân...</p>
+<p>Mỗi process có không gian địa chỉ bộ nhớ riêng. Một process không thể gây hại đến không gian bộ nhớ của một process khác. Điều này có nghĩa là nếu một process gặp sự cố, các process khác vẫn có thể tiếp tục chạy. Trình duyệt Chrome vận dụng điều này rất tốt. Mỗi tab của Chrome là một process. Khi một tab gặp sự cố do lỗi hay bị tấn công, các tab khác không bị ảnh hưởng.</p>
+<h2 id="luong-thread-la-gi">Luồng (Thread) là gì?</h2>
+<p><strong>Luồng</strong> (thread) là một đơn vị thực thi bên trong một process. Mỗi process có ít nhất một thread, còn gọi là main thread. Một process có thể có nhiều thread.</p>
+<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Mỗi thread có một stack riêng. Trước đó ta đề cập đến việc các thanh ghi, bộ đếm chương trình, con trỏ stack là một phần của một process. Giờ ta có thể nói đúng hơn rằng chúng là một phần của một thread.</p>
+<p>Các thread trong một process chia sẻ cùng một không gian địa chỉ bộ nhớ. Không gian địa chỉ bộ nhớ chung này cũng có thể được dùng để giao tiếp giữa các thread với nhau. Tuy nhiên, một thread gặp sự cố có thể dẫn đến cả process gặp lỗi.</p>
+<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
+<h2 id="he-ieu-hanh-khoi-chay-thread-hoac-process-tren-cpu-nhu-the-nao">Hệ điều hành khởi chạy thread hoặc process trên CPU như thế nào?</h2>
+<p>Việc này được thực hiện bởi <strong>context switching</strong> (thay đổi bối cảnh).</p>
+<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Trong khi đang context switch, một process được mang ra (switch) khỏi CPU để cho một process khác có thể chạy. Hệ điều hành lưu trạng thái của process hiện tại (bị switch ra) để có thể khôi phục và tiếp tục chạy vào một thời điểm khác. Sau đó nó khôi phục trạng thái trước đó của một process khác và tiếp tục chạy process đó.</p>
+<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Context switch rất tốn kém. Nó bao gồm việc lưu và tải dữ liệu vào thanh ghi, thay đổi trang bộ nhớ, và cập nhật nhiều cấu trúc dữ liệu trong kernel. Thay đổi thực thi giữa các luồng cũng cần context switching.</p>
+<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Thông thường thì context switch trên thread sẽ nhanh hơn trên process. Thread thì có ít trạng thái hơn và quan trọng hơn là các thread có cùng không gian địa chỉ bộ nhớ, nên không cần phải thay đổi trang các bộ nhớ ảo, đây cũng là thao tác tốn kém nhất trong context switch.</p>
+<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Context switch tốn kém nên có một số cơ chế để tối thiểu hoá sự tốn kém này, ví dụ như <strong>fiber</strong> và <strong>coroutine</strong>.</p>
+<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Các cơ chế này giảm tốn kém nhưng tăng độ phức tạp của context switch. Nói chung, chúng được lên lịch một cách hợp tác với nhau, nghĩa là, một thằng phải đưa quyền điều khiển cho thằng còn lại để thằng còn lại có thể chạy, giúp cho ứng dụng tự mình lập lịch. Trách nhiệm thuộc về ứng dụng để đảm bảo rằng một task kéo dài có thể tạm ngưng bằng cách trao quyền điều khiến theo định kỳ.</p>
+<p><div class="lightgallery"><a data-sub-html="figure12" href="../figure12.png"><img alt="figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></div></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">21/01/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">24/02/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">21/01/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">24/02/2023 (GMT+07)</span>
       
     
   </small>
