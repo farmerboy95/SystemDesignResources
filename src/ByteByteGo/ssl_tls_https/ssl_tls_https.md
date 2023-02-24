@@ -12,6 +12,8 @@ Với giao thức HTTP thông thường, giao tiếp giữa trình duyệt và m
 
 HTTPS là bản mở rộng của giao thức HTTP. Với HTTPS, thông tin được truyền đi dưới dạng mã hoá với một thứ được gọi là **TLS** (Transport Layer Security). Nếu thông tin mã hoá này lọt vào tay hacker, hắn cũng không thể đọc được nội dung thực sự trong đó.
 
+![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+
 ## SSL/TLS
 
 Bắt tay TLS bao gồm một số bước như sau:

@@ -13,3 +13,4 @@ hide:
     - [REST API là gì?](ByteByteGo/rest_api/rest_api.md)
     - [SSL, TLS và HTTPS](ByteByteGo/ssl_tls_https/ssl_tls_https.md)
     - [Scan to Pay là gì?](ByteByteGo/scan_to_pay/scan_to_pay.md)
+    - [Process vs. Thread](ByteByteGo/process_vs_thread/process_vs_thread.md)
