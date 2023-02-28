@@ -2,8 +2,7 @@
 
 ## Nguồn
 
-<img src="../../../img/bytebytego.png" width="16" height="16"/> [FANG Interview Question | Process vs Thread
-](https://www.youtube.com/watch?v=4rLW7zg21gI)
+<img src="../../../img/bytebytego.png" width="16" height="16"/> [FANG Interview Question | Process vs Thread](https://www.youtube.com/watch?v=4rLW7zg21gI)
 
 ## Chương trình (Program) là gì?
 
