@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/cdn/cdn/</loc>
+         <lastmod>2023-02-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/debugging_techniques/debugging_techniques/</loc>
          <lastmod>2023-02-28</lastmod>
          <changefreq>daily</changefreq>

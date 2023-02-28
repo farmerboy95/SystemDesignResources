@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/debugging_techniques/debugging_techniques/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/cdn/cdn/">
       
       
-        <link rel="prev" href="../../process_vs_thread/process_vs_thread/">
+        <link rel="prev" href="../../debugging_techniques/debugging_techniques/">
       
-      
-        <link rel="next" href="../../cdn/cdn/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
-        <title>Các kĩ thuật debug - farmerboy's System Design Resources</title>
+        <title>Tìm hiểu về CDN - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cac-ki-thuat-debug" class="md-skip">
+        <a href="#tim-hieu-ve-cdn" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Các kĩ thuật debug
+              Tìm hiểu về CDN
             
           </span>
         </div>
@@ -485,6 +483,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../debugging_techniques/debugging_techniques/" class="md-nav__link">
+        Các kĩ thuật debug
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -497,12 +509,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Các kĩ thuật debug
+          Tìm hiểu về CDN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Các kĩ thuật debug
+        Tìm hiểu về CDN
       </a>
       
         
@@ -528,15 +540,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
-    Mở đầu
+  <a href="#cdn-la-gi" class="md-nav__link">
+    CDN là gì?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nhung-ieu-co-ban" class="md-nav__link">
-    Những điều cơ bản
+  <a href="#cdn-ngay-nay-lam-uoc-gi-cho-chung-ta" class="md-nav__link">
+    CDN ngày nay làm được gì cho chúng ta?
   </a>
   
 </li>
@@ -545,20 +557,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cdn/cdn/" class="md-nav__link">
-        Tìm hiểu về CDN
-      </a>
     </li>
   
 
@@ -604,15 +602,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
-    Mở đầu
+  <a href="#cdn-la-gi" class="md-nav__link">
+    CDN là gì?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nhung-ieu-co-ban" class="md-nav__link">
-    Những điều cơ bản
+  <a href="#cdn-ngay-nay-lam-uoc-gi-cho-chung-ta" class="md-nav__link">
+    CDN ngày nay làm được gì cho chúng ta?
   </a>
   
 </li>
@@ -636,43 +634,39 @@
   
 
 
-<h1 id="cac-ki-thuat-debug">Các kĩ thuật debug</h1>
+<h1 id="tim-hieu-ve-cdn">Tìm hiểu về CDN</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=J8uAiZJMfzQ">Debugging Like A Pro</a></p>
-<h2 id="mo-au">Mở đầu</h2>
-<p>Bạn có bao giờ tự hỏi vì sao ở trường người ta không dạy <strong>gỡ lỗi</strong> (debug) hay không? Phần lớn lập trình viên học debug thông qua công việc, và chỉ có một vài thanh niên may mắn có người hướng dẫn để chỉ cho họ debug như nào cho chuẩn.</p>
-<p>Hôm nay, ta sẽ nghiên cứu một cách tiếp cận có hệ thống cho việc debug, bạn có thể dùng nó như một checklist trong quá trình debug của chính bản thân bạn. Debug đòi hỏi kỉ luật, bạn có thể dễ dàng xao nhãng và phí phạm thời gian quý giá. Ta sẽ nghiên cứu làm sao để có trực giác tốt và những sự đánh đổi cần thiết trong việc debug. Hãy nhớ rằng, bạn có thể dùng những kĩ thuật này theo thứ tự nào cũng được, không có cách đúng hoặc sai gì để debug.</p>
-<p>Ta bắt đầu với tầm quan trọng của việc có một tư duy đúng đắn khi debug. Nó cũng có nghĩa là sự khác nhau giữa việc đầu hàng quá sớm hoặc giải quyết vấn đề hoàn toàn. Khi gặp những lỗi khó debug, việc giữ được những tư duy như sau rất quan trọng: </p>
-<ol>
-<li>Nhớ rằng máy tính hoạt động theo logic, và luôn có một cách giải thích logic cho vấn đề mà bạn đang gặp phải, ngay cả khi nghe nó thật vô lý trong thời điểm bạn đánh giá.</li>
-<li>Khó khăn chỉ là tạm thời, và với sự kiên nhẫn và nỗ lực, vấn đề rồi sẽ được giải quyết.</li>
-<li>Biết được giới hạn của bản thân và nhận ra khi nào cần đến sự giúp đỡ từ người chuyên nghiệp hơn là điều rất quan trọng</li>
-<li>Không phải lúc nào ta cũng cần nỗ lực lớn để giải quyết mọi loại bug. Ta cần sắp xếp chúng theo thứ tự ưu tiên dựa vào độ nghiêm trọng và sự ảnh hưởng đến hệ thống hoặc chương trình. Ta cần chấp nhận một thực tế rằng một số bug thực sự không đáng để ta bỏ nhiều công sức đến như thế.</li>
-</ol>
+<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=RI9np1LWzqw">What Is A CDN? How Does It Work?</a></p>
+<h2 id="cdn-la-gi">CDN là gì?</h2>
+<p><strong>CDN</strong> (Content Delivery Network - Mạng lưới phân phối nội dung) được ra đời vào cuối những năm 90 của thế kỉ 20 (1998). Ban đầu nó được phát triển để tăng tốc việc phân phối content HTML tĩnh cho user trên toàn thế giới.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
-<h2 id="nhung-ieu-co-ban">Những điều cơ bản</h2>
-<p>Khi ta nhận được báo cáo lỗi từ khách hàng, ta cần phải thu thập nhiều thông tin nhất có thể. Xin ảnh chụp màn hình hoặc video mô tả lỗi từ khách hàng nếu có thể. Thêm vào đó, thu thập các bước để tái tạo lại lỗi và các log có liên quan, kể cả các error message liên quan đến lỗi. Mục tiêu là để lấy được nhiều thông tin nhất có thể để giúp chúng ta tái tạo lại lỗi.</p>
-<p>Nếu ta có thể cô lập môi trường và hoàn cảnh nơi mà lỗi xảy ra, ta có thể thử tạo lại lỗi đó trên một server test và xem thử nó có hiện ra hay không. Có được một môi trường để tạo lại lỗi đã là đi được nửa chẳng đường.</p>
-<p>Giờ tạo được lỗi lại rồi thì làm gì nữa. Đây là một số phương pháp để bạn cân nhắc:</p>
-<p>Thứ nhất, dùng print một cách tự do. Chúng có thể giúp ta tạo ra được một timeline về những gì đã xảy ra và xem thử code có chạy theo thứ tự như ta print ra hay không. Với một số hệ sinh thái ngôn ngữ, setup một debugger có vẻ như khả thi hơn. Ví dụ, các hệ thống như Erlang/OTP có debugger rất mạnh, giúp ích nhiều cho lập trình viên khi gặp khó khăn. Nói chung, nếu có thể tái tạo lại lỗi, sẽ không quá khó để debug. Nó có thể mất chút thời gian và sự kiên nhẫn, nhưng nếu làm theo những phương pháp ở trên thì cuối cùng lỗi cũng sẽ được giải quyết.</p>
-<p>Cơ mà nếu không tái tạo lại được lỗi thì sao? Khá là khó đấy. Ta cần chút may mắn cùng với rất nhiều sự kiên nhẫn. Hãy xem thử vì sao đôi khi tái tạo lỗi lại rất khó. Một số trường hợp thường gặp là:</p>
-<p>Thứ nhất, một số lỗi chỉ phát sinh trên môi trường live.</p>
-<p>Thứ hai, một số lỗi chỉ phát sinh trên môi trường live trong một số race condition cụ thể. </p>
+<p>CDN phát triển mạnh mẽ trong những thập niên tiếp theo. Ngày nay, một CDN cần được sử dụng bất kì khi nào có HTTP traffic.</p>
+<h2 id="cdn-ngay-nay-lam-uoc-gi-cho-chung-ta">CDN ngày nay làm được gì cho chúng ta?</h2>
+<p>Ở cấp độ cơ bản, một CDN mang content lại gần user hơn. Điều này cải thiện hiệu suất của web service dưới góc nhìn user. Thống kê chỉ ra rằng hiệu suất rất quan trọng cho việc tiếp cận và giữ chân user.</p>
 <p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Thứ ba, một số hoàn cảnh hoặc môi trường trên thiết bị của người dùng gây phát sinh lỗi, như là khi một người dùng twitter có quá nhiều followers chẳng hạn.</p>
-<p>Rồi làm gì nữa? Một số cách bạn có thể dùng là:</p>
-<p>Nếu có một lỗi cụ thể nào đó, traceback code với call stack.</p>
 <p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Thu thập hết các log và xây dựng timeline bằng cách theo một request thất bại qua hết toàn bộ vòng đời của request. Nếu may mắn, ta có thể suy ra chuyện gì đã xảy ra.</p>
+<p>Để mang service lại gần user hơn, CDN triển khai rất nhiều server tại hàng trăm địa điểm trên thế giới. Các địa điểm này được gọi là <strong>PoP</strong> (Point of Presence - điểm tồn tại). Server nằm trong PoP thường được gọi là <strong>edge server</strong>. PoP hiện diện ở nhiều nơi trên thế giới giúp đảm bảo rằng mọi user có thể kết nối đến edge server gần họ nhất.</p>
 <p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Sau đó, ta có thể thêm log vào code để chứng minh luận điểm trên và push lên môi trường live. Lặp lại quy trình này cho đến khi ta có thêm thông tin và cuối cùng giải quyết được lỗi. Lưu ý rằng quá trình này có thể dài và mệt mỏi, nhưng sự kiên nhẫn rất quan trọng.</p>
-<p>Cuối cùng, ta hãy review một số phương pháp chung để cân nhắc khi ta thực sự bế tắc: </p>
-<ol>
-<li>Nghỉ tí đi. Đôi khi rời máy tính một lát và quay lại với tâm hồn tươi mới có thể cho bạn nhiều ý tưởng. Ngủ một giấc, tập thể dục, hay làm gì đó khác để thanh tẩy tâm trí bạn.</li>
-<li>Độc thoại. Đôi khi nói ra cái vấn đề bạn đang gặp phải có thể dẫn đến một khoảnh khắc Eureka nào đó. Với một số người khác, viết vấn đề ra giấy hoặc gửi email cho một người bạn tưởng tượng có thể giúp họ có một số ý tưởng hoặc góc nhìn mới. </li>
-<li>Nhờ giúp đỡ. Đừng ngần ngại nhờ ai đó giúp bạn. Hai cái đầu thì tốt hơn một. Một góc nhìn khác bạn thường giúp bạn rất nhiều trong việc giải quyết vấn đề.</li>
-</ol>
-<p>Debug có thể khó, nhưng với một tư duy và chiến lược đúng đắn, bạn có thể vượt qua mọi trở ngại. Chúc bạn thành công! </p>
+<p>Các CDN khác nhau triển khai các công nghệ khác nhau để điều hướng request của user đến PoP gần nhất. Hai công nghệ phổ biến nhất là <strong>routing dựa trên DNS</strong> và <strong>Anycast</strong>.</p>
+<p>Với routing dựa trên DNS, mỗi PoP có một địa chỉ IP riêng. Khi user tìm địa chỉ IP của CDN, DNS trả về địa chỉ IP của PoP gần với user nhất.</p>
+<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Với Anycast, các PoP chia sẻ cùng một địa chỉ IP. Khi một request vào mạng Anycast của địa chỉ IP đó, mạng này sẽ gửi request đến PoP gần nhất với user.</p>
+<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Mỗi edge server đóng vai trò là reverse proxy với content cache rất lớn. Content tĩnh được cache trong những content cache trên edge server. Nếu một content nằm trong cache, nó có thể được nhanh chóng trả về cho user. Edge server chỉ cần một bản sao của content tĩnh từ server gốc nếu content không nằm trong cache nên việc này giúp giảm yêu cầu tải và băng thông cho server gốc rất nhiều.</p>
+<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Một CDN hiện đại còn có thể chuyển đổi content tĩnh thành một dạng tối ưu hơn. Ví dụ, CDN có thể minify Javascript bundle trước khi đến tay user, hoặc chuyển đổi một file hình ảnh từ dạng cũ thành những dạng mới hơn như WebP hay AVIF.</p>
+<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Edge server còn đóng vai trò cực kỳ quan trọng trong HTTP stack hiện đại. Tất cả TLS connection kết thúc tại edge server. Bắt tay TLS rất tốn kém. Các phiên bản TLS thịnh hành như TLS 1.2 cần vài network round trip để tạo connection. Thế nên kết thúc TLS connection tại edge server giúp giảm độ trễ để tạo TLS connection. Đây là lý do vì sao nhiều ứng dụng ngày nay gửi HTTP content động không cache được qua CDN.</p>
+<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Bên cạnh hiệu suất, CDN hiện đại còn có hai lợi ích lớn nữa. </p>
+<p>Thứ nhất là bảo mật. Tất cả các mạng CDN đều có dung lượng mạng lớn tại edge server. Đây là mấu chốt để chống tần công từ chối dịch vụ (DDoS) quy mô lớn một cách hiệu quả, bằng việc có một mạng có dung lượng còn lớn hơn của kẻ tấn công. Điều này thật sự hiệu quả với CDN trên nền mạng Anycast. Nó cho phép CDN khuếch tán traffic tấn công trên một lượng lớn server.</p>
+<p><div class="lightgallery"><a data-sub-html="figure12" href="../figure12.png"><img alt="figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><div class="lightgallery"><a data-sub-html="figure13" href="../figure13.png"><img alt="figure13" src="../figure13.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Thứ hai, CDN hiện đại cải thiện tính thường trực (availability). CDN có tính phân bố rất lớn. Với việc có bản sao content trên nhiều PoP, CDN có thể chịu được nhiều sự cố phần cứng hơn server gốc.</p>
+<p><div class="lightgallery"><a data-sub-html="figure14" href="../figure14.png"><img alt="figure14" src="../figure14.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>CDN hiện đại mang lại rất nhiều lợi ích. Hãy dùng CDN khi ta có HTTP traffic.</p>
 
   <hr>
 <div class="md-source-file">
