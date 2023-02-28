@@ -15,3 +15,4 @@ hide:
     - [Scan to Pay là gì?](ByteByteGo/scan_to_pay/scan_to_pay.md)
     - [Process vs. Thread](ByteByteGo/process_vs_thread/process_vs_thread.md)
     - [Các kĩ thuật debug](ByteByteGo/debugging_techniques/debugging_techniques.md)
+    - [Tìm hiểu về CDN](ByteByteGo/cdn/cdn.md)
