@@ -17,6 +17,7 @@ hide:
     - [Các kĩ thuật debug](ByteByteGo/debugging_techniques/debugging_techniques.md)
     - [Tìm hiểu về CDN](ByteByteGo/cdn/cdn.md)
     - [Top 5 ứng dụng của Redis](ByteByteGo/top_redis_use_cases/top_redis_use_cases.md)
+    - [Vì sao Redis lại nhanh?](ByteByteGo/why_redis_fast/why_redis_fast.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1) - Sắp ra mắt](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
