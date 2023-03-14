@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/http_versions/http_versions/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/sso/sso/">
       
       
-        <link rel="prev" href="../../latency_numbers/latency_numbers/">
+        <link rel="prev" href="../../why_kafka_fast/why_kafka_fast/">
       
-      
-        <link rel="next" href="../../rest_api/rest_api/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
-        <title>HTTP/1 đến HTTP/2 đến HTTP/3 - farmerboy's System Design Resources</title>
+        <title>Single Sign-on (SSO) là gì? - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#http1-en-http2-en-http3" class="md-skip">
+        <a href="#single-sign-on-sso-la-gi" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HTTP/1 đến HTTP/2 đến HTTP/3
+              Single Sign-on (SSO) là gì?
             
           </span>
         </div>
@@ -438,80 +436,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          HTTP/1 đến HTTP/2 đến HTTP/3
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../http_versions/http_versions/" class="md-nav__link">
         HTTP/1 đến HTTP/2 đến HTTP/3
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http1" class="md-nav__link">
-    HTTP/1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http11" class="md-nav__link">
-    HTTP/1.1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http2" class="md-nav__link">
-    HTTP/2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http3" class="md-nav__link">
-    HTTP/3
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -675,11 +604,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../sso/sso/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Single Sign-on (SSO) là gì?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Single Sign-on (SSO) là gì?
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ang-nhap-mot-lan-single-sign-on-sso-la-gi" class="md-nav__link">
+    Đăng nhập một lần (Single Sign-on - SSO) là gì?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quy-trinh-sso" class="md-nav__link">
+    Quy trình SSO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vay-chung-ta-nen-su-dung-phuong-phap-sso-nao" class="md-nav__link">
+    Vậy chúng ta nên sử dụng phương pháp SSO nào?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -850,29 +841,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#http1" class="md-nav__link">
-    HTTP/1
+  <a href="#ang-nhap-mot-lan-single-sign-on-sso-la-gi" class="md-nav__link">
+    Đăng nhập một lần (Single Sign-on - SSO) là gì?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http11" class="md-nav__link">
-    HTTP/1.1
+  <a href="#quy-trinh-sso" class="md-nav__link">
+    Quy trình SSO
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http2" class="md-nav__link">
-    HTTP/2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http3" class="md-nav__link">
-    HTTP/3
+  <a href="#vay-chung-ta-nen-su-dung-phuong-phap-sso-nao" class="md-nav__link">
+    Vậy chúng ta nên sử dụng phương pháp SSO nào?
   </a>
   
 </li>
@@ -896,45 +880,56 @@
   
 
 
-<h1 id="http1-en-http2-en-http3">HTTP/1 đến HTTP/2 đến HTTP/3</h1>
+<h1 id="single-sign-on-sso-la-gi">Single Sign-on (SSO) là gì?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=a-sBfyiXysI">HTTP/1 to HTTP/2 to HTTP/3</a></p>
-<h2 id="http1">HTTP/1</h2>
-<p>HTTP/1 ra mắt vào năm 1996, được xây dựng dựa trên TCP. Mỗi request đến cùng một server cần một TCP connection riêng.</p>
-<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
-<h2 id="http11">HTTP/1.1</h2>
-<p>HTTP/1.1 ra mắt sau HTTP/1 một năm, vào năm 1997. Nó giới thiệu cơ chế <strong>keep-alive</strong> nhằm giúp cho một connection có thể được sử dụng lại cho nhiều request. Duy trì kết nối (persistent connection) sẽ giúp giảm độ trễ khi request vì client sẽ không cần phải khởi tạo lại connection cho các request sau đó (bắt tay 3 bước TCP).</p>
-<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
-<p>Một chi tiết đáng chú ý nữa của HTTP/1.1 là chức năng <strong>HTTP pipelining</strong>. Về mặt lý thuyết, chức năng này cho phép client gửi nhiều request lên server trước khi đợi mỗi response. Các response phải được nhận theo thứ tự được request để đảm bảo tính chính xác.</p>
-<p>Lưu ý là HTTP pipelining khá khó để cài đặt và nhiều proxy server ở giữa không thể nào xử lý pipelining chính xác được. Chức năng này vì thế không còn được hỗ trợ bởi nhiều trình duyệt ngày nay.</p>
-<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
-<p>HTTP/1.1 với pipelining còn có một vấn đề nữa được gọi là <strong>head-of-line blocking</strong> (HOL blocking). Đại khái thì với cùng một connection, các request sau sẽ phải đợi request trước đó xong (nghĩa là request đã được gửi lên server). Nếu một request bị chặn vì một số lý do như mất gói tin (packet loss), các request sau nó trên cùng một connection cũng bị ảnh hưởng.</p>
-<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
-<p>Để giữ cho kết nối có tốc độ ở mức chấp nhận được, trình duyệt thường giữ nhiều TCP connection đến cùng một server và gửi các request song song với nhau đến server.</p>
+<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=O1cRJWYF-g4">What Is Single Sign-on (SSO)? How It Works</a></p>
+<h2 id="ang-nhap-mot-lan-single-sign-on-sso-la-gi">Đăng nhập một lần (Single Sign-on - SSO) là gì?</h2>
+<p><strong>SSO (hay Single Sign-on, Đăng nhập một lần)</strong> là một sơ đồ xác thực. Nó cho phép người dùng truy cập an toàn vào nhiều ứng dụng và dịch vụ với một ID duy nhất. </p>
+<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Khi SSO được tích hợp vào các ứng dụng như Gmail, Workday hay Slack, nó cung cấp một cửa sổ hay trang đăng nhập cho cùng một bộ thông tin xác thực. Với SSO, người dùng có thể truy cập nhiều ứng dụng mà không phải đăng nhập mỗi lần.</p>
+<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>SSO được xây dựng trên một khái niệm gọi là danh tính liên kết (federated identity). Nó cho phép chia sẻ thông tin nhận dạng trên các hệ thống đáng tin cậy nhưng độc lập. </p>
+<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Có hai giao thức phổ biến cho quá trình xác thực này.</p>
+<p><strong>SAML, hay ngôn ngữ đánh dấu xác nhận bảo mật (Security assertion markup language)</strong>, là một tiêu chuẩn mở dựa trên XML để trao đổi thông tin nhân dạng giữa các dịch vụ. Ta thường thấy nó trong môi trường làm việc, công sở. </p>
+<p>Một giao thức khác là <strong>OpenID Connect</strong>. Có lẽ ai cũng biết cái này rồi. Khi ta dùng tài khoản Google cá nhân để đăng nhập vào các ứng dụng như YouTuble, ta đang dùng OpenID Connect. Nó dùng JWT (JSON Web Token) để chia sẻ thông tin nhân dạng giữa các dịch vụ.</p>
+<h2 id="quy-trinh-sso">Quy trình SSO</h2>
+<p>Ta sẽ tập trung vào SAML.</p>
+<p>(1) Một nhân viên văn phòng truy cập một ứng dụng như Gmail. Theo SAML, Gmail trong trường hợp này là một nhà cung cấp dịch vụ (Service Provider). </p>
+<p>(2) Máy chủ Gmail phát hiện ra người dùng này đến từ một work domain (nghĩa là không phải từ <code>@gmail.com</code>, có thể đến từ <code>@sea.com</code> chẳng hạn), và trả về một yêu cầu xác thực SAML (SAML Authentication Request - SAR) về cho trình duyệt. </p>
+<p>(3) Trình duyệt chuyển hướng người dùng đến nhà cung cấp danh tính (Identity Provider) cho công ty được chỉ định trong yêu cầu xác thực SAML. Okta, Auth0 và OneLogin là một số ví dụ về nhà cung cấp danh tính thương mại. </p>
+<p>(4) + (5) Nhà cung cấp danh tính hiển thị trang đăng nhập để người dùng đăng nhập vào. </p>
+<p>(6) Sau khi được xác thực, nhà cung cấp danh tính tạo SAML response và trả về cho trình duyệt. Đây được gọi là xác nhận SAML (SAML Assertion). Xác nhận SAML là một tài liệu XML được ký bằng khoá có chứa thông tin về người dùng và những gì người dùng có thể truy cập với nhà cung cấp dịch vụ.</p>
+<p>(7) Trình duyệt chuyển tiếp xác nhận SAML đã ký tới nhà cung cấp dịch vụ.</p>
+<p>(8) Nhà cung cấp dịch vụ xác thực rằng xác nhận SAML đã được ký bởi bên cung cấp danh tính. Quá trình xác thực này thường được thực hiện bởi mã hoá khoá công khai. </p>
+<p>(9) Nhà cung cấp dịch vụ trả lại tài nguyên được bảo vệ cho trình duyệt dựa trên những gì người dùng được phép truy cập như được chỉ định trong xác nhận SAML. </p>
+<p>Vậy là xong quy trình đăng nhập SSO cơ bản.</p>
+<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Giờ ta cùng xem điều gì sẽ xảy ra khi người dùng điều hướng đến một ứng dụng tích hợp SSO khác, như Workday. </p>
+<p>(1) Người dùng truy cập Workday.</p>
+<p>(2) Máy chủ Workday, như trong ví dụ với Gmail, phát hiện work domain và gửi yêu cầu xác thực SAML về trình duyệt. </p>
+<p>(3) Trình duyệt lại chuyển hướng người dùng đến Nhà cung cấp danh tính. </p>
+<p>(4) Vì người dùng đã đăng nhập bằng Nhà cung cấp danh tính nên người dùng sẽ bỏ qua quy trình đăng nhập và thay vào đó, nó sẽ tạo một xác nhận SAML cho Workday, nêu chi tiết những gì người dùng có thể truy cập ở đó. </p>
+<p>(5) + (6) Xác nhận SAML được trả về trình duyệt và chuyển tiếp đến Workday. </p>
+<p>(7) + (8) Workday xác thực xác nhận đã ký và cấp cho người dùng quyền truy cập tương ứng.</p>
 <p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
-<h2 id="http2">HTTP/2</h2>
-<p>HTTP/2 ra đời năm 2015, giới thiệu HTTP streams, giúp ta có thể gửi nhiều stream request đến cùng một server trên chỉ một TCP connection. Khác với HTTP/1.1 pipelining, các stream này độc lập với nhau và không cần phải gửi hay nhận theo bất cứ thứ tự nào. </p>
-<p>HTTP/2 giải quyết được head-of-line blocking của HTTP/1.1 trên tầng ứng dụng nhưng không giải quyết được trên tầng giao vận với TCP.</p>
+<p>Trước đó ta cũng đã đề cập đến OpenID Connect. Quy trình của OpenID Connect tương tự như SAML, nhưng thay vì chuyển tài liệu XML đã ký, OpenID Connect chuyển với JWT. JƯT là một tài liệu JSON đã ký.</p>
 <p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Một chi tiết đáng lưu ý của HTTP/2 là khả năng push, giúp cho server có thể gửi nội dung mới cho client khi có thể, mà không cần client phải gửi request để poll.</p>
-<h2 id="http3">HTTP/3</h2>
-<p>HTTP/3 ra mắt bản thử nghiệm vào năm 2020 và được ra mắt chính thức vào tháng 6 năm 2022. Nó sử dụng một giao thức tên là <strong>QUIC</strong> thay vì dùng TCP. QUIC dựa trên UDP. Nó giới thiệu các stream đóng vai trò quan trọng trên tầng giao vận. Các QUIC stream dùng chung một connection nhanh nên không cần phải bắt tay để tạo connection mới. Trong hầu hết các trường hợp, mất gói tin ảnh hưởng đến một stream sẽ không ảnh hưởng đến các stream khác, nên nó giải quyết được tình trạng head-of-line blocking trên tầng giao vận.</p>
-<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>QUIC được thiết kế cho việc sử dụng nhiều internet trên điện thoại. Người ta thường chuyển mạng trên điện thoại nhiều lần (như từ WiFi sang 4G và ngược lại). Với TCP, việc chuyển mạng này khá là khó chịu và chậm chạp.</p>
-<p>QUIC sử dụng một concept gọi là <strong>connection ID</strong>, giúp cho connection có thể di chuyển giữa các địa chỉ IP và giao diện mạng dễ dàng, nhanh chóng và đáng tin cậy.</p>
-<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
-<p>Dù HTTP/3 mới chỉ được chuẩn hoá, nó đã được dùng bởi 25% số website và được hỗ trợ bởi nhiều trình duyệt trên thị trường.</p>
+<p>Chi tiết triển khai hơi khác một chút, nhưng khái niệm tổng thể thì tương tự nhau. </p>
+<h2 id="vay-chung-ta-nen-su-dung-phuong-phap-sso-nao">Vậy chúng ta nên sử dụng phương pháp SSO nào?</h2>
+<p>Cả hai cách triển khai đều an toàn. Đối với môi trường doanh nghiệp, nơi thường chuyển việc quản lý danh tính cho một nền tảng danh tính thương mại (như Microsoft, Okta, Thales, JumpCloud, Duo, PingIdentity, RSA, OneLogin, SecureAuth), thì các nền tảng này hỗ trợ mạnh mẽ cho cả hai. </p>
+<p>Quyết định sau đó sẽ phụ thuộc vào ứng dụng được tích hợp và giao thức nào dễ tích hợp hơn. Nếu viết một ứng dụng web mới, việc tích hợp với một số nền tảng OpenID Connect phổ biến hơn như Google, Facebook và Github có lẽ là một lựa chọn an toàn.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">22/01/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/03/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">22/01/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/03/2023 (GMT+07)</span>
       
     
   </small>
