@@ -20,6 +20,7 @@ hide:
     - [Vì sao Redis lại nhanh?](ByteByteGo/why_redis_fast/why_redis_fast.md)
     - [Lưu mật khẩu vào database như thế nào cho đúng?](ByteByteGo/storing_passwords/storing_passwords.md)
     - [API Gateway là gì?](ByteByteGo/api_gateway/api_gateway.md)
+    - [Tại sao Kafka lại nhanh như vậy?](ByteByteGo/why_kafka_fast/why_kafka_fast.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1) - Sắp ra mắt](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
