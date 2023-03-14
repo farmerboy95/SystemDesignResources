@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/why_kafka_fast/why_kafka_fast/</loc>
+         <lastmod>2023-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/why_redis_fast/why_redis_fast/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>

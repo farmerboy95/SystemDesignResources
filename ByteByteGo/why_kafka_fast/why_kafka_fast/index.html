@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/cdn/cdn/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/why_kafka_fast/why_kafka_fast/">
       
       
-        <link rel="prev" href="../../debugging_techniques/debugging_techniques/">
+        <link rel="prev" href="../../api_gateway/api_gateway/">
       
-      
-        <link rel="next" href="../../top_redis_use_cases/top_redis_use_cases/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
-        <title>Tìm hiểu về CDN - farmerboy's System Design Resources</title>
+        <title>Tại sao Kafka lại nhanh như vậy? - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tim-hieu-ve-cdn" class="md-skip">
+        <a href="#tai-sao-kafka-lai-nhanh-nhu-vay" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tìm hiểu về CDN
+              Tại sao Kafka lại nhanh như vậy?
             
           </span>
         </div>
@@ -522,66 +520,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tìm hiểu về CDN
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../cdn/cdn/" class="md-nav__link">
         Tìm hiểu về CDN
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cdn-la-gi" class="md-nav__link">
-    CDN là gì?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cdn-ngay-nay-lam-uoc-gi-cho-chung-ta" class="md-nav__link">
-    CDN ngày nay làm được gì cho chúng ta?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -647,11 +590,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../why_kafka_fast/why_kafka_fast/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tại sao Kafka lại nhanh như vậy?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Tại sao Kafka lại nhanh như vậy?
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nhanh-la-nhanh-nhu-the-nao" class="md-nav__link">
+    Nhanh là nhanh như thế nào?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thiet-ke-cua-kafka" class="md-nav__link">
+    Thiết kế của Kafka
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -822,15 +820,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cdn-la-gi" class="md-nav__link">
-    CDN là gì?
+  <a href="#nhanh-la-nhanh-nhu-the-nao" class="md-nav__link">
+    Nhanh là nhanh như thế nào?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cdn-ngay-nay-lam-uoc-gi-cho-chung-ta" class="md-nav__link">
-    CDN ngày nay làm được gì cho chúng ta?
+  <a href="#thiet-ke-cua-kafka" class="md-nav__link">
+    Thiết kế của Kafka
   </a>
   
 </li>
@@ -854,50 +852,42 @@
   
 
 
-<h1 id="tim-hieu-ve-cdn">Tìm hiểu về CDN</h1>
+<h1 id="tai-sao-kafka-lai-nhanh-nhu-vay">Tại sao Kafka lại nhanh như vậy?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=RI9np1LWzqw">What Is A CDN? How Does It Work?</a></p>
-<h2 id="cdn-la-gi">CDN là gì?</h2>
-<p><strong>CDN</strong> (Content Delivery Network - Mạng lưới phân phối nội dung) được ra đời vào cuối những năm 90 của thế kỉ 20 (1998). Ban đầu nó được phát triển để tăng tốc việc phân phối content HTML tĩnh cho user trên toàn thế giới.</p>
+<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=UNUz1-msbOM">System Design: Why is Kafka fast?</a></p>
+<h2 id="nhanh-la-nhanh-nhu-the-nao">Nhanh là nhanh như thế nào?</h2>
+<p><strong>Kafka</strong> được tối ưu hoá cho thông lượng lớn. Nó được thiết kế để di chuyển một số lượng bản ghi lớn trong một khoảng thời gian ngắn. Có thể tưởng tượng một đường ống cực lớn có nước chảy qua. Đường kính ống càng lớn thì thể tích nước có thể đi qua cũng lớn theo.</p>
+<p>Vì vậy, nói Kafka nhanh là đề cập đến khả năng vận chuyển nhiều dữ liệu một cách hiệu quả của Kafka.</p>
+<h2 id="thiet-ke-cua-kafka">Thiết kế của Kafka</h2>
+<p>Hiệu suất của Kafka được đóng góp lớn bởi thiết kế đặc biệt của nó. Ta sẽ tập trung vào hai tính chất của thiết kế này.</p>
+<p><strong>Tính chất đầu tiên</strong> là sự phụ thuộc của Kafka vào I/O tuần tự. Mà I/O tuần tự (sequential I/O) là cái gì? Ta sẽ cùng nhau tìm hiểu.</p>
+<p>Có một quan niện sai lầm phổ biến là truy cập vào ổ đĩa thì chậm hơn truy cập vào bộ nhớ, nhưng thực ra thì điều này phần nhiều phụ thuộc vào các kiểu truy cập dữ liệu. Có hai kiểu như vậy: ngẫu nhiên (random) và tuần tự (sequential).</p>
+<p>Đối với ổ cứng, nó cần thời gian để điều chỉnh con chạy (arm), theo nghĩa đen, đến các vị trí khác nhau trên đĩa từ. Đây là nguyên nhân khiến truy cập ngẫu nhiên bị chậm. Tuy nhiên, đối với truy cập tuần tự, con chạy không cần chạy nhiều như thế, nên việc đọc và ghi từng khối dữ liệu một sẽ nhanh hơn nhiều.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>CDN phát triển mạnh mẽ trong những thập niên tiếp theo. Ngày nay, một CDN cần được sử dụng bất kì khi nào có HTTP traffic.</p>
-<h2 id="cdn-ngay-nay-lam-uoc-gi-cho-chung-ta">CDN ngày nay làm được gì cho chúng ta?</h2>
-<p>Ở cấp độ cơ bản, một CDN mang content lại gần user hơn. Điều này cải thiện hiệu suất của web service dưới góc nhìn user. Thống kê chỉ ra rằng hiệu suất rất quan trọng cho việc tiếp cận và giữ chân user.</p>
+<p>Kafka tận dụng lợi thế này bằng cách sử dụng log chỉ thêm vào sau (append-only log) là cấu trúc dữ liệu chính của nó. Append-only log chỉ thêm dữ liệu mới vào cuối file. Kiểu truy cập này là tuần tự.</p>
 <p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Giờ thêm một chút thống kê nhé. Với phần cứng hiện đại, giả sử ta có một loạt các ổ cứng như thế, tốc độ ghi tuần tự đạt hàng trăm MB mỗi giây, trong khi tốc độ ghi ngẫu nhiên chỉ được vài trăm KB trên giây. <strong>Truy cập tuần tự rõ ràng là nhanh hơn.</strong> Sử dụng ổ cứng cũng có lợi thế về chi phí. So với SSD, HDD có giá chỉ bằng một phần ba nhưng dung lượng thì gấp khoảng ba lần. </p>
 <p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Để mang service lại gần user hơn, CDN triển khai rất nhiều server tại hàng trăm địa điểm trên thế giới. Các địa điểm này được gọi là <strong>PoP</strong> (Point of Presence - điểm tồn tại). Server nằm trong PoP thường được gọi là <strong>edge server</strong>. PoP hiện diện ở nhiều nơi trên thế giới giúp đảm bảo rằng mọi user có thể kết nối đến edge server gần họ nhất.</p>
 <p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Các CDN khác nhau triển khai các công nghệ khác nhau để điều hướng request của user đến PoP gần nhất. Hai công nghệ phổ biến nhất là <strong>routing dựa trên DNS</strong> và <strong>Anycast</strong>.</p>
-<p>Với routing dựa trên DNS, mỗi PoP có một địa chỉ IP riêng. Khi user tìm địa chỉ IP của CDN, DNS trả về địa chỉ IP của PoP gần với user nhất.</p>
+<p>Cung cấp cho Kafka một lượng lớn dung lượng giá rẻ mà không phải đánh đổi về mặt hiệu năng nghĩa là Kafka có thể lưu giữ thông tin một cách hiệu quả về mặt chi phí trong thời gian dài. Trước Kafka thì hầu như ít người dám nghĩ tới điều này.</p>
+<p><strong>Tính chất thứ hai</strong> của thiết kế Kafka đó là việc tập trung vào hiệu quả. Kafka di chuyển rất nhiều dữ liệu từ mạng sang ổ đĩa, và từ ổ đĩa lên mạng. Điều quan trọng ở đây là phải bỏ đi những bản copy thừa khi di chuyển giữa các trang (trong ổ đĩa) và các trang dữ liệu giữa ổ đĩa và mạng.</p>
+<p>Đây là lúc nguyên tắc không sao chép (zero-copy principle) được áp dụng. Các hệ điều hành unix hiện đại được tối ưu hoá cao để truyền dữ liệu từ đĩa lên mạng mà không phải sao chép dữ liệu quá nhiều. Trước tiên ta hãy xem cách Kafka gửi một trang dữ liệu từ đĩa đến consumer khi zero-copy không được sử dụng. Dữ liệu sẽ được load từ đĩa lên cache của hệ điều hành.</p>
+<p>Tiếp theo, dữ liệu được sao chép từ cache hệ điều hành đến ứng dụng Kafka. Sau đó dữ liệu được sao chép từ Kafka vào bộ đệm socket. Rồi dữ liệu lại được sao chép từ bộ đệm socket đến bộ đệm NIC (network interface card). Cuối cùng thì dữ liệu được gửi lên mạng đến consumer.</p>
+<p>Rõ ràng là như vậy không ổn. Có 4 bản sao dữ liệu và 2 system call. Giờ so với zero-copy xem. Bước 1 giữ nghuyên, dữ liệu sẽ được load từ đĩa lên cache của hệ điều hành.</p>
+<p>Với zero-copy, ứng dụng Kafka dùng một system call gọi là <code>sendfile()</code> để nói cho hệ điều hành sao chép thẳng dữ liệu từ cache hệ điều hành sang bộ đệm NIC. Với cách này, bản sao duy nhất là từ cache hệ điều hành sang bộ đệm NIC. Với một network card hiện đại, sao chép được thực hiện bởi DMA (direct memory access - truy cập bộ nhớ trực tiếp). Khi dùng DMA, CPU không tham gia vào nhiệm vụ này, khiến cho nó còn hiệu quả hơn.</p>
 <p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Với Anycast, các PoP chia sẻ cùng một địa chỉ IP. Khi một request vào mạng Anycast của địa chỉ IP đó, mạng này sẽ gửi request đến PoP gần nhất với user.</p>
-<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Mỗi edge server đóng vai trò là reverse proxy với content cache rất lớn. Content tĩnh được cache trong những content cache trên edge server. Nếu một content nằm trong cache, nó có thể được nhanh chóng trả về cho user. Edge server chỉ cần một bản sao của content tĩnh từ server gốc nếu content không nằm trong cache nên việc này giúp giảm yêu cầu tải và băng thông cho server gốc rất nhiều.</p>
-<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Một CDN hiện đại còn có thể chuyển đổi content tĩnh thành một dạng tối ưu hơn. Ví dụ, CDN có thể minify Javascript bundle trước khi đến tay user, hoặc chuyển đổi một file hình ảnh từ dạng cũ thành những dạng mới hơn như WebP hay AVIF.</p>
-<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Edge server còn đóng vai trò cực kỳ quan trọng trong HTTP stack hiện đại. Tất cả TLS connection kết thúc tại edge server. Bắt tay TLS rất tốn kém. Các phiên bản TLS thịnh hành như TLS 1.2 cần vài network round trip để tạo connection. Thế nên kết thúc TLS connection tại edge server giúp giảm độ trễ để tạo TLS connection. Đây là lý do vì sao nhiều ứng dụng ngày nay gửi HTTP content động không cache được qua CDN.</p>
-<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Bên cạnh hiệu suất, CDN hiện đại còn có hai lợi ích lớn nữa. </p>
-<p>Thứ nhất là bảo mật. Tất cả các mạng CDN đều có dung lượng mạng lớn tại edge server. Đây là mấu chốt để chống tần công từ chối dịch vụ (DDoS) quy mô lớn một cách hiệu quả, bằng việc có một mạng có dung lượng còn lớn hơn của kẻ tấn công. Điều này thật sự hiệu quả với CDN trên nền mạng Anycast. Nó cho phép CDN khuếch tán traffic tấn công trên một lượng lớn server.</p>
-<p><div class="lightgallery"><a data-sub-html="figure12" href="../figure12.png"><img alt="figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="figure13" href="../figure13.png"><img alt="figure13" src="../figure13.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Thứ hai, CDN hiện đại cải thiện tính thường trực (availability). CDN có tính phân bố rất lớn. Với việc có bản sao content trên nhiều PoP, CDN có thể chịu được nhiều sự cố phần cứng hơn server gốc.</p>
-<p><div class="lightgallery"><a data-sub-html="figure14" href="../figure14.png"><img alt="figure14" src="../figure14.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>CDN hiện đại mang lại rất nhiều lợi ích. Hãy dùng CDN khi ta có HTTP traffic.</p>
+<p>Tóm lại, I/O tuần tự và nguyên tắc không sao chép là nền tảng cho hiệu suất cao của Kafka. Kafka sử dụng các kĩ thuật khác để tối đa hoá hiệu quả từ phần cứng, nhưng hai tính chất này vẫn là quan trọng nhất.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/02/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/03/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/02/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/03/2023 (GMT+07)</span>
       
     
   </small>
