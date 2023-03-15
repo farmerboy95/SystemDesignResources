@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/dns/dns/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/http_versions/http_versions/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
