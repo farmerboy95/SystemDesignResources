@@ -22,6 +22,7 @@ hide:
     - [API Gateway là gì?](ByteByteGo/api_gateway/api_gateway.md)
     - [Tại sao Kafka lại nhanh như vậy?](ByteByteGo/why_kafka_fast/why_kafka_fast.md)
     - [Single Sign-on (SSO) là gì?](ByteByteGo/sso/sso.md)
+    - [Mô hình OSI là gì?](ByteByteGo/osi_model/osi_model.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1) - Sắp ra mắt](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
