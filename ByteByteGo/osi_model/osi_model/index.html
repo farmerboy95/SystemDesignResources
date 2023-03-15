@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/debugging_techniques/debugging_techniques/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/osi_model/osi_model/">
       
       
-        <link rel="prev" href="../../process_vs_thread/process_vs_thread/">
+        <link rel="prev" href="../../sso/sso/">
       
-      
-        <link rel="next" href="../../cdn/cdn/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Các kĩ thuật debug - farmerboy's System Design Resources</title>
+        <title>Mô hình OSI là gì? - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cac-ki-thuat-debug" class="md-skip">
+        <a href="#mo-hinh-osi-la-gi" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Các kĩ thuật debug
+              Mô hình OSI là gì?
             
           </span>
         </div>
@@ -508,66 +506,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Các kĩ thuật debug
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../debugging_techniques/debugging_techniques/" class="md-nav__link">
         Các kĩ thuật debug
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
-    Mở đầu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nhung-ieu-co-ban" class="md-nav__link">
-    Những điều cơ bản
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -675,11 +618,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../osi_model/osi_model/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Mô hình OSI là gì?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Mô hình OSI là gì?
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#khai-niem" class="md-nav__link">
+    Khái niệm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#du-lieu-i-qua-mo-hinh-osi-nhu-the-nao" class="md-nav__link">
+    Dữ liệu đi qua mô hình OSI như thế nào.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -850,15 +848,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
-    Mở đầu
+  <a href="#khai-niem" class="md-nav__link">
+    Khái niệm
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nhung-ieu-co-ban" class="md-nav__link">
-    Những điều cơ bản
+  <a href="#du-lieu-i-qua-mo-hinh-osi-nhu-the-nao" class="md-nav__link">
+    Dữ liệu đi qua mô hình OSI như thế nào.
   </a>
   
 </li>
@@ -882,54 +880,52 @@
   
 
 
-<h1 id="cac-ki-thuat-debug">Các kĩ thuật debug</h1>
+<h1 id="mo-hinh-osi-la-gi">Mô hình OSI là gì?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=J8uAiZJMfzQ">Debugging Like A Pro</a></p>
-<h2 id="mo-au">Mở đầu</h2>
-<p>Bạn có bao giờ tự hỏi vì sao ở trường người ta không dạy <strong>gỡ lỗi</strong> (debug) hay không? Phần lớn lập trình viên học debug thông qua công việc, và chỉ có một vài thanh niên may mắn có người hướng dẫn để chỉ cho họ debug như nào cho chuẩn.</p>
-<p>Hôm nay, ta sẽ nghiên cứu một cách tiếp cận có hệ thống cho việc debug, bạn có thể dùng nó như một checklist trong quá trình debug của chính bản thân bạn. Debug đòi hỏi kỉ luật, bạn có thể dễ dàng xao nhãng và phí phạm thời gian quý giá. Ta sẽ nghiên cứu làm sao để có trực giác tốt và những sự đánh đổi cần thiết trong việc debug. Hãy nhớ rằng, bạn có thể dùng những kĩ thuật này theo thứ tự nào cũng được, không có cách đúng hoặc sai gì để debug.</p>
-<p>Ta bắt đầu với tầm quan trọng của việc có một tư duy đúng đắn khi debug. Nó cũng có nghĩa là sự khác nhau giữa việc đầu hàng quá sớm hoặc giải quyết vấn đề hoàn toàn. Khi gặp những lỗi khó debug, việc giữ được những tư duy như sau rất quan trọng: </p>
-<ol>
-<li>Nhớ rằng máy tính hoạt động theo logic, và luôn có một cách giải thích logic cho vấn đề mà bạn đang gặp phải, ngay cả khi nghe nó thật vô lý trong thời điểm bạn đánh giá.</li>
-<li>Khó khăn chỉ là tạm thời, và với sự kiên nhẫn và nỗ lực, vấn đề rồi sẽ được giải quyết.</li>
-<li>Biết được giới hạn của bản thân và nhận ra khi nào cần đến sự giúp đỡ từ người chuyên nghiệp hơn là điều rất quan trọng</li>
-<li>Không phải lúc nào ta cũng cần nỗ lực lớn để giải quyết mọi loại bug. Ta cần sắp xếp chúng theo thứ tự ưu tiên dựa vào độ nghiêm trọng và sự ảnh hưởng đến hệ thống hoặc chương trình. Ta cần chấp nhận một thực tế rằng một số bug thực sự không đáng để ta bỏ nhiều công sức đến như thế.</li>
-</ol>
+<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=0y6FtKsg6J4">What is OSI Model | Real World Examples</a></p>
+<h2 id="khai-niem">Khái niệm</h2>
+<p><strong>Mô hình OSI (Open Systems Interconnect)</strong> là một framework (về mặt lý thuyết) cung cấp một góc nhìn về mạng. Nó chia việc giao tiếp giữa hai thiết bị trên mạng vào 7 tầng trừu tượng.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
-<h2 id="nhung-ieu-co-ban">Những điều cơ bản</h2>
-<p>Khi ta nhận được báo cáo lỗi từ khách hàng, ta cần phải thu thập nhiều thông tin nhất có thể. Xin ảnh chụp màn hình hoặc video mô tả lỗi từ khách hàng nếu có thể. Thêm vào đó, thu thập các bước để tái tạo lại lỗi và các log có liên quan, kể cả các error message liên quan đến lỗi. Mục tiêu là để lấy được nhiều thông tin nhất có thể để giúp chúng ta tái tạo lại lỗi.</p>
-<p>Nếu ta có thể cô lập môi trường và hoàn cảnh nơi mà lỗi xảy ra, ta có thể thử tạo lại lỗi đó trên một server test và xem thử nó có hiện ra hay không. Có được một môi trường để tạo lại lỗi đã là đi được nửa chẳng đường.</p>
-<p>Giờ tạo được lỗi lại rồi thì làm gì nữa. Đây là một số phương pháp để bạn cân nhắc:</p>
-<p>Thứ nhất, dùng print một cách tự do. Chúng có thể giúp ta tạo ra được một timeline về những gì đã xảy ra và xem thử code có chạy theo thứ tự như ta print ra hay không. Với một số hệ sinh thái ngôn ngữ, setup một debugger có vẻ như khả thi hơn. Ví dụ, các hệ thống như Erlang/OTP có debugger rất mạnh, giúp ích nhiều cho lập trình viên khi gặp khó khăn. Nói chung, nếu có thể tái tạo lại lỗi, sẽ không quá khó để debug. Nó có thể mất chút thời gian và sự kiên nhẫn, nhưng nếu làm theo những phương pháp ở trên thì cuối cùng lỗi cũng sẽ được giải quyết.</p>
-<p>Cơ mà nếu không tái tạo lại được lỗi thì sao? Khá là khó đấy. Ta cần chút may mắn cùng với rất nhiều sự kiên nhẫn. Hãy xem thử vì sao đôi khi tái tạo lỗi lại rất khó. Một số trường hợp thường gặp là:</p>
-<p>Thứ nhất, một số lỗi chỉ phát sinh trên môi trường live.</p>
-<p>Thứ hai, một số lỗi chỉ phát sinh trên môi trường live trong một số race condition cụ thể. </p>
+<p><strong>Tầng vật lý (Physical Layer)</strong> là tầng dưới cùng. Nó chịu trách nhiệm truyền tải các bit dữ liệu thô qua một kết nối vật lý.</p>
 <p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Thứ ba, một số hoàn cảnh hoặc môi trường trên thiết bị của người dùng gây phát sinh lỗi, như là khi một người dùng twitter có quá nhiều followers chẳng hạn.</p>
-<p>Rồi làm gì nữa? Một số cách bạn có thể dùng là:</p>
-<p>Nếu có một lỗi cụ thể nào đó, traceback code với call stack.</p>
+<p><strong>Tầng liên kết dữ liệu (Data Link Layer)</strong> là tầng thứ hai. Nó lấy các bit dữ liệu thô từ tầng vật lý và tổ chức chúng thành các frame. Nó đảm bảo các frame được đưa đến đúng địa chỉ. Ethernet hầu hết là nằm trong tầng này.</p>
 <p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Thu thập hết các log và xây dựng timeline bằng cách theo một request thất bại qua hết toàn bộ vòng đời của request. Nếu may mắn, ta có thể suy ra chuyện gì đã xảy ra.</p>
+<p><strong>Tầng mạng (Network Layer)</strong> là tầng thứ ba. Nó chịu trách nhiệm định tuyến các frame dữ liệu trên các mạng khác nhau. Phần IP của TCP/IP là một ví dụ nổi tiếng về tầng này.</p>
 <p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Sau đó, ta có thể thêm log vào code để chứng minh luận điểm trên và push lên môi trường live. Lặp lại quy trình này cho đến khi ta có thêm thông tin và cuối cùng giải quyết được lỗi. Lưu ý rằng quá trình này có thể dài và mệt mỏi, nhưng sự kiên nhẫn rất quan trọng.</p>
-<p>Cuối cùng, ta hãy review một số phương pháp chung để cân nhắc khi ta thực sự bế tắc: </p>
-<ol>
-<li>Nghỉ tí đi. Đôi khi rời máy tính một lát và quay lại với tâm hồn tươi mới có thể cho bạn nhiều ý tưởng. Ngủ một giấc, tập thể dục, hay làm gì đó khác để thanh tẩy tâm trí bạn.</li>
-<li>Độc thoại. Đôi khi nói ra cái vấn đề bạn đang gặp phải có thể dẫn đến một khoảnh khắc Eureka nào đó. Với một số người khác, viết vấn đề ra giấy hoặc gửi email cho một người bạn tưởng tượng có thể giúp họ có một số ý tưởng hoặc góc nhìn mới. </li>
-<li>Nhờ giúp đỡ. Đừng ngần ngại nhờ ai đó giúp bạn. Hai cái đầu thì tốt hơn một. Một góc nhìn khác bạn thường giúp bạn rất nhiều trong việc giải quyết vấn đề.</li>
-</ol>
-<p>Debug có thể khó, nhưng với một tư duy và chiến lược đúng đắn, bạn có thể vượt qua mọi trở ngại. Chúc bạn thành công! </p>
+<p><strong>Tầng giao vận (Transport Layer)</strong> là tầng thứ tư. Nó xử lý giao tiếp đầu cuối giữa 2 node. Đây là nơi chứa TCP và UDP. </p>
+<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>TCP cung cấp khả năng liên lạc đầu cuối, đáng tin cậy giữa các thiết bị. Nó thực hiện điều này bằng cách chia dữ liệu thành các phân đoạn nhỏ, có thể quản lý được và gửi từng phân đoạn riêng lẻ. Mỗi đoạn có một số thứ tự gắn liền với nó. Đầu nhận sử dụng các số thứ tự để tập hợp lại dữ liệu theo đúng thứ tự. TCP cũng cung cấp chức năng kiểm tra lỗi để đảm bảo rằng dữ liệu không bị hỏng trong quá trình truyền.</p>
+<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>UDP cũng là một giao thức nổi tiếng trong tầng giao vận. Nó tương tự như TCP nhưng đơn giản hơn và nhanh hơn. UDP không cung cấp tính năng kiểm tra lỗi và kiểm tra độ tin cậy, khác với TCP. Nó chỉ đơn giản là gửi các gói tin từ thiết bị này sang thiết bị khác. Đầu nhận có trách nhiệm xác định xem gói tin có được nhận chính xác hay chưa. Nếu có lỗi xảy ra, đầu nhận chỉ đơn giản là loại bỏ gói tin.</p>
+<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Các tầng còn lại bao gồm <strong>tầng phiên (Session Layer), tầng trình diễn (Presentation Layer) và tầng ứng dụng (Application Layers)</strong>. Đây là nơi mà mô hình OSI mất đi tính hữu dụng trong thực tế. Chúng quá chi tiết và không phản ánh thực tế. Nói chung, <strong>chỉ cần thu gọn chúng thành một tầng duy nhất và coi các giao thức ứng dụng (Application Protocols Layer) như HTTP như các giao thức tầng 7 là được.</strong></p>
+<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
+<h2 id="du-lieu-i-qua-mo-hinh-osi-nhu-the-nao">Dữ liệu đi qua mô hình OSI như thế nào.</h2>
+<p>Ta cùng xem xét mọt ví dụ về cách dữ liệu di chuyển qua các tầng khi được truyền qua mạng.</p>
+<p>(1) Người dùng gửi một HTTP request đến web server qua mạng, HTTP header được thêm vào dữ liệu ở tầng ứng dụng. </p>
+<p>(2) Sau đó, một TCP header được thêm vào dữ liệu. Nó được gói gọn trong các đoạn TCP ở tầng giao vận. Header chứa port nguồn, port đích và số thứ tự.</p>
+<p>(3) Tiếp theo, các phân đoạn được gói với một IP header ở tầng mạng. IP header chứa địa chỉ IP nguồn và đích. </p>
+<p>(4) Một MAC header được thêm vào tầng liên kết dữ liệu, với địa chỉ MAC nguồn và đích. Thực ra địa chỉ MAC thường không phải là địa chỉ MAC của thiết bị gửi và thiết bị nhận. Chúng là địa chỉ MAC của các thiết bị định tuyến trong bước nhảy tiếp theo của hành trình dài trên internet. </p>
+<p>(5) Các frame cũng được gửi qua mạng ở dạng bit dữ liệu thô trong tầng vật lý. </p>
+<p>(6) + (7) + (8) + (9) + (10) Khi web server nhận được các bit thô này từ mạng, nó sẽ đảo ngược quy trình. Các header được bóc ra trên từng tầng, và cuối cùng, web server xử lý HTTP request.</p>
+<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Tóm lại, mô hình OSI là một cách nhìn về cách mạng hoạt động. Mục đích chính của nó là để giáo dục. Mặc dù các tầng không hoàn toàn phù hợp với các use case trong thế giới thực, chúng vẫn được các nhà cung cấp mạng và nhà cung cấp dịch vụ đám mây sử dụng rộng rãi như một cách để mô tả bị trí của các sản phẩm mạng của họ trong mô hình OSI.</p>
+<p>Ví dụ: load balancer trên đám mây thường được chia làm hai loại - L4 và L7.</p>
+<p>L7 load balancer nghĩa là nó hoạt động ở tầng giao thức ứng dụng như HTTP và HTTPS. </p>
+<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>L4 load balancer thì hoạt động ở tầng giao vận.</p>
+<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></div></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/02/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">15/03/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/02/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">15/03/2023 (GMT+07)</span>
       
     
   </small>

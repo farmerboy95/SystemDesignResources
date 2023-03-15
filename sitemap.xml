@@ -2,87 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/navigation/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/api_gateway/api_gateway/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/cdn/cdn/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/debugging_techniques/debugging_techniques/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/http_versions/http_versions/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/latency_numbers/latency_numbers/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/osi_model/osi_model/</loc>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/process_vs_thread/process_vs_thread/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/rest_api/rest_api/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/scan_to_pay/scan_to_pay/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/ssl_tls_https/ssl_tls_https/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/sso/sso/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/storing_passwords/storing_passwords/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/top_redis_use_cases/top_redis_use_cases/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/what_happen_when_access_url/what_happen_when_access_url/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/why_kafka_fast/why_kafka_fast/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/why_redis_fast/why_redis_fast/</loc>
-         <lastmod>2023-03-14</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
