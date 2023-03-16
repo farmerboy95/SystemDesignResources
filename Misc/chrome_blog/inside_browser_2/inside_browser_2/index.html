@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/Misc/chrome_blog/inside_browser_1/inside_browser_1/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/Misc/chrome_blog/inside_browser_2/inside_browser_2/">
       
       
-        <link rel="prev" href="../../../../ByteByteGo/dns/dns/">
+        <link rel="prev" href="../../inside_browser_1/inside_browser_1/">
       
-      
-        <link rel="next" href="../../inside_browser_2/inside_browser_2/">
       
       <link rel="icon" href="../../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Bên trong các trình duyệt ngày nay (Phần 1) - farmerboy's System Design Resources</title>
+        <title>Bên trong các trình duyệt ngày nay (Phần 2) - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ben-trong-cac-trinh-duyet-ngay-nay-phan-1" class="md-skip">
+        <a href="#ben-trong-cac-trinh-duyet-ngay-nay-phan-2" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bên trong các trình duyệt ngày nay (Phần 1)
+              Bên trong các trình duyệt ngày nay (Phần 2)
             
           </span>
         </div>
@@ -260,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../inside_browser_1/inside_browser_1/" class="md-tabs__link md-tabs__link--active">
         Nguồn khác
       </a>
     </li>
@@ -712,6 +710,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../inside_browser_1/inside_browser_1/" class="md-nav__link">
+        Bên trong các trình duyệt ngày nay (Phần 1)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -724,12 +736,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Bên trong các trình duyệt ngày nay (Phần 1)
+          Bên trong các trình duyệt ngày nay (Phần 2)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Bên trong các trình duyệt ngày nay (Phần 1)
+        Bên trong các trình duyệt ngày nay (Phần 2)
       </a>
       
         
@@ -755,30 +767,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cpu-gpu-bo-nho-va-kien-truc-a-tien-trinh" class="md-nav__link">
-    CPU, GPU, bộ nhớ, và kiến trúc đa tiến trình
+  <a href="#chuyen-xay-ra-khi-ieu-huong" class="md-nav__link">
+    Chuyện xảy ra khi điều hướng
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nhan-may-tinh-chua-cpu-va-gpu" class="md-nav__link">
-    Nhân máy tính chứa CPU và GPU
+  <a href="#no-bat-au-voi-browser-process" class="md-nav__link">
+    Nó bắt đầu với browser process
   </a>
   
-    <nav class="md-nav" aria-label="Nhân máy tính chứa CPU và GPU">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ieu-huong-on-gian" class="md-nav__link">
+    Điều hướng đơn giản
+  </a>
+  
+    <nav class="md-nav" aria-label="Điều hướng đơn giản">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    CPU
+  <a href="#buoc-1-xu-ly-input" class="md-nav__link">
+    Bước 1: Xử lý input
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gpu" class="md-nav__link">
-    GPU
+  <a href="#buoc-2-bat-au-ieu-huong" class="md-nav__link">
+    Bước 2: Bắt đầu điều hướng
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-oc-response" class="md-nav__link">
+    Bước 3: Đọc response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-tim-mot-renderer-process" class="md-nav__link">
+    Bước 4: Tìm một renderer process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-ieu-huong" class="md-nav__link">
+    Bước 5: Điều hướng
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-bo-sung-hoan-thanh-viec-tai-ban-au" class="md-nav__link">
+    Bước bổ sung: Hoàn thành việc tải ban đầu
   </a>
   
 </li>
@@ -789,50 +836,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#khoi-chay-chuong-trinh-tren-process-va-thread" class="md-nav__link">
-    Khởi chạy chương trình trên Process và Thread
+  <a href="#ieu-huong-en-mot-trang-web-khac" class="md-nav__link">
+    Điều hướng đến một trang web khác
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#kien-truc-trinh-duyet" class="md-nav__link">
-    Kiến trúc trình duyệt
+  <a href="#truong-hop-cua-service-worker" class="md-nav__link">
+    Trường hợp của Service Worker
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cac-process-ieu-khien-cai-gi" class="md-nav__link">
-    Các Process điều khiển cái gì?
+  <a href="#tai-truoc-ieu-huong" class="md-nav__link">
+    Tải trước điều hướng
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#loi-ich-cua-kien-truc-a-tien-trinh-trong-chrome" class="md-nav__link">
-    Lợi ích của kiến trúc đa tiến trình trong Chrome
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tiet-kiem-nhieu-bo-nho-hon-servicification-trong-chrome" class="md-nav__link">
-    Tiết kiệm nhiều bộ nhớ hơn - Servicification trong Chrome
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#renderer-process-tren-moi-frame-site-isolation" class="md-nav__link">
-    Renderer process trên mỗi frame - Site Isolation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-phan-1" class="md-nav__link">
-    Kết phần 1
+  <a href="#ket-phan-2" class="md-nav__link">
+    Kết phần 2
   </a>
   
 </li>
@@ -841,20 +867,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../inside_browser_2/inside_browser_2/" class="md-nav__link">
-        Bên trong các trình duyệt ngày nay (Phần 2)
-      </a>
     </li>
   
 
@@ -935,30 +947,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cpu-gpu-bo-nho-va-kien-truc-a-tien-trinh" class="md-nav__link">
-    CPU, GPU, bộ nhớ, và kiến trúc đa tiến trình
+  <a href="#chuyen-xay-ra-khi-ieu-huong" class="md-nav__link">
+    Chuyện xảy ra khi điều hướng
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nhan-may-tinh-chua-cpu-va-gpu" class="md-nav__link">
-    Nhân máy tính chứa CPU và GPU
+  <a href="#no-bat-au-voi-browser-process" class="md-nav__link">
+    Nó bắt đầu với browser process
   </a>
   
-    <nav class="md-nav" aria-label="Nhân máy tính chứa CPU và GPU">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ieu-huong-on-gian" class="md-nav__link">
+    Điều hướng đơn giản
+  </a>
+  
+    <nav class="md-nav" aria-label="Điều hướng đơn giản">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    CPU
+  <a href="#buoc-1-xu-ly-input" class="md-nav__link">
+    Bước 1: Xử lý input
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gpu" class="md-nav__link">
-    GPU
+  <a href="#buoc-2-bat-au-ieu-huong" class="md-nav__link">
+    Bước 2: Bắt đầu điều hướng
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-oc-response" class="md-nav__link">
+    Bước 3: Đọc response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-tim-mot-renderer-process" class="md-nav__link">
+    Bước 4: Tìm một renderer process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-ieu-huong" class="md-nav__link">
+    Bước 5: Điều hướng
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-bo-sung-hoan-thanh-viec-tai-ban-au" class="md-nav__link">
+    Bước bổ sung: Hoàn thành việc tải ban đầu
   </a>
   
 </li>
@@ -969,50 +1016,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#khoi-chay-chuong-trinh-tren-process-va-thread" class="md-nav__link">
-    Khởi chạy chương trình trên Process và Thread
+  <a href="#ieu-huong-en-mot-trang-web-khac" class="md-nav__link">
+    Điều hướng đến một trang web khác
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#kien-truc-trinh-duyet" class="md-nav__link">
-    Kiến trúc trình duyệt
+  <a href="#truong-hop-cua-service-worker" class="md-nav__link">
+    Trường hợp của Service Worker
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cac-process-ieu-khien-cai-gi" class="md-nav__link">
-    Các Process điều khiển cái gì?
+  <a href="#tai-truoc-ieu-huong" class="md-nav__link">
+    Tải trước điều hướng
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#loi-ich-cua-kien-truc-a-tien-trinh-trong-chrome" class="md-nav__link">
-    Lợi ích của kiến trúc đa tiến trình trong Chrome
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tiet-kiem-nhieu-bo-nho-hon-servicification-trong-chrome" class="md-nav__link">
-    Tiết kiệm nhiều bộ nhớ hơn - Servicification trong Chrome
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#renderer-process-tren-moi-frame-site-isolation" class="md-nav__link">
-    Renderer process trên mỗi frame - Site Isolation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-phan-1" class="md-nav__link">
-    Kết phần 1
+  <a href="#ket-phan-2" class="md-nav__link">
+    Kết phần 2
   </a>
   
 </li>
@@ -1036,93 +1062,75 @@
   
 
 
-<h1 id="ben-trong-cac-trinh-duyet-ngay-nay-phan-1">Bên trong các trình duyệt ngày nay (Phần 1)</h1>
+<h1 id="ben-trong-cac-trinh-duyet-ngay-nay-phan-2">Bên trong các trình duyệt ngày nay (Phần 2)</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a href="https://developer.chrome.com/blog/inside-browser-part1/">Inside look at modern web browser (part 1) - Chrome Developers Blog</a></p>
-<h2 id="cpu-gpu-bo-nho-va-kien-truc-a-tien-trinh">CPU, GPU, bộ nhớ, và kiến trúc đa tiến trình</h2>
-<p>Trong series 4 phần này, ta sẽ đi sâu vào trình duyệt Chrome từ kiến trúc bậc cao đến các chi tiết của quá trình render (kết xuất). Nếu bạn từng thắc mắc làm sao trình duyệt biến code của bạn thành một trang web, hoặc tại sao một kỹ thuật cụ thể nào đó có thể được dùng để cải thiện hiệu suất, thì series này là dành cho bạn.</p>
-<p>Trong phần 1 của series này, ta sẽ xem xét đến thuật ngữ core computing (điện toán lõi) và kiến trúc đa tiến trình của Chrome.</p>
+<p><a href="https://developer.chrome.com/blog/inside-browser-part2/">Inside look at modern web browser (part 2) - Chrome Developers Blog</a></p>
+<h2 id="chuyen-xay-ra-khi-ieu-huong">Chuyện xảy ra khi điều hướng</h2>
+<p>Đây là phần 2 trong series 4 phần tìm hiểu về Chrome. Trong phần 1, ta tìm hiểu làm sao các process và thread khác nhau xử lý các phần khác nhau trong trình duyệt. Ở phần này, ta đi sâu hơn về việc làm thế nào mỗi process và thread giao tiếp với nhau để hiển thị một trang web.</p>
+<p>Ta bắt đầu với một use case đơn giản như sau: Bạn điền URL vào trình duyệt, trình duyệt lấy data từ internet và hiển thị trang web. Trong phần này, ta sẽ tập trung vào phần mà người dùng request một website và trình duyệt chuẩn bị render một trang - nôm na gọi là điều hướng (navigation).</p>
 <p><strong>Lưu ý: Vui lòng bấm vào hình ảnh để xem chú thích của hình ảnh đó.</strong></p>
-<h2 id="nhan-may-tinh-chua-cpu-va-gpu">Nhân máy tính chứa CPU và GPU</h2>
-<p>Để hiểu môi trường mà trình duyệt sẽ chạy, ta cần hiểu một số thành phần trong máy tính trước đã.</p>
-<h3 id="cpu">CPU</h3>
-<p>Đầu tiên là <strong>CPU</strong> (<strong>C</strong>entral <strong>P</strong>rocessing <strong>U</strong>nit - đơn vị xử lý trung tâm). CPU có thể được xem như não bộ của máy tính. Một nhân CPU, như trong hình là một kiểu nhân viên văn phòng, có thể xử lý nhiều tác vụ lần lượt. Nó có thể xử lý mọi thứ từ toán cho đến mỹ thuật. Trong quá khứ, hầu hết các CPU là một chip đơn. Một core giống như một CPU khác ở trong cùng một con chịp. Trong phần cứng hiện đại, ta thường có nhiều hơn một core, mang lại nhiều sức mạnh tính toán hơn cho điện thoại và laptop của bạn.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được" href="../figure1.avif"><img alt="Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được" src="../figure1.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<h3 id="gpu">GPU</h3>
-<p><strong>GPU</strong> (<strong>G</strong>raphics <strong>P</strong>rocessing <strong>U</strong>nit - đơn vị xử lý đồ hoạ) là một phần khác của máy tính. Khác với CPU, GPU xử lý các tác vụ đơn giản nhưng trên nhiều core một lần. Giống như tên gọi thì ban đầu nó được phát triển để xử lý đồ hoạ. Đây là lý do vì sao mà trong các trường hợp "dùng GPU" hay "được hỗ trợ bởi GPU" thường đi liền với render nhanh và tương tác mượt mà. Trong những năm gần đây, với điện toán được GPU tăng tốc, ngày càng có thể thực hiện được nhiều tính toán hơn chỉ trên GPU.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản" href="../figure2.avif"><img alt="Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản" src="../figure2.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<p>Khi bạn khởi động một ứng dụng trên máy tính hoặc điện thoại, CPU và GPU là những thứ chính yếu của ứng dụng. Thông thường, các ứng dụng chạy trên CPU và GPU sử dụng các cơ chế do hệ điều hành cung cấp.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng" href="../figure3.avif"><img alt="Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng" src="../figure3.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<h2 id="khoi-chay-chuong-trinh-tren-process-va-thread">Khởi chạy chương trình trên Process và Thread</h2>
-<p>Một khái niệm nữa cần nắm trước khi đi sâu vào kiến trúc trình duyệt là Process và Thread. Một process có thể được xem như một chương trình thực thi của ứng dụng. Một thread là thứ nằm bên trong process và thực thi bất kỳ phần nào trong chương trình của process của nó.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process" href="../figure4.avif"><img alt="Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process" src="../figure4.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<p>Khi bạn khởi động một ứng dụng, một process sẽ được tạo ra. Chương trình có thể tạo các thread để giúp chương trình hoạt động, nhưng không bắt buộc. Hệ điều hành cung cấp cho process một khối bộ nhớ để hoạt động và tất cả các trạng thái của ứng dụng được giữ trong không gian bộ nhớ riêng đó. Khi đóng ứng dụng, process này cũng biến mất và hệ điều hành sẽ giải phóng bộ nhớ.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng" href="../figure5.svg"><img alt="Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng" src="../figure5.svg" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<p>Một process có thể yêu cầu hệ điều hành khởi động một process khác để chạy các tác vụ khác nhau. Khi điều này xảy ra, các phần khác nhau của bộ nhớ được phân bố cho process mới. Nếu hai process cần giao tiếp với nhau, chúng sẽ dùng <strong>IPC</strong> (<strong>I</strong>nter <strong>P</strong>rocess <strong>C</strong>ommunication - Giao tiếp giữa các process). Nhiều ứng dụng được thiết kế để hoạt động theo cách này sao cho nếu một worker process bị treo, nó có thể được khởi động lại mà không phải dừng các process khác đang chạy các phần khác nhau của ứng dụng.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC" href="../figure6.svg"><img alt="Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC" src="../figure6.svg" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<h2 id="kien-truc-trinh-duyet">Kiến trúc trình duyệt</h2>
-<p>Giờ thì trình duyệt được xây dựng dựa trên process và thread như thế nào? Có thể là một process với nhiều thread khác nhau hoặc nhiều process khác nhau với một ít thread giao tiếp với nhau qua IPC.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread" href="../figure7.avif"><img alt="Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread" src="../figure7.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<p>Một lưu ý quan trọng là các kiến trúc khác nhau này là các chi tiết cài đặt. Không có một chuẩn nào cho việc tạo ra một trình duyệt. Cách tiếp cận để xây dựng trình duyệt này có thể khác hoàn toàn với cách tiếp cận để xây dựng một trình duyệt khác.</p>
-<p>Ta sẽ chỉ tập trung vào kiến trúc bây giờ của Chrome được miêu tả trong sơ đồ bên dưới.</p>
-<p>Ở trên cùng là process trình duyệt phối hợp với các process khác để đảm nhiệm các phần khác nhau của ứng dụng. Với renderer process, nhiều process được tạo ra và gán cho mỗi tab. Cho đến gần đây, Chrome cho mỗi tab một process khi có thể; giờ nó cố gắng cho mỗi trang một process riêng, kể cả iframe (Ở phần Site Isolation).</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab" href="../figure8.avif"><img alt="Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab" src="../figure8.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<h2 id="cac-process-ieu-khien-cai-gi">Các Process điều khiển cái gì?</h2>
-<p>Bảng sau cho thấy các process của Chrome và những thứ chúng điều khiển:</p>
-<table>
-<thead>
-<tr>
-<th align="center">Process</th>
-<th align="left">Điều khiển</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Trình duyệt</td>
-<td align="left">Điều khiển phần "chrome" của ứng dụng bao gồm thanh địa chỉ, bookmark, nút quay lại trang trước và đi tiếp trang sau. <br/> Xử lý các phần ẩn, đặc quyền của trình duyệt như network request hay truy cập file.</td>
-</tr>
-<tr>
-<td align="center">Renderer</td>
-<td align="left">Điều khiển bất cứ cái gì trong tab, nơi mà website được hiển thị.</td>
-</tr>
-<tr>
-<td align="center">Plugin</td>
-<td align="left">Điều khiển bất kỳ plugin nào dùng bởi website, ví dụ như flash.</td>
-</tr>
-<tr>
-<td align="center">GPU</td>
-<td align="left">Xử lý các tác vụ GPU riêng biệt, tách ra khỏi các process khác. Nó được phân ra riêng vì các GPU xử lý các yêu cầu từ nhiều ứng dụng và vẽ chúng trên cùng một chỗ</td>
-</tr>
-</tbody>
-</table>
-<p><div class="lightgallery"><a data-sub-html="Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt" href="../figure9.avif"><img alt="Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt" src="../figure9.avif" style="display: block; margin: 0 auto; height: 400px" /></a></div></p>
-<p>Còn có nhiều process hơn nữa như là process cho các tiện ích mở rộng hay process cho các tiện ích khác. Nếu bạn muốn xem có bao nhiêu process đang chạy trong Chrome, bấm vào dấu ba chấm ở góc phải trên của Chrome, chọn More Tools, rồi chọn Task Manager. Một cửa sổ sẽ hiện lên với danh sách các process đang chạy và chúng đang dùng bao nhiêu CPU / Bộ nhớ.</p>
-<h2 id="loi-ich-cua-kien-truc-a-tien-trinh-trong-chrome">Lợi ích của kiến trúc đa tiến trình trong Chrome</h2>
-<p>Trước đó, ta đã đề cập đến việc Chrome sử dụng nhiều renderer process. Trong trường hợp đơn giản nhất, ta có thể tưởng tượng mỗi tab có một renderer process riêng. Giả sử bạn có 3 tab đang mở và mỗi tab được chạy bởi một renderer process độc lập. Nếu một tab bị treo, thì bạn có thể đóng tab đó trong khi vẫn giữ cho các tab khác hoạt động. Nếu tất cả các tab đang chạy trên một process, khi một tab treo, các tab khác cũng treo luôn. Khá buồn.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab" href="../figure10.avif"><img alt="Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab" src="../figure10.avif" style="display: block; margin: 0 auto; height: 400px" /></a></div></p>
-<p>Một lợi ích khác của việc tách công việc của trình duyệt thành nhiều process là do tính bảo mật và độc lập. Vì các hệ điều hành cung cấp một cách để hạn chế các quyền của các process, trình duyệt có thể sandbox một số process nhất định từ các tính năng nhất định. Ví dụ, trình duyệt Chrome hạn chế quyền truy cập file tuỳ ý đối với các process xử lý đầu vào tuỳ ý của người dùng như renderer process.</p>
-<p>Vì các process có không gian bộ nhớ riêng nên chúng thường chứa bản sao của cơ sở hạ tầng chung (như V8 là công cụ JavaScript của Chrome). Điều này nghĩa là sử dụng nhiều bộ nhớ hơn vì chúng không thể được chia sẻ theo cách truyền thống nếu chúng là các thread trong cùng một process. Để tiết kiệm bộ nhớ, Chrome đặt giới hạn về số process có thể thực hiện. Giới hạn khác nhau tuỳ vào dung lượng bộ nhớ và sức mạnh CPU mà thiết bị có, nhưng khi Chrome đạt giới hạn, nó sẽ bắt đầu chạy nhiều tab của cùng một trang trên cùng một process.</p>
-<h2 id="tiet-kiem-nhieu-bo-nho-hon-servicification-trong-chrome">Tiết kiệm nhiều bộ nhớ hơn - Servicification trong Chrome</h2>
-<p>Cách tiếp cận tương tự cũng được áp dụng cho process trình duyệt. Chrome đang tiến hành các thay đổi về kiến trúc để chạy từng phần của trình duyệt dưới dạng một service cho phép phân chia dễ dàng các process khác nhau hoặc tổng hợp thành một.</p>
-<p>Ý tưởng chung là khi Chrome đang chạy trên phần cứng mạnh mẽ, nó có thể chia từng service thành các process khác nhau để giữ tính ổn định. Nhưng nếu chạy trên một thiết bị hạn chế tài nguyên, Chrome sẽ hợp nhất các service thành một process để tiết kiệm bộ nhớ. Cách tiếp cận tương tự về hợp nhất các process để sử dụng ít bộ nhớ hơn đã được dùng trên các nền tảng khác như Android trước khi có sự thay đổi này.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn" href="../figure11.svg"><img alt="Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn" src="../figure11.svg" style="display: block; margin: 0 auto; height: 400px" /></a></div></p>
-<h2 id="renderer-process-tren-moi-frame-site-isolation">Renderer process trên mỗi frame - Site Isolation</h2>
-<p><a href="https://developers.google.com//web/updates/2018/07/site-isolation">Site Isolation</a> (cách ly trang web) là một tính năng được giới thiệu gần đây trong Chrome, nó chạy các renderer process khác nhau cho từng iframe của các trang web khác (cross-site iframe) trên cùng một tab. Ta đã nói về một renderer process trên mỗi tab cho phép các iframe của các trang web khác chạy một renderer process với không gian bộ nhớ chia sẻ trên các site khác nhau. Chạy <code>a.com</code> và <code>b.com</code> trên cùng một renderer process nghe có vẻ ổn. <a href="https://developer.mozilla.org/docs/Web/Security/Same-origin_policy">Same Origin Policy</a> (chính sách xuất xứ giống nhau) là mô hình bảo mật cốt lõi của web; nó bảo đảm một trang web không thể truy cập dữ liệu từ các web khác mà không có sự đồng ý. Bỏ qua chính sách này là một lỗ hổng lớn cho các cuộc tấn công mạng. Việc cách ly các process là cách hiệu quả nhất để tách các trang web. Với <a href="https://developers.google.com/web/updates/2018/02/meltdown-spectre">Meltdown và Spectre</a>, rõ ràng hơn là chúng ta cần tách các trang web bằng các process. Với Site Isolation được áp dụng mặc định trên Chrome desktop từ bản 67, mỗi iframe của các trang web khác trong một tab có một renderer process riêng.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web" href="../figure12.avif"><img alt="Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web" src="../figure12.avif" style="display: block; margin: 0 auto; height: 400px" /></a></div></p>
-<p>Cho phép Site Isolation là một nỗ lực trong nhiều năm của đội ngũ kỹ sư. Site Isolation không đơn giản chỉ là chỉ định các renderer process khác nhau; về cơ bản nó thay đổi cách các iframe giao tiếp với nhau. Mở devtools trên một trang có iframe chạy trên các process khác nhau nghĩa là devtools phải triển khai công việc hậu trường để làm nó xuất hiện liền mạch. Ngay cả việc chạy <code>Ctrl+F</code> đơn giản để tìm một từ trong trang cũng có nghĩa là tìm kiếm trên nhiều renderer process khác nhau. Bạn có thể thấy vì sao các kỹ sư trình duyệt nói về việc phát hành Site Isolation như là một cột mốc đỉnh cao!</p>
-<h2 id="ket-phan-1">Kết phần 1</h2>
-<p>Trong phần này, ta đã đi qua góc nhìn cơ bản của kiến trúc trình duyệt và lợi ích của kiến trúc đa tiến trình. Ta cũng đi qua Servicification và Site Isolation trong Chrome, những thứ cực kỳ liên quan đến kiến trúc đa tiến trình. Trong phần sau, ta sẽ khám phá chuyện gì xảy ra giữa các process và thread này để hiển thị website.</p>
+<h2 id="no-bat-au-voi-browser-process">Nó bắt đầu với browser process</h2>
+<p>Như ta đã biết từ phần 1, mọi thứ không trong tab sẽ được xử lý bởi browser process. Browser process này có các thread như UI thread, nó sẽ vẽ các nút bấm và ô nhập liệu (như thanh địa chỉ) của trình duyệt. browser process còn có network thread, nó sẽ xử lý các network stack để nhận data từ internet. Storage thread cũng là một thành phần của browser process, nó kiểm soát quyền truy cập file. Và còn một số loại thread nữa. Khi bạn nhập URL vào thanh địa chỉ, nó sẽ được xử lý bởi UI thread của browser process.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 1: UI của trình duyệt ở trên, sơ đồ của browser process với UI, network và storage thread bên trong ở dưới" href="../figure1.avif"><img alt="Hình 1: UI của trình duyệt ở trên, sơ đồ của browser process với UI, network và storage thread bên trong ở dưới" src="../figure1.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h2 id="ieu-huong-on-gian">Điều hướng đơn giản</h2>
+<h3 id="buoc-1-xu-ly-input">Bước 1: Xử lý input</h3>
+<p>Khi người dùng bắt đầu nhập vào thanh địa chỉ, đầu tiên UI thread sẽ hỏi là "Đây là truy vấn tìm kiếm hay URL vây?". Trong Chrome, thanh địa chỉ cũng là thanh tìm kiếm, nên UI thread cần phải kiểm tra và quyết định xem nên gửi người dùng đến bộ máy tìm kiếm hay đi đến cái trang mà người ta muốn đến.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 2: UI thread hỏi xem input là truy vấn tìm kiếm hay URL" href="../figure2.avif"><img alt="Hình 2: UI thread hỏi xem input là truy vấn tìm kiếm hay URL" src="../figure2.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h3 id="buoc-2-bat-au-ieu-huong">Bước 2: Bắt đầu điều hướng</h3>
+<p>Khi người dùng bấm Enter, UI thread khởi tạo network call để lấy nội dung trang web. Biểu tượng xoay (loading) sẽ xuất hiện ở góc của tab, và network thread đi qua các giao thức thích hợp như tra cứu DNS và thiết lập kết nối TLS cho request.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 3: UI thread giao tiếp với network thread để điều hướng đến mysite.com" href="../figure3.avif"><img alt="Hình 3: UI thread giao tiếp với network thread để điều hướng đến mysite.com" src="../figure3.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Tại thời điểm này, network thread có thể được nhận header chuyển hướng server như HTTP 301. Trong trường hợp đó, network thread giao tiếp với UI thread để nói cho UI thread biết là server đang yêu cầu chuyển hướng. Sau đó, một URL request khác sẽ được khởi tạo.</p>
+<h3 id="buoc-3-oc-response">Bước 3: Đọc response</h3>
+<p>Khi mà response body bắt đầu đến, network thread đọc một vài byte đầu của stream nếu cần. Content-Type header của response cho nó biết loại data là gì, nhưng vì thông tìn này có thể bị thiếu hoặc sai, <a href="https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types">kiểm tra MIME Type (MIME Type sniffing)</a> sẽ được thực hiện tại đây. Đây là một "công việc khó khăn" như được comment trong <a href="https://cs.chromium.org/chromium/src/net/base/mime_sniffer.cc?sq=package:chromium&amp;dr=CS&amp;l=5">code</a>. Bạn có thể đọc comment để xem các trình duyệt khác nhau xử lý cặp Content-Type - response body như thế nào.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 4: Response header chứa Content-Type và response body chứa data thực sự" href="../figure4.avif"><img alt="Hình 4: Response header chứa Content-Type và response body chứa data thực sự" src="../figure4.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
+<p>Nếu response là một file HTML, thì bước tiếp theo sẽ là chuyển data cho renderer process, nhưng nếu nó là file zip hoặc các loại file khác thì nghĩa là nó là một request tại file, nên data được chuyển qua cho bên download manager.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 5: Network thread hỏi xem response data có phải HTML từ một trang an toàn không" href="../figure5.avif"><img alt="Hình 5: Network thread hỏi xem response data có phải HTML từ một trang an toàn không" src="../figure5.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Đây cũng là nơi kiểm tra <a href="https://safebrowsing.google.com/">SafeBrowsing</a> xảy ra. Nếu domain và response data khớp một cái site lừa đảo nào đó, network thread sẽ nhắc trình duyệt để hiển thị một trang cảnh báo. Thêm vào đó, kiểm tra <a href="https://www.chromium.org/Home/chromium-security/corb-for-developers"><strong>C</strong>ross <strong>O</strong>rigin <strong>R</strong>ead <strong>B</strong>locking (<strong>CORB</strong>)</a> cũng được thực hiện để đảm bảo thông tin nhạy cảm xuyên website không đi vào renderer process.</p>
+<h3 id="buoc-4-tim-mot-renderer-process">Bước 4: Tìm một renderer process</h3>
+<p>Sau khi các kiểm tra đều đã xong và network thread chắc chắn rằng trình duyệt sẽ được điều hướng đến trang web được yêu cầu, network thread sẽ bảo UI thread rằng data đã sắn sàng. UI thread sau đó tìm một renderer process để thực hiện quá trình render trang web</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 6: Network thread kêu UI thread tìm Renderer Process" href="../figure6.avif"><img alt="Hình 6: Network thread kêu UI thread tìm Renderer Process" src="../figure6.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Vì network request có thể mất vài trăm mili giây để nhận phản hồi, nên một quá trình tối ưu hoá được áp dụng để tăng tốc quá trình trên. Khi UI thread đang gửi URL request cho network thread ở bước 2, nó đã biết trình duyệt sẽ được điều hướng đến trang nào. UI thread cố gắng chủ động tìm hoặc khởi chạy một renderer process song song với network request. Bằng cách này, nếu mọi việc diễn ra bình thường, một renderer process đã chờ sẵn khi network thread nhận đata. Process dự phòng này có thể không được sử dụng nếu việc điều hướng chuyển hướng giữa các trang, trong trường hợp đó thì phải cần một process khác.</p>
+<h3 id="buoc-5-ieu-huong">Bước 5: Điều hướng</h3>
+<p>Giờ data và renderer process đã sẵn sàng, một IPC được gửi từ browser process đến renderer process để thực hiện điều hướng. Nó cũng truyền luồng data để renderer process có thể tiếp tục nhận HTML data. Một khi browser process được xác nhận rằng quá trình điều hướng đã xảy ra trong renderer process, điều hướng hoàn tất và giai đoạn tải tài liệu bắt đầu.</p>
+<p>Tại thời điểm này, thanh địa chỉ được cập nhật và giao diện người dùng cài đặt trang và chỉ báo bảo mật phản ánh thông tin trang của trang mới. Lịch sử phiên cho tab sẽ được cập nhật để các nút quay lại / chuyển tiếp sẽ chuyển qua trang web vừa được điều hướng đến. Để tạo điều kiện khôi phục tab / phiên khi bạn đóng tab hoặc cửa sổ trình duyệt, lịch sử phiên sẽ được lưu trên đĩa.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 7: IPC giữa trình duyệt và các renderer process, để yêu cầu render trang" href="../figure7.avif"><img alt="Hình 7: IPC giữa trình duyệt và các renderer process, để yêu cầu render trang" src="../figure7.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h3 id="buoc-bo-sung-hoan-thanh-viec-tai-ban-au">Bước bổ sung: Hoàn thành việc tải ban đầu</h3>
+<p>Khi điều hướng được cam kết, renderer process tiếp tục tải tài nguyên và render trang. Ta sẽ xem các chi tiết về những gì xảy ra ở đây trong phần tiếp theo. Sau khi renderer process "hoàn tất" việc render, nó gửi một IPC trở lại browser process (đây là sau khi tất cả các event <code>onload</code> đã kích hoạt trên tất cả các frame trên trang và đã thực hiện xong). Tại thời điểm này, UI thread dừng biểu tượng xoay trên tab.</p>
+<p>Ta nói "hoàn tất" vì JavaScript phía client vẫn có thể tải các tài nguyên bổ sung và render các view mới sau bước này.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 8: IPC từ renderer process sang browser process để báo rằng trang đã được tải" href="../figure8.avif"><img alt="Hình 8: IPC từ renderer process sang browser process để báo rằng trang đã được tải" src="../figure8.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h2 id="ieu-huong-en-mot-trang-web-khac">Điều hướng đến một trang web khác</h2>
+<p>Điều hướng đơn giản đã hoàn tất! Nhưng điều gì xảy ra nếu người dùng nhập URL khác vào thanh địa chỉ? Browser process sẽ trải qua các bước tương tự để điều hướng đến trang web khác. Nhưng trước khi có thể làm điều đó, nó cần kiểm tra với trang web hiện được hiển thị xem nó có quan tâm đến event []<code>beforeunload</code>](https://developer.mozilla.org/docs/Web/Events/beforeunload) hay không.</p>
+<p><code>beforeunload</code> có thể tạo cảnh báo "Bạn muốn rời khỏi trang web này?" khi ta cố gắng điều hướng đi hoặc đóng tab. Mọi thứ bên trong tab bao gồm cả code JavaScript của bạn đều được xử lý bởi renderer process, vì vậy browser process phải kiểm tra với renderer process hiện tại khi có yêu cầu điều hướng mới.</p>
+<details class="tip">
+<summary>Chú ý</summary>
+<p>Không thêm <code>beforeunload</code> handler vô điều kiện. Nó tạo ra độ trễ lớn hơn vì handler cần được thực thi trước khi có thể bắt đầu điều hướng. Chỉ nên thêm event handler này khi cần thiết, chẳng hạn như nếu người dùng cần được cảnh báo rằng họ có thể mất dữ liệu đã nhập trên trang.</p>
+</details>
+<p><div class="lightgallery"><a data-sub-html="Hình 9: IPC từ browser process sang một renderer process để nói cho nó biết rằng trình duyệt chuẩn bị điều hướng tới một trang web khác" href="../figure9.avif"><img alt="Hình 9: IPC từ browser process sang một renderer process để nói cho nó biết rằng trình duyệt chuẩn bị điều hướng tới một trang web khác" src="../figure9.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Nếu điều hướng được khởi tạo từ renderer process (chẳng hạn như khi người dùng đã nhấp vào liên kết hoặc client-side JavaScript đã chạy <code>window.location = "https://newsite.com"</code>) thì renderer process trước tiên sẽ kiểm tra <code>beforeunload</code> handler. Sau đó, nó trải qua quy trình tương tự như quá trình điều hướng do browser process bắt đầu. Sự khác biệt duy nhất là yêu cầu điều hướng được khởi tạo từ renderer process sang browser process.</p>
+<p>Khi điều hướng mới được tạo cho một trang web khác với trang web được render hiện tại, một renderer process riêng biệt sẽ được gọi để xử lý điều hướng mới trong khi renderer process hiện tại được giữ lại để xử lý các event như <code>unload</code>. Để biết thêm thông tin, vui lòng xem <a href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api#overview_of_page_lifecycle_states_and_events">tổng quan về trạng thái vòng đời của trang</a> và cách bạn có thể kết nối với các event bằng <a href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api">Page Lifecycle API</a>.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 10: Các IPC từ browser process sang một renderer process mới để render trang mới và sang renderer process cũ để unload trang cũ" href="../figure10.avif"><img alt="Hình 10: Các IPC từ browser process sang một renderer process mới để render trang mới và sang renderer process cũ để unload trang cũ" src="../figure10.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h2 id="truong-hop-cua-service-worker">Trường hợp của Service Worker</h2>
+<p>Một thay đổi gần đây đối với quy trình điều hướng này là việc giới thiệu <a href="https://developers.google.com/web/fundamentals/primers/service-workers/">Service Worker</a>. Service worker là một cách để viết proxy mạng trong code; cho phép các nhà phát triển web có nhiều quyền kiểm soát hơn đối với những gì cần lưu vào bộ nhớ cache cục bộ và thời điểm nhận dữ liệu mới từ mạng. Nếu Service worker được thiết lập để tải trang từ cache, thì không cần yêu cầu data từ mạng.</p>
+<p>Điều quan trọng cần nhớ là Service worker là code JavaScript chạy trong renderer process. Nhưng khi có yêu cầu điều hướng, làm thế nào để trình duyệt biết trang web có Service worker?</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 11: Network thread trong browser process tra cứu phạm vi của Service worker" href="../figure11.avif"><img alt="Hình 11: Network thread trong browser process tra cứu phạm vi của Service worker" src="../figure11.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Khi một Service worker được đăng ký, phạm vi của Service worker được giữ làm tham chiếu (bạn có thể đọc thêm về phạm vi trong bài viết <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle">Vòng đời của Service worker</a> này). Khi một quá trình điều hướng diễn ra, network thread sẽ kiểm tra miền dựa trên phạm vi của Service worker đã đăng ký, nếu một Service worker được đăng ký cho URL đó, thì UI thread sẽ tìm một renderer process để thực thi code của Service worker. Service worker có thể tải data từ cache, loại bỏ nhu cầu yêu cầu data từ mạng hoặc có thể yêu cầu tài nguyên mới từ mạng.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 12: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker; một worker thread trong renderer process sau đó yêu cầu data từ mạng" href="../figure12.avif"><img alt="Hình 12: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker; một worker thread trong renderer process sau đó yêu cầu data từ mạng" src="../figure12.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h2 id="tai-truoc-ieu-huong">Tải trước điều hướng</h2>
+<p>Bạn có thể thấy round trip này giữa browser process và renderer process có thể dẫn đến delay nếu Service worker quyết định yêu cầu data từ mạng. Tải trước điều hướng là một cơ chế để tăng tốc quá trình này bằng cách tải tài nguyên song song với khởi động Service worker. Nó đánh dấu các request này bằng một header, cho phép các máy chủ quyết định gửi nội dung khác nhau cho các request này; ví dụ: chỉ cập nhật data thay vì full data.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 13: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker trong khi bắt đầu network request cùng lúc đó" href="../figure13.avif"><img alt="Hình 13: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker trong khi bắt đầu network request cùng lúc đó" src="../figure13.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h2 id="ket-phan-2">Kết phần 2</h2>
+<p>Trong phần này, ta đã xem thử chuyện gì sẽ xảy ra trong khi điều hướng và làm sao code của ứng dụng web như response header và JavaScript phía client giao tiếp với trình duyệt. Việc biết được các bước trình duyệt phải thực hiện để lấy data từ mạng giúp ta dễ hiểu hơn vì sao các API như Tải trước điều hướng được phát triển. Trong bài sau, ta sẽ đi vào việc làm sao trình duyệt đọc code HTML/CSS/JavaScript của chúng ta để hiển thị các trang.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/03/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">17/03/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/03/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">17/03/2023 (GMT+07)</span>
       
     
   </small>
