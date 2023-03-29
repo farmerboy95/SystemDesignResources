@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-[10+ Key Memory & Storage Systems: Crash Course System Design #5](https://www.youtube.com/watch?v=lX4CrbXMsNQ)
+<img src="../../../img/bytebytego.png" width="16" height="16"/> [10+ Key Memory & Storage Systems: Crash Course System Design #5](https://www.youtube.com/watch?v=lX4CrbXMsNQ)
 
 ## Bộ nhớ
 
