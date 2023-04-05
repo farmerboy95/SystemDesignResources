@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/Misc/chrome_blog/inside_browser_1/inside_browser_1/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/Misc/chrome_blog/inside_browser_3/inside_browser_3/">
       
       
-        <link rel="prev" href="../../../../ByteByteGo/computer_memory_and_storage/computer_memory_and_storage/">
+        <link rel="prev" href="../../inside_browser_2/inside_browser_2/">
       
-      
-        <link rel="next" href="../../inside_browser_2/inside_browser_2/">
       
       <link rel="icon" href="../../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Bên trong các trình duyệt ngày nay (Phần 1) - farmerboy's System Design Resources</title>
+        <title>Bên trong các trình duyệt ngày nay (Phần 3) - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ben-trong-cac-trinh-duyet-ngay-nay-phan-1" class="md-skip">
+        <a href="#ben-trong-cac-trinh-duyet-ngay-nay-phan-3" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bên trong các trình duyệt ngày nay (Phần 1)
+              Bên trong các trình duyệt ngày nay (Phần 3)
             
           </span>
         </div>
@@ -260,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../inside_browser_1/inside_browser_1/" class="md-tabs__link md-tabs__link--active">
         Nguồn khác
       </a>
     </li>
@@ -726,6 +724,34 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../inside_browser_1/inside_browser_1/" class="md-nav__link">
+        Bên trong các trình duyệt ngày nay (Phần 1)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inside_browser_2/inside_browser_2/" class="md-nav__link">
+        Bên trong các trình duyệt ngày nay (Phần 2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -738,12 +764,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Bên trong các trình duyệt ngày nay (Phần 1)
+          Bên trong các trình duyệt ngày nay (Phần 3)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Bên trong các trình duyệt ngày nay (Phần 1)
+        Bên trong các trình duyệt ngày nay (Phần 3)
       </a>
       
         
@@ -769,30 +795,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cpu-gpu-bo-nho-va-kien-truc-a-tien-trinh" class="md-nav__link">
-    CPU, GPU, bộ nhớ, và kiến trúc đa tiến trình
+  <a href="#ben-trong-renderer-process" class="md-nav__link">
+    Bên trong Renderer Process
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nhan-may-tinh-chua-cpu-va-gpu" class="md-nav__link">
-    Nhân máy tính chứa CPU và GPU
+  <a href="#cac-renderer-process-xu-ly-noi-dung-web" class="md-nav__link">
+    Các renderer process xử lý nội dung web
   </a>
   
-    <nav class="md-nav" aria-label="Nhân máy tính chứa CPU và GPU">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-phan-tich-cu-phap" class="md-nav__link">
+    Parsing (Phân tích cú pháp)
+  </a>
+  
+    <nav class="md-nav" aria-label="Parsing (Phân tích cú pháp)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    CPU
+  <a href="#xay-dung-dom" class="md-nav__link">
+    Xây dựng DOM
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gpu" class="md-nav__link">
-    GPU
+  <a href="#tai-nguon-phu" class="md-nav__link">
+    Tải nguồn phụ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-co-the-chan-parsing" class="md-nav__link">
+    JavaScript có thể chặn parsing
   </a>
   
 </li>
@@ -803,50 +843,90 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#khoi-chay-chuong-trinh-tren-process-va-thread" class="md-nav__link">
-    Khởi chạy chương trình trên Process và Thread
+  <a href="#goi-y-cho-trinh-duyet-rang-ban-muon-tai-tai-nguyen-nhu-the-nao" class="md-nav__link">
+    Gợi ý cho trình duyệt rằng bạn muốn tải tài nguyên như thế nào
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#kien-truc-trinh-duyet" class="md-nav__link">
-    Kiến trúc trình duyệt
+  <a href="#tinh-toan-cho-cac-style" class="md-nav__link">
+    Tính toán cho các style
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cac-process-ieu-khien-cai-gi" class="md-nav__link">
-    Các Process điều khiển cái gì?
+  <a href="#layout" class="md-nav__link">
+    Layout
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#loi-ich-cua-kien-truc-a-tien-trinh-trong-chrome" class="md-nav__link">
-    Lợi ích của kiến trúc đa tiến trình trong Chrome
+  <a href="#ve" class="md-nav__link">
+    Vẽ
   </a>
+  
+    <nav class="md-nav" aria-label="Vẽ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cap-nhat-rendering-pipeline-rat-ton-kem" class="md-nav__link">
+    Cập nhật rendering pipeline rất tốn kém.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tiet-kiem-nhieu-bo-nho-hon-servicification-trong-chrome" class="md-nav__link">
-    Tiết kiệm nhiều bộ nhớ hơn - Servicification trong Chrome
+  <a href="#compositor" class="md-nav__link">
+    Compositor
   </a>
+  
+    <nav class="md-nav" aria-label="Compositor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ban-ve-mot-trang-nhu-the-nao" class="md-nav__link">
+    Bạn vẽ một trang như thế nào?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compositing-la-gi" class="md-nav__link">
+    Compositing là gì?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chia-ra-thanh-cac-layer" class="md-nav__link">
+    Chia ra thành các layer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raster-va-composite-khong-lien-quan-en-main-thread" class="md-nav__link">
+    Raster và composite không liên quan đến main thread
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#renderer-process-tren-moi-frame-site-isolation" class="md-nav__link">
-    Renderer process trên mỗi frame - Site Isolation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-phan-1" class="md-nav__link">
-    Kết phần 1
+  <a href="#ket-phan-3" class="md-nav__link">
+    Kết phần 3
   </a>
   
 </li>
@@ -855,34 +935,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../inside_browser_2/inside_browser_2/" class="md-nav__link">
-        Bên trong các trình duyệt ngày nay (Phần 2)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../inside_browser_3/inside_browser_3/" class="md-nav__link">
-        Bên trong các trình duyệt ngày nay (Phần 3)
-      </a>
     </li>
   
 
@@ -949,30 +1001,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cpu-gpu-bo-nho-va-kien-truc-a-tien-trinh" class="md-nav__link">
-    CPU, GPU, bộ nhớ, và kiến trúc đa tiến trình
+  <a href="#ben-trong-renderer-process" class="md-nav__link">
+    Bên trong Renderer Process
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nhan-may-tinh-chua-cpu-va-gpu" class="md-nav__link">
-    Nhân máy tính chứa CPU và GPU
+  <a href="#cac-renderer-process-xu-ly-noi-dung-web" class="md-nav__link">
+    Các renderer process xử lý nội dung web
   </a>
   
-    <nav class="md-nav" aria-label="Nhân máy tính chứa CPU và GPU">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-phan-tich-cu-phap" class="md-nav__link">
+    Parsing (Phân tích cú pháp)
+  </a>
+  
+    <nav class="md-nav" aria-label="Parsing (Phân tích cú pháp)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    CPU
+  <a href="#xay-dung-dom" class="md-nav__link">
+    Xây dựng DOM
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gpu" class="md-nav__link">
-    GPU
+  <a href="#tai-nguon-phu" class="md-nav__link">
+    Tải nguồn phụ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-co-the-chan-parsing" class="md-nav__link">
+    JavaScript có thể chặn parsing
   </a>
   
 </li>
@@ -983,50 +1049,90 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#khoi-chay-chuong-trinh-tren-process-va-thread" class="md-nav__link">
-    Khởi chạy chương trình trên Process và Thread
+  <a href="#goi-y-cho-trinh-duyet-rang-ban-muon-tai-tai-nguyen-nhu-the-nao" class="md-nav__link">
+    Gợi ý cho trình duyệt rằng bạn muốn tải tài nguyên như thế nào
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#kien-truc-trinh-duyet" class="md-nav__link">
-    Kiến trúc trình duyệt
+  <a href="#tinh-toan-cho-cac-style" class="md-nav__link">
+    Tính toán cho các style
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cac-process-ieu-khien-cai-gi" class="md-nav__link">
-    Các Process điều khiển cái gì?
+  <a href="#layout" class="md-nav__link">
+    Layout
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#loi-ich-cua-kien-truc-a-tien-trinh-trong-chrome" class="md-nav__link">
-    Lợi ích của kiến trúc đa tiến trình trong Chrome
+  <a href="#ve" class="md-nav__link">
+    Vẽ
   </a>
+  
+    <nav class="md-nav" aria-label="Vẽ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cap-nhat-rendering-pipeline-rat-ton-kem" class="md-nav__link">
+    Cập nhật rendering pipeline rất tốn kém.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tiet-kiem-nhieu-bo-nho-hon-servicification-trong-chrome" class="md-nav__link">
-    Tiết kiệm nhiều bộ nhớ hơn - Servicification trong Chrome
+  <a href="#compositor" class="md-nav__link">
+    Compositor
   </a>
+  
+    <nav class="md-nav" aria-label="Compositor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ban-ve-mot-trang-nhu-the-nao" class="md-nav__link">
+    Bạn vẽ một trang như thế nào?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compositing-la-gi" class="md-nav__link">
+    Compositing là gì?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chia-ra-thanh-cac-layer" class="md-nav__link">
+    Chia ra thành các layer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raster-va-composite-khong-lien-quan-en-main-thread" class="md-nav__link">
+    Raster và composite không liên quan đến main thread
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#renderer-process-tren-moi-frame-site-isolation" class="md-nav__link">
-    Renderer process trên mỗi frame - Site Isolation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-phan-1" class="md-nav__link">
-    Kết phần 1
+  <a href="#ket-phan-3" class="md-nav__link">
+    Kết phần 3
   </a>
   
 </li>
@@ -1050,93 +1156,121 @@
   
 
 
-<h1 id="ben-trong-cac-trinh-duyet-ngay-nay-phan-1">Bên trong các trình duyệt ngày nay (Phần 1)</h1>
+<h1 id="ben-trong-cac-trinh-duyet-ngay-nay-phan-3">Bên trong các trình duyệt ngày nay (Phần 3)</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a href="https://developer.chrome.com/blog/inside-browser-part1/">Inside look at modern web browser (part 1) - Chrome Developers Blog</a></p>
-<h2 id="cpu-gpu-bo-nho-va-kien-truc-a-tien-trinh">CPU, GPU, bộ nhớ, và kiến trúc đa tiến trình</h2>
-<p>Trong series 4 phần này, ta sẽ đi sâu vào trình duyệt Chrome từ kiến trúc bậc cao đến các chi tiết của quá trình render (kết xuất). Nếu bạn từng thắc mắc làm sao trình duyệt biến code của bạn thành một trang web, hoặc tại sao một kỹ thuật cụ thể nào đó có thể được dùng để cải thiện hiệu suất, thì series này là dành cho bạn.</p>
-<p>Trong phần 1 của series này, ta sẽ xem xét đến thuật ngữ core computing (điện toán lõi) và kiến trúc đa tiến trình của Chrome.</p>
-<p><strong>Lưu ý: Vui lòng bấm vào hình ảnh để xem chú thích của hình ảnh đó.</strong></p>
-<h2 id="nhan-may-tinh-chua-cpu-va-gpu">Nhân máy tính chứa CPU và GPU</h2>
-<p>Để hiểu môi trường mà trình duyệt sẽ chạy, ta cần hiểu một số thành phần trong máy tính trước đã.</p>
-<h3 id="cpu">CPU</h3>
-<p>Đầu tiên là <strong>CPU</strong> (<strong>C</strong>entral <strong>P</strong>rocessing <strong>U</strong>nit - đơn vị xử lý trung tâm). CPU có thể được xem như não bộ của máy tính. Một nhân CPU, như trong hình là một kiểu nhân viên văn phòng, có thể xử lý nhiều tác vụ lần lượt. Nó có thể xử lý mọi thứ từ toán cho đến mỹ thuật. Trong quá khứ, hầu hết các CPU là một chip đơn. Một core giống như một CPU khác ở trong cùng một con chịp. Trong phần cứng hiện đại, ta thường có nhiều hơn một core, mang lại nhiều sức mạnh tính toán hơn cho điện thoại và laptop của bạn.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được" href="../figure1.avif"><img alt="Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được" src="../figure1.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<h3 id="gpu">GPU</h3>
-<p><strong>GPU</strong> (<strong>G</strong>raphics <strong>P</strong>rocessing <strong>U</strong>nit - đơn vị xử lý đồ hoạ) là một phần khác của máy tính. Khác với CPU, GPU xử lý các tác vụ đơn giản nhưng trên nhiều core một lần. Giống như tên gọi thì ban đầu nó được phát triển để xử lý đồ hoạ. Đây là lý do vì sao mà trong các trường hợp "dùng GPU" hay "được hỗ trợ bởi GPU" thường đi liền với render nhanh và tương tác mượt mà. Trong những năm gần đây, với điện toán được GPU tăng tốc, ngày càng có thể thực hiện được nhiều tính toán hơn chỉ trên GPU.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản" href="../figure2.avif"><img alt="Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản" src="../figure2.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<p>Khi bạn khởi động một ứng dụng trên máy tính hoặc điện thoại, CPU và GPU là những thứ chính yếu của ứng dụng. Thông thường, các ứng dụng chạy trên CPU và GPU sử dụng các cơ chế do hệ điều hành cung cấp.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng" href="../figure3.avif"><img alt="Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng" src="../figure3.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<h2 id="khoi-chay-chuong-trinh-tren-process-va-thread">Khởi chạy chương trình trên Process và Thread</h2>
-<p>Một khái niệm nữa cần nắm trước khi đi sâu vào kiến trúc trình duyệt là Process và Thread. Một process có thể được xem như một chương trình thực thi của ứng dụng. Một thread là thứ nằm bên trong process và thực thi bất kỳ phần nào trong chương trình của process của nó.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process" href="../figure4.avif"><img alt="Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process" src="../figure4.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<p>Khi bạn khởi động một ứng dụng, một process sẽ được tạo ra. Chương trình có thể tạo các thread để giúp chương trình hoạt động, nhưng không bắt buộc. Hệ điều hành cung cấp cho process một khối bộ nhớ để hoạt động và tất cả các trạng thái của ứng dụng được giữ trong không gian bộ nhớ riêng đó. Khi đóng ứng dụng, process này cũng biến mất và hệ điều hành sẽ giải phóng bộ nhớ.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng" href="../figure5.svg"><img alt="Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng" src="../figure5.svg" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<p>Một process có thể yêu cầu hệ điều hành khởi động một process khác để chạy các tác vụ khác nhau. Khi điều này xảy ra, các phần khác nhau của bộ nhớ được phân bố cho process mới. Nếu hai process cần giao tiếp với nhau, chúng sẽ dùng <strong>IPC</strong> (<strong>I</strong>nter <strong>P</strong>rocess <strong>C</strong>ommunication - Giao tiếp giữa các process). Nhiều ứng dụng được thiết kế để hoạt động theo cách này sao cho nếu một worker process bị treo, nó có thể được khởi động lại mà không phải dừng các process khác đang chạy các phần khác nhau của ứng dụng.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC" href="../figure6.svg"><img alt="Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC" src="../figure6.svg" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<h2 id="kien-truc-trinh-duyet">Kiến trúc trình duyệt</h2>
-<p>Giờ thì trình duyệt được xây dựng dựa trên process và thread như thế nào? Có thể là một process với nhiều thread khác nhau hoặc nhiều process khác nhau với một ít thread giao tiếp với nhau qua IPC.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread" href="../figure7.avif"><img alt="Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread" src="../figure7.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
-<p>Một lưu ý quan trọng là các kiến trúc khác nhau này là các chi tiết cài đặt. Không có một chuẩn nào cho việc tạo ra một trình duyệt. Cách tiếp cận để xây dựng trình duyệt này có thể khác hoàn toàn với cách tiếp cận để xây dựng một trình duyệt khác.</p>
-<p>Ta sẽ chỉ tập trung vào kiến trúc bây giờ của Chrome được miêu tả trong sơ đồ bên dưới.</p>
-<p>Ở trên cùng là process trình duyệt phối hợp với các process khác để đảm nhiệm các phần khác nhau của ứng dụng. Với renderer process, nhiều process được tạo ra và gán cho mỗi tab. Cho đến gần đây, Chrome cho mỗi tab một process khi có thể; giờ nó cố gắng cho mỗi trang một process riêng, kể cả iframe (Ở phần Site Isolation).</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab" href="../figure8.avif"><img alt="Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab" src="../figure8.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<h2 id="cac-process-ieu-khien-cai-gi">Các Process điều khiển cái gì?</h2>
-<p>Bảng sau cho thấy các process của Chrome và những thứ chúng điều khiển:</p>
+<p><a href="https://developer.chrome.com/blog/inside-browser-part3/">Inside look at modern web browser (part 3) - Chrome Developers Blog</a></p>
+<h2 id="ben-trong-renderer-process">Bên trong Renderer Process</h2>
+<p>Đây là phần 3 trong series 4 phần về cách trình duyệt hoạt động. Trước đó, ta đã đi qua kiến trúc đa tiến trình và quá trình điều hướng. Trong phần này, ta sẽ xem điều gì xảy ra trong renderer process.</p>
+<p>Renderer process liên quan đến nhiều khía cạnh của hiệu suất web. Vì có rất nhiều thứ xảy ra trong renderer process, phần này sẽ chỉ là khái quát chung. Nếu bạn muốn đi sâu hơn, <a href="https://developers.google.com/web/fundamentals/performance/why-performance-matters/">phần Hiệu suất của Web cơ bản</a> có rất nhiều tài nguyên.</p>
+<h2 id="cac-renderer-process-xu-ly-noi-dung-web">Các renderer process xử lý nội dung web</h2>
+<p>Renderer process chịu trách nhiệm cho tất cả mọi thứ xảy ra trong một tab trên trình duyệt. Trong renderer process, main thread sẽ xử lý gần như mọi code bạn gửi cho user. Đôi khi các phần của code JavaScript được xử lý bởi các worker thread nếu bạn dùng một web worker hoặc một service worker. Các raster thread và compositor thread cũng được chạy trong renderer process để render trang một cách hiệu quả và mượt mà.</p>
+<p>Công việc chủ yếu của renderer process là chuyển HTML, CSS và JavaScript thành một trang web mà người dùng có thể tương tác.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong" href="../figure1.avif"><img alt="Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong" src="../figure1.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h2 id="parsing-phan-tich-cu-phap">Parsing (Phân tích cú pháp)</h2>
+<h3 id="xay-dung-dom">Xây dựng DOM</h3>
+<p>Khi renderer process nhận một thông báo commit cho điều hướng và bắt đầu nhận dữ liệu HTML, main thread bắt đầu parse (phân tích cú pháp) chuỗi văn bản (HTML) và biến nó thành Mô hình Đối tượng Tài liệu - <strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel (<strong>DOM</strong>).</p>
+<p>DOM là biểu diễn bên trong của trình duyệt về trang cũng như cấu trúc dữ liệu và API mà nhà phát triển web có thể tương tác qua JavaScript.</p>
+<p>Parse một tài liệu HTML thành DOM được định nghĩa bởi <a href="https://html.spec.whatwg.org/">Tiêu chuẩn HTML</a>. Bạn có thể nhận thấy rằng việc cung cấp HTML cho trình duyệt không bao giờ gây ra lỗi. Ví dụ, thiếu thẻ đóng <code>&lt;/p&gt;</code> là một HTML hợp lệ. Markup sai như <code>Hi! &lt;b&gt;I'm &lt;i&gt;Chrome&lt;/b&gt;!&lt;/i&gt;</code> (tag b đóng trước tag i) sẽ được xem như bạn viết <code>Hi! &lt;b&gt;I'm &lt;i&gt;Chrome&lt;/i&gt;&lt;/b&gt;&lt;i&gt;!&lt;/i&gt;</code>. Điều này là do đặc tả HTML được thiết kế để linh hoạt xử lý các lỗi đó. Nếu bạn muốn biết chúng được thực hiện như thế nào, bạn có thể đọc phần "<a href="https://html.spec.whatwg.org/multipage/parsing.html#an-introduction-to-error-handling-and-strange-cases-in-the-parser">Giới thiệu về xử lý lỗi và các trường hợp lạ trong parser</a>" của đặc tả HTML.</p>
+<h3 id="tai-nguon-phu">Tải nguồn phụ</h3>
+<p>Một website thường dùng các tài nguyên bên ngoài như hình ảnh, CSS và JavaScript. Các file này cần được tải từ mạng hoặc cache. Main thread <em>có thể</em> yêu cầu từng cái một khi nó tìm ra các tài nguyên đó trong lúc parse để xây dựng DOM, nhưng để tăng tốc, "scanner tải trước" được chạy đồng thời. Nếu có những thứ như <code>&lt;img&gt;</code> hoặc <code>&lt;link&gt;</code> trong tài liệu HTML, scanner tải trước sẽ xem xét mã thông báo do HTML parser tạo và gửi request đến network thread trong browser process.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 2: Main thread parse HTML và xây dựng cây DOM" href="../figure2.avif"><img alt="Hình 2: Main thread parse HTML và xây dựng cây DOM" src="../figure2.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h3 id="javascript-co-the-chan-parsing">JavaScript có thể chặn parsing</h3>
+<p>Khi HTML parser tìm thấy thẻ <code>&lt;script&gt;</code>, nó sẽ tạm dừng việc parse tài liệu HTML và phải tải, parse và thực thi code JavaScript. Vì sao? Bởi vì JavaScript có thể thay đổi tài liệu HTML với những thứ như <code>document.write()</code>, nó sẽ thay đổi toàn bộ cấu trúc DROM (<a href="https://html.spec.whatwg.org/multipage/parsing.html#overview-of-the-parsing-model">tổng quan về mô hình parsing</a> trong đặc tả HTML có một sơ đồ rất đẹp). Đây là lý do vì sao HTML parser phải đợi JavaScript chạy trước khi tiếp tục parse tài liệu HTML. Nếu bạn tò mò về những thứ xảy ra trong quá trình thực thi JavaScript, <a href="https://mathiasbynens.be/notes/shapes-ics">team V8 đã có những buổi toạ đàm và bài viết về vấn đề đó</a>.</p>
+<h2 id="goi-y-cho-trinh-duyet-rang-ban-muon-tai-tai-nguyen-nhu-the-nao">Gợi ý cho trình duyệt rằng bạn muốn tải tài nguyên như thế nào</h2>
+<p>Có nhiều cách để các nhà phát triển ứng dụng web có thể gửi gợi ý đến trình duyệt để tải tài nguyên theo thứ tự nào đó. Nếu code JavaScript của bạn không dùng <code>document.write()</code>, bạn có thể thêm các thuộc tính <a href="https://developer.mozilla.org/docs/Web/HTML/Element/script#attr-async"><code>async</code></a> hay <a href="https://developer.mozilla.org/docs/Web/HTML/Element/script#attr-defer"><code>defer</code></a> cho thẻ <code>&lt;script&gt;</code>. Trình duyệt sẽ tải và chạy code JavaScript một cách bất đồng bộ và không làm gián đoạn việc parse. Bạn có thể dùng <a href="https://developers.google.com/web/fundamentals/primers/modules">JavaScript module</a> nếu thấy hợp lý. <code>&lt;link rel="preload"&gt;</code> là một cách để báo cho trình duyệt rằng tài nguyên là rất cần thiết cho việc điều hướng bây giờ và bạn muốn tải càng sớm càng tốt. Bạn có thể đọc thêm tại <a href="https://developers.google.com/web/fundamentals/performance/resource-prioritization">Ưu tiên tài nguyên - Nhờ trình duyệt giúp bạn</a>.</p>
+<h2 id="tinh-toan-cho-cac-style">Tính toán cho các style</h2>
+<p>DOM là chưa đủ để biết trang web sẽ trông như thế nào vì ta cần các style trong CSS. Main thread sẽ parse CSS và quyết định computed style cho từng node DOM. Đây là thông tin về loại style được áp dụng cho từng element dựa trên bộ chọn CSS. Bạn có thể xem thông tin này trong phần <code>computed</code> của DevTools.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 3: Main thread parse CSS để thêm các computed style vào" href="../figure3.avif"><img alt="Hình 3: Main thread parse CSS để thêm các computed style vào" src="../figure3.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Ngay cả khi nếu bạn không cung cấp CSS, mỗi DOM node vẫn có một style được tính toán. Tag <code>&lt;h1&gt;</code> được hiển thị to hơn tag <code>&lt;h2&gt;</code> và margin được định nghĩa cho mỗi element. Lý do là vì browser có CSS mặc định. Nếu bạn muốn biết CSS mặc định của Chrome trông như nào, <a href="https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/html/resources/html.css">bạn có thể xem source code ở đây</a>.</p>
+<h2 id="layout">Layout</h2>
+<p>Giờ renderer process đã biết cấu trúc của tài liệu và style cho từng node, nhưng vẫn không đủ để render trang. Tưởng tượng bạn đang cố gắng miêu tả một bức vẽ cho bạn của mình qua điện thoại. "Có một hình tròn lớn màu đủ và một hình vuông nhỏ màu xanh" là không đủ thông tin để bạn của bạn biết chính xác bức vẽ trông thế nào.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác" href="../figure4.avif"><img alt="Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác" src="../figure4.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Layout (bố cục) là một process để tìm hình dạng của các element. Main thread sẽ đi qua DOM và các computed style và tạo cây layout, nó sẽ có các thông tin như toạ độ x y và kích thước hộp giới hạn. Cây layout có cấu trúc tương tự cây DOM, nhưng nó chỉ chứa thông tin liên quan đến những gì hiển thị trên trang. Nếu <code>display: none</code> được áp dụng, element đó không nằm trong layout tree (tuy nhiên, element với <code>visibility: hidden</code> vẫn nằm trên cây layout). Tương tự, nếu một lớp giả với nội dung như <code>p::before{content:"Hi!"}</code> được áp dụng, nó sẽ nằm trong cây layout mặc dù nó không nằm trong DOM.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout" href="../figure5.avif"><img alt="Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout" src="../figure5.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Xác định layout của trang là một việc khó. Ngay cả layout của trang đơn giản nhất như một đống block từ trên xuống dưới cũng phải xem xét độ lớn của font chữ và vị trí ngắt dòng vì chúng ảnh hưởng đến kích thước và hình dạng của đoạn văn; mà sau đó ảnh hưởng đến vị trí của đoạn sau, như video dưới đây.</p>
+<video controls>
+    <source id="mp4" src="../figure6.mp4" type="video/mp4">
+</video>
+
+<p>CSS có thể làm cho phần tử nổi sang một bên, che phần mục tràn và thay đổi hướng viết. Bạn có thể tưởng tượng, giai đoạn layout này có một nhiệm vụ to lớn. Trong Chrome, toàn bộ team kỹ sư làm việc trên layout. Nếu bạn muốn xem chi tiết về công việc của họ, bạn có thể xem <a href="https://www.youtube.com/watch?v=Y5Xa4H2wtVA">một vài buổi toạ đàm từ Hội nghị BlinkOn</a>.</p>
+<h2 id="ve">Vẽ</h2>
+<p>Có DOM, style, và layout vẫn chưa đủ để render trang. Giả sử bạn muốn vẽ lại bức tranh đó. Bạn biết kích thước, hình dáng và vị trí các element, nhưng theo thứ tự nào?</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước" href="../figure7.avif"><img alt="Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước" src="../figure7.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Ví dụ, <code>z-index</code> có thể được set cho một số element nhất định, trong trường hợp đó, vẽ theo thứ tự trên HTML sẽ cho ra kết quả sai khi render.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng" href="../figure8.avif"><img alt="Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng" src="../figure8.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Ở bước vẽ này, main thread sẽ đi qua cây layout để tạo ra các bản ghi vẽ. Bản ghi vẽ (paint record) là một ghi chú của quá trình vẽ như "nền trước, rồi chữ, rồi đến hình chữ nhật". Nếu bạn từng vẽ trên element <code>&lt;canvas&gt;</code> với JavaScript, bạn sẽ quen với quá trình này.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ" href="../figure9.avif"><img alt="Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ" src="../figure9.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h3 id="cap-nhat-rendering-pipeline-rat-ton-kem">Cập nhật rendering pipeline rất tốn kém.</h3>
+<p>Điều quan trọng nhất cần nắm bắt trong renderer pipeline là ở mỗi bước, kết quả của thao tác trước đó được sử dụng để tạo dữ liệu mới. Ví dụ, nếu có gì đó thay đổi trong cây layout, thì thứ tự vẽ cần được tạo lại cho các phần bị ảnh hưởng của tài liệu. Video bên dưới cho thấy các cây DOM + Style, Layout và Paint theo thứ tự chúng được sinh ra.</p>
+<video controls>
+    <source id="mp4" src="../figure10.mp4" type="video/mp4">
+</video>
+
+<p>Nếu bạn đang tạo hiệu ứng cho các element, trình duyệt phải chạy các thao tác này ở giữa mọi frame. Hầu hết các display sẽ refresh 60 lần một giây (60 frame/giây); hình ảnh động sẽ xuất hiện mượt mà đối với mắt người khi bạn di chuyển mọi thứ trên màn hình ở mọi frame. Tuy nhiên, nếu hoạt ảnh mất đi các frame ở giữa, thì trang sẽ xuất hiện một cách "lộn xộn".</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 11: Các frame hoạt ảnh trên dòng thời gian" href="../figure11.avif"><img alt="Hình 11: Các frame hoạt ảnh trên dòng thời gian" src="../figure11.avif" style="display: block; margin: 0 auto; height: 150px" /></a></div></p>
+<p>Ngay cả khi các hoạt động render của bạn theo kịp quá trình refresh màn hình, thì các tính toán này vẫn đang chạy trên main thread, nghĩa là thread này có thể bị chặn khi ứng dụng của bạn đang chạy JavaScript.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript" href="../figure12.avif"><img alt="Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript" src="../figure12.avif" style="display: block; margin: 0 auto; height: 150px" /></a></div></p>
+<p>Bạn có thể chia thao tác JavaScript thành các phần nhỏ và lên lịch chạy ở mọi frame bằng cách sử dụng <code>requestAnimationFrame()</code>. Để biết thêm về chủ đề này, vui lòng xem <a href="https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution">Tối ưu hóa thực thi JavaScript</a>. Bạn cũng có thể chạy <a href="https://www.youtube.com/watch?v=X57mh8tKkgE">JavaScript trong Web Worker</a> để tránh chặn main thread.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh" href="../figure13.avif"><img alt="Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh" src="../figure13.avif" style="display: block; margin: 0 auto; height: 150px" /></a></div></p>
+<h2 id="compositor">Compositor</h2>
+<h3 id="ban-ve-mot-trang-nhu-the-nao">Bạn vẽ một trang như thế nào?</h3>
+<p>Bây giờ trình duyệt đã biết cấu trúc của tài liệu, style của từng element, hình dạng của trang và thứ tự tô màu, vậy nó sẽ vẽ một trang như thế nào? Biến thông tin này thành pixel trên màn hình được gọi là <strong>rasterizing</strong>.</p>
+<p>Có lẽ một cách ngây thơ để xử lý việc này là raster các phần bên trong viewport (tầm nhìn của màn hình). Nếu người dùng cuộn trang, sau đó di chuyển frame đã raster và điền vào các phần còn thiếu bằng cách raster nhiều hơn, giống video bên dưới. Đây là cách Chrome xử lý rasterizing khi nó được phát hành lần đầu tiên. Tuy nhiên, trình duyệt hiện đại chạy một quy trình phức tạp hơn được gọi là compositing (tổng hợp).</p>
+<video controls>
+    <source id="mp4" src="../figure14.mp4" type="video/mp4">
+</video>
+
+<h3 id="compositing-la-gi">Compositing là gì?</h3>
+<p>Compositing là một kỹ thuật để tách các phần của trang thành các layer, rasterize từng layer và tổng hợp dưới dạng một trang trong một thread riêng biệt được gọi là compositor thread. Nếu cuộn trang xảy ra, vì các lớp đã được rasterized, tất cả những gì nó phải làm là composite một frame mới. Hoạt ảnh có thể đạt được theo cách tương tự bằng cách di chuyển các layer và composite một frame mới, như video bên dưới.</p>
+<video controls>
+    <source id="mp4" src="../figure15.mp4" type="video/mp4">
+</video>
+
+<p>Bạn có thể xem cách trang web của mình được chia thành các layer trong DevTools bằng cách sử dụng <a href="https://blog.logrocket.com/eliminate-content-repaints-with-the-new-layers-panel-in-chrome-e2c306d4d752?gi=cd6271834cea">bảng Layers</a>.</p>
+<h3 id="chia-ra-thanh-cac-layer">Chia ra thành các layer</h3>
+<p>Để tìm ra mỗi element nằm trong layer nào, main thread đi qua cây layout để tạo cây layer (phần này được gọi là "Cập nhật cây layer" trong bảng hiệu suất DevTools). Nếu một số phần của trang lẽ ra là layer riêng biệt (như menu bên trượt vào) mà không có layer riêng, thì bạn có thể gợi ý cho trình duyệt bằng cách sử dụng thuộc tính <code>will-change</code> trong CSS.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 16: Main thread đi qua cây layout để tạo ra cây layer" href="../figure16.avif"><img alt="Hình 16: Main thread đi qua cây layout để tạo ra cây layer" src="../figure16.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Bạn có thể muốn cung cấp các layer cho mọi element, nhưng việc composite trên một số lượng lớn các layer có thể dẫn đến hoạt động chậm hơn so với việc rasterizing các phần nhỏ của trang trên mỗi frame, vì vậy, điều quan trọng là bạn phải đo hiệu suất render của ứng dụng của mình. Để biết thêm về chủ đề này, hãy xem <a href="https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count">Bám sát các thuộc tính chỉ dành cho Compositor và Quản lý số lượng Layer</a>.</p>
+<h3 id="raster-va-composite-khong-lien-quan-en-main-thread">Raster và composite không liên quan đến main thread</h3>
+<p>Khi cây layer được tạo và thứ tự vẽ được xác định, main thread sẽ commit thông tin đó cho compositor thread. Compositor thread sau đó rasterize từng layer. Một layer có thể lớn bằng toàn bộ chiều dài của một trang, do đó, compositor thread chia chúng thành các ô và gửi từng ô tới các raster thread. Các raster thread sẽ rasterize từng ô và lưu chúng trong bộ nhớ GPU.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU" href="../figure17.avif"><img alt="Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU" src="../figure17.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Compositor thread có thể ưu tiên các raster thread khác nhau để những thứ trong viewport(hoặc gần đó) có thể được raster trước. Một layer cũng có nhiều ô cho các độ phân giải khác nhau để xử lý những thứ như phóng to chẳng hạn.</p>
+<p>Sau khi các ô được raster, compositor thread sẽ thu thập thông tin ô được gọi là <strong>draw quads</strong> để tạo <strong>compositor frame</strong>.</p>
 <table>
 <thead>
 <tr>
-<th align="center">Process</th>
-<th align="left">Điều khiển</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Trình duyệt</td>
-<td align="left">Điều khiển phần "chrome" của ứng dụng bao gồm thanh địa chỉ, bookmark, nút quay lại trang trước và đi tiếp trang sau. <br/> Xử lý các phần ẩn, đặc quyền của trình duyệt như network request hay truy cập file.</td>
+<td>Draw quad</td>
+<td>Chứa thông tin như vị trí của ô trong bộ nhớ và vị trí trong trang để vẽ ô, có tính đến việc composite trang.</td>
 </tr>
 <tr>
-<td align="center">Renderer</td>
-<td align="left">Điều khiển bất cứ cái gì trong tab, nơi mà website được hiển thị.</td>
-</tr>
-<tr>
-<td align="center">Plugin</td>
-<td align="left">Điều khiển bất kỳ plugin nào dùng bởi website, ví dụ như flash.</td>
-</tr>
-<tr>
-<td align="center">GPU</td>
-<td align="left">Xử lý các tác vụ GPU riêng biệt, tách ra khỏi các process khác. Nó được phân ra riêng vì các GPU xử lý các yêu cầu từ nhiều ứng dụng và vẽ chúng trên cùng một chỗ</td>
+<td>Compositor frame</td>
+<td>Tập các draw quad đại diện cho một frame của trang.</td>
 </tr>
 </tbody>
 </table>
-<p><div class="lightgallery"><a data-sub-html="Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt" href="../figure9.avif"><img alt="Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt" src="../figure9.avif" style="display: block; margin: 0 auto; height: 400px" /></a></div></p>
-<p>Còn có nhiều process hơn nữa như là process cho các tiện ích mở rộng hay process cho các tiện ích khác. Nếu bạn muốn xem có bao nhiêu process đang chạy trong Chrome, bấm vào dấu ba chấm ở góc phải trên của Chrome, chọn More Tools, rồi chọn Task Manager. Một cửa sổ sẽ hiện lên với danh sách các process đang chạy và chúng đang dùng bao nhiêu CPU / Bộ nhớ.</p>
-<h2 id="loi-ich-cua-kien-truc-a-tien-trinh-trong-chrome">Lợi ích của kiến trúc đa tiến trình trong Chrome</h2>
-<p>Trước đó, ta đã đề cập đến việc Chrome sử dụng nhiều renderer process. Trong trường hợp đơn giản nhất, ta có thể tưởng tượng mỗi tab có một renderer process riêng. Giả sử bạn có 3 tab đang mở và mỗi tab được chạy bởi một renderer process độc lập. Nếu một tab bị treo, thì bạn có thể đóng tab đó trong khi vẫn giữ cho các tab khác hoạt động. Nếu tất cả các tab đang chạy trên một process, khi một tab treo, các tab khác cũng treo luôn. Khá buồn.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab" href="../figure10.avif"><img alt="Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab" src="../figure10.avif" style="display: block; margin: 0 auto; height: 400px" /></a></div></p>
-<p>Một lợi ích khác của việc tách công việc của trình duyệt thành nhiều process là do tính bảo mật và độc lập. Vì các hệ điều hành cung cấp một cách để hạn chế các quyền của các process, trình duyệt có thể sandbox một số process nhất định từ các tính năng nhất định. Ví dụ, trình duyệt Chrome hạn chế quyền truy cập file tuỳ ý đối với các process xử lý đầu vào tuỳ ý của người dùng như renderer process.</p>
-<p>Vì các process có không gian bộ nhớ riêng nên chúng thường chứa bản sao của cơ sở hạ tầng chung (như V8 là công cụ JavaScript của Chrome). Điều này nghĩa là sử dụng nhiều bộ nhớ hơn vì chúng không thể được chia sẻ theo cách truyền thống nếu chúng là các thread trong cùng một process. Để tiết kiệm bộ nhớ, Chrome đặt giới hạn về số process có thể thực hiện. Giới hạn khác nhau tuỳ vào dung lượng bộ nhớ và sức mạnh CPU mà thiết bị có, nhưng khi Chrome đạt giới hạn, nó sẽ bắt đầu chạy nhiều tab của cùng một trang trên cùng một process.</p>
-<h2 id="tiet-kiem-nhieu-bo-nho-hon-servicification-trong-chrome">Tiết kiệm nhiều bộ nhớ hơn - Servicification trong Chrome</h2>
-<p>Cách tiếp cận tương tự cũng được áp dụng cho process trình duyệt. Chrome đang tiến hành các thay đổi về kiến trúc để chạy từng phần của trình duyệt dưới dạng một service cho phép phân chia dễ dàng các process khác nhau hoặc tổng hợp thành một.</p>
-<p>Ý tưởng chung là khi Chrome đang chạy trên phần cứng mạnh mẽ, nó có thể chia từng service thành các process khác nhau để giữ tính ổn định. Nhưng nếu chạy trên một thiết bị hạn chế tài nguyên, Chrome sẽ hợp nhất các service thành một process để tiết kiệm bộ nhớ. Cách tiếp cận tương tự về hợp nhất các process để sử dụng ít bộ nhớ hơn đã được dùng trên các nền tảng khác như Android trước khi có sự thay đổi này.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn" href="../figure11.svg"><img alt="Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn" src="../figure11.svg" style="display: block; margin: 0 auto; height: 400px" /></a></div></p>
-<h2 id="renderer-process-tren-moi-frame-site-isolation">Renderer process trên mỗi frame - Site Isolation</h2>
-<p><a href="https://developers.google.com//web/updates/2018/07/site-isolation">Site Isolation</a> (cách ly trang web) là một tính năng được giới thiệu gần đây trong Chrome, nó chạy các renderer process khác nhau cho từng iframe của các trang web khác (cross-site iframe) trên cùng một tab. Ta đã nói về một renderer process trên mỗi tab cho phép các iframe của các trang web khác chạy một renderer process với không gian bộ nhớ chia sẻ trên các site khác nhau. Chạy <code>a.com</code> và <code>b.com</code> trên cùng một renderer process nghe có vẻ ổn. <a href="https://developer.mozilla.org/docs/Web/Security/Same-origin_policy">Same Origin Policy</a> (chính sách xuất xứ giống nhau) là mô hình bảo mật cốt lõi của web; nó bảo đảm một trang web không thể truy cập dữ liệu từ các web khác mà không có sự đồng ý. Bỏ qua chính sách này là một lỗ hổng lớn cho các cuộc tấn công mạng. Việc cách ly các process là cách hiệu quả nhất để tách các trang web. Với <a href="https://developers.google.com/web/updates/2018/02/meltdown-spectre">Meltdown và Spectre</a>, rõ ràng hơn là chúng ta cần tách các trang web bằng các process. Với Site Isolation được áp dụng mặc định trên Chrome desktop từ bản 67, mỗi iframe của các trang web khác trong một tab có một renderer process riêng.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web" href="../figure12.avif"><img alt="Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web" src="../figure12.avif" style="display: block; margin: 0 auto; height: 400px" /></a></div></p>
-<p>Cho phép Site Isolation là một nỗ lực trong nhiều năm của đội ngũ kỹ sư. Site Isolation không đơn giản chỉ là chỉ định các renderer process khác nhau; về cơ bản nó thay đổi cách các iframe giao tiếp với nhau. Mở devtools trên một trang có iframe chạy trên các process khác nhau nghĩa là devtools phải triển khai công việc hậu trường để làm nó xuất hiện liền mạch. Ngay cả việc chạy <code>Ctrl+F</code> đơn giản để tìm một từ trong trang cũng có nghĩa là tìm kiếm trên nhiều renderer process khác nhau. Bạn có thể thấy vì sao các kỹ sư trình duyệt nói về việc phát hành Site Isolation như là một cột mốc đỉnh cao!</p>
-<h2 id="ket-phan-1">Kết phần 1</h2>
-<p>Trong phần này, ta đã đi qua góc nhìn cơ bản của kiến trúc trình duyệt và lợi ích của kiến trúc đa tiến trình. Ta cũng đi qua Servicification và Site Isolation trong Chrome, những thứ cực kỳ liên quan đến kiến trúc đa tiến trình. Trong phần sau, ta sẽ khám phá chuyện gì xảy ra giữa các process và thread này để hiển thị website.</p>
+<p>Một compositor frame sau đó được gửi tới browser process thông qua IPC. Ở đây, một compositor frame khác có thể được thêm vào từ UI thread để thay đổi UI của trình duyệt hoặc từ các renderer process khác dành cho tiện ích mở rộng. Các compositor frame này được gửi đến GPU để hiển thị trên màn hình. Nếu một sự kiện cuộn xảy ra, compositor thread sẽ tạo một compositor frame khác để gửi tới GPU.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU" href="../figure18.avif"><img alt="Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU" src="../figure18.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Lợi ích của việc composite là nó được thực hiện mà không liên quan đến main thread. Compositor thread không cần đợi tính toán style hoặc thực thi JavaScript. Đây là lý do tại sao các <a href="https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">hoạt-ảnh-chỉ-cần-composite</a> được coi là tốt nhất để có hiệu suất mượt mà. Nếu layout hoặc paint cần được tính toán lại thì main thread phải tham gia.</p>
+<h2 id="ket-phan-3">Kết phần 3</h2>
+<p>Trong phần này, ta đã xem qua rendering pipeline từ parsing đến compositing. Hi vọng rằng bạn đã đủ khả năng để đọc thêm về tối ưu hoá hiệu suất của một trang web.</p>
+<p>Trong phần tiếp theo và cũng là phần cuối, ta sẽ nghiên cứu compositor thread chi tiết hơn và xem điều gì xảy ra khi người dùng nhập liệu cũng như di chuyển và nhấp chuột.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/03/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">05/04/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/03/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">05/04/2023 (GMT+07)</span>
       
     
   </small>
