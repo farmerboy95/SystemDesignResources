@@ -30,4 +30,4 @@ hide:
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
         - [Bên trong các trình duyệt ngày nay (Phần 2)](Misc/chrome_blog/inside_browser_2/inside_browser_2.md)
         - [Bên trong các trình duyệt ngày nay (Phần 3)](Misc/chrome_blog/inside_browser_3/inside_browser_3.md)
-        - [Bên trong các trình duyệt ngày nay (Phần 4) - Sắp ra mắt](Misc/chrome_blog/inside_browser_4/inside_browser_4.md)
+        - [Bên trong các trình duyệt ngày nay (Phần 4)](Misc/chrome_blog/inside_browser_4/inside_browser_4.md)
