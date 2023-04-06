@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/Misc/chrome_blog/inside_browser_3/inside_browser_3/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/Misc/chrome_blog/inside_browser_4/inside_browser_4/">
       
       
-        <link rel="prev" href="../../inside_browser_2/inside_browser_2/">
+        <link rel="prev" href="../../inside_browser_3/inside_browser_3/">
       
-      
-        <link rel="next" href="../../inside_browser_4/inside_browser_4/">
       
       <link rel="icon" href="../../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Bên trong các trình duyệt ngày nay (Phần 3) - farmerboy's System Design Resources</title>
+        <title>Bên trong các trình duyệt ngày nay (Phần 4) - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ben-trong-cac-trinh-duyet-ngay-nay-phan-3" class="md-skip">
+        <a href="#ben-trong-cac-trinh-duyet-ngay-nay-phan-4" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bên trong các trình duyệt ngày nay (Phần 3)
+              Bên trong các trình duyệt ngày nay (Phần 4)
             
           </span>
         </div>
@@ -754,6 +752,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../inside_browser_3/inside_browser_3/" class="md-nav__link">
+        Bên trong các trình duyệt ngày nay (Phần 3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -766,12 +778,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Bên trong các trình duyệt ngày nay (Phần 3)
+          Bên trong các trình duyệt ngày nay (Phần 4)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Bên trong các trình duyệt ngày nay (Phần 3)
+        Bên trong các trình duyệt ngày nay (Phần 4)
       </a>
       
         
@@ -797,44 +809,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ben-trong-renderer-process" class="md-nav__link">
-    Bên trong Renderer Process
+  <a href="#input-i-en-compositor" class="md-nav__link">
+    Input đi đến Compositor
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cac-renderer-process-xu-ly-noi-dung-web" class="md-nav__link">
-    Các renderer process xử lý nội dung web
+  <a href="#cac-input-event-tu-goc-nhin-trinh-duyet" class="md-nav__link">
+    Các input event từ góc nhìn trình duyệt
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parsing-phan-tich-cu-phap" class="md-nav__link">
-    Parsing (Phân tích cú pháp)
+  <a href="#compositor-nhan-cac-input-event" class="md-nav__link">
+    Compositor nhận các input event
   </a>
   
-    <nav class="md-nav" aria-label="Parsing (Phân tích cú pháp)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hieu-ve-non-fast-scrollable-region" class="md-nav__link">
+    Hiểu về non-fast scrollable region
+  </a>
+  
+    <nav class="md-nav" aria-label="Hiểu về non-fast scrollable region">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xay-dung-dom" class="md-nav__link">
-    Xây dựng DOM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tai-nguon-phu" class="md-nav__link">
-    Tải nguồn phụ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#javascript-co-the-chan-parsing" class="md-nav__link">
-    JavaScript có thể chặn parsing
+  <a href="#e-y-khi-viet-event-handler" class="md-nav__link">
+    Để ý khi viết event handler
   </a>
   
 </li>
@@ -845,37 +850,58 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#goi-y-cho-trinh-duyet-rang-ban-muon-tai-tai-nguyen-nhu-the-nao" class="md-nav__link">
-    Gợi ý cho trình duyệt rằng bạn muốn tải tài nguyên như thế nào
+  <a href="#kiem-tra-xem-co-huy-event-uoc-khong" class="md-nav__link">
+    Kiểm tra xem có huỷ event được không
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tinh-toan-cho-cac-style" class="md-nav__link">
-    Tính toán cho các style
+  <a href="#tim-event-target" class="md-nav__link">
+    Tìm event target
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#layout" class="md-nav__link">
-    Layout
+  <a href="#giam-thieu-viec-gui-event-en-main-thread" class="md-nav__link">
+    Giảm thiểu việc gửi event đến main thread
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ve" class="md-nav__link">
-    Vẽ
+  <a href="#su-dung-getcoalescedevents-e-nhan-cac-event-trong-frame" class="md-nav__link">
+    Sử dụng getCoalescedEvents để nhận các event trong frame
   </a>
   
-    <nav class="md-nav" aria-label="Vẽ">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-buoc-tiep-theo" class="md-nav__link">
+    Các bước tiếp theo
+  </a>
+  
+    <nav class="md-nav" aria-label="Các bước tiếp theo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cap-nhat-rendering-pipeline-rat-ton-kem" class="md-nav__link">
-    Cập nhật rendering pipeline rất tốn kém.
+  <a href="#dung-lighthouse" class="md-nav__link">
+    Dùng Lighthouse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoc-cach-o-luong-hieu-suat" class="md-nav__link">
+    Học cách đo lường hiệu suất
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#them-feature-policy-vao-trang-cua-ban" class="md-nav__link">
+    Thêm Feature Policy vào trang của bạn
   </a>
   
 </li>
@@ -886,49 +912,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compositor" class="md-nav__link">
-    Compositor
-  </a>
-  
-    <nav class="md-nav" aria-label="Compositor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ban-ve-mot-trang-nhu-the-nao" class="md-nav__link">
-    Bạn vẽ một trang như thế nào?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compositing-la-gi" class="md-nav__link">
-    Compositing là gì?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chia-ra-thanh-cac-layer" class="md-nav__link">
-    Chia ra thành các layer
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#raster-va-composite-khong-lien-quan-en-main-thread" class="md-nav__link">
-    Raster và composite không liên quan đến main thread
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-phan-3" class="md-nav__link">
-    Kết phần 3
+  <a href="#ket-phan-4" class="md-nav__link">
+    Kết phần 4
   </a>
   
 </li>
@@ -937,20 +922,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../inside_browser_4/inside_browser_4/" class="md-nav__link">
-        Bên trong các trình duyệt ngày nay (Phần 4)
-      </a>
     </li>
   
 
@@ -1003,44 +974,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ben-trong-renderer-process" class="md-nav__link">
-    Bên trong Renderer Process
+  <a href="#input-i-en-compositor" class="md-nav__link">
+    Input đi đến Compositor
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cac-renderer-process-xu-ly-noi-dung-web" class="md-nav__link">
-    Các renderer process xử lý nội dung web
+  <a href="#cac-input-event-tu-goc-nhin-trinh-duyet" class="md-nav__link">
+    Các input event từ góc nhìn trình duyệt
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parsing-phan-tich-cu-phap" class="md-nav__link">
-    Parsing (Phân tích cú pháp)
+  <a href="#compositor-nhan-cac-input-event" class="md-nav__link">
+    Compositor nhận các input event
   </a>
   
-    <nav class="md-nav" aria-label="Parsing (Phân tích cú pháp)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hieu-ve-non-fast-scrollable-region" class="md-nav__link">
+    Hiểu về non-fast scrollable region
+  </a>
+  
+    <nav class="md-nav" aria-label="Hiểu về non-fast scrollable region">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xay-dung-dom" class="md-nav__link">
-    Xây dựng DOM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tai-nguon-phu" class="md-nav__link">
-    Tải nguồn phụ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#javascript-co-the-chan-parsing" class="md-nav__link">
-    JavaScript có thể chặn parsing
+  <a href="#e-y-khi-viet-event-handler" class="md-nav__link">
+    Để ý khi viết event handler
   </a>
   
 </li>
@@ -1051,37 +1015,58 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#goi-y-cho-trinh-duyet-rang-ban-muon-tai-tai-nguyen-nhu-the-nao" class="md-nav__link">
-    Gợi ý cho trình duyệt rằng bạn muốn tải tài nguyên như thế nào
+  <a href="#kiem-tra-xem-co-huy-event-uoc-khong" class="md-nav__link">
+    Kiểm tra xem có huỷ event được không
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tinh-toan-cho-cac-style" class="md-nav__link">
-    Tính toán cho các style
+  <a href="#tim-event-target" class="md-nav__link">
+    Tìm event target
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#layout" class="md-nav__link">
-    Layout
+  <a href="#giam-thieu-viec-gui-event-en-main-thread" class="md-nav__link">
+    Giảm thiểu việc gửi event đến main thread
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ve" class="md-nav__link">
-    Vẽ
+  <a href="#su-dung-getcoalescedevents-e-nhan-cac-event-trong-frame" class="md-nav__link">
+    Sử dụng getCoalescedEvents để nhận các event trong frame
   </a>
   
-    <nav class="md-nav" aria-label="Vẽ">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-buoc-tiep-theo" class="md-nav__link">
+    Các bước tiếp theo
+  </a>
+  
+    <nav class="md-nav" aria-label="Các bước tiếp theo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cap-nhat-rendering-pipeline-rat-ton-kem" class="md-nav__link">
-    Cập nhật rendering pipeline rất tốn kém.
+  <a href="#dung-lighthouse" class="md-nav__link">
+    Dùng Lighthouse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoc-cach-o-luong-hieu-suat" class="md-nav__link">
+    Học cách đo lường hiệu suất
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#them-feature-policy-vao-trang-cua-ban" class="md-nav__link">
+    Thêm Feature Policy vào trang của bạn
   </a>
   
 </li>
@@ -1092,49 +1077,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compositor" class="md-nav__link">
-    Compositor
-  </a>
-  
-    <nav class="md-nav" aria-label="Compositor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ban-ve-mot-trang-nhu-the-nao" class="md-nav__link">
-    Bạn vẽ một trang như thế nào?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compositing-la-gi" class="md-nav__link">
-    Compositing là gì?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chia-ra-thanh-cac-layer" class="md-nav__link">
-    Chia ra thành các layer
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#raster-va-composite-khong-lien-quan-en-main-thread" class="md-nav__link">
-    Raster và composite không liên quan đến main thread
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-phan-3" class="md-nav__link">
-    Kết phần 3
+  <a href="#ket-phan-4" class="md-nav__link">
+    Kết phần 4
   </a>
   
 </li>
@@ -1158,121 +1102,102 @@
   
 
 
-<h1 id="ben-trong-cac-trinh-duyet-ngay-nay-phan-3">Bên trong các trình duyệt ngày nay (Phần 3)</h1>
+<h1 id="ben-trong-cac-trinh-duyet-ngay-nay-phan-4">Bên trong các trình duyệt ngày nay (Phần 4)</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a href="https://developer.chrome.com/blog/inside-browser-part3/">Inside look at modern web browser (part 3) - Chrome Developers Blog</a></p>
-<h2 id="ben-trong-renderer-process">Bên trong Renderer Process</h2>
-<p>Đây là phần 3 trong series 4 phần về cách trình duyệt hoạt động. Trước đó, ta đã đi qua kiến trúc đa tiến trình và quá trình điều hướng. Trong phần này, ta sẽ xem điều gì xảy ra trong renderer process.</p>
-<p>Renderer process liên quan đến nhiều khía cạnh của hiệu suất web. Vì có rất nhiều thứ xảy ra trong renderer process, phần này sẽ chỉ là khái quát chung. Nếu bạn muốn đi sâu hơn, <a href="https://developers.google.com/web/fundamentals/performance/why-performance-matters/">phần Hiệu suất của Web cơ bản</a> có rất nhiều tài nguyên.</p>
-<h2 id="cac-renderer-process-xu-ly-noi-dung-web">Các renderer process xử lý nội dung web</h2>
-<p>Renderer process chịu trách nhiệm cho tất cả mọi thứ xảy ra trong một tab trên trình duyệt. Trong renderer process, main thread sẽ xử lý gần như mọi code bạn gửi cho user. Đôi khi các phần của code JavaScript được xử lý bởi các worker thread nếu bạn dùng một web worker hoặc một service worker. Các raster thread và compositor thread cũng được chạy trong renderer process để render trang một cách hiệu quả và mượt mà.</p>
-<p>Công việc chủ yếu của renderer process là chuyển HTML, CSS và JavaScript thành một trang web mà người dùng có thể tương tác.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong" href="../figure1.avif"><img alt="Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong" src="../figure1.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<h2 id="parsing-phan-tich-cu-phap">Parsing (Phân tích cú pháp)</h2>
-<h3 id="xay-dung-dom">Xây dựng DOM</h3>
-<p>Khi renderer process nhận một thông báo commit cho điều hướng và bắt đầu nhận dữ liệu HTML, main thread bắt đầu parse (phân tích cú pháp) chuỗi văn bản (HTML) và biến nó thành Mô hình Đối tượng Tài liệu - <strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel (<strong>DOM</strong>).</p>
-<p>DOM là biểu diễn bên trong của trình duyệt về trang cũng như cấu trúc dữ liệu và API mà nhà phát triển web có thể tương tác qua JavaScript.</p>
-<p>Parse một tài liệu HTML thành DOM được định nghĩa bởi <a href="https://html.spec.whatwg.org/">Tiêu chuẩn HTML</a>. Bạn có thể nhận thấy rằng việc cung cấp HTML cho trình duyệt không bao giờ gây ra lỗi. Ví dụ, thiếu thẻ đóng <code>&lt;/p&gt;</code> là một HTML hợp lệ. Markup sai như <code>Hi! &lt;b&gt;I'm &lt;i&gt;Chrome&lt;/b&gt;!&lt;/i&gt;</code> (tag b đóng trước tag i) sẽ được xem như bạn viết <code>Hi! &lt;b&gt;I'm &lt;i&gt;Chrome&lt;/i&gt;&lt;/b&gt;&lt;i&gt;!&lt;/i&gt;</code>. Điều này là do đặc tả HTML được thiết kế để linh hoạt xử lý các lỗi đó. Nếu bạn muốn biết chúng được thực hiện như thế nào, bạn có thể đọc phần "<a href="https://html.spec.whatwg.org/multipage/parsing.html#an-introduction-to-error-handling-and-strange-cases-in-the-parser">Giới thiệu về xử lý lỗi và các trường hợp lạ trong parser</a>" của đặc tả HTML.</p>
-<h3 id="tai-nguon-phu">Tải nguồn phụ</h3>
-<p>Một website thường dùng các tài nguyên bên ngoài như hình ảnh, CSS và JavaScript. Các file này cần được tải từ mạng hoặc cache. Main thread <em>có thể</em> yêu cầu từng cái một khi nó tìm ra các tài nguyên đó trong lúc parse để xây dựng DOM, nhưng để tăng tốc, "scanner tải trước" được chạy đồng thời. Nếu có những thứ như <code>&lt;img&gt;</code> hoặc <code>&lt;link&gt;</code> trong tài liệu HTML, scanner tải trước sẽ xem xét mã thông báo do HTML parser tạo và gửi request đến network thread trong browser process.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 2: Main thread parse HTML và xây dựng cây DOM" href="../figure2.avif"><img alt="Hình 2: Main thread parse HTML và xây dựng cây DOM" src="../figure2.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<h3 id="javascript-co-the-chan-parsing">JavaScript có thể chặn parsing</h3>
-<p>Khi HTML parser tìm thấy thẻ <code>&lt;script&gt;</code>, nó sẽ tạm dừng việc parse tài liệu HTML và phải tải, parse và thực thi code JavaScript. Vì sao? Bởi vì JavaScript có thể thay đổi tài liệu HTML với những thứ như <code>document.write()</code>, nó sẽ thay đổi toàn bộ cấu trúc DROM (<a href="https://html.spec.whatwg.org/multipage/parsing.html#overview-of-the-parsing-model">tổng quan về mô hình parsing</a> trong đặc tả HTML có một sơ đồ rất đẹp). Đây là lý do vì sao HTML parser phải đợi JavaScript chạy trước khi tiếp tục parse tài liệu HTML. Nếu bạn tò mò về những thứ xảy ra trong quá trình thực thi JavaScript, <a href="https://mathiasbynens.be/notes/shapes-ics">team V8 đã có những buổi toạ đàm và bài viết về vấn đề đó</a>.</p>
-<h2 id="goi-y-cho-trinh-duyet-rang-ban-muon-tai-tai-nguyen-nhu-the-nao">Gợi ý cho trình duyệt rằng bạn muốn tải tài nguyên như thế nào</h2>
-<p>Có nhiều cách để các nhà phát triển ứng dụng web có thể gửi gợi ý đến trình duyệt để tải tài nguyên theo thứ tự nào đó. Nếu code JavaScript của bạn không dùng <code>document.write()</code>, bạn có thể thêm các thuộc tính <a href="https://developer.mozilla.org/docs/Web/HTML/Element/script#attr-async"><code>async</code></a> hay <a href="https://developer.mozilla.org/docs/Web/HTML/Element/script#attr-defer"><code>defer</code></a> cho thẻ <code>&lt;script&gt;</code>. Trình duyệt sẽ tải và chạy code JavaScript một cách bất đồng bộ và không làm gián đoạn việc parse. Bạn có thể dùng <a href="https://developers.google.com/web/fundamentals/primers/modules">JavaScript module</a> nếu thấy hợp lý. <code>&lt;link rel="preload"&gt;</code> là một cách để báo cho trình duyệt rằng tài nguyên là rất cần thiết cho việc điều hướng bây giờ và bạn muốn tải càng sớm càng tốt. Bạn có thể đọc thêm tại <a href="https://developers.google.com/web/fundamentals/performance/resource-prioritization">Ưu tiên tài nguyên - Nhờ trình duyệt giúp bạn</a>.</p>
-<h2 id="tinh-toan-cho-cac-style">Tính toán cho các style</h2>
-<p>DOM là chưa đủ để biết trang web sẽ trông như thế nào vì ta cần các style trong CSS. Main thread sẽ parse CSS và quyết định computed style cho từng node DOM. Đây là thông tin về loại style được áp dụng cho từng element dựa trên bộ chọn CSS. Bạn có thể xem thông tin này trong phần <code>computed</code> của DevTools.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 3: Main thread parse CSS để thêm các computed style vào" href="../figure3.avif"><img alt="Hình 3: Main thread parse CSS để thêm các computed style vào" src="../figure3.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<p>Ngay cả khi nếu bạn không cung cấp CSS, mỗi DOM node vẫn có một style được tính toán. Tag <code>&lt;h1&gt;</code> được hiển thị to hơn tag <code>&lt;h2&gt;</code> và margin được định nghĩa cho mỗi element. Lý do là vì browser có CSS mặc định. Nếu bạn muốn biết CSS mặc định của Chrome trông như nào, <a href="https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/html/resources/html.css">bạn có thể xem source code ở đây</a>.</p>
-<h2 id="layout">Layout</h2>
-<p>Giờ renderer process đã biết cấu trúc của tài liệu và style cho từng node, nhưng vẫn không đủ để render trang. Tưởng tượng bạn đang cố gắng miêu tả một bức vẽ cho bạn của mình qua điện thoại. "Có một hình tròn lớn màu đủ và một hình vuông nhỏ màu xanh" là không đủ thông tin để bạn của bạn biết chính xác bức vẽ trông thế nào.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác" href="../figure4.avif"><img alt="Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác" src="../figure4.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<p>Layout (bố cục) là một process để tìm hình dạng của các element. Main thread sẽ đi qua DOM và các computed style và tạo cây layout, nó sẽ có các thông tin như toạ độ x y và kích thước hộp giới hạn. Cây layout có cấu trúc tương tự cây DOM, nhưng nó chỉ chứa thông tin liên quan đến những gì hiển thị trên trang. Nếu <code>display: none</code> được áp dụng, element đó không nằm trong layout tree (tuy nhiên, element với <code>visibility: hidden</code> vẫn nằm trên cây layout). Tương tự, nếu một lớp giả với nội dung như <code>p::before{content:"Hi!"}</code> được áp dụng, nó sẽ nằm trong cây layout mặc dù nó không nằm trong DOM.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout" href="../figure5.avif"><img alt="Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout" src="../figure5.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<p>Xác định layout của trang là một việc khó. Ngay cả layout của trang đơn giản nhất như một đống block từ trên xuống dưới cũng phải xem xét độ lớn của font chữ và vị trí ngắt dòng vì chúng ảnh hưởng đến kích thước và hình dạng của đoạn văn; mà sau đó ảnh hưởng đến vị trí của đoạn sau, như video dưới đây.</p>
+<p><a href="https://developer.chrome.com/blog/inside-browser-part4/">Inside look at modern web browser (part 4) - Chrome Developers Blog</a></p>
+<h2 id="input-i-en-compositor">Input đi đến Compositor</h2>
+<p>Đây là phần cuối trong series 4 phần về bên trong trình duyệt Chrome, nơi ta sẽ xem làm sao nó có thể xử lý code để hiện ra một trang web. Trong bài trước, ta đã tìm hiểu rendering process và compositor. Trong bài này, ta sẽ xem compositor tạo ra những tương tác mượt mà như thế nào khi có input từ người dùng.</p>
+<h2 id="cac-input-event-tu-goc-nhin-trinh-duyet">Các input event từ góc nhìn trình duyệt</h2>
+<p>Khi nghe "input event", bạn có thể nghĩ ngay đến việc nhập vào một textbox hay click chuột, nhưng từ góc nhìn của trình duyệt, input có nghĩa là bất kỳ hành động nào từ người dùng. Cuộn cũng là một input event, chạm hoặc di chuột qua cũng là một input event.</p>
+<p>Khi hành động của người dùng như chạm vào màn hình xảy ra, browser process sẽ nhận hành động đó trước. Tuy nhiên, browser process chỉ biết nơi hành động đó xảy ra do nội dung bên trong tab được xử lý bởi renderer process. Vì vậy, browser process sẽ gửi loại event (như <code>touchstart</code>) và toạ độ của nó đến renderer process. Renderer process xử lý event một cách thích hợp bằng cách tìm event target và chạy event listener được đính kèm.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 1: Input event được dẫn qua browser process sang renderer process" href="../figure1.avif"><img alt="Hình 1: Input event được dẫn qua browser process sang renderer process" src="../figure1.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h2 id="compositor-nhan-cac-input-event">Compositor nhận các input event</h2>
+<p>Trong phần trước, ta đã xem cách compositor có thể xử lý cuộn một cách mượt mà bằng cách tổng hợp các rasterized layer. Nếu không có input event listener nào được đính kèm vào trang, compositor thread có thể tạo một composite frame mới hoàn toàn độc lập với main thread. Nhưng nếu có listener thì sao? Làm sao compositor thread tìm ra event cần được xử lý.</p>
 <video controls>
-    <source id="mp4" src="../figure6.mp4" type="video/mp4">
+    <source id="mp4" src="../figure2.mp4" type="video/mp4">
 </video>
 
-<p>CSS có thể làm cho phần tử nổi sang một bên, che phần mục tràn và thay đổi hướng viết. Bạn có thể tưởng tượng, giai đoạn layout này có một nhiệm vụ to lớn. Trong Chrome, toàn bộ team kỹ sư làm việc trên layout. Nếu bạn muốn xem chi tiết về công việc của họ, bạn có thể xem <a href="https://www.youtube.com/watch?v=Y5Xa4H2wtVA">một vài buổi toạ đàm từ Hội nghị BlinkOn</a>.</p>
-<h2 id="ve">Vẽ</h2>
-<p>Có DOM, style, và layout vẫn chưa đủ để render trang. Giả sử bạn muốn vẽ lại bức tranh đó. Bạn biết kích thước, hình dáng và vị trí các element, nhưng theo thứ tự nào?</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước" href="../figure7.avif"><img alt="Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước" src="../figure7.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<p>Ví dụ, <code>z-index</code> có thể được set cho một số element nhất định, trong trường hợp đó, vẽ theo thứ tự trên HTML sẽ cho ra kết quả sai khi render.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng" href="../figure8.avif"><img alt="Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng" src="../figure8.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<p>Ở bước vẽ này, main thread sẽ đi qua cây layout để tạo ra các bản ghi vẽ. Bản ghi vẽ (paint record) là một ghi chú của quá trình vẽ như "nền trước, rồi chữ, rồi đến hình chữ nhật". Nếu bạn từng vẽ trên element <code>&lt;canvas&gt;</code> với JavaScript, bạn sẽ quen với quá trình này.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ" href="../figure9.avif"><img alt="Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ" src="../figure9.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<h3 id="cap-nhat-rendering-pipeline-rat-ton-kem">Cập nhật rendering pipeline rất tốn kém.</h3>
-<p>Điều quan trọng nhất cần nắm bắt trong renderer pipeline là ở mỗi bước, kết quả của thao tác trước đó được sử dụng để tạo dữ liệu mới. Ví dụ, nếu có gì đó thay đổi trong cây layout, thì thứ tự vẽ cần được tạo lại cho các phần bị ảnh hưởng của tài liệu. Video bên dưới cho thấy các cây DOM + Style, Layout và Paint theo thứ tự chúng được sinh ra.</p>
-<video controls>
-    <source id="mp4" src="../figure10.mp4" type="video/mp4">
-</video>
-
-<p>Nếu bạn đang tạo hiệu ứng cho các element, trình duyệt phải chạy các thao tác này ở giữa mọi frame. Hầu hết các display sẽ refresh 60 lần một giây (60 frame/giây); hình ảnh động sẽ xuất hiện mượt mà đối với mắt người khi bạn di chuyển mọi thứ trên màn hình ở mọi frame. Tuy nhiên, nếu hoạt ảnh mất đi các frame ở giữa, thì trang sẽ xuất hiện một cách "lộn xộn".</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 11: Các frame hoạt ảnh trên dòng thời gian" href="../figure11.avif"><img alt="Hình 11: Các frame hoạt ảnh trên dòng thời gian" src="../figure11.avif" style="display: block; margin: 0 auto; height: 150px" /></a></div></p>
-<p>Ngay cả khi các hoạt động render của bạn theo kịp quá trình refresh màn hình, thì các tính toán này vẫn đang chạy trên main thread, nghĩa là thread này có thể bị chặn khi ứng dụng của bạn đang chạy JavaScript.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript" href="../figure12.avif"><img alt="Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript" src="../figure12.avif" style="display: block; margin: 0 auto; height: 150px" /></a></div></p>
-<p>Bạn có thể chia thao tác JavaScript thành các phần nhỏ và lên lịch chạy ở mọi frame bằng cách sử dụng <code>requestAnimationFrame()</code>. Để biết thêm về chủ đề này, vui lòng xem <a href="https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution">Tối ưu hóa thực thi JavaScript</a>. Bạn cũng có thể chạy <a href="https://www.youtube.com/watch?v=X57mh8tKkgE">JavaScript trong Web Worker</a> để tránh chặn main thread.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh" href="../figure13.avif"><img alt="Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh" src="../figure13.avif" style="display: block; margin: 0 auto; height: 150px" /></a></div></p>
-<h2 id="compositor">Compositor</h2>
-<h3 id="ban-ve-mot-trang-nhu-the-nao">Bạn vẽ một trang như thế nào?</h3>
-<p>Bây giờ trình duyệt đã biết cấu trúc của tài liệu, style của từng element, hình dạng của trang và thứ tự tô màu, vậy nó sẽ vẽ một trang như thế nào? Biến thông tin này thành pixel trên màn hình được gọi là <strong>rasterizing</strong>.</p>
-<p>Có lẽ một cách ngây thơ để xử lý việc này là raster các phần bên trong viewport (tầm nhìn của màn hình). Nếu người dùng cuộn trang, sau đó di chuyển frame đã raster và điền vào các phần còn thiếu bằng cách raster nhiều hơn, giống video bên dưới. Đây là cách Chrome xử lý rasterizing khi nó được phát hành lần đầu tiên. Tuy nhiên, trình duyệt hiện đại chạy một quy trình phức tạp hơn được gọi là compositing (tổng hợp).</p>
-<video controls>
-    <source id="mp4" src="../figure14.mp4" type="video/mp4">
-</video>
-
-<h3 id="compositing-la-gi">Compositing là gì?</h3>
-<p>Compositing là một kỹ thuật để tách các phần của trang thành các layer, rasterize từng layer và tổng hợp dưới dạng một trang trong một thread riêng biệt được gọi là compositor thread. Nếu cuộn trang xảy ra, vì các lớp đã được rasterized, tất cả những gì nó phải làm là composite một frame mới. Hoạt ảnh có thể đạt được theo cách tương tự bằng cách di chuyển các layer và composite một frame mới, như video bên dưới.</p>
-<video controls>
-    <source id="mp4" src="../figure15.mp4" type="video/mp4">
-</video>
-
-<p>Bạn có thể xem cách trang web của mình được chia thành các layer trong DevTools bằng cách sử dụng <a href="https://blog.logrocket.com/eliminate-content-repaints-with-the-new-layers-panel-in-chrome-e2c306d4d752?gi=cd6271834cea">bảng Layers</a>.</p>
-<h3 id="chia-ra-thanh-cac-layer">Chia ra thành các layer</h3>
-<p>Để tìm ra mỗi element nằm trong layer nào, main thread đi qua cây layout để tạo cây layer (phần này được gọi là "Cập nhật cây layer" trong bảng hiệu suất DevTools). Nếu một số phần của trang lẽ ra là layer riêng biệt (như menu bên trượt vào) mà không có layer riêng, thì bạn có thể gợi ý cho trình duyệt bằng cách sử dụng thuộc tính <code>will-change</code> trong CSS.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 16: Main thread đi qua cây layout để tạo ra cây layer" href="../figure16.avif"><img alt="Hình 16: Main thread đi qua cây layout để tạo ra cây layer" src="../figure16.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<p>Bạn có thể muốn cung cấp các layer cho mọi element, nhưng việc composite trên một số lượng lớn các layer có thể dẫn đến hoạt động chậm hơn so với việc rasterizing các phần nhỏ của trang trên mỗi frame, vì vậy, điều quan trọng là bạn phải đo hiệu suất render của ứng dụng của mình. Để biết thêm về chủ đề này, hãy xem <a href="https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count">Bám sát các thuộc tính chỉ dành cho Compositor và Quản lý số lượng Layer</a>.</p>
-<h3 id="raster-va-composite-khong-lien-quan-en-main-thread">Raster và composite không liên quan đến main thread</h3>
-<p>Khi cây layer được tạo và thứ tự vẽ được xác định, main thread sẽ commit thông tin đó cho compositor thread. Compositor thread sau đó rasterize từng layer. Một layer có thể lớn bằng toàn bộ chiều dài của một trang, do đó, compositor thread chia chúng thành các ô và gửi từng ô tới các raster thread. Các raster thread sẽ rasterize từng ô và lưu chúng trong bộ nhớ GPU.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU" href="../figure17.avif"><img alt="Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU" src="../figure17.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<p>Compositor thread có thể ưu tiên các raster thread khác nhau để những thứ trong viewport(hoặc gần đó) có thể được raster trước. Một layer cũng có nhiều ô cho các độ phân giải khác nhau để xử lý những thứ như phóng to chẳng hạn.</p>
-<p>Sau khi các ô được raster, compositor thread sẽ thu thập thông tin ô được gọi là <strong>draw quads</strong> để tạo <strong>compositor frame</strong>.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Draw quad</td>
-<td>Chứa thông tin như vị trí của ô trong bộ nhớ và vị trí trong trang để vẽ ô, có tính đến việc composite trang.</td>
-</tr>
-<tr>
-<td>Compositor frame</td>
-<td>Tập các draw quad đại diện cho một frame của trang.</td>
-</tr>
-</tbody>
-</table>
-<p>Một compositor frame sau đó được gửi tới browser process thông qua IPC. Ở đây, một compositor frame khác có thể được thêm vào từ UI thread để thay đổi UI của trình duyệt hoặc từ các renderer process khác dành cho tiện ích mở rộng. Các compositor frame này được gửi đến GPU để hiển thị trên màn hình. Nếu một sự kiện cuộn xảy ra, compositor thread sẽ tạo một compositor frame khác để gửi tới GPU.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU" href="../figure18.avif"><img alt="Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU" src="../figure18.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
-<p>Lợi ích của việc composite là nó được thực hiện mà không liên quan đến main thread. Compositor thread không cần đợi tính toán style hoặc thực thi JavaScript. Đây là lý do tại sao các <a href="https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">hoạt-ảnh-chỉ-cần-composite</a> được coi là tốt nhất để có hiệu suất mượt mà. Nếu layout hoặc paint cần được tính toán lại thì main thread phải tham gia.</p>
-<h2 id="ket-phan-3">Kết phần 3</h2>
-<p>Trong phần này, ta đã xem qua rendering pipeline từ parsing đến compositing. Hi vọng rằng bạn đã đủ khả năng để đọc thêm về tối ưu hoá hiệu suất của một trang web.</p>
-<p>Trong phần tiếp theo và cũng là phần cuối, ta sẽ nghiên cứu compositor thread chi tiết hơn và xem điều gì xảy ra khi người dùng nhập liệu cũng như di chuyển và nhấp chuột.</p>
+<h2 id="hieu-ve-non-fast-scrollable-region">Hiểu về non-fast scrollable region</h2>
+<p>Vì chạy JavaScript là việc của main thread, nên khi có một trang được tổng hợp (composited), compositor thread sẽ đánh dấu một vùng của trang có đính kém các event handler là "vùng cuộn không nhanh" (Non-Fast Scrollable Region). Với thông tin này, compositor thread có thể đảm bảo gửi input event đến main thread nến event xảy ra trong vùng đó. Nếu input event đến từ ngoài vùng, compositor thread sẽ tiếp tục tổng hợp frame mới mà không cần đợi main thread.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 3: Sơ đồ mô tả input vào non-fast scrollable region" href="../figure3.avif"><img alt="Hình 3: Sơ đồ mô tả input vào non-fast scrollable region" src="../figure3.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h3 id="e-y-khi-viet-event-handler">Để ý khi viết event handler</h3>
+<p>Một pattern phổ biến khi xử lý event trong phát triển web là uỷ quyền event. Vì event chuyển thông tin từ node có event đi lên trên cây DOM (bubble), ta có thể đính kèm một event handler ở element trên cùng và uỷ quyền các tác vụ dựa trên event target. Bạn có thể đã thấy hoặc viết code như sau:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">area</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">});</span>
+</code></pre></div>
+<p>Vì ta chỉ cần viết một event handler cho tất cả element, pattern uỷ quyền event này rất hấp dẫn. Tuy nhiên, nếu bạn ở góc nhìn của trình duyệt, toàn bộ trang sẽ được xem như non-fast scrollable region. Nghĩa là ngay cả khi ứng dụng của bạn không quan tâm đến input từ một số phần nhất định của trang, compositor thread sẽ phải giao tiếp với main thread và đợi nó mỗi khi có input event đến. Do đó, khả năng cuộn mượt mà của compositor sẽ không còn.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 4: Sơ đồ cho thấy input vào non-fast scrollable region mà bao trọn toàn bộ trang" href="../figure4.avif"><img alt="Hình 4: Sơ đồ cho thấy input vào non-fast scrollable region mà bao trọn toàn bộ trang" src="../figure4.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Để giảm thiểu điều này, bạn có thể truyền <code>passive : true</code> vào event listener. Nó sẽ gợi ý cho trình duyệt rằng bạn vẫn muốn tiếp tục lắng nghe event ở main thread, nhưng compositor vẫn có thể chạy tiếp và tạo frame mới.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">area</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">passive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">});</span>
+</code></pre></div>
+<h2 id="kiem-tra-xem-co-huy-event-uoc-khong">Kiểm tra xem có huỷ event được không</h2>
+<p>Giả sử bạn có một cái khung trong trang, bạn muốn cái khung này chỉ cuộn ngang.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 5: Trang web với khung chỉ cho cuộn ngang" href="../figure5.avif"><img alt="Hình 5: Trang web với khung chỉ cho cuộn ngang" src="../figure5.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p>Dùng <code>passive: true</code> trong pointer event nghĩa là trang có thể cuộn một cách mượt mà, nhưng cuộn dọc có thể đã bắt đầu khi bạn muốn <code>preventDefault</code> để chặn cuộn dọc. Bạn có thể kiểm tra bằng cách dùng <code>event.cancelable</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pointermove&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">cancelable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span><span class="w"> </span><span class="c1">// block the native scroll</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="cm">/*</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="cm">        *  do what you want the application to do here</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="cm">        */</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">passive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">});</span>
+</code></pre></div>
+<p>Thay vào đó, bạn có thể dùng CSS rule như <code>touch-action</code> để loại bỏ hoàn toàn event handler.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="err">#</span><span class="nx">area</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">touch</span><span class="o">-</span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="nx">pan</span><span class="o">-</span><span class="nx">x</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="tim-event-target">Tìm event target</h2>
+<p>Khi compositor thread gửi một input event đến main thread, nó sẽ chạy một hit test để tìm event target. Hit test dùng dữ liệu paint record, được tạo ra trong rendering process để tìm hiểu những thứ nằm dưới toạ độ điểm mà event xảy ra.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 6: Main thread kiểm tra paint record để xem điểm x.y có gì" href="../figure6.avif"><img alt="Hình 6: Main thread kiểm tra paint record để xem điểm x.y có gì" src="../figure6.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<h2 id="giam-thieu-viec-gui-event-en-main-thread">Giảm thiểu việc gửi event đến main thread</h2>
+<p>Trong bài trước, ta đã xem cách màn hình refresh 60 lần trên giây và cách mà ta cần theo kịp điều đó để có hoạt ảnh mượt mà. Với input, một thiết bị màn hình cảm ứng thông thường cung cấp event chạm 60 - 120 lần mỗi giây. Input event rõ ràng là nhiều hơn mức refresh của màn hình.</p>
+<p>Nếu một event liên tục như <code>touchmove</code> được gửi đến main thread 120 lần mỗi giây, nó sẽ kích hoạt quá nhiều hit test và thực thi JavaScript so với mức mà màn hình có thể refresh.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 7: Quá nhiều event trong khung thời gian làm trang bị giật" href="../figure7.avif"><img alt="Hình 7: Quá nhiều event trong khung thời gian làm trang bị giật" src="../figure7.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
+<p>Để giảm thiểu quá nhiều lệnh gọi đến main thread, Chrome kết hợp các event liên tục (như <code>wheel</code>, <code>mousewheel</code>, <code>mousemove</code>, <code>pointermove</code>, <code>touchmove</code>) và trì hoãn việc gửi đến main thread cho đến ngay trước <code>requestAnimationFrame</code> tiếp theo.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 8: Vẫn cái dòng thời gian đó, nhưng các event được kết hợp và trì hoãn" href="../figure8.avif"><img alt="Hình 8: Vẫn cái dòng thời gian đó, nhưng các event được kết hợp và trì hoãn" src="../figure8.avif" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
+<p>Các event rời rạc như <code>keydown</code>, <code>keyup</code>, <code>mouseup</code>, <code>mousedown</code>, <code>touchstart</code>, và <code>touchend</code> được gửi ngay lập tức.</p>
+<h2 id="su-dung-getcoalescedevents-e-nhan-cac-event-trong-frame">Sử dụng <code>getCoalescedEvents</code> để nhận các event trong frame</h2>
+<p>Với hầu hết cac ứng dụng web, các event được kết hợp phải đủ để cung cấp trải nghiệm người dùng tốt. Tuy nhiên, nếu bạn đang làm những thứ như ứng dụng vẽ và tạo một đường thẳng dựa trên các toạ độ <code>touchmove</code>, bạn có thể mất các toạ độ ở giữa để vẽ ra một đường thẳng đẹp. Trong trường hợp đó, bạn có thể dùng phương thức <code>getCoalescedEvents</code> trong pointer event để lấy thông tin về các event kết hợp đó.</p>
+<p><div class="lightgallery"><a data-sub-html="Hình 9: Hành động touch trong thực tế ở bên trái, và sau khi bị kết hợp ở bên phải" href="../figure9.avif"><img alt="Hình 9: Hành động touch trong thực tế ở bên trái, và sau khi bị kết hợp ở bên phải" src="../figure9.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pointermove&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">events</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">getCoalescedEvents</span><span class="p">();</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">event</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">events</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">pageX</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">pageY</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="c1">// draw a line using x and y coordinates.</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">});</span>
+</code></pre></div>
+<h2 id="cac-buoc-tiep-theo">Các bước tiếp theo</h2>
+<p>Trong series này, ta đã đề cập đến các hoạt động bên trong một trình duyệt web. Nếu bạn chưa bao giờ nghĩ vì sao DevTools khuyên bạn thêm <code>{passive: true}</code> vào event handler hoặc vì sao bạn có thể viết thuộc tính <code>async</code> vào thẻ script, mình hi vọng series có thể làm rõ vì sao trình duyệt cần các thông tin đó để cung cấp trải nghiệm duyệt web mượt mà và nhanh hơn.</p>
+<h3 id="dung-lighthouse">Dùng Lighthouse</h3>
+<p>Nếu bạn muốn làm cho code của mình phù hợp với trình duyệt nhưng không biết bắt đầu từ đâu, thì <a href="https://developer.chrome.com/docs/lighthouse/overview/">Lighthouse</a> là một công cụ chạy kiểm tra bất kỳ trang web nào và cung cấp cho bạn báo cáo về những gì đang được thực hiện đúng và những gì cần phải cải thiện. Đọc qua danh sách kiểm tra cũng cho bạn ý tưởng về những thứ mà trình duyệt cần.</p>
+<h3 id="hoc-cach-o-luong-hieu-suat">Học cách đo lường hiệu suất</h3>
+<p>Các điều chỉnh hiệu suất có thể khác nhau đối với các trang web khác nhau, do đó, điều quan trọng là bạn phải đo hiệu suất trang web của mình và quyết định điều gì phù hợp nhất cho trang web của mình. Team Chrome DevTools có một số hướng dẫn về <a href="https://developers.google.com/web/tools/chrome-devtools/speed/get-started">cách đo hiệu suất trang web của bạn</a>.</p>
+<h3 id="them-feature-policy-vao-trang-cua-ban">Thêm Feature Policy vào trang của bạn</h3>
+<p>Nếu bạn muốn đi xa hơn, <a href="https://developers.google.com/web/updates/2018/06/feature-policy">Feature Policy</a> là một tính năng web mới có thể là rào cản cho bạn khi bạn đang tạo ra website cho mình. Việc bật feature policy sẽ đảm bảo hành vi nhất định của ứng dụng và ngăn bạn mắc lỗi. Ví dụ, nếu muốn đảm bảo ứng dụng của mình sẽ không bao giờ chặn parsing, thì bạn có thể chạy ứng dụng của mình theo synchronous scripts policy. Khi có <code>sync-script: 'none'</code>, đoạn code JavaScript chặn parser sẽ bị chặn thực thi. Điều này ngăn bất kỳ code nào của bạn chặn parser và trình duyệt không cần phải lo về việc tạm dừng parse.</p>
+<h2 id="ket-phan-4">Kết phần 4</h2>
+<p>Khi mới bắt đầu xây dựng website, mình gần như chỉ quan tâm đến việc làm sao để viết code và làm gì để trở nên năng suất hơn. Những thứ đó quan trọng thật, nhưng ta cũng cần biết làm sao trình duyệt đọc được code của chúng ta. Trình duyệt hiện đại đã và đang tiếp tục nâng cao trải nghiệm web cho người dùng. Đối xử tốt với trình duyệt bằng cách tổ chức tốt code của chúng ta sẽ dẫn đến việc cải thiện trải nghiệm người dùng. Mình hi vọng các bạn sẽ tham gia cùng mình trong việc đối xử tốt với trình duyệt!</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">05/04/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">06/04/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">05/04/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">06/04/2023 (GMT+07)</span>
       
     
   </small>
