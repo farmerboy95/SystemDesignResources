@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/rest_api/rest_api/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/cap_theorem/cap_theorem/">
       
       
-        <link rel="prev" href="../../http_versions/http_versions/">
+        <link rel="prev" href="../../chatgpt_hacks/chatgpt_hacks/">
       
       
-        <link rel="next" href="../../ssl_tls_https/ssl_tls_https/">
+        <link rel="next" href="../../../Misc/chrome_blog/inside_browser_1/inside_browser_1/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
-        <title>REST API là gì? - farmerboy's System Design Resources</title>
+        <title>Định lý CAP - CAP theorem - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rest-api-la-gi" class="md-skip">
+        <a href="#inh-ly-cap-cap-theorem" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              REST API là gì?
+              Định lý CAP - CAP theorem
             
           </span>
         </div>
@@ -452,73 +452,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          REST API là gì?
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../rest_api/rest_api/" class="md-nav__link">
         REST API là gì?
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-la-gi" class="md-nav__link">
-    API là gì?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#co-ban-ve-rest-api" class="md-nav__link">
-    Cơ bản về REST API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#crud-la-gi" class="md-nav__link">
-    CRUD là gì?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -738,11 +676,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../cap_theorem/cap_theorem/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Định lý CAP - CAP theorem
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Định lý CAP - CAP theorem
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#khai-niem" class="md-nav__link">
+    Khái niệm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phan-vung-mang" class="md-nav__link">
+    Phân vùng mạng
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-du" class="md-nav__link">
+    Ví dụ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    Kết luận
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -913,22 +920,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-la-gi" class="md-nav__link">
-    API là gì?
+  <a href="#khai-niem" class="md-nav__link">
+    Khái niệm
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#co-ban-ve-rest-api" class="md-nav__link">
-    Cơ bản về REST API
+  <a href="#phan-vung-mang" class="md-nav__link">
+    Phân vùng mạng
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#crud-la-gi" class="md-nav__link">
-    CRUD là gì?
+  <a href="#vi-du" class="md-nav__link">
+    Ví dụ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    Kết luận
   </a>
   
 </li>
@@ -952,43 +966,61 @@
   
 
 
-<h1 id="rest-api-la-gi">REST API là gì?</h1>
+<h1 id="inh-ly-cap-cap-theorem">Định lý CAP - CAP theorem</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=-mN3VyJuCjM">What Is REST API? Examples And How To Use It</a></p>
-<h2 id="api-la-gi">API là gì?</h2>
-<p><strong>API</strong>, hay đầy đủ hơn là <strong>Application Programming Interface</strong>, là một cách để hai máy tính giao tiếp với nhau.</p>
-<p>Chuẩn API chung được dùng bởi phần lớn các ứng dụng web và di động để giao tiếp với các server được gọi là <strong>REST</strong>, hay đầy đủ hơn là <strong>REpresentational State Transfer</strong>.</p>
-<p>REST nghe có vẻ hàn lâm. Nó không phải là một dạng đặc tả gì cả. Nó là một tập hợp các quy tắc đã trở thành chuẩn chung cho việc xây dựng web API từ đầu những năm 2000. Một API tuân thủ chuẩn REST thì được gọi là một <strong>RESTful API</strong>. Một số ví dụ có thể kể ra là Twilio, Stripe và Google Maps.</p>
+<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=BHqjEjzAicA">CAP Theorem Simplified | System Design Fundamentals</a></p>
+<h2 id="khai-niem">Khái niệm</h2>
+<p>Định lý CAP (CAP Theorem) là một khái niệm trong khoa học máy tính giải thích sự đánh đổi giữa <strong>tính nhất quán (consistency - C)</strong>, <strong>tính khả dụng (availability - A)</strong> và <strong>sức chịu đựng sự phân vùng trong mạng (partition tolerance - P)</strong> trong các hệ thống phân tán.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
-<h2 id="co-ban-ve-rest-api">Cơ bản về REST API</h2>
-<p>Một RESTful API tổ chức các tài nguyên theo một tập các <strong>URI</strong> duy nhất, hay đầy đủ hơn là <strong>Uniform Resource Identifier</strong>. Các URI này phân biệt các loại tài nguyên khác nhau trên server. Sau đây là vài ví dụ.</p>
+<p><strong>Tính nhất quán (consistency - C)</strong> là thuộc tính của một hệ thống trong đó tất cả các node có cùng một kết quả khi đọc dữ liệu. Điều đó có nghĩa là tất cả client đều nhìn thấy cùng một dữ liệu trong cùng thời điểm, bất kể việc client kết nối với node nào.</p>
+<p><strong>Tính khả dụng (availability - A)</strong> là khả năng của hệ thống để luôn luôn đáp ứng các request của người dùng.</p>
+<p><strong>Sức chịu đựng phân vùng trong mạng (partition tolerance - P)</strong> là khả năng hệ thống tiếp tục hoạt động ngay cả khi có một phân vùng mạng. </p>
+<h2 id="phan-vung-mang">Phân vùng mạng</h2>
+<p>Nhưng phân vùng mạng (network partition) là gì? Phân vùng mạng xảy ra khi các node trong hệ thống phân tán không thể giao tiếp với nhau do lỗi mạng. </p>
+<p>Khi có phân vùng mạng, hệ thống phải chọn giữa tính nhất quán và tính khả dụng. </p>
+<p>Nếu hệ thống ưu tiên tính nhất quán, nó có thể không khả dụng cho đến khi phân vùng được giải quyết. Nếu hệ thống ưu tiên tính khả dụng, nó có thể cho phép cập nhật dữ liệu. Nhưng sự không thống nhất về mặt dữ liệu có thể xảy ra cho đến khi phân vùng được giải quyết.</p>
 <p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Các tài nguyên nên được nhóm theo danh từ, không nên là động từ. Một API dùng để lấy tất cả products nên dùng <code>/products</code> chứ không nên dùng <code>/getAllProducts</code>. Client tương tác với tài nguyên bằng cách tạo một request đến endpoint tương ứng với tài nguyên đó thông qua HTTP. Request này có format cụ thể. Nó bao gồm URI của tài nguyên ta muốn truy cập, trước URI là một HTTP verb, thứ sẽ nói cho server biết ta muốn làm gì với tài nguyên đó.</p>
+<p>Cùng xem một ví dụ nhé.</p>
+<h2 id="vi-du">Ví dụ</h2>
+<p>Giả sử ta có một ngân hàng nhỏ với hai máy ATM được kết nối qua mạng. Các máy ATM này hỗ trợ 3 thao tác: gửi tiền, rút tiền và kiểm tra số dư. Bất kể điều gì xảy ra, số dư sẽ không bao giờ bị âm. Không có cơ sở dữ liệu trung tâm để lưu số dư tài khoản, nó được lưu trên cả hai máy ATM.</p>
+<p>Khi một khách hàng dùng máy ATM, số dư sẽ được cập nhật trên cả hai máy ATM qua mạng. Điều này đảm bảo rằng các máy ATM có cùng kết quả khi kiểm tra số dư tài khoản.</p>
+<p>Nếu có một phân vùng mạng và các máy ATM không thể giao tiếp với nhau, thì hệ thống phải chọn giữa tính nhất quán và tính khả dụng.</p>
+<p>Nếu ngân hàng ưu tiên tính nhất quán, máy ATM có thể từ chối xử lý tiền gửi hoặc rút tiền cho đến khi phân vùng được giải quyết. Điều này đảm bảo rằng số dư vẫn nhất quán nhưng hệ thống không khả dụng với khách hàng.</p>
 <p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
-<h2 id="crud-la-gi">CRUD là gì?</h2>
-<p>Một POST request cho thấy ta muốn tạo (CREATE) một tài nguyên mới. Một GET request cho thấy ta muốn đọc (READ) tài nguyên có sẵn. Một PUT request cho thấy ta muốn cập nhật (UPDATE) một tài nguyên hiện có. Một DELETE request cho thấy ta muốn xoá (DELETE) một tài nguyên hiện có. Bạn có thể đã nghe qua từ viêt tắt CRUD, 4 thứ trên kết hợp lại chính là nó.</p>
-<p>Body của request có thể có HTTP request body chứa data, thường là mã hoá theo JSON. </p>
+<p>Nếu ngân hàng ưu tiên tính khả dụng, thì máy ATM có thể cho phép gửi và rút tiền, nhưng số dư có thể không ổn định cho đến khi phân vùng được giải quyết.</p>
 <p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Server nhận request, xử lý nó, sau đó format kết quả thành một response. Dòng đầu tiên của response chứa HTTP status code để nói cho client biết chuyện gì đã xảy ra với request.</p>
-<p>Một RESTful API được cài đặt tốt sẽ trả về đúng HTTP status code. Code 2xx nghĩa là request đã thực hiện thành công. Code 4xx nghĩa là đã có lỗi gì đó xảy ra với request, ví dụ như request không đúng định dạng. Code 5xx nghĩa là có vấn đề với server khi thực hiện request, như việc server sập.</p>
+<p>Khi có phân vùng mạng, khách hàng có thể rút toàn bộ số dư từ cả hai máy ATM. Khi phân vùng mạng được khắc phục, sự không nhất quán được giải quyết và bây giờ số dư là số âm. Đó là điều không được phép xảy ra.</p>
 <p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Client có thể chọn để thử lại request 5xx vừa rồi. Ta nói "có thể thử lại" vì một số request không idempotent, và các request đó cần được chú ý nhiều hơn khi thử lại. Một API gọi là idempotent nghĩa là khi gọi cùng một request nhiều lần thì ảnh hưởng đến tài nguyên sẽ như khi chỉ gọi một lần. Các POST request thường không idempotent vì chùng thường được dùng để tạo tài nguyên mới.</p>
-<p>Response body có thể có hoặc không, và có thể chứa data, thường được mã hoá theo JSON.</p>
+<p>Hãy cùng xem một ví dụ khác và xem cách một mạng xã hội có thể áp dụng định lý CAP</p>
+<p>Trong khi mạng bị phân vùng, nếu hai người dùng cùng bình luận một bài đăng cùng lúc, bình luận của một người dùng có thể không được hiển thị đến người dùng kia cho đến khi phân vùng được giải quyết. </p>
 <p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Cài đặt REST nên theo hướng stateless, nghĩa là cả 2 phía server và client đều không lưu thông tin của nhau và mọi vòng request response (chu kì) đều độc lập với nhau. Điều này khiến cho các ứng dụng web dễ dàng scale up hơn.</p>
-<p>Nếu một endpoint trả về lượng thông tin lớn, cần dùng pagination (phân trang). Chuẩn pagination thường được dùng là với các tham số "offset" và "limit". Ví dụ <code>/products?offset=50&amp;limit=25</code> nghĩa là ta lấy 25 product từ product thứ 50 trở đi. Nếu các tham số trên không được truyền vào, ta cần dùng các tham số mặc định của chúng.</p>
-<p>Cuối cùng, versioning API rất quan trọng. Versioning cho phép kĩ sư có thể tiếp tục cung cấp các phiên bản trước của các API mà không phải xoá hoàn toàn chúng đi. Điều này giúp client có đủ thời gian để chuyển qua API version mới. Có nhiều cách versioning, phổ biến nhất là đặt tiền tố <code>/v1/</code>, <code>/v2/</code> trước tài nguyên trên URI, ví dụ <code>/v1/products</code>, <code>/v2/products</code>.</p>
+<p>Ngoài ra, nếu mạng xã hội ưu tiên tính nhất quán, thì tính năng comment có thể không khả dụng cho đến khi phân vùng được giải quyết. Đối với mạng xã hội, việc ưu tiên tính khả dụng thường được chấp nhận với cái giá là người dùng đôi khi thấy các data hơi khác nhau.</p>
+<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Định lý CAP nghe có vẻ rất đơn giản, nhưng thế giới thực lại rất hỗn loạn.</p>
+<p>Cũng giống như nhiều thứ trong công nghệ phần mềm, tất cả đều liên quan đến sự đánh đổi và các lựa chọn không phải lúc nào cũng rành rành ra đó. Định lý CPA giả định 100% tính khả dụng hoặc 100% tính nhất quán. Trong thế giới thực, có các mức độ nhất quán và khả dụng mà những người thiết kế hệ thống phân tán phải xem xét cẩn thận. Đây là lúc mà mô hình đơn giản của định lý CAP có thể gây hiểu nhầm.</p>
+<p>Quay lại ví dụ ngân hàng, trong quá trình phân vùng mạng, máy ATM chỉ có thể cho phép xử lý các yêu cầu về số dư, trong khi các khoản tiền gửi hoặc rút tiền bị chặn. </p>
+<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Ngoài ra, ngân hàng có thể triển khai một phương pháp kết hợp. Ví dụ, ATM có thể cho phép xử lý các yêu cầu về số dư và các khoản tiền nhỏ khi mạng đang bị phần vùng, nhưng chặn các khoản rút tiền hoặc gửi tiền lớn cho đến khi phân vùng được giải quyết.</p>
+<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Cần lưu ý là trong thực tế, việc đối soát sau phân vùng mạng có thể rất là lộn xộn. Với ví dụ ngân hàng ở trên thì việc đối soát là tương đối đơn giản. Trong thực tế, các cấu trúc dữ liệu liên quan có thể phức tạp và khó dung hoà.</p>
+<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Một ví dụ điển hình về cấu trúc dữ liệu phức tạp là Google Docs. Giải quyết các bản cập nhật xung đột có thể rất phức tạp.</p>
+<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></div></p>
+<h2 id="ket-luan">Kết luận</h2>
+<p>Vậy định lý CAP có hữu ích không? Có, đó là một công cụ hữu ích để giúp ta cân nhắc những đánh đổi cần lưu ý khi có một phân vùng mạng. Có điều, nó không cung cấp một bức tranh toàn cảnh về sự đánh đổi cần xem xét khi thiết kế một hệ thống phân tán toàn diện.</p>
+<p>Cụ thể, khi hệ thống hoạt động bình thường mà không có bất kỳ sự cố mạng nào (hầu hết thời gian là như vậy), ta lại có những đánh đổi khác để xem xét giữa độ trễ và tính nhất quán. Nó lại thuộc về định lý PACELC. Ta sẽ nói về nó trong một bài viết khác.</p>
+<p><div class="lightgallery"><a data-sub-html="figure12" href="../figure12.png"><img alt="figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></div></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/02/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/04/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/02/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/04/2023 (GMT+07)</span>
       
     
   </small>
