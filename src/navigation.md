@@ -29,6 +29,7 @@ hide:
     - [Định lý CAP - CAP theorem](ByteByteGo/cap_theorem/cap_theorem.md)
     - [gRPC là gì?](ByteByteGo/grpc/grpc.md)
     - [GraphQL là gì?](ByteByteGo/graphql/graphql.md)
+    - [Proxy vs. Reverse Proxy](ByteByteGo/proxy_vs_reverse_proxy/proxy_vs_reverse_proxy.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
