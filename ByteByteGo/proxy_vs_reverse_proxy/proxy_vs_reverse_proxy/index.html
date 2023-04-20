@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/cap_theorem/cap_theorem/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/proxy_vs_reverse_proxy/proxy_vs_reverse_proxy/">
       
       
-        <link rel="prev" href="../../chatgpt_hacks/chatgpt_hacks/">
+        <link rel="prev" href="../../graphql/graphql/">
       
       
-        <link rel="next" href="../../grpc/grpc/">
+        <link rel="next" href="../../../Misc/chrome_blog/inside_browser_1/inside_browser_1/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
-        <title>Định lý CAP - CAP theorem - farmerboy's System Design Resources</title>
+        <title>Proxy vs. Reverse Proxy - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#inh-ly-cap-cap-theorem" class="md-skip">
+        <a href="#proxy-vs-reverse-proxy" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Định lý CAP - CAP theorem
+              Proxy vs. Reverse Proxy
             
           </span>
         </div>
@@ -676,80 +676,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Định lý CAP - CAP theorem
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../cap_theorem/cap_theorem/" class="md-nav__link">
         Định lý CAP - CAP theorem
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#khai-niem" class="md-nav__link">
-    Khái niệm
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phan-vung-mang" class="md-nav__link">
-    Phân vùng mạng
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vi-du" class="md-nav__link">
-    Ví dụ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-luan" class="md-nav__link">
-    Kết luận
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -787,11 +718,86 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../proxy_vs_reverse_proxy/proxy_vs_reverse_proxy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Proxy vs. Reverse Proxy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Proxy vs. Reverse Proxy
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forward-proxy" class="md-nav__link">
+    Forward Proxy
+  </a>
+  
+    <nav class="md-nav" aria-label="Forward Proxy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transparent-proxy" class="md-nav__link">
+    Transparent Proxy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-proxy" class="md-nav__link">
+    Reverse Proxy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-lop-reverse-proxy" class="md-nav__link">
+    Các lớp reverse proxy
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -962,29 +968,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#khai-niem" class="md-nav__link">
-    Khái niệm
+  <a href="#forward-proxy" class="md-nav__link">
+    Forward Proxy
+  </a>
+  
+    <nav class="md-nav" aria-label="Forward Proxy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transparent-proxy" class="md-nav__link">
+    Transparent Proxy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-proxy" class="md-nav__link">
+    Reverse Proxy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phan-vung-mang" class="md-nav__link">
-    Phân vùng mạng
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vi-du" class="md-nav__link">
-    Ví dụ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-luan" class="md-nav__link">
-    Kết luận
+  <a href="#cac-lop-reverse-proxy" class="md-nav__link">
+    Các lớp reverse proxy
   </a>
   
 </li>
@@ -1008,61 +1020,48 @@
   
 
 
-<h1 id="inh-ly-cap-cap-theorem">Định lý CAP - CAP theorem</h1>
+<h1 id="proxy-vs-reverse-proxy">Proxy vs. Reverse Proxy</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=BHqjEjzAicA">CAP Theorem Simplified | System Design Fundamentals</a></p>
-<h2 id="khai-niem">Khái niệm</h2>
-<p>Định lý CAP (CAP Theorem) là một khái niệm trong khoa học máy tính giải thích sự đánh đổi giữa <strong>tính nhất quán (consistency - C)</strong>, <strong>tính khả dụng (availability - A)</strong> và <strong>sức chịu đựng sự phân vùng trong mạng (partition tolerance - P)</strong> trong các hệ thống phân tán.</p>
+<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=4NB0NDtOwIQ">Proxy vs Reverse Proxy (Real-world Examples)</a></p>
+<h2 id="forward-proxy">Forward Proxy</h2>
+<p>Có hai loại proxy phổ biến là forward proxy (proxy chuyển tiếp) và reverse proxy (proxy ngược).</p>
+<p><strong>Forward proxy</strong> là một server nằm giữa một nhóm các máy client và mạng internet. Khi những máy client đó gửi request lên các trang web trên mạng internet, forward proxy sẽ đóng vai trò là trung gian để chặn các request đó, và giao tiếp với web server thay mặt cho các máy client đó.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p><strong>Tính nhất quán (consistency - C)</strong> là thuộc tính của một hệ thống trong đó tất cả các node có cùng một kết quả khi đọc dữ liệu. Điều đó có nghĩa là tất cả client đều nhìn thấy cùng một dữ liệu trong cùng thời điểm, bất kể việc client kết nối với node nào.</p>
-<p><strong>Tính khả dụng (availability - A)</strong> là khả năng của hệ thống để luôn luôn đáp ứng các request của người dùng.</p>
-<p><strong>Sức chịu đựng phân vùng trong mạng (partition tolerance - P)</strong> là khả năng hệ thống tiếp tục hoạt động ngay cả khi có một phân vùng mạng. </p>
-<h2 id="phan-vung-mang">Phân vùng mạng</h2>
-<p>Nhưng phân vùng mạng (network partition) là gì? Phân vùng mạng xảy ra khi các node trong hệ thống phân tán không thể giao tiếp với nhau do lỗi mạng. </p>
-<p>Khi có phân vùng mạng, hệ thống phải chọn giữa tính nhất quán và tính khả dụng. </p>
-<p>Nếu hệ thống ưu tiên tính nhất quán, nó có thể không khả dụng cho đến khi phân vùng được giải quyết. Nếu hệ thống ưu tiên tính khả dụng, nó có thể cho phép cập nhật dữ liệu. Nhưng sự không thống nhất về mặt dữ liệu có thể xảy ra cho đến khi phân vùng được giải quyết.</p>
+<p>Người ta cần forward proxy vì một vài lý do sau.</p>
+<p>Thứ nhất, forward proxy bảo vệ danh tính trực tuyến của client. Bằng cách dùng forward proxy để kết nối với một trang web, địa chỉ IP của client sẽ không bị server tìm ra, server sẽ chỉ nhìn thấy địa chỉ của proxy. Như vậy sẽ khó hơn để tìm ra được client.</p>
+<p>Thứ hai, một forward proxy có thể được sử dụng để bỏ qua các hạn chế về duyệt web. Một số tổ chức như chính phủ, trường học và doanh nghiệp lớn sử dụng tường lửa để hạn chế quyền truy cập internet. Bằng cách kết nối với forward proxy bên ngoài tường lửa, client có khả năng vượt qua những hạn chế này. Tuy nhiên không phải lúc nào cũng vượt qua được vì bản thân tường lửa có thể chặn kết nối với proxy.</p>
+<p>Thứ ba, có thể sử dụng forward proxy để chặn quyền truy cập vào một số nội dung nhất định. Điều này không có gì lạ khi các trường học và doanh nghiệp sẽ cấu hình mạng của họ để kết nối tất cả client với web thông qua một proxy và áp dụng các bộ lọc để không cho phép truy cập các trang web như mạng xã hội. Cần lưu ý rằng forward proxy thường yêu cầu client cấu hình ứng dụng của client trỏ đến proxy. </p>
+<h3 id="transparent-proxy">Transparent Proxy</h3>
+<p>Đối với các tổ chức lớn, họ thường sử dụng một kỹ thuật gọi là <strong>transparent proxy</strong> (proxy minh bạch) để hợp lý hoá quá trình.</p>
+<p>Một transparent proxy hoạt động với các công tắc tầng 4 (OSI) để tự động chuyển hướng một số loại lưu lượng truy cập nhất định đến proxy. Không cần phải cấu hình client để sử dụng nó. Rất khó để bỏ qua một transparent proxy khi client đang ở trên mạng của tổ chức.</p>
 <p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Cùng xem một ví dụ nhé.</p>
-<h2 id="vi-du">Ví dụ</h2>
-<p>Giả sử ta có một ngân hàng nhỏ với hai máy ATM được kết nối qua mạng. Các máy ATM này hỗ trợ 3 thao tác: gửi tiền, rút tiền và kiểm tra số dư. Bất kể điều gì xảy ra, số dư sẽ không bao giờ bị âm. Không có cơ sở dữ liệu trung tâm để lưu số dư tài khoản, nó được lưu trên cả hai máy ATM.</p>
-<p>Khi một khách hàng dùng máy ATM, số dư sẽ được cập nhật trên cả hai máy ATM qua mạng. Điều này đảm bảo rằng các máy ATM có cùng kết quả khi kiểm tra số dư tài khoản.</p>
-<p>Nếu có một phân vùng mạng và các máy ATM không thể giao tiếp với nhau, thì hệ thống phải chọn giữa tính nhất quán và tính khả dụng.</p>
-<p>Nếu ngân hàng ưu tiên tính nhất quán, máy ATM có thể từ chối xử lý tiền gửi hoặc rút tiền cho đến khi phân vùng được giải quyết. Điều này đảm bảo rằng số dư vẫn nhất quán nhưng hệ thống không khả dụng với khách hàng.</p>
+<p>Tóm lại, forward proxy nằm giữa client và internet và hoạt động thay mặt cho client.</p>
+<h2 id="reverse-proxy">Reverse Proxy</h2>
+<p><strong>Reverse proxy</strong> nằm giữa internet và các web server. Nó chặn các request từ client và giao tiếp với web server thay mặt cho client.</p>
 <p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Nếu ngân hàng ưu tiên tính khả dụng, thì máy ATM có thể cho phép gửi và rút tiền, nhưng số dư có thể không ổn định cho đến khi phân vùng được giải quyết.</p>
+<p>Có một số lý do vì sao một website sẽ dùng reverse proxy.</p>
+<p>Thứ nhất, một reverse proxy có thể được sử dụng để bảo vệ một trang web. Địa chỉ IP của trang web được ẩn đằng sau reverse proxy và không được tiết lộ cho client. Điều này khiến việc tổ chức một cuộc tấn công từ chối dịch vụ (DDoS) vào một trang web trở nên khó hơn nhiều.</p>
+<p>Thứ hai, một reverse proxy được sử dụng để cân bằng tải (load balancing). Một trang web nổi tiếng có thể phải xử lý hàng triệu người dùng mỗi ngày, nó khó có thể xử lý lưu lượng truy cập lớn như vậy với một server. Một reverse proxy có thể cân bằng một lượng lớn request đến web server bằng cách phân phối lưu lượng truy cập đến một nhóm lớn các web server, và ngăn chặn hiệu quả bất kỳ một server nào trong số chúng bị quá tải. Lưu ý rằng ta giả sử reverse proxy có thể xử lý lưu lượng truy cập đến.</p>
+<p>Các dịch vụ như Cloudflare đặt các reverse proxy server ở hàng trăm địa điểm trên khắp thế giới. Điều này đặt reverse proxy gần với người dùng, và đồng thời cung cấp dung lượng xử lý lớn.</p>
+<p>Thứ ba, một reverse proxy có thể cache các static content. Một phần của content có thể được cache vào reverse proxy trong một khoảng thời gian. Nếu cùng một phần content đó dược request lại từ reverse proxy, thông tin đã cache có thể được trả về nhanh chóng.</p>
+<p>Thứ tư, reverse proxy có thể xử lý mã hoá SSL. Bắt tay SSL rất tốn kém về mặt tính toán. Một reverse proxy có thể giải phóng các server khỏi các thao tác tốn kém này. THay vì xử lý SSL cho tất cả client, một trang web chỉ cần xử lý bắt tay SSL từ một số ít reverse proxy.</p>
+<h2 id="cac-lop-reverse-proxy">Các lớp reverse proxy</h2>
+<p>Reverse proxy ở khắp mọi nơi. Với một trang web hiện đại, không có gì lạ khi có nhiều lớp reverse proxy. </p>
+<p>Lớp đầu tiên có thể là một dịch vụ biên như Cloudflare. Các reverse proxy được triển khai tới hàng trăm địa điểm trên toàn thế giới để gần với người dùng.</p>
+<p>Lớp thứ hai có thể là API gateway hoặc load balance tại nhà cung cấp dịch vụ host. Nhiều nhà cung cấp dịch vụ đám mây kết hợp 2 lớp này thành một dịch vụ đầu vào duy nhất.</p>
+<p>Người dùng sẽ vào mạng đám mây ở gần với người dùng và từ đó, reverse proxy kết nối qua mạng cáp quang tốc độ cao với load balancer, nơi request được phân phối đều trên một cụm web server.</p>
 <p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Khi có phân vùng mạng, khách hàng có thể rút toàn bộ số dư từ cả hai máy ATM. Khi phân vùng mạng được khắc phục, sự không nhất quán được giải quyết và bây giờ số dư là số âm. Đó là điều không được phép xảy ra.</p>
-<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Hãy cùng xem một ví dụ khác và xem cách một mạng xã hội có thể áp dụng định lý CAP</p>
-<p>Trong khi mạng bị phân vùng, nếu hai người dùng cùng bình luận một bài đăng cùng lúc, bình luận của một người dùng có thể không được hiển thị đến người dùng kia cho đến khi phân vùng được giải quyết. </p>
-<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Ngoài ra, nếu mạng xã hội ưu tiên tính nhất quán, thì tính năng comment có thể không khả dụng cho đến khi phân vùng được giải quyết. Đối với mạng xã hội, việc ưu tiên tính khả dụng thường được chấp nhận với cái giá là người dùng đôi khi thấy các data hơi khác nhau.</p>
-<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Định lý CAP nghe có vẻ rất đơn giản, nhưng thế giới thực lại rất hỗn loạn.</p>
-<p>Cũng giống như nhiều thứ trong công nghệ phần mềm, tất cả đều liên quan đến sự đánh đổi và các lựa chọn không phải lúc nào cũng rành rành ra đó. Định lý CPA giả định 100% tính khả dụng hoặc 100% tính nhất quán. Trong thế giới thực, có các mức độ nhất quán và khả dụng mà những người thiết kế hệ thống phân tán phải xem xét cẩn thận. Đây là lúc mà mô hình đơn giản của định lý CAP có thể gây hiểu nhầm.</p>
-<p>Quay lại ví dụ ngân hàng, trong quá trình phân vùng mạng, máy ATM chỉ có thể cho phép xử lý các yêu cầu về số dư, trong khi các khoản tiền gửi hoặc rút tiền bị chặn. </p>
-<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Ngoài ra, ngân hàng có thể triển khai một phương pháp kết hợp. Ví dụ, ATM có thể cho phép xử lý các yêu cầu về số dư và các khoản tiền nhỏ khi mạng đang bị phần vùng, nhưng chặn các khoản rút tiền hoặc gửi tiền lớn cho đến khi phân vùng được giải quyết.</p>
-<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Cần lưu ý là trong thực tế, việc đối soát sau phân vùng mạng có thể rất là lộn xộn. Với ví dụ ngân hàng ở trên thì việc đối soát là tương đối đơn giản. Trong thực tế, các cấu trúc dữ liệu liên quan có thể phức tạp và khó dung hoà.</p>
-<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Một ví dụ điển hình về cấu trúc dữ liệu phức tạp là Google Docs. Giải quyết các bản cập nhật xung đột có thể rất phức tạp.</p>
-<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></div></p>
-<h2 id="ket-luan">Kết luận</h2>
-<p>Vậy định lý CAP có hữu ích không? Có, đó là một công cụ hữu ích để giúp ta cân nhắc những đánh đổi cần lưu ý khi có một phân vùng mạng. Có điều, nó không cung cấp một bức tranh toàn cảnh về sự đánh đổi cần xem xét khi thiết kế một hệ thống phân tán toàn diện.</p>
-<p>Cụ thể, khi hệ thống hoạt động bình thường mà không có bất kỳ sự cố mạng nào (hầu hết thời gian là như vậy), ta lại có những đánh đổi khác để xem xét giữa độ trễ và tính nhất quán. Nó lại thuộc về định lý PACELC. Ta sẽ nói về nó trong một bài viết khác.</p>
-<p><div class="lightgallery"><a data-sub-html="figure12" href="../figure12.png"><img alt="figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></div></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/04/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">20/04/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">16/04/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">20/04/2023 (GMT+07)</span>
       
     
   </small>

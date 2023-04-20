@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/proxy_vs_reverse_proxy/proxy_vs_reverse_proxy/</loc>
+         <lastmod>2023-04-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/rest_api/rest_api/</loc>
          <lastmod>2023-04-20</lastmod>
          <changefreq>daily</changefreq>
