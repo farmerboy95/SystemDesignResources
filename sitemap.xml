@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/graphql/graphql/</loc>
+         <lastmod>2023-04-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/grpc/grpc/</loc>
          <lastmod>2023-04-20</lastmod>
          <changefreq>daily</changefreq>
