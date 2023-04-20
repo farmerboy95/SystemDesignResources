@@ -27,6 +27,7 @@ hide:
     - [Bộ nhớ và ổ cứng trong máy tính](ByteByteGo/computer_memory_and_storage/computer_memory_and_storage.md)
     - [7 cách mà lập trình viên tận dụng ChatGPT](ByteByteGo/chatgpt_hacks/chatgpt_hacks.md)
     - [Định lý CAP - CAP theorem](ByteByteGo/cap_theorem/cap_theorem.md)
+    - [gRPC là gì?](ByteByteGo/grpc/grpc.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
