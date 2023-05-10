@@ -30,6 +30,7 @@ hide:
     - [gRPC là gì?](ByteByteGo/grpc/grpc.md)
     - [GraphQL là gì?](ByteByteGo/graphql/graphql.md)
     - [Proxy vs. Reverse Proxy](ByteByteGo/proxy_vs_reverse_proxy/proxy_vs_reverse_proxy.md)
+    - [Thiết kế hệ thống: Thiết kế Location Based Service](ByteByteGo/design_location_based_service/design_location_based_service.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
