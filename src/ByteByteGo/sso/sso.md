@@ -64,7 +64,7 @@ Giờ ta cùng xem điều gì sẽ xảy ra khi người dùng điều hướng
 
 ![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
 
-Trước đó ta cũng đã đề cập đến OpenID Connect. Quy trình của OpenID Connect tương tự như SAML, nhưng thay vì chuyển tài liệu XML đã ký, OpenID Connect chuyển với JWT. JƯT là một tài liệu JSON đã ký.
+Trước đó ta cũng đã đề cập đến OpenID Connect. Quy trình của OpenID Connect tương tự như SAML, nhưng thay vì chuyển tài liệu XML đã ký, OpenID Connect chuyển với JWT. JWT là một tài liệu JSON đã ký.
 
 ![!figure6](figure6.png){ style="display: block; margin: 0 auto" }
 
