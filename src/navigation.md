@@ -33,6 +33,7 @@ comment: false
     - [Proxy vs. Reverse Proxy](ByteByteGo/proxy_vs_reverse_proxy/proxy_vs_reverse_proxy.md)
     - [Thiết kế hệ thống: Thiết kế Location Based Service](ByteByteGo/design_location_based_service/design_location_based_service.md)
     - [7 kiểu hệ thống phân tán thông dụng](ByteByteGo/system_patterns/system_patterns.md)
+    - [Bí mật đằng sau NoSQL: Cây LSM](ByteByteGo/lsm_tree/lsm_tree.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
