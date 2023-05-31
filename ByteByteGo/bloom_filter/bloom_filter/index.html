@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/what_happen_when_access_url/what_happen_when_access_url/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/bloom_filter/bloom_filter/">
       
       
-        <link rel="prev" href="../../../navigation/">
+        <link rel="prev" href="../../lsm_tree/lsm_tree/">
       
       
-        <link rel="next" href="../../latency_numbers/latency_numbers/">
+        <link rel="next" href="../../../Misc/chrome_blog/inside_browser_1/inside_browser_1/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt? - farmerboy's System Design Resources</title>
+        <title>Bloom Filter là gì? - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chuyen-gi-se-xay-ra-khi-ta-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet" class="md-skip">
+        <a href="#bloom-filter-la-gi" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
+              Bloom Filter là gì?
             
           </span>
         </div>
@@ -245,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../what_happen_when_access_url/what_happen_when_access_url/" class="md-tabs__link md-tabs__link--active">
         ByteByteGo
       </a>
     </li>
@@ -416,73 +416,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../what_happen_when_access_url/what_happen_when_access_url/" class="md-nav__link">
         Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#url-la-gi" class="md-nav__link">
-    URL là gì?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dns-la-gi" class="md-nav__link">
-    DNS là gì?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vay-chuyen-gi-se-xay-ra-khi-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet" class="md-nav__link">
-    Vậy chuyện gì sẽ xảy ra khi truy cập vào một đường dẫn (URL) trên trình duyệt?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -842,11 +780,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../bloom_filter/bloom_filter/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bloom Filter là gì?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Bloom Filter là gì?
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mo-au" class="md-nav__link">
+    Mở đầu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloom-filter-la-gi_1" class="md-nav__link">
+    Bloom Filter là gì?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloom-filter-uoc-ung-dung-nhu-the-nao" class="md-nav__link">
+    Bloom filter được ứng dụng như thế nào?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloom-filter-hoat-ong-nhu-the-nao" class="md-nav__link">
+    Bloom filter hoạt động như thế nào?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1017,22 +1024,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#url-la-gi" class="md-nav__link">
-    URL là gì?
+  <a href="#mo-au" class="md-nav__link">
+    Mở đầu
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dns-la-gi" class="md-nav__link">
-    DNS là gì?
+  <a href="#bloom-filter-la-gi_1" class="md-nav__link">
+    Bloom Filter là gì?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vay-chuyen-gi-se-xay-ra-khi-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet" class="md-nav__link">
-    Vậy chuyện gì sẽ xảy ra khi truy cập vào một đường dẫn (URL) trên trình duyệt?
+  <a href="#bloom-filter-uoc-ung-dung-nhu-the-nao" class="md-nav__link">
+    Bloom filter được ứng dụng như thế nào?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloom-filter-hoat-ong-nhu-the-nao" class="md-nav__link">
+    Bloom filter hoạt động như thế nào?
   </a>
   
 </li>
@@ -1056,41 +1070,50 @@
   
 
 
-<h1 id="chuyen-gi-se-xay-ra-khi-ta-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet">Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?</h1>
+<h1 id="bloom-filter-la-gi">Bloom Filter là gì?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=AlkDbnbv7dk">What happens when you type a URL into your browser?</a></p>
-<h2 id="url-la-gi">URL là gì?</h2>
-<p><strong>URL</strong>, hay tên đầy đủ là <strong>Universal Resources Locator</strong>, bao gồm 4 phần. Ví dụ với URL sau:</p>
+<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=V3pzxngeLqw">Bloom Filters | Algorithms You Should Know #2 | Real-world Examples</a></p>
+<h2 id="mo-au">Mở đầu</h2>
+<p><strong>Bloom Filter (bộ lọc nở hoa)</strong> là một cấu trúc dữ liệu có nhiều ứng dụng thực tế. Ta có thể thấy nó trong các router mạng, database và trình duyệt web, vân vân. Ta đã từng nói về Bloom Filter trong một bài viết về cây LSM. Ta cùng xem nó là gì qua bài viết sau nhé.</p>
+<h2 id="bloom-filter-la-gi_1">Bloom Filter là gì?</h2>
+<p>Bloom filter là một cấu trúc dữ liệu xác suất, hiệu quả về mặt không gian, đã ra đời được tầm 50 năm. Nó được sử dụng để trả lời cho câu hỏi: phần tử này có ở trong tập hợp không? Bloom filter sẽ trả lời "chắc chắn là không" hoặc "có lẽ là có". Nói cách khác, ta có thể gặp trường hợp khẳng định sai, nghĩa là phần tử không ở trong tập hợp nhưng bloom filter lại cho kết quả là có. Ngược lại, phủ định sai không thể xảy ra, nghĩa là phần tử có trong tập hợp nhưng bloom filter cho ra kết quả là không.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Trong đó:</p>
-<ul>
-<li><strong>Scheme</strong> cho trình duyệt biết rằng ta sẽ kết nối đến một server bằng giao thức trong scheme (ở đây là giao thức HTTP). Một scheme phổ biến khác là HTTPS, với sự khác biệt là kết nối đến server sẽ được mã hoá.</li>
-<li><strong>Domain</strong> là tên miền của website.</li>
-<li><strong>Path</strong> và <strong>Resource</strong> thường không có sự khác biệt rõ ràng. Có thể xem chúng lần lượt là thư mục và tập tin trong một ổ cứng bình thường. Chúng kết hợp với nhau tạo thành tài nguyên và ta muốn tải về trình duyệt.</li>
-</ul>
-<h2 id="dns-la-gi">DNS là gì?</h2>
-<p><strong>DNS</strong>, hay tên đầy đủ là <strong>Domain Name System</strong>, được xem như cuốn danh bạ trên internet. DNS có tác dụng chuyển đổi tên miền thành địa chỉ IP giúp trình duyệt có thể xác định được tài nguyên cần tìm nằm ở đâu trên mạng internet.</p>
-<p>Thông thường, địa chỉ IP ứng với tên miền được cached lại ngay tại trình duyệt trong một khoảng thời gian ngắn sau khi trình duyệt truy cập vào một URL. Cache này cũng hiện diện trong hệ điều hành để lấy được IP nhanh hơn là khi phải tra trong DNS.</p>
-<h2 id="vay-chuyen-gi-se-xay-ra-khi-truy-cap-vao-mot-uong-dan-url-tren-trinh-duyet">Vậy chuyện gì sẽ xảy ra khi truy cập vào một đường dẫn (URL) trên trình duyệt?</h2>
+<p>Phần "có lẽ là có" chính là điều làm cho bloom filter có tính xác suất. Cũng như nhiều thứ khác trong công nghệ phần mềm, đây là một sự đánh đổi. Sự đánh đổi ở đây là: đôi khi câu trả lời "có" có thể sai vài lần, nhưng bloom filter tiêu tốn rất ít bộ nhớ, so với các cấu trúc dữ liệu có ứng dụng tương tự, chẳng hạn như hash table, thứ sẽ luôn cho kết quả đúng. Nếu một use case chấp nhận một số câu trả lời "có" sai, nhưng không chấp nhận câu trả lời "không" sai, bloom filter sẽ là một giải pháp tuyệt vời. Một điểm quan trọng nữa là, ta không thể xoá phần tử ra khỏi bloom filter.</p>
 <p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Đầu tiên, người dùng sẽ gõ URL vào thanh địa chỉ (Address) trên trình duyệt.</p>
-<p>Sau đó, trình duyệt sẽ thử tìm IP ứng với tên miền của URL trong cache của nó. Nếu không tìm ra, trình duyệt sẽ hỏi cache của hệ điều hành để lấy được địa chỉ IP. Nếu vẫn không tìm ra, ta đến bước tiếp theo.</p>
-<p>Trình duyệt sẽ gửi truy vấn lên DNS Resolver để tìm ra địa chỉ IP. Việc này bao gồm một chuỗi các yêu cầu cho đến khi có được địa chỉ IP. DNS Resolver sẽ tìm trong các DNS Server trên internet để giúp trình duyệt tìm IP. Lưu ý là mỗi yêu cầu trong chuỗi các yêu cầu đều được cached lại nhằm giúp cho DNS Resolver cũng như các DNS Server thuận tiện hơn cho những lần tìm kiếm tiếp theo.</p>
-<p>Sau bước 2, giờ ta đã có địa chỉ IP của URL. Trình duyệt lúc này sẽ tạo ra một kết nối TCP đến server ứng với địa chỉ IP này. Quá trình bắt tay giữa trình duyệt và server cũng sẽ xảy ra ở đây (thường là bắt tay 3 bước). Để giúp cho việc kết nối diễn ra nhanh hơn, các trình duyệt ngày nay dùng một thứ gọi là kết nối keep-alive để sử dụng lại kết nối TCP đã được tạo nhiều nhất có thể.</p>
-<p>Nếu giao thức là HTTPS, quá trình kết nối sẽ có nhiều bước hơn. Nó yêu cầu một quá trình bắt tay phức tạp hơn gọi là bắt tay SSL/TLS để tạo ra kết nối an toàn (đã được mã hoá) giữa trình duyệt và server. Quá trình bắt tay này tốn kha khá tài nguyên và trình duyệt thường sử dụng một trick gọi là SSL session resumption để tiết kiệm tài nguyên.</p>
-<p>Ở bước 4, trình duyệt gửi HTTP request lên server với kết nối TCP trước đó. HTTP là một giao thức khá đơn giản. Server xử lý request và trả về response ở bước 5. Trình duyệt nhận response và render HTML content cho chúng ta.</p>
-<p>Ngoài ra ta còn có thêm những tài nguyên khác để tải về như JS bundles hay hình ảnh. Trình duyệt sẽ thực hiện lại các bước trên để lấy tất cả các tài nguyên đó về.</p>
+<h2 id="bloom-filter-uoc-ung-dung-nhu-the-nao">Bloom filter được ứng dụng như thế nào?</h2>
+<p>Nhiều database NoSQL sử dụng các bloom filter để giảm việc đọc đĩa với các key không tồn tại. Với một database dựa vào cây LSM, việc tìm một key không có trong database cần phải tra cứu qua nhiều file và rất tốn kém.</p>
+<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Các CDN như Akamai dùng bloom filter để tránh cache các "one-hit-wonder". Đây là các trang web chỉ được request một lần. Theo Akamai, 75% số trang là "one-hit-wonder". Sử dụng bloom filter để theo dõi tất cả các URL được xem và chỉ cache các trang trong lần request thứ hai đã giúp giảm đáng kể việc cache và tăng tỉ lệ truy cập cache.</p>
+<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Các trình duyệt như Chrome từng dùng bloom filter để xác định các URL độc hại. Bất kỳ URL nào trước hết cũng phải được kiểm tra trong bloom filter. Nó chỉ thực hiện kiểm tra kỹ URL sau khi bloom filter trả về "có thể là độc hại". Tuy nhiên, số lượng URL độc hại tăng lên hàng triệu nên bloom filter không còn được sử dụng nữa, mà thay vào đó là một giải pháp hiểu quả nhưng phức tạp hơn.</p>
+<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Tương tự vậy, một số trình xác thực mật khẩu sẽ dùng bloom filter để tránh cho người dùng dùng các mật khẩu yếu. Đôi khi một mật khẩu mạnh sẽ không qua được do khẳng định sai, nhưng trong trường hợp này, nó chỉ có thể hỏi người dùng cung cấp mật khẩu khác.</p>
+<p>Trên đây chỉ là một số ví dụ phổ biến. Bloom filter còn rất nhiều ứng dụng khác nữa.</p>
+<h2 id="bloom-filter-hoat-ong-nhu-the-nao">Bloom filter hoạt động như thế nào?</h2>
+<p>Một thành phần quan trọng của một bloom filter ngon lành là các hàm hash tốt. Các hàm hash này cần phải nhanh và chúng phải cho ra các output được phân phối đồng đều và ngẫu nhiên. Trùng lặp cũng được, miễn là hiếm khi xảy ra. Một bloom filter là một tập hợp lớn, với mỗi phần tử chứa một bit, và ban đầu bit đó là 0.</p>
+<p>Giờ tưởng tượng ta đang lưu các món ăn nhé. Với ví dụ này, ta sẽ dùng một bloom filter với 10 phần tử đánh số từ 0 đến 9, và ta sẽ dùng 3 hàm hash. </p>
+<p>Thêm <code>ribeye</code> vào bloom filter nhé. Các hàm hash sẽ trả về lần lượt các số 1, 3 và 4. Các bit tương ứng sẽ được đánh dấu bằng 1, dĩ nhiên là trong thời gian hằng số. </p>
+<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Tiếp theo, cho <code>potato</code> vào bloom filter. Các hàm hash sẽ trả về lần lượt các số 0, 4 và 8. Đánh dấu 1 vào các bit đó. </p>
+<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Giờ ta cần kiểm tra xem <code>ribeye</code> có trong đó không. Vì cùng input sẽ cho ra cùng output, <code>ribeye</code> sẽ được hash thành 1, 3, 4. Ta kiểm tra các phần tử tương ứng, thấy chúng đều có bit bằng 1. Nên bloom filter sẽ trả về là "có lẽ là có". Trong trường hợp này, đúng là có.</p>
+<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Giờ kiểm tra xem <code>pork chop</code> có trong đó không. Các hàm hash sẽ trả về 0, 5, 8. Dù phần tử thứ 0 và 8 chứa 1, nhưng phần tử 5 lại chứa 0. Vì vậy nên bloom filter trả về "chắc chắn là không".</p>
+<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Với <code>lemon</code> thì sao? Các hàm hash trả về 1, 4, 8. Do các phần tử tương ứng đều chứa bit 1, bloom filter sẽ trả về "có lẽ là có". Đây là một ví dụ về khẳng định sai, vì ta ban đầu không cho <code>lemon</code> vào bloom filter.</p>
+<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p>Trong thực tế, kích thước của bloom filter sẽ lớn hơn nhiều so với ví dụ này. Ta có thể kiểm soát tần suất thấy khẳng định sai bằng cách chọn chính xác kích thước cho bloom filter dựa vào kỳ vọng số entry trong đó. Đây là sự đánh đổi giữa không gian bộ nhớ và sự chính xác.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">21/01/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">01/06/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">21/01/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">01/06/2023 (GMT+07)</span>
       
     
   </small>
