@@ -1,6 +1,7 @@
 ---
 hide:
   - feedback
+comment: false
 ---
 
 - Trang chủ

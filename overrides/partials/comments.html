@@ -1,4 +1,9 @@
-{% if page.meta.comments %}
+{% set comment = config.extra.comments.enabled %}
+{% if page and page.meta and page.meta.comment == false %}
+  {% set comment = false %}
+{% endif %}
+
+{% if comment %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
   <!-- Insert generated snippet here -->
   <script src="https://giscus.app/client.js"
