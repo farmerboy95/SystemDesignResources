@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/lsm_tree/lsm_tree/</loc>
+         <lastmod>2023-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/osi_model/osi_model/</loc>
          <lastmod>2023-05-31</lastmod>
          <changefreq>daily</changefreq>
