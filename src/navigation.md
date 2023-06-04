@@ -36,6 +36,7 @@ comment: false
     - [Bí mật đằng sau NoSQL: Cây LSM](ByteByteGo/lsm_tree/lsm_tree.md)
     - [Bloom Filter là gì?](ByteByteGo/bloom_filter/bloom_filter.md)
     - [CI/CD là gì?](ByteByteGo/ci_cd/ci_cd.md)
+    - [Làm sao chọn database cho đúng?](ByteByteGo/choose_database/choose_database.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
