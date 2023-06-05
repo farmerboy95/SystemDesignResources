@@ -38,6 +38,7 @@ comment: false
     - [CI/CD là gì?](ByteByteGo/ci_cd/ci_cd.md)
     - [Làm sao chọn database cho đúng?](ByteByteGo/choose_database/choose_database.md)
     - [Kiến trúc Kubernetes](ByteByteGo/kubernetes/kubernetes.md)
+    - [Microservices là gì?](ByteByteGo/microservices/microservices.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
