@@ -39,6 +39,7 @@ comment: false
     - [Làm sao chọn database cho đúng?](ByteByteGo/choose_database/choose_database.md)
     - [Kiến trúc Kubernetes](ByteByteGo/kubernetes/kubernetes.md)
     - [Microservices là gì?](ByteByteGo/microservices/microservices.md)
+    - [Vì sao phỏng vấn System Design lại quan trọng?](ByteByteGo/why_system_design_interview_important/why_system_design_interview_important.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
