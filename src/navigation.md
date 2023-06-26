@@ -40,9 +40,12 @@ comment: false
     - [Kiến trúc Kubernetes](ByteByteGo/kubernetes/kubernetes.md)
     - [Microservices là gì?](ByteByteGo/microservices/microservices.md)
     - [Vì sao phỏng vấn System Design lại quan trọng?](ByteByteGo/why_system_design_interview_important/why_system_design_interview_important.md)
+    - [Hệ thống của Stack Overflow có gì hay?](ByteByteGo/stackoverflow_architecture/stackoverflow_architecture.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
         - [Bên trong các trình duyệt ngày nay (Phần 2)](Misc/chrome_blog/inside_browser_2/inside_browser_2.md)
         - [Bên trong các trình duyệt ngày nay (Phần 3)](Misc/chrome_blog/inside_browser_3/inside_browser_3.md)
         - [Bên trong các trình duyệt ngày nay (Phần 4)](Misc/chrome_blog/inside_browser_4/inside_browser_4.md)
+    - Công cụ linh tinh
+        - [Vim Cheat Sheet](Misc/tools/vim_cheat_sheet/vim_cheat_sheet.md)
