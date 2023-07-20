@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/lsm_tree/lsm_tree/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/oauth2_explained/oauth2_explained/">
       
       
-        <link rel="prev" href="../../system_patterns/system_patterns/">
+        <link rel="prev" href="../../netflix_architecture_evolution/netflix_architecture_evolution/">
       
       
-        <link rel="next" href="../../bloom_filter/bloom_filter/">
+        <link rel="next" href="../../../Misc/chrome_blog/inside_browser_1/inside_browser_1/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
-        <title>Bí mật đằng sau NoSQL: Cây LSM - farmerboy's System Design Resources</title>
+        <title>Giải thích dễ hiểu OAuth2 - farmerboy's System Design Resources</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bi-mat-ang-sau-nosql-cay-lsm" class="md-skip">
+        <a href="#giai-thich-de-hieu-oauth2" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bí mật đằng sau NoSQL: Cây LSM
+              Giải thích dễ hiểu OAuth2
             
           </span>
         </div>
@@ -766,87 +766,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Bí mật đằng sau NoSQL: Cây LSM
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../lsm_tree/lsm_tree/" class="md-nav__link">
         Bí mật đằng sau NoSQL: Cây LSM
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
-    Mở đầu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#b-tree" class="md-nav__link">
-    B-tree
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cay-lsm" class="md-nav__link">
-    Cây LSM
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qua-trinh-nen" class="md-nav__link">
-    Quá trình nén
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cac-cach-toi-uu" class="md-nav__link">
-    Các cách tối ưu
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -968,11 +892,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../oauth2_explained/oauth2_explained/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Giải thích dễ hiểu OAuth2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Giải thích dễ hiểu OAuth2
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thuo-so-khai" class="md-nav__link">
+    Thuở sơ khai
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oauth2-la-cai-gi" class="md-nav__link">
+    OAuth2 là cái gì?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-du" class="md-nav__link">
+    Ví dụ
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1191,36 +1177,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mo-au" class="md-nav__link">
-    Mở đầu
+  <a href="#thuo-so-khai" class="md-nav__link">
+    Thuở sơ khai
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#b-tree" class="md-nav__link">
-    B-tree
+  <a href="#oauth2-la-cai-gi" class="md-nav__link">
+    OAuth2 là cái gì?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cay-lsm" class="md-nav__link">
-    Cây LSM
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qua-trinh-nen" class="md-nav__link">
-    Quá trình nén
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cac-cach-toi-uu" class="md-nav__link">
-    Các cách tối ưu
+  <a href="#vi-du" class="md-nav__link">
+    Ví dụ
   </a>
   
 </li>
@@ -1244,57 +1216,48 @@
   
 
 
-<h1 id="bi-mat-ang-sau-nosql-cay-lsm">Bí mật đằng sau NoSQL: Cây LSM</h1>
+<h1 id="giai-thich-de-hieu-oauth2">Giải thích dễ hiểu OAuth2</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=I6jB0nM9SKU">The Secret Sauce Behind NoSQL: LSM Tree</a></p>
-<h2 id="mo-au">Mở đầu</h2>
-<p>Các database NoSQL như Cassandra đã trở nên bùng nổ trong những năm gần đây. Một yếu tố thúc đẩy là nhu cầu lớn để thu tập lượng dữ liệu khổng lồ từ rất rất nhiều nguồn khác nhau và ngày càng tăng lên, như các ứng dụng di động và các thiết bị IoT (Internet of Things). Bí mật ẩn giấu đằng sau các database NoSQL này là một cấu trúc dữ liệu có tên là <strong>cây Log Structured Merge</strong> (viết tắt là <strong>cây LSM</strong>, lược dịch là cây hợp nhất có cấu trúc log).
-Cây LSM được tối ưu hoá cho việc ghi dữ liệu nhanh.</p>
+<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=ZV5yTm4pT8g">OAuth 2 Explained In Simple Terms</a></p>
+<h2 id="thuo-so-khai">Thuở sơ khai</h2>
+<p>Ta cùng nhau nhớ lại thời kỳ sơ khai của Internet, việc chia sẻ thông tin lúc đó khá là chân phương. Bạn chỉ cần đưa service tên đăng nhập và mật khẩu của bạn và cái service đó có thể truy cập vào bất cứ thứ gì nó muốn. Cách làm này khá là khó chịu, tuy nhiên vẫn có một số chỗ vẫn còn sử dụng, như trong một số phần mềm tài chính cá nhân để lấy thông tin từ một số ngân hàng cũ nào đó.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
-<h2 id="b-tree">B-tree</h2>
-<p>Để hiểu cây LSM hoạt động như thế nào, ta cùng đi tìm hiểu dữ liệu thường được lưu vào các relational database (cơ sở dữ liệu quan hệ) ra sao. Một relational database thường được hỗ trợ bởi một cấu trúc dữ liệu có tên là <strong>B-tree</strong>. </p>
+<p>May mắn là ta có thứ khác ngon hơn, đó là <strong>OAuth2</strong>.</p>
+<h2 id="oauth2-la-cai-gi">OAuth2 là cái gì?</h2>
+<p>OAuth2 sẽ kiểu như bạn đưa cho ai đó một cái key đặc biệt, key này cho phép người đó truy cập vào một số phần thông tin nhất định của ta trong một ứng dụng khác. Ta sẽ kiểm soát được ai có quyền truy cập thông tin của mình mà không phải chia sẻ mật khẩu. Và điều tuyệt vời nữa là ta có thể thu hồi cái key đó bất kỳ lúc nào.</p>
 <p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>B-tree được tối ưu cho việc đọc dữ liệu. Cập nhật (thêm, sửa, xoá) B-tree tương đối tốn kém vì nó liên quan đến random I/O và có thể bao gồm việc cập nhật nhiều trang trên đĩa cứng. Điều này làm giới hạn tốc độ ghi dữ liệu của B-tree. </p>
-<h2 id="cay-lsm">Cây LSM</h2>
-<p>Cây LSM thì khác. Việc ghi dữ liệu được dồn theo đợt trong bộ nhớ trong một cấu trúc gọi là memtable, sau đó gửi đi. Một memtable được sắp xếp theo object key, và thường được triển khai dưới dạng cây nhị phân cân bằng (balanced binary tree). </p>
+<h2 id="vi-du">Ví dụ</h2>
+<p>Xét một ví dụ như sau: Ta có một ứng dụng lưu trữ ảnh tên là SnapStore. Ta đang dùng nó để lưu trữ hình ảnh, và giờ ta muốn in một số hình với một service in của bên thứ ba, gọi là PrintMagic.</p>
+<p>Thay vì phải upload bằng tay mỗi tấm hình lên PrintMagic, ta có thể yêu cầu PrintMagic làm điều đó luôn. Với chỉ một cú click chuột, ta trao (grant) cho PrintMagic quyền để truy cập vào các hình ảnh của ta trên SnapStore.</p>
 <p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Khi kích thước memtable đến một giới hạn nào đó, nó sẽ được chuyển vào đĩa cứng dưới dạng <strong>Sorted String Table</strong> bất biến (viết tắt là SSTable, lược dịch là Bảng chứa các xâu được sắp xếp).</p>
+<p>Với OAuth2, PrintMagic sẽ thay mặt ta truy cập vào kho hình trên SnapStore mà không cần biết thông tin đăng nhập của chúng ta.</p>
 <p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Một SSTable lưu các cặp key-value theo trình tự được sắp xếp theo key. Tất cả các lần ghi đều là I/O tuần tự, khiến cho việc ghi rất nhanh trên mọi loại đĩa. SSTable mới sẽ trở thành đoạn (hay là thông tin) mới nhất của cây LSM. Khi có nhiều dữ liệu hơn, ngày càng nhiều SSTable bất biến được tạo ra và thêm vào cây LSM, với mỗi SSTable đại diện cho một tập con nhỏ theo trình tự thời gian của các thay đổi mới nhất. </p>
+<p>Đây là một ví dụ về luồng OAuth, được dẫn đầu bởi OAuth2. Hãy cùng đi sâu hơn chút nhé.</p>
+<p>Trong hoàn cảnh này, ta là <strong>resource owner</strong> (chủ tài nguyên), vì ta chính là chủ của những tấm hình của chính mình trên SnapStore. SnapStore là <strong>resource server</strong> (máy chủ tài nguyên), là thứ đang lưu hình ảnh. PrintMagic là <strong>client</strong> muốn truy cập vào kho hình. <strong>Authorization server</strong> (máy chủ định danh) có thể là một phần của SnapStore hoặc có thể từ một <strong>identity provider</strong> (nhà cung cấp danh tính) bên ngoài nào đó, nó chịu trách nhiệm xử lý quá trình OAuth2.</p>
+<p>Ta đi vào xem luồng OAuth2 cụ thể sẽ đi như thế nào nhé.</p>
+<ol>
+<li>Mọi chuyện bắt đầu khi ta hướng dẫn PrintMagic lấy hình từ SnapStore.</li>
+<li>PrintMagic gửi một client ID và scope (phạm vi truy cập) đến authorization server của SnapStore. </li>
+<li>Là một resource owner, ta xác thực danh tính trực tiếp với SnapStore và đồng ý trao cho PrintMagic quyền để truy cập hình ảnh của mình. </li>
+<li>Khi được sự đồng ý, authorization server gửi một authorization code về cho PrintMagic. </li>
+<li>PrintMagic sẽ lại mang authorization code này, cùng với client ID và client secret đến cho authorization server. Client secret là một khoá bí mật được chỉ được chia sẻ cho PrintMagic và authorization server. </li>
+<li>Nếu authorization server xác nhận authorization code, client ID và client secret, nó sẽ tạo ra một <strong>access token</strong> gửi về PrintMagic. </li>
+<li>PrintMagic sẽ dùng cái token này để request hình ảnh từ resource server của SnapStore.</li>
+</ol>
+<p>OAuth2 đảm bảo rằng thông tin đăng nhập của SnapStore sẽ không bao giờ được lộ ra cho bên PrintMagic biết, và vẫn cho PrintMagic truy cập thông tin, nhưng chỉ những thông tin được trao quyền truy cập. Thêm một vấn đề nữa cần lưu ý là access token có thể hết hạn sau một khoảng thời gian hoặc có thể bị ta thu hồi bất cứ lúc nào, đây là một lớp bảo mật rất đáng giá.</p>
+<p>OAuth2 còn hỗ trợ <strong>refresh token</strong>, nó có thể được dùng để lấy access token mới khi cái cũ hết hạn mà không cần ta phải làm gì cả.</p>
 <p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Vì các SSTable này bất biến, cập nhật cho một key hiện có sẽ không ghi đè lên SSTable chứa key đó. Thay vào đó, một key mới được thêm vào SSTable mới nhất, và nó sẽ thay cho các key trùng nó trong các SSTable cũ.</p>
-<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Việc xoá một object phải xử lý khác đi, vì ta không thể đánh dấu object đã bị xoá trong SSTable cũ được. Để thực hiện xoá, nó thêm một đánh dấu gọi là tombstone (bia mộ) vào SSTable mới nhất cho cái key đó. Khi ta đọc dữ liệu mà thấy tombstone, ta biết rằng object đã bị xoá. Việc xoá ở đây lại tốn thêm không gian dữ liệu, nghe hơi lạ, nhưng là cách tốt nhất có thể làm.</p>
-<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Khi có request đọc dữ liệu đến, đầu tiên ta tìm key trong memtable, sau đó tìm trong SSTable mới nhất trong cây LSM, xong đến SSTable mới thứ hai, và tiếp tục như thế. SSTable đã được sắp xếp nên việc tìm kiếm có thể được thực hiện hiệu quả.</p>
-<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Việc thêm liên tục các SSTable như vậy nảy sinh hai vấn đề. Thứ nhất, vì số SSTable tăng lên, sẽ ngày càng tốn thời gian hơn để tìm một key. Thứ hai, SSTable liên tục tích luỹ như vậy, sẽ có rất nhiều object cũ do việc sửa và xoá (thêm data mới), điều này sẽ làm tốn không gian lưu trữ. </p>
-<p>Để giải quyết các vấn đề này, ta sẽ đi hợp nhất (merge) và nén (compact) định kỳ. Quá trình này sẽ chạy nền để hợp nhất các SSTable và loại bỏ các giá trị cũ hoặc bị xoá. Điều này giúp tiết kiệm không gian lưu trữ và giới hạn số lượng SSTable mà một lần đọc phải kiểm tra. Vì các SSTable được sắp xếp rồi, nên quá trình hợp nhất và nén này rất đơn giản và hiệu quả. Cách làm cũng tương tự việc merge trong Merge Sort. Tóm lại, đây là cách cây LSM cung cấp khả năng ghi dữ liệu nhanh chóng.</p>
-<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Ta cùng tóm tắt lại nhé. Cây LSM sẽ ghi dữ liệu vào memtable trước. Khi memtable đầy, ta sắp xếp và đẩy nó vào đĩa cứng dưới dạng SSTable bất biến. Số lượng SSTable tăng lên do càng nhiều memtable data được đẩy vào. Điều này sinh ra vấn đề cho việc đọc, do nó phải tìm kiếm qua các SSTable để thực hiện tra cứu. Để giới hạn số lương SSTable mà nó phải tìm kiếm cho mỗi lần đọc, cây LSM hợp nhất các SSTable và nén (quá trình này được chạy nền).</p>
-<p><div class="lightgallery"><a data-sub-html="figure12" href="../figure12.png"><img alt="figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></div></p>
-<h2 id="qua-trinh-nen">Quá trình nén</h2>
-<p>Ta cùng xem xét sâu hơn về quá trình nén. Khi các SSTable hợp nhất, chúng được tổ chức thành các level. Đây là nơi phần cây của cây LSM xuất hiện. Có một số cách khác nhau để xác định thời điểm và cách thức các SSTable được hợp nhất và nén. Có hai cách tổng quát: <strong>Nén theo kích thước (Size Tiered Compaction)</strong> và <strong>nén theo level (Leveled Compaction)</strong>.</p>
-<p>Nén theo kích thước được tối ưu hoá cho việc ghi, còn nén theo level được tối ưu hoá cho việc đọc dữ liệu hơn. Ta sẽ không đi vào chi tiết những cách này hoạt động như thế nào. Nhưng có một vài điểm chính cần nhớ: việc nén giữ cho số lương SSTable nằm trong giới hạn nào đó. Các SSTable được tổ chức thành các level. Mỗi level sẽ lớn hơn theo cấp số nhân khi các SSTable ở level trên được hợp nhất vào nó. Việc nên tốn rất nhiều I/O. Nén sai sẽ có thể làm chậm cả việc đọc và ghi.</p>
-<h2 id="cac-cach-toi-uu">Các cách tối ưu</h2>
-<p>Cuối cùng, ta cùng xem xét các tối ưu phổ biến cho cây LSM trong thực tế. Có nhiều cách tối ưu hoá cố gắng cung cấp hiệu suất đọc gần với B-tree hơn. Những gì ta sẽ đi vào dưới đây chỉ là những cách phổ biến nhất thôi. Để tra một key, nó thực hiện tìm kiếm trên SSTable ở mọi level. Mặc dù tìm kiếm nhanh trên dữ liệu được sắp xếp, nhưng việc duyệt qua tất cả các SSTable trên đĩa sẽ tốn rất nhiều I/O. Nhiều hệ thống giữ một bảng tóm tắt (summary table) trong bộ nhớ, trong đó chứa min/max của mỗi khối đĩa ở mọi level. Điều này giúp hệ thống bỏ qua tìm kiếm ở những khối đĩa không có key cần tìm, giúp tiết kiệm rất nhiều random I/O.</p>
-<p><div class="lightgallery"><a data-sub-html="figure13" href="../figure13.png"><img alt="figure13" src="../figure13.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Một vấn đề nữa có thể tốn kém là việc tìm key không có trong cây LSM. Nó sẽ phải tìm qua tất cả các khối ở mọi level. Hầu hết các hệ thống duy trì một bloom filter ở mỗi level. Một bloom filter là một cấu trúc dữ liệu tiết kiệm không gian, nó sẽ trả về "Không có" nếu key không tồn tại, và "Có thể có" nếu key có thể tồn tại. Điều này giúp hệ thống bỏ qua một level nếu key không có ở đó, giúp giảm mạnh lượng random I/O cần. </p>
-<p><div class="lightgallery"><a data-sub-html="figure14" href="../figure14.png"><img alt="figure14" src="../figure14.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Kết lại, NoSQL database được hỗ trợ bằng một cây LSM có thể được điều chỉnh để hỗ trợ tốc độ ghi rất cao. Như với bất kỳ database nào, điều chỉnh cần phải phù hợp. Với cây LSM, điều chỉnh việc nén là quan trọng nhất.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">31/05/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">20/07/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">31/05/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">20/07/2023 (GMT+07)</span>
       
     
   </small>
