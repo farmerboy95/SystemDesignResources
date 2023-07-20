@@ -42,6 +42,7 @@ comment: false
     - [Vì sao phỏng vấn System Design lại quan trọng?](ByteByteGo/why_system_design_interview_important/why_system_design_interview_important.md)
     - [Hệ thống của Stack Overflow có gì hay?](ByteByteGo/stackoverflow_architecture/stackoverflow_architecture.md)
     - [Giải mã sự phát triển trong kiến trúc API của Netflix](ByteByteGo/netflix_architecture_evolution/netflix_architecture_evolution.md)
+    - [Giải thích dễ hiểu OAuth2](ByteByteGo/oauth2_explained/oauth2_explained.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
