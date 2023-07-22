@@ -1,4 +1,4 @@
-# Tất tần tật về DNS
+# Những thứ bạn cần biết về DNS
 
 ## Nguồn
 
