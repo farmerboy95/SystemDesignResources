@@ -24,7 +24,7 @@ comment: false
     - [Tại sao Kafka lại nhanh như vậy?](ByteByteGo/why_kafka_fast/why_kafka_fast.md)
     - [Single Sign-on (SSO) là gì?](ByteByteGo/sso/sso.md)
     - [Mô hình OSI là gì?](ByteByteGo/osi_model/osi_model.md)
-    - [Tất tần tật về DNS](ByteByteGo/dns/dns.md)
+    - [Những thứ bạn cần biết về DNS](ByteByteGo/dns/dns.md)
     - [Bộ nhớ và ổ cứng trong máy tính](ByteByteGo/computer_memory_and_storage/computer_memory_and_storage.md)
     - [7 cách mà lập trình viên tận dụng ChatGPT](ByteByteGo/chatgpt_hacks/chatgpt_hacks.md)
     - [Định lý CAP - CAP theorem](ByteByteGo/cap_theorem/cap_theorem.md)
@@ -43,6 +43,7 @@ comment: false
     - [Hệ thống của Stack Overflow có gì hay?](ByteByteGo/stackoverflow_architecture/stackoverflow_architecture.md)
     - [Giải mã sự phát triển trong kiến trúc API của Netflix](ByteByteGo/netflix_architecture_evolution/netflix_architecture_evolution.md)
     - [Giải thích dễ hiểu OAuth2](ByteByteGo/oauth2_explained/oauth2_explained.md)
+    - [Discord lưu hàng nghìn tỉ tin nhắn như thế nào?](ByteByteGo/discord_messages_migration/discord_messages_migration.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
