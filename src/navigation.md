@@ -50,5 +50,8 @@ comment: false
         - [Bên trong các trình duyệt ngày nay (Phần 2)](Misc/chrome_blog/inside_browser_2/inside_browser_2.md)
         - [Bên trong các trình duyệt ngày nay (Phần 3)](Misc/chrome_blog/inside_browser_3/inside_browser_3.md)
         - [Bên trong các trình duyệt ngày nay (Phần 4)](Misc/chrome_blog/inside_browser_4/inside_browser_4.md)
+    - Discord Blog
+        - [Discord lưu trữ hàng tỉ tin nhắn như thế nào?](Misc/discord_blog/storing_billions_messages/storing_billions_messages.md)
+        - [Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?](Misc/discord_blog/storing_trillions_messages/storing_trillions_messages.md)
     - Công cụ linh tinh
         - [Vim Cheat Sheet](Misc/tools/vim_cheat_sheet/vim_cheat_sheet.md)

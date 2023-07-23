@@ -12,19 +12,19 @@ Trong bài này, ta sẽ không chỉ nói về database migration (di chuyển 
 
 ## Vấn đề của Cassandra
 
-Hãy quay trở lại thời gian tầm vài năm trước. Discord lúc này đang hơi khó xử với việc chọn database. Họ đang dùng Cassandra, nhưng khi nền tảng này tiếp tục phát triển, họ phải đối mặt với các vấn đề nghiêm trọng về hiệu suất. Việc duy trì cluster Cassangra chính (nơi lưu trữ tin nhắn) mất rất nhiều công sức. Độ trễ không thể dự đoán được, và các sự cố thường xuyên xảy ra khi on-call gây nên căng thẳng rất lớn cho team.
+Hãy quay trở lại thời gian tầm vài năm trước. Discord lúc này đang hơi khó xử với việc chọn database. Họ đang dùng Cassandra, nhưng khi nền tảng này tiếp tục phát triển, họ phải đối mặt với các vấn đề nghiêm trọng về hiệu suất. Việc duy trì cluster Cassandra chính (nơi lưu trữ tin nhắn) mất rất nhiều công sức. Độ trễ khó đoán và các sự cố thường xuyên xảy ra khi on-call gây nên căng thẳng rất lớn cho team.
 
-Đến năm 2022, cluster Cassandra chứa hàng nghìn tỉ tin nhắn trên **177 node**. Họ hiểu rằng họ cần một sự khác biệt, nhưng cluster tin nhắn này rất quan trọng với Discord. Nếu cluster này chậm, Discord cũng sẽ chậm. Nếu cluster ngừng hoạt động, Discord cũng ngừng hoạt động luôn.
+Đến năm 2022, cluster Cassandra chứa hàng nghìn tỉ tin nhắn trên **177 node**. Họ hiểu rằng họ cần một sự khác biệt, nhưng cluster tin nhắn này rất quan trọng với Discord. Nếu cluster này chậm, Discord cũng sẽ chậm. Nếu cluster ngừng hoạt động, Discord cũng chết luôn.
 
 ![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
 
 ## ScyllaDB và quá trình di chuyển
 
-### Các giai đoạn trong quá trình di chuyển
-
 Giải pháp là gì? ScyllaDB, một database tương thích với Cassandra, nhưng với một engine dựa trên C++ mạnh mẽ hơn.
 
-Thay vì lao vào giải quyết vấn đề rủi ro nhất và lớn nhất, **họ bắt đầu di chuyển với các database nhỏ hơn**. Và đây chính là bài học đầu tiên. Ở Discord, dev sẽ hành động nhanh chóng khi sai lầm có thể khắc phục được, nhưng nếu giải pháp chỉ có một chiều, họ sẽ dành thêm thời gian để nghiên cứu làm sao cho đúng. Họ di chuyển những database nhỏ để **kiểm tra và giải quyết nhiều vấn đề nhất có thể** trước khi di chuyển con quái vật nghìn tỉ tin nhắn.
+### Các giai đoạn trong quá trình di chuyển
+
+Thay vì lao vào giải quyết vấn đề rủi ro nhất và lớn nhất, **họ bắt đầu di chuyển với các database nhỏ hơn**. Và đây chính là bài học đầu tiên. Ở Discord, dev sẽ hành động nhanh chóng khi sai lầm có thể khắc phục được, nhưng nếu giải pháp không thể đảo ngược khi có vấn đề, họ sẽ dành thêm thời gian để nghiên cứu làm sao cho đúng. Họ di chuyển những database nhỏ để **kiểm tra và giải quyết nhiều vấn đề nhất có thể** trước khi di chuyển con quái vật nghìn tỉ tin nhắn.
 
 ![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
 
@@ -34,11 +34,11 @@ Nói thêm một chút về ScyllaDB. Nó được viết bằng C++ và hứa h
 
 ### Data service
 
-Bước quan trọng tiếp theo là tạo một lớp trung gian giữa khối API và các cluster database được gọi là các **data service**. Lớp này được viết bằng Rust, một ngôn ngữ an toàn và có hiệu suất cao.
+Bước quan trọng tiếp theo là tạo một lớp trung gian giữa khối API và các cluster database được gọi là các **data service**. Lớp này được viết bằng **Rust**, một ngôn ngữ an toàn và có hiệu suất cao.
 
 ![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
 
-Ý tưởng cực hay về lớp này là thứ được gọi là **request coalescing** (hợp nhất request). Nếu nhiều người dùng request cùng một dữ liệu, database chỉ cần được truy vấn một lần duy nhất.
+Ý tưởng cực hay về lớp data service này là thứ được gọi là **request coalescing** (hợp nhất request). Nếu nhiều người dùng cùng request một dữ liệu, database chỉ cần được truy vấn một lần duy nhất.
 
 ![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
 
@@ -48,7 +48,7 @@ Bước quan trọng tiếp theo là tạo một lớp trung gian giữa khối 
 
 Sau đó, họ đưa ra khái niệm về Super-Disk. Các cluster database chạy trên Google Cloud. Khi gặp các vấn đề về độ trễ trên đĩa cứng, họ không thể dựa vào ổ SSD NVMe cục bộ trên máy ảo để lưu trữ dữ liệu quan trọng do các vấn đề về độ tin cậy và độ bền. 
 
-Giải pháp thay thế là các **Persistent Disk** của Google Cloud. Mặc dù nó đáng tin cậy và linh hoạt, nó có một nhược diểm là độ trễ cao hơn do chúng được gắn vào mạng thay vì được gán trực tiếp.
+Giải pháp thay thế là các **Persistent Disk** của Google Cloud. Mặc dù nó đáng tin cậy và linh hoạt, nó có một nhược diểm là độ trễ cao hơn do chúng được gắn thông qua mạng thay vì được gán trực tiếp.
 
 ![!figure6](figure6.png){ style="display: block; margin: 0 auto" }
 
@@ -56,7 +56,7 @@ Vậy Discord đã làm gì? Họ quay lại bản vẽ và tập trung tạo ra
 
 ![!figure7](figure7.png){ style="display: block; margin: 0 auto" }
 
-Super-Disk này là một giải pháp RAID hai lớp. Họ dùng RAID0 để kết hợp nhiều SSD cục bộ thành một đĩa ảo có độ trễ thấp, và sau đó RAID1 để mirror mảng RAID0 này vào Persistent Disk. Sau đó, họ cấu hình linux kernel để chuyển hướng ghi vào Persistent Disk để đảm bảo độ bền cao, và hướng đọc vào SSD cục bộ để có độ trễ thấp. Thiết lập này đảm bào khả năng đọc có độ trễ thấp từ SSD cục bộ và độ bền ghi từ Persistent Disk.
+Super-Disk này là một giải pháp RAID hai lớp. Họ dùng RAID0 để kết hợp nhiều SSD cục bộ thành một đĩa ảo có độ trễ thấp, và sau đó RAID1 để mirror RAID0 này vào Persistent Disk. Sau đó, họ cấu hình linux kernel để chuyển hướng ghi vào Persistent Disk để đảm bảo độ bền cao, và hướng đọc vào SSD cục bộ để có độ trễ thấp. Thiết lập này đảm bào khả năng đọc có độ trễ thấp từ SSD cục bộ và độ bền ghi từ Persistent Disk.
 
 ![!figure8](figure8.png){ style="display: block; margin: 0 auto" }
 
