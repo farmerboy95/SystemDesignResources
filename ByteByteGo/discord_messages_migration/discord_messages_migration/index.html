@@ -1146,12 +1146,74 @@
       
       
         <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-          Công cụ linh tinh
+          Discord Blog
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Discord Blog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Misc/discord_blog/storing_billions_messages/storing_billions_messages/" class="md-nav__link">
+        Discord lưu trữ hàng tỉ tin nhắn như thế nào?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Misc/discord_blog/storing_trillions_messages/storing_trillions_messages/" class="md-nav__link">
+        Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Công cụ linh tinh
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Công cụ linh tinh
         </label>
@@ -1291,29 +1353,29 @@
 <p>Trong bài này, ta sẽ không chỉ nói về database migration (di chuyển dữ liệu từ database này sang database khác), mà còn nói về một task siêu to khổng lồ mà các dev của Discord đã làm được - chuyển hàng nghìn tỉ tin nhắn từ một database này sang database khác. Nếu bạn tự hỏi rằng sẽ tốn bao nhiêu công sức để di chuyển data với quy mô khó tưởng tượng ra như vậy, bạn sẽ thích bài viết này.</p>
 <p><strong>Discord</strong> gần đây đã vén bức màn về cách công ty này di chuyển hàng nghìn tỉ tin nhắn từ <strong>Cassandra</strong> - database chứa các cuộc trò chuyện và hội thoại của bạn, sang <strong>ScyllaDB</strong> - một giải pháp thay thế nhanh hơn và đáng tin cậy hơn. Bí mật này được chia sẻ lần đầu tại ScyllaDB Summit 2023 bởi Bo Ingram (video tại <a href="https://resources.scylladb.com/videos/how-discord-migrated-trillions-of-messages-from-cassandra-to-scylladb-2">đây</a>), với một bài blog chi tiết tại <a href="https://discord.com/blog/how-discord-stores-trillions-of-messages">đây</a>. Mình sẽ tóm tắt ý tưởng cùng bài học rút ra ngay sau đây.</p>
 <h2 id="van-e-cua-cassandra">Vấn đề của Cassandra</h2>
-<p>Hãy quay trở lại thời gian tầm vài năm trước. Discord lúc này đang hơi khó xử với việc chọn database. Họ đang dùng Cassandra, nhưng khi nền tảng này tiếp tục phát triển, họ phải đối mặt với các vấn đề nghiêm trọng về hiệu suất. Việc duy trì cluster Cassangra chính (nơi lưu trữ tin nhắn) mất rất nhiều công sức. Độ trễ không thể dự đoán được, và các sự cố thường xuyên xảy ra khi on-call gây nên căng thẳng rất lớn cho team.</p>
-<p>Đến năm 2022, cluster Cassandra chứa hàng nghìn tỉ tin nhắn trên <strong>177 node</strong>. Họ hiểu rằng họ cần một sự khác biệt, nhưng cluster tin nhắn này rất quan trọng với Discord. Nếu cluster này chậm, Discord cũng sẽ chậm. Nếu cluster ngừng hoạt động, Discord cũng ngừng hoạt động luôn.</p>
+<p>Hãy quay trở lại thời gian tầm vài năm trước. Discord lúc này đang hơi khó xử với việc chọn database. Họ đang dùng Cassandra, nhưng khi nền tảng này tiếp tục phát triển, họ phải đối mặt với các vấn đề nghiêm trọng về hiệu suất. Việc duy trì cluster Cassandra chính (nơi lưu trữ tin nhắn) mất rất nhiều công sức. Độ trễ khó đoán và các sự cố thường xuyên xảy ra khi on-call gây nên căng thẳng rất lớn cho team.</p>
+<p>Đến năm 2022, cluster Cassandra chứa hàng nghìn tỉ tin nhắn trên <strong>177 node</strong>. Họ hiểu rằng họ cần một sự khác biệt, nhưng cluster tin nhắn này rất quan trọng với Discord. Nếu cluster này chậm, Discord cũng sẽ chậm. Nếu cluster ngừng hoạt động, Discord cũng chết luôn.</p>
 <p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
 <h2 id="scylladb-va-qua-trinh-di-chuyen">ScyllaDB và quá trình di chuyển</h2>
-<h3 id="cac-giai-oan-trong-qua-trinh-di-chuyen">Các giai đoạn trong quá trình di chuyển</h3>
 <p>Giải pháp là gì? ScyllaDB, một database tương thích với Cassandra, nhưng với một engine dựa trên C++ mạnh mẽ hơn.</p>
-<p>Thay vì lao vào giải quyết vấn đề rủi ro nhất và lớn nhất, <strong>họ bắt đầu di chuyển với các database nhỏ hơn</strong>. Và đây chính là bài học đầu tiên. Ở Discord, dev sẽ hành động nhanh chóng khi sai lầm có thể khắc phục được, nhưng nếu giải pháp chỉ có một chiều, họ sẽ dành thêm thời gian để nghiên cứu làm sao cho đúng. Họ di chuyển những database nhỏ để <strong>kiểm tra và giải quyết nhiều vấn đề nhất có thể</strong> trước khi di chuyển con quái vật nghìn tỉ tin nhắn.</p>
+<h3 id="cac-giai-oan-trong-qua-trinh-di-chuyen">Các giai đoạn trong quá trình di chuyển</h3>
+<p>Thay vì lao vào giải quyết vấn đề rủi ro nhất và lớn nhất, <strong>họ bắt đầu di chuyển với các database nhỏ hơn</strong>. Và đây chính là bài học đầu tiên. Ở Discord, dev sẽ hành động nhanh chóng khi sai lầm có thể khắc phục được, nhưng nếu giải pháp không thể đảo ngược khi có vấn đề, họ sẽ dành thêm thời gian để nghiên cứu làm sao cho đúng. Họ di chuyển những database nhỏ để <strong>kiểm tra và giải quyết nhiều vấn đề nhất có thể</strong> trước khi di chuyển con quái vật nghìn tỉ tin nhắn.</p>
 <p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
 <p>Nói thêm một chút về ScyllaDB. Nó được viết bằng C++ và hứa hẹn hiệu suất tốt hơn, sửa chữa nhanh hơn, và quan trọng nhất là <strong>không có garbage collection</strong>. Với một team có quá nhiều vấn đề với garbage collector của Cassandra, đây thực sự là một luồng gió mới. </p>
 <p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
 <h3 id="data-service">Data service</h3>
-<p>Bước quan trọng tiếp theo là tạo một lớp trung gian giữa khối API và các cluster database được gọi là các <strong>data service</strong>. Lớp này được viết bằng Rust, một ngôn ngữ an toàn và có hiệu suất cao.</p>
+<p>Bước quan trọng tiếp theo là tạo một lớp trung gian giữa khối API và các cluster database được gọi là các <strong>data service</strong>. Lớp này được viết bằng <strong>Rust</strong>, một ngôn ngữ an toàn và có hiệu suất cao.</p>
 <p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Ý tưởng cực hay về lớp này là thứ được gọi là <strong>request coalescing</strong> (hợp nhất request). Nếu nhiều người dùng request cùng một dữ liệu, database chỉ cần được truy vấn một lần duy nhất.</p>
+<p>Ý tưởng cực hay về lớp data service này là thứ được gọi là <strong>request coalescing</strong> (hợp nhất request). Nếu nhiều người dùng cùng request một dữ liệu, database chỉ cần được truy vấn một lần duy nhất.</p>
 <p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
 <p>Điều này làm giảm khả năng tạo ra các hot partition (là các partition bị truy cập quá nhiều, đặc biệt trong giờ cao điểm). Hãy tưởng tượng tất cả những tin nhắn <code>@everyone</code> ngoài ý muốn đó trong các server Discord cực to đi. Với lớp này ở giữa, sẽ không có vấn đề gì đối với database. </p>
 <h3 id="super-disk">Super-Disk</h3>
 <p>Sau đó, họ đưa ra khái niệm về Super-Disk. Các cluster database chạy trên Google Cloud. Khi gặp các vấn đề về độ trễ trên đĩa cứng, họ không thể dựa vào ổ SSD NVMe cục bộ trên máy ảo để lưu trữ dữ liệu quan trọng do các vấn đề về độ tin cậy và độ bền. </p>
-<p>Giải pháp thay thế là các <strong>Persistent Disk</strong> của Google Cloud. Mặc dù nó đáng tin cậy và linh hoạt, nó có một nhược diểm là độ trễ cao hơn do chúng được gắn vào mạng thay vì được gán trực tiếp.</p>
+<p>Giải pháp thay thế là các <strong>Persistent Disk</strong> của Google Cloud. Mặc dù nó đáng tin cậy và linh hoạt, nó có một nhược diểm là độ trễ cao hơn do chúng được gắn thông qua mạng thay vì được gán trực tiếp.</p>
 <p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
 <p>Vậy Discord đã làm gì? Họ quay lại bản vẽ và tập trung tạo ra một giải pháp phù hợp với nhu cầu cụ thể của họ. Họ chọn ưu tiên các lần đọc đĩa có độ trễ thấp, ưu tiên hơn tất cả các chỉ số khác của đĩa cứng, trong khi vẫn duy trì bảo đảm thời gian hoạt động của database hiện có. Họ đã nghĩ ra một Super-Disk kết hợp những gì tốt nhất của các SSD cục bộ và các Persistent Disk ở cấp độ phần mềm. </p>
 <p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p>Super-Disk này là một giải pháp RAID hai lớp. Họ dùng RAID0 để kết hợp nhiều SSD cục bộ thành một đĩa ảo có độ trễ thấp, và sau đó RAID1 để mirror mảng RAID0 này vào Persistent Disk. Sau đó, họ cấu hình linux kernel để chuyển hướng ghi vào Persistent Disk để đảm bảo độ bền cao, và hướng đọc vào SSD cục bộ để có độ trễ thấp. Thiết lập này đảm bào khả năng đọc có độ trễ thấp từ SSD cục bộ và độ bền ghi từ Persistent Disk.</p>
+<p>Super-Disk này là một giải pháp RAID hai lớp. Họ dùng RAID0 để kết hợp nhiều SSD cục bộ thành một đĩa ảo có độ trễ thấp, và sau đó RAID1 để mirror RAID0 này vào Persistent Disk. Sau đó, họ cấu hình linux kernel để chuyển hướng ghi vào Persistent Disk để đảm bảo độ bền cao, và hướng đọc vào SSD cục bộ để có độ trễ thấp. Thiết lập này đảm bào khả năng đọc có độ trễ thấp từ SSD cục bộ và độ bền ghi từ Persistent Disk.</p>
 <p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
 <p><strong>Cái này thì có gì mà hay?</strong> Đây chính là một ví dụ tuyệt vời về giải quyết vấn đề từ những nguyên tắc đầu tiên. Discord đang xử lý một vấn đề không có sẵn giải pháp. Thay vì cố gắng làm với những gì có sẵn, họ xác định lại vấn đề dựa trên nhu cầu cụ thể và sau đó xây dựng một giải pháp phù hợp.</p>
 <p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
@@ -1329,7 +1391,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">22/07/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">24/07/2023 (GMT+07)</span>
       
         <br>
         Created:
