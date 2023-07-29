@@ -44,6 +44,7 @@ comment: false
     - [Giải mã sự phát triển trong kiến trúc API của Netflix](ByteByteGo/netflix_architecture_evolution/netflix_architecture_evolution.md)
     - [Giải thích dễ hiểu OAuth2](ByteByteGo/oauth2_explained/oauth2_explained.md)
     - [Discord lưu hàng nghìn tỉ tin nhắn như thế nào?](ByteByteGo/discord_messages_migration/discord_messages_migration.md)
+    - [7 cách để tăng hiệu suất API của bạn](ByteByteGo/optimize_api_performance/optimize_api_performance.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
