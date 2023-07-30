@@ -1352,15 +1352,15 @@
 <p>Ok, giờ coi như ta đã hết cách với database hiện tại. Chọn cái mới sao đây? </p>
 <p>Những dev như chúng ta thường bị thu hút bởi cái mới, như những con thiêu thân lao vào ngọn lửa. Nhưng khi nhắc đến database, càng chán thì càng tốt. Ta nên chọn những cái nào lâu đời và đã được test kỹ. Bất kể mảng bạn đang làm là gì, sẽ có một cộng đồng và thị trường với những nhà quản trị và dev có kinh nghiệm với loại database mà ta đang cân nhắc.</p>
 <p>Phát triển phần mềm là về sự đánh đổi. Khi nhắc đến database, nó càng đúng hơn. Cần nhớ là <strong>không có gì miễn phí</strong> hết. Cẩn thận với những lời tiếp thị thái quá. Sẽ luôn có những chi phí ẩn sau những lời có cánh như "khả năng mở rộng đến vô hạn mà không tốn công sức". Hãy đào sâu nghiên cứu để xem bạn cần đánh đổi gì. Hãy đọc hướng dẫn sử dụng thay vì xem mỗi quảng cáo. Ở đó thường sẽ có một phần gọi là "Giới hạn" (Limits). Phần FAQ cũng rất hữu ích. Các phần này là nơi những giới hạn của database thực sự được phơi bày.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Theo kinh nghiệm của chúng tôi, càng tuyên bố hấp dẫn thì các tuyên bố từ chối trách nhiệm (disclaimers) càng dài hơn ở sau. Ví dụ, nhiều database NoSQL hỗ trợ mở rộng nhiều hơn so với các database quan hệ cũ. Chúng thường tuyên bố rằng có thể hỗ trợ mở rộng theo chiều ngang gần như là tuyến tính. Tuy nhiên, đi đôi với đó là những đánh đổi như sau. Một, chúng loại bỏ hoặc hạn chế việc đảm bảo tính transactional. Hai, chúng hạn chế nghiêm trọng tính linh hoạt của mô hình dữ liệu. Không có truy vấn nào giữa các data entity. Data bị denormalize khi cùng một data được lưu tại nhiều collection khác nhau để hỗ trợ nhiều kiểu truy cập data khác nhau. </p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Để biết thêm về một loại database nào đó, gia nhập nhóm chat. Hỏi nhiều câu hỏi. Với các project mã nguồn mở, đọc GitHub issues. Cố gắng biết càng nhiều càng tốt về các ứng viên database mà ta đang cân nhắc. Thời gian đầu tư vào cho đến giờ giờ vẫn tương đối nhỏ đấy.</p>
 <h2 id="test-database-moi-sao-ay">Test database mởi sao đây?</h2>
 <p>Rồi, giờ ta đã có một số ít ứng viên còn sót lại, tiếp theo làm gì? </p>
 <p>Tạo bench test với data của chính chúng ta cho mỗi ứng viên, với kiểu truy cập như thực tế luôn. Ta có data đó mà phải không? Dù sao thì database hiện tại cũng đang quá tải rồi, nên có một tập data tượng trưng cũng là có thể. Đúng, điều này sẽ tốn kém, và có thể mất hàng tuần, nhưng không thể bỏ qua bước này. Việc chuyển đổi database trên live rất rủi ro, và sẽ tốn nhiều công sức hơn là việc benchmark. Nếu ta đang đánh cược sự nghiệp vào cái này, hãy chắc chắn là nó hoạt động. </p>
 <p>Trong khi benchmark, hãy chú ý đến các ngoại lệ. Đo p99 của mọi thứ. p50 không có ý nghĩa gì đâu. Cố gắng mô phỏng lại môi trường live, và đẩy giới hạn đi xa hơn xem nó chịu được đến đâu. </p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Thử một số tác vụ vận hành rủi ro hơn, như phá hỏng một node, hoặc test xem có hỏng data khi bị phân vùng dữ liệu không. Thử tăng, giảm sharding, nếu có thể. Sau khi kiểm tra hết, lên kế hoạch chuyển đổi database cẩn thận. Viết ra một kế hoạch chuyển đổi từng bước và nhờ đồng nghiệp review lại cho cẩn thận. Nếu có thể, chuyển một service nhỏ trước, và lấy thật nhiều thông tin từ nó.</p>
 <p>Chọn ra một database đúng không hề hấp dẫn tí nào, và tốn rất nhiều công sức. Chuyển đổi sang một database mới trong thực tế có thể mất nhiều năm ở quy mô lớn. Chúc may mắn.</p>
 
@@ -1369,7 +1369,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">05/06/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
       
         <br>
         Created:

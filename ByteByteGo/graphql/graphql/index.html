@@ -1322,33 +1322,33 @@
 <p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=yWzKJPw_VzM">What Is GraphQL? REST vs. GraphQL</a></p>
 <h2 id="inh-nghia">Định nghĩa</h2>
 <p><strong>GraphQL</strong> là ngôn ngữ truy vấn dành cho API do Meta phát triển. Nó cung cấp một data schema trong API và cung cấp cho client quyền yêu cầu chính xác những gì client cần.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>GraphQL nằm giữa client và backend service. Nó có thể tổng hợp nhiều yêu cầu tài nguyên vào một truy vấn duy nhất. Nó cũng hỗ trợ mutation và subscription.</p>
 <p><strong>Mutation</strong> là cách GraphQL áp dụng các sửa đổi data cho tài nguyên.</p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p><strong>Subscription</strong> là cách GraphQL cho client nhận thông báo về các thay đổi trong dữ liệu.</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="so-sanh-voi-rest">So sánh với REST</h2>
 <p>Trong thực tế, cả GraphQL và REST đều gửi HTTP request và nhận HTTP response.</p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Ta sẽ so sánh các thao tác REST và GraphQL đơn giản trông như thế nào.</p>
 <p>REST xoay quanh các tài nguyên. Mỗi tài nguyên được xác định bằng một URL. Để lấy thông tin của một cuốn sách từ API của nhà sách, nó có thể giống như thế này. Lưu ý trường tác giả tuỳ vào việc cài đặt. Một số triển khai REST API có thể chia chúng thành các lời gọi REST riêng biệt.</p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure5" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Tuy nhiên, điều này sẽ khác với GraphQL. Đầu tiên ta xác định các type (loại). Trong ví dụ này ta có các type là Book và Author. Các type này mô tả các loại dữ liệu có sẵn.</p>
-<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure6" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Chúng không chỉ định cách truy xuất dữ liệu qua GraphQL. Để làm được điều đó, ta cần định nghĩa một truy vấn, như sau.</p>
-<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure7" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Giờ ta cần gửi một request đến GraphQL endpoint để lấy data.</p>
-<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure8" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure9" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Như ta thấy thì cả REST và GraphQL đều dùng HTTP. Cả hai đều gửi request qua một URL, và chúng đều có thể trả về một JSON response như nhau. Nhưng đây là sự khác biệt: Với GraphQL, ta chỉ định chính xác các tài nguyên mà ta muốn, và cả những trường mà ta muốn.</p>
-<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure10" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Trong ví dụ về REST, trường Author có sẵn trong response. Nhưng với GraphQL, client quyết định những gì có trong response.</p>
-<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure11" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Điều này mang đến một trong những lợi ích chính của GraphQL. GraphQL không sử dụng URL để chỉ định tài nguyên có sẵn trong API. Thay vào đó nó sử dụng GraphQL schema. Ta có thể gửi một truy vấn phức tạp để lấy data bổ sung theo các quan hệ được xác định trong schema. </p>
-<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure12" data-desc-position="bottom"><img alt="!figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Điều này sẽ phức tạp hơn nếu ta muốn làm trong REST. Ta sẽ phải thực hiện điều đó ở client với nhiều request. Đây là vấn đề phổ biến dẫn đến N+1 truy vấn.</p>
-<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure13" data-desc-position="bottom"><img alt="!figure13" src="../figure13.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure13.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="nhuoc-iem">Nhược điểm</h2>
 <p>Cái hay của REST là ta không cần các thư viện đặc biệt để sử dụng API của người khác. Request có thể được gửi đơn giản bằng cách sử dụng các công cụ phổ biến như cURL hay trình duyệt web.</p>
 <p>Ngược lại, GraphQL yêu cầu công cụ hỗ trợ nặng hơn, cả ở phía client và server. Điều này đòi hỏi một khoản đầu tư trước khá lớn. Chi phí này có thể không đáng, đặc biệt là với các API CRUD đơn giản.</p>
@@ -1361,7 +1361,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">20/04/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
       
         <br>
         Created:

@@ -1349,7 +1349,7 @@
 <h2 id="forward-proxy">Forward Proxy</h2>
 <p>Có hai loại proxy phổ biến là forward proxy (proxy chuyển tiếp) và reverse proxy (proxy ngược).</p>
 <p><strong>Forward proxy</strong> là một server nằm giữa một nhóm các máy client và mạng internet. Khi những máy client đó gửi request lên các trang web trên mạng internet, forward proxy sẽ đóng vai trò là trung gian để chặn các request đó, và giao tiếp với web server thay mặt cho các máy client đó.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Người ta cần forward proxy vì một vài lý do sau.</p>
 <p>Thứ nhất, forward proxy bảo vệ danh tính trực tuyến của client. Bằng cách dùng forward proxy để kết nối với một trang web, địa chỉ IP của client sẽ không bị server tìm ra, server sẽ chỉ nhìn thấy địa chỉ của proxy. Như vậy sẽ khó hơn để tìm ra được client.</p>
 <p>Thứ hai, một forward proxy có thể được sử dụng để bỏ qua các hạn chế về duyệt web. Một số tổ chức như chính phủ, trường học và doanh nghiệp lớn sử dụng tường lửa để hạn chế quyền truy cập internet. Bằng cách kết nối với forward proxy bên ngoài tường lửa, client có khả năng vượt qua những hạn chế này. Tuy nhiên không phải lúc nào cũng vượt qua được vì bản thân tường lửa có thể chặn kết nối với proxy.</p>
@@ -1357,11 +1357,11 @@
 <h3 id="transparent-proxy">Transparent Proxy</h3>
 <p>Đối với các tổ chức lớn, họ thường sử dụng một kỹ thuật gọi là <strong>transparent proxy</strong> (proxy minh bạch) để hợp lý hoá quá trình.</p>
 <p>Một transparent proxy hoạt động với các công tắc tầng 4 (OSI) để tự động chuyển hướng một số loại lưu lượng truy cập nhất định đến proxy. Không cần phải cấu hình client để sử dụng nó. Rất khó để bỏ qua một transparent proxy khi client đang ở trên mạng của tổ chức.</p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Tóm lại, forward proxy nằm giữa client và internet và hoạt động thay mặt cho client.</p>
 <h2 id="reverse-proxy">Reverse Proxy</h2>
 <p><strong>Reverse proxy</strong> nằm giữa internet và các web server. Nó chặn các request từ client và giao tiếp với web server thay mặt cho client.</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Có một số lý do vì sao một website sẽ dùng reverse proxy.</p>
 <p>Thứ nhất, một reverse proxy có thể được sử dụng để bảo vệ một trang web. Địa chỉ IP của trang web được ẩn đằng sau reverse proxy và không được tiết lộ cho client. Điều này khiến việc tổ chức một cuộc tấn công từ chối dịch vụ (DDoS) vào một trang web trở nên khó hơn nhiều.</p>
 <p>Thứ hai, một reverse proxy được sử dụng để cân bằng tải (load balancing). Một trang web nổi tiếng có thể phải xử lý hàng triệu người dùng mỗi ngày, nó khó có thể xử lý lưu lượng truy cập lớn như vậy với một server. Một reverse proxy có thể cân bằng một lượng lớn request đến web server bằng cách phân phối lưu lượng truy cập đến một nhóm lớn các web server, và ngăn chặn hiệu quả bất kỳ một server nào trong số chúng bị quá tải. Lưu ý rằng ta giả sử reverse proxy có thể xử lý lưu lượng truy cập đến.</p>
@@ -1373,14 +1373,14 @@
 <p>Lớp đầu tiên có thể là một dịch vụ biên như Cloudflare. Các reverse proxy được triển khai tới hàng trăm địa điểm trên toàn thế giới để gần với người dùng.</p>
 <p>Lớp thứ hai có thể là API gateway hoặc load balance tại nhà cung cấp dịch vụ host. Nhiều nhà cung cấp dịch vụ đám mây kết hợp 2 lớp này thành một dịch vụ đầu vào duy nhất.</p>
 <p>Người dùng sẽ vào mạng đám mây ở gần với người dùng và từ đó, reverse proxy kết nối qua mạng cáp quang tốc độ cao với load balancer, nơi request được phân phối đều trên một cụm web server.</p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">20/04/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
       
         <br>
         Created:

@@ -1380,35 +1380,35 @@
 <h2 id="van-e-cua-cassandra">Vấn đề của Cassandra</h2>
 <p>Hãy quay trở lại thời gian tầm vài năm trước. Discord lúc này đang hơi khó xử với việc chọn database. Họ đang dùng Cassandra, nhưng khi nền tảng này tiếp tục phát triển, họ phải đối mặt với các vấn đề nghiêm trọng về hiệu suất. Việc duy trì cluster Cassandra chính (nơi lưu trữ tin nhắn) mất rất nhiều công sức. Độ trễ khó đoán và các sự cố thường xuyên xảy ra khi on-call gây nên căng thẳng rất lớn cho team.</p>
 <p>Đến năm 2022, cluster Cassandra chứa hàng nghìn tỉ tin nhắn trên <strong>177 node</strong>. Họ hiểu rằng họ cần một sự khác biệt, nhưng cluster tin nhắn này rất quan trọng với Discord. Nếu cluster này chậm, Discord cũng sẽ chậm. Nếu cluster ngừng hoạt động, Discord cũng chết luôn.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="scylladb-va-qua-trinh-di-chuyen">ScyllaDB và quá trình di chuyển</h2>
 <p>Giải pháp là gì? ScyllaDB, một database tương thích với Cassandra, nhưng với một engine dựa trên C++ mạnh mẽ hơn.</p>
 <h3 id="cac-giai-oan-trong-qua-trinh-di-chuyen">Các giai đoạn trong quá trình di chuyển</h3>
 <p>Thay vì lao vào giải quyết vấn đề rủi ro nhất và lớn nhất, <strong>họ bắt đầu di chuyển với các database nhỏ hơn</strong>. Và đây chính là bài học đầu tiên. Ở Discord, dev sẽ hành động nhanh chóng khi sai lầm có thể khắc phục được, nhưng nếu giải pháp không thể đảo ngược khi có vấn đề, họ sẽ dành thêm thời gian để nghiên cứu làm sao cho đúng. Họ di chuyển những database nhỏ để <strong>kiểm tra và giải quyết nhiều vấn đề nhất có thể</strong> trước khi di chuyển con quái vật nghìn tỉ tin nhắn.</p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Nói thêm một chút về ScyllaDB. Nó được viết bằng C++ và hứa hẹn hiệu suất tốt hơn, sửa chữa nhanh hơn, và quan trọng nhất là <strong>không có garbage collection</strong>. Với một team có quá nhiều vấn đề với garbage collector của Cassandra, đây thực sự là một luồng gió mới. </p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <h3 id="data-service">Data service</h3>
 <p>Bước quan trọng tiếp theo là tạo một lớp trung gian giữa khối API và các cluster database được gọi là các <strong>data service</strong>. Lớp này được viết bằng <strong>Rust</strong>, một ngôn ngữ an toàn và có hiệu suất cao.</p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Ý tưởng cực hay về lớp data service này là thứ được gọi là <strong>request coalescing</strong> (hợp nhất request). Nếu nhiều người dùng cùng request một dữ liệu, database chỉ cần được truy vấn một lần duy nhất.</p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure5" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Điều này làm giảm khả năng tạo ra các hot partition (là các partition bị truy cập quá nhiều, đặc biệt trong giờ cao điểm). Hãy tưởng tượng tất cả những tin nhắn <code>@everyone</code> ngoài ý muốn đó trong các server Discord cực to đi. Với lớp này ở giữa, sẽ không có vấn đề gì đối với database. </p>
 <h3 id="super-disk">Super-Disk</h3>
 <p>Sau đó, họ đưa ra khái niệm về Super-Disk. Các cluster database chạy trên Google Cloud. Khi gặp các vấn đề về độ trễ trên đĩa cứng, họ không thể dựa vào ổ SSD NVMe cục bộ trên máy ảo để lưu trữ dữ liệu quan trọng do các vấn đề về độ tin cậy và độ bền. </p>
 <p>Giải pháp thay thế là các <strong>Persistent Disk</strong> của Google Cloud. Mặc dù nó đáng tin cậy và linh hoạt, nó có một nhược diểm là độ trễ cao hơn do chúng được gắn thông qua mạng thay vì được gán trực tiếp.</p>
-<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure6" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Vậy Discord đã làm gì? Họ quay lại bản vẽ và tập trung tạo ra một giải pháp phù hợp với nhu cầu cụ thể của họ. Họ chọn ưu tiên các lần đọc đĩa có độ trễ thấp, ưu tiên hơn tất cả các chỉ số khác của đĩa cứng, trong khi vẫn duy trì bảo đảm thời gian hoạt động của database hiện có. Họ đã nghĩ ra một Super-Disk kết hợp những gì tốt nhất của các SSD cục bộ và các Persistent Disk ở cấp độ phần mềm. </p>
-<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure7" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Super-Disk này là một giải pháp RAID hai lớp. Họ dùng RAID0 để kết hợp nhiều SSD cục bộ thành một đĩa ảo có độ trễ thấp, và sau đó RAID1 để mirror RAID0 này vào Persistent Disk. Sau đó, họ cấu hình linux kernel để chuyển hướng ghi vào Persistent Disk để đảm bảo độ bền cao, và hướng đọc vào SSD cục bộ để có độ trễ thấp. Thiết lập này đảm bào khả năng đọc có độ trễ thấp từ SSD cục bộ và độ bền ghi từ Persistent Disk.</p>
-<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure8" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
 <p><strong>Cái này thì có gì mà hay?</strong> Đây chính là một ví dụ tuyệt vời về giải quyết vấn đề từ những nguyên tắc đầu tiên. Discord đang xử lý một vấn đề không có sẵn giải pháp. Thay vì cố gắng làm với những gì có sẵn, họ xác định lại vấn đề dựa trên nhu cầu cụ thể và sau đó xây dựng một giải pháp phù hợp.</p>
-<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure9" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Super-Disk hoạt động thực sự rất tốt. Ở mức tải cao nhất, các database không còn dồn các thao tác trên đĩa thành đống nữa, và không có thay đổi nào về độ trễ khi truy vấn. </p>
-<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure10" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Cuối cùng, với tất cả việc chuẩn bị hoàn tất, đã đến lúc di chuyển database lớn nhất - con quái vật "cluster tin nhắn".</p>
 <p>Với hàng nghìn tỉ tin nhắn và gần 200 node, đây là một nhiệm vụ khó khăn. Nhưng với một trình chuyển dữ liệu viết bằng Rust và một số chiến lược thông minh, họ đã làm xong trong chỉ 9 ngày. Đúng, bạn không nhầm đâu, họ di chuyển hàng nghìn tỉ tin nhắn mà không có downtime trong vòng chưa đến hai tuần! Và phần thưởng là gì? Một hệ thống nhẹ nhàng và hiệu quả hơn rất nhiều. Từ 177 node Cassandra, qua ScyllaDB chỉ còn <strong>72 node</strong>. Nó cải thiện đáng kể độ trễ và chất lượng cuộc sống của các dev on-call. </p>
-<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure11" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Đó không phải là một task bình thường, nhưng với các giải pháp sáng tạo và giảm thiểu rủi ro một cách thông minh, họ đã hoàn tất nó một cách tuyệt vời. Di chuyển database trên môi trường live không phải là trò đùa, và làm ở quy mô lớn như thế này, thực sự rất khó đấy.</p>
 
   <hr>
@@ -1416,7 +1416,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">24/07/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
       
         <br>
         Created:

@@ -1393,30 +1393,30 @@
 <p>Nhưng mà RPC là gì?</p>
 <p>Một lệnh gọi thủ tục cục bộ (local procedure call) là lệnh gọi hàm trong một process để thực thi một số code gì đó.</p>
 <p>Một lệnh gọi thủ tục từ xa (remote proceduree call) cho phép một máy gọi một số code trên máy khác như thể đó là lệnh gọi hàm cục bộ từ góc nhìn của người dùng.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>gRPC là một triển khai phổ biến của RPC.</p>
 <p>Nhiều tổ chức đã sử dụng gRPC làm cơ chế RPC ưu tiên để kết nối một số lượng lớn microservice đang chạy trong và giữa các data center. Tuy nhiên, làm sao gRPC lại phổ biến như vậy?</p>
 <h2 id="su-pho-bien">Sự phổ biến</h2>
 <h3 id="he-sinh-thai-dev-manh">Hệ sinh thái dev mạnh</h3>
 <p>Đầu tiên, gPRC có một hệ sinh thái dev rất mạnh. Điều này giúp dễ dàng phát triển các API chất lượng cao và có thể mở rộng quy mô tốt. Cốt lõi của hệ sinh thái này là việc sử dụng Protocol Buffers (hay protobuf) làm định dạng trao đổi dữ liệu.</p>
 <p>Protocol Buffers là một cơ chế không phụ thuộc vào ngôn ngữ và nền tảng để mã hoá dữ liệu có cấu trúc. gRPC sử dụng Protocol Buffers để mã hoá và gửi dữ liệu qua dây dẫn như bình thường. </p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Mặc dù gRPC có thể hỗ trợ các định dạng mã hoá khác như JSON, Protocol Buffers lại cung cấp một số lợi thế khiến nó trở thành định dạng mã hoá được lựa chọn cho gRPC.</p>
 <p>Protocol Buffers hỗ trợ các định nghĩa schema strongly-typed (nghĩa là đi theo kiểu dữ liệu rõ ràng với mỗi trường, ví dụ như string hay integer). Cấu trúc data được xác định trong một file proto.</p>
 <p>Protocol Buffers cung cấp nhiều công cụ hỗ trợ để chuyển schema được định nghĩa trong file proto thành các lớp truy cập dữ liệu cho tất cả các ngôn ngữ lập trình phổ biến.</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Một gRPC service cũng được định nghĩa trong file proto bằng cách chỉ định các tham số và kiểu trả về của phương thức gRPC. Công cụ tương tự cũng được sử dụng để sinh code client và server từ file proto. </p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Dev sẽ sử dụng các lớp được sinh ra này trong client để thực hiện các lệnh gọi RPC, và trong server để phục vụ các request RPC.</p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure5" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Bằng cách hỗ trợ nhiều ngôn ngữ lập trình, client và server có thể độc lập chọn ngôn ngữ lập trình và hệ sinh thái phù hợp nhất cho các use case cụ thể. Thông thường thì điều này không khả thi với hầu hết các RPC framework khác.</p>
-<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure6" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
 <h3 id="hieu-suat-cao">Hiệu suất cao</h3>
 <p>Lý do thứ hai khiến gRPC trở nên phổ biến là vì nó có hiệu suất cao ngay từ đầu. Có hai yếu tố góp phần vào hiệu suất của nó.</p>
 <p>Thứ nhất, Protocol Buffers là một định dạng mã hoá nhị phân rất hiệu quả. Nó nhanh hơn nhiều so với JSON.</p>
-<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure7" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Thứ hai, gRPC được xây dựng dựa trên HTTP/2 để cung cấp nền tảng hiệu suất cao trên quy mô lớn. Việc sử dụng HTTP/2 mang lại nhiều lợi ích, có một bài viết về các phiên bản HTTP, trong đó có HTTP/2, bạn có thể đọc bài đó.</p>
-<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure8" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
 <p>gRPC sử dụng các stream trong HTTP/2. Nó cho phép nhiều stream gói tin thông qua một kết nối TCP tồn tại lâu. Điều này cho phép gRPC framework xử lý nhiều lời gọi RPC đồng thời qua một số lượng nhỏ kết nối TCP giữa client và server. Để hiểu cách gRPC hoạt động, ta cùng xem qua một flow từ gRPC client đến gRPC server.</p>
 <h3 id="vi-du">Ví dụ</h3>
 <p>Trong ví dụ này, Order Service là gRPC client, và Payment Service là gRPC server. </p>
@@ -1426,16 +1426,16 @@
 <p>(4), (5), (6) Payment Service nhận các gói tin từ mạng, giải mã chúng và gọi server app.</p>
 <p>(7), (8), (9) Kết quả trả về từ server app được mã hóa vào Protocol Buffer và gửi đến tầng giao vận.</p>
 <p>(10), (11), (12), (13) Order Service nhận các gói tin, giải mã chúng và gửi kết quả đến client app.</p>
-<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure10" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="han-che">Hạn chế</h2>
 <p>Từ ví dụ trên, ta thấy gRPC rất dễ triển khai. Nếu dễ dàng như vậy, sao chúng ta không thấy gRPC được sử dụng nhiều giữa web client và web server?</p>
 <p>Nguyên nhân là gRPC dựa vào quyền truy cập cấp thấp hơn vào nguyên mẫu HTTP/2. Hiện không có trình duyệt nào cung cấp mức độ kiểm soát cần thiết đối với các web request để hỗ trợ client gRPC.</p>
 <p>Có thể thực hiện lệnh gọi gRPC từ trình duyệt với sự trợ giúp của proxy. Công nghệ này được gọi là gRPC-Web.</p>
 <p>Tuy nhiên, tính năng này không hoàn toàn tương thích với gRPC và mức độ sử dụng của nó vẫn thấp so với gRPC.</p>
-<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure11" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="khi-nao-su-dung">Khi nào sử dụng</h2>
 <p>gRPC là cơ chế giao tiếp liên dịch vụ được lựa chọn giữa các microservice trong data center.</p>
-<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure12" data-desc-position="bottom"><img alt="!figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Khả năng hỗ trợ lớn của nó đối với nhiều ngôn ngữ lập trình cho phép các dịch vụ chọn ngôn ngữ riêng và hệ sinh thái dev phù hợp với use case của người dùng. Ta cũng có thể thấy việc sử dụng gRPC ngày càng tăng trong các ứng dụng di động.</p>
 <p>Tính hiệu quả và hiệu suất của nó có vai trò lớn trong các môi trường bị hạn chế về hiệu năng và băng thông như các thiết bị di động.</p>
 
@@ -1444,7 +1444,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">20/04/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
       
         <br>
         Created:

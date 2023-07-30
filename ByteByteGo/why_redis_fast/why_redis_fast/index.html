@@ -1352,21 +1352,21 @@
 <p><strong>Redis</strong> là một dạng cơ sở dữ liệu lưu trữ data trong bộ nhớ. Nó thường được sử dụng như là cache. Nó hỗ trợ nhiều dạng cấu trúc dữ liệu khác nhau, như string, hash, list, set và sorted set. Redis rất chắc chắn, dễ sử dụng và có tốc độ rất tốt. Các yếu tố này lý giải vì sao nó là một trong những loại cơ sở dữ liệu được yêu thích nhất, theo khảo sát thường niên trên Stack Overflow.</p>
 <h2 id="co-so-du-lieu-in-memory">Cơ sở dữ liệu in-memory</h2>
 <p>Lý do đầu tiên mà Redis nhanh là vì nó là một cơ sở dữ liệu in-memory, tức là dùng RAM, chứ không phải ổ cứng. </p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Truy cập vào bộ nhớ nhanh hơn rất rất nhiều lần so với truy cập ngẫu nhiên trên đĩa. Việc truy cập vào bộ nhớ mang lại thông lượng đọc và ghi cao cùng với độ trễ thấp. Đổi lại thì dữ liệu không thể lớn hơn bộ nhớ.</p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Về mặt cài đặt, các cấu trúc dữ liệu trong bộ nhớ dễ cài đặt hơn nhiều so với cài trên đĩa. Điều này giúp code đơn giản và góp phần vào sự ổn định vững chắc của Redis.</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="on-luong">Đơn luồng</h2>
 <p>Redis chủ yếu là đơn luồng. Vì sao một thiết kế đơn luồng lại cho ta hiệu suất cao như vậy? Tận dụng hết các core trong CPU với đa luồng không phải nhanh hơn sao?</p>
 <p>Các ứng dụng đa luồng yêu cầu lock hoặc các cơ chế đồng bộ hoá khác. Chúng nổi tiếng là khó giải thích. Trong nhiều ứng dụng, thêm phức tạp chỉ tổ gây thêm lỗi và mất đi sự ổn định, gây khó khăn cho việc duy trì hiệu suất cao.</p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Trong trường hợp của Redis, code đơn luồng rất dễ hiểu. Nhưng mà làm thế nào để code đơn luồng này có thể xử lý hàng ngàn request và response cùng lúc? Luồng không bị block để xử lý từng request một à? Đây là lúc <strong>I/O multiplexing</strong> phát huy tác dụng. Với I/O multiplexing, hệ điều hành cho phép một luồng có thể đợi cùng lúc trên nhiều kết nối socket. Thông thường thì điều này được thực hiện bởi các system call như <code>select</code> hay <code>poll</code>. Các system call này không hiệu quả lắm khi có hàng ngàn kết nối.</p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure5" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Trên linux, <code>epoll</code> là một biến thể hiệu quả của I/O multiplexing giúp hỗ trợ hàng ngàn kết nối cùng lúc. Một nhược điểm của thiết kế đơn luồng là nó không tận dụng được tất cả các core của CPU trong phần cứng ngày nay. Không hiếm các trường hợp có nhiều instance Redis chạy trên cùng một máy chủ để tận dụng nhiều core CPU hơn.</p>
 <h2 id="cac-cau-truc-du-lieu-hieu-qua">Các cấu trúc dữ liệu hiệu quả</h2>
 <p>Vì Redis là cơ sở dữ liệu in-memory, nó có thể tận dụng một số cấu trúc dữ liệu bậc thấp hiệu quả mà không phải lo lắng làm sao để lưu chúng vào đĩa một cách hiệu quả. Danh sách liên kết, skip list, hash table là một số ví dụ.</p>
-<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure6" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="ket">Kết</h2>
 <p>Ngày nay thì ta có thể thấy một số ứng dụng cài đặt tương thích với Redis để đạt được hiệu suất còn cao hơn nữa từ một máy chủ. Với tính dễ sử dụng, tính ổn định vững chắc và hiệu suất cao của Redis, nó vẫn cung cấp một giải pháp mạnh mẽ về mặt hiệu suất và độ ổn định cho thị trường.</p>
 
@@ -1375,7 +1375,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">09/03/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
       
         <br>
         Created:

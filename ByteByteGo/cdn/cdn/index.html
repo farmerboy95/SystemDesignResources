@@ -1308,33 +1308,33 @@
 <p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=RI9np1LWzqw">What Is A CDN? How Does It Work?</a></p>
 <h2 id="cdn-la-gi">CDN là gì?</h2>
 <p><strong>CDN</strong> (Content Delivery Network - Mạng lưới phân phối nội dung) được ra đời vào cuối những năm 90 của thế kỉ 20 (1998). Ban đầu nó được phát triển để tăng tốc việc phân phối content HTML tĩnh cho user trên toàn thế giới.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>CDN phát triển mạnh mẽ trong những thập niên tiếp theo. Ngày nay, một CDN cần được sử dụng bất kì khi nào có HTTP traffic.</p>
 <h2 id="cdn-ngay-nay-lam-uoc-gi-cho-chung-ta">CDN ngày nay làm được gì cho chúng ta?</h2>
 <p>Ở cấp độ cơ bản, một CDN mang content lại gần user hơn. Điều này cải thiện hiệu suất của web service dưới góc nhìn user. Thống kê chỉ ra rằng hiệu suất rất quan trọng cho việc tiếp cận và giữ chân user.</p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Để mang service lại gần user hơn, CDN triển khai rất nhiều server tại hàng trăm địa điểm trên thế giới. Các địa điểm này được gọi là <strong>PoP</strong> (Point of Presence - điểm tồn tại). Server nằm trong PoP thường được gọi là <strong>edge server</strong>. PoP hiện diện ở nhiều nơi trên thế giới giúp đảm bảo rằng mọi user có thể kết nối đến edge server gần họ nhất.</p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Các CDN khác nhau triển khai các công nghệ khác nhau để điều hướng request của user đến PoP gần nhất. Hai công nghệ phổ biến nhất là <strong>routing dựa trên DNS</strong> và <strong>Anycast</strong>.</p>
 <p>Với routing dựa trên DNS, mỗi PoP có một địa chỉ IP riêng. Khi user tìm địa chỉ IP của CDN, DNS trả về địa chỉ IP của PoP gần với user nhất.</p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure5" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Với Anycast, các PoP chia sẻ cùng một địa chỉ IP. Khi một request vào mạng Anycast của địa chỉ IP đó, mạng này sẽ gửi request đến PoP gần nhất với user.</p>
-<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure6" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Mỗi edge server đóng vai trò là reverse proxy với content cache rất lớn. Content tĩnh được cache trong những content cache trên edge server. Nếu một content nằm trong cache, nó có thể được nhanh chóng trả về cho user. Edge server chỉ cần một bản sao của content tĩnh từ server gốc nếu content không nằm trong cache nên việc này giúp giảm yêu cầu tải và băng thông cho server gốc rất nhiều.</p>
-<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure7" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure8" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Một CDN hiện đại còn có thể chuyển đổi content tĩnh thành một dạng tối ưu hơn. Ví dụ, CDN có thể minify Javascript bundle trước khi đến tay user, hoặc chuyển đổi một file hình ảnh từ dạng cũ thành những dạng mới hơn như WebP hay AVIF.</p>
-<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure9" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Edge server còn đóng vai trò cực kỳ quan trọng trong HTTP stack hiện đại. Tất cả TLS connection kết thúc tại edge server. Bắt tay TLS rất tốn kém. Các phiên bản TLS thịnh hành như TLS 1.2 cần vài network round trip để tạo connection. Thế nên kết thúc TLS connection tại edge server giúp giảm độ trễ để tạo TLS connection. Đây là lý do vì sao nhiều ứng dụng ngày nay gửi HTTP content động không cache được qua CDN.</p>
-<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure10" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure11" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Bên cạnh hiệu suất, CDN hiện đại còn có hai lợi ích lớn nữa. </p>
 <p>Thứ nhất là bảo mật. Tất cả các mạng CDN đều có dung lượng mạng lớn tại edge server. Đây là mấu chốt để chống tần công từ chối dịch vụ (DDoS) quy mô lớn một cách hiệu quả, bằng việc có một mạng có dung lượng còn lớn hơn của kẻ tấn công. Điều này thật sự hiệu quả với CDN trên nền mạng Anycast. Nó cho phép CDN khuếch tán traffic tấn công trên một lượng lớn server.</p>
-<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure12" data-desc-position="bottom"><img alt="!figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure13" data-desc-position="bottom"><img alt="!figure13" src="../figure13.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure13.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Thứ hai, CDN hiện đại cải thiện tính thường trực (availability). CDN có tính phân bố rất lớn. Với việc có bản sao content trên nhiều PoP, CDN có thể chịu được nhiều sự cố phần cứng hơn server gốc.</p>
-<p><a class="glightbox" href="../figure14.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure14" data-desc-position="bottom"><img alt="!figure14" src="../figure14.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure14.png" style="display: block; margin: 0 auto" /></a></p>
 <p>CDN hiện đại mang lại rất nhiều lợi ích. Hãy dùng CDN khi ta có HTTP traffic.</p>
 
   <hr>
@@ -1342,7 +1342,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/02/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
       
         <br>
         Created:

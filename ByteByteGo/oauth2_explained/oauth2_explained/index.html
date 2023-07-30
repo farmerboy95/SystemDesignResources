@@ -1322,17 +1322,17 @@
 <p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=ZV5yTm4pT8g">OAuth 2 Explained In Simple Terms</a></p>
 <h2 id="thuo-so-khai">Thuở sơ khai</h2>
 <p>Ta cùng nhau nhớ lại thời kỳ sơ khai của Internet, việc chia sẻ thông tin lúc đó khá là chân phương. Bạn chỉ cần đưa service tên đăng nhập và mật khẩu của bạn và cái service đó có thể truy cập vào bất cứ thứ gì nó muốn. Cách làm này khá là khó chịu, tuy nhiên vẫn có một số chỗ vẫn còn sử dụng, như trong một số phần mềm tài chính cá nhân để lấy thông tin từ một số ngân hàng cũ nào đó.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>May mắn là ta có thứ khác ngon hơn, đó là <strong>OAuth2</strong>.</p>
 <h2 id="oauth2-la-cai-gi">OAuth2 là cái gì?</h2>
 <p>OAuth2 sẽ kiểu như bạn đưa cho ai đó một cái key đặc biệt, key này cho phép người đó truy cập vào một số phần thông tin nhất định của ta trong một ứng dụng khác. Ta sẽ kiểm soát được ai có quyền truy cập thông tin của mình mà không phải chia sẻ mật khẩu. Và điều tuyệt vời nữa là ta có thể thu hồi cái key đó bất kỳ lúc nào.</p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="vi-du">Ví dụ</h2>
 <p>Xét một ví dụ như sau: Ta có một ứng dụng lưu trữ ảnh tên là SnapStore. Ta đang dùng nó để lưu trữ hình ảnh, và giờ ta muốn in một số hình với một service in của bên thứ ba, gọi là PrintMagic.</p>
 <p>Thay vì phải upload bằng tay mỗi tấm hình lên PrintMagic, ta có thể yêu cầu PrintMagic làm điều đó luôn. Với chỉ một cú click chuột, ta trao (grant) cho PrintMagic quyền để truy cập vào các hình ảnh của ta trên SnapStore.</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Với OAuth2, PrintMagic sẽ thay mặt ta truy cập vào kho hình trên SnapStore mà không cần biết thông tin đăng nhập của chúng ta.</p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Đây là một ví dụ về luồng OAuth, được dẫn đầu bởi OAuth2. Hãy cùng đi sâu hơn chút nhé.</p>
 <p>Trong hoàn cảnh này, ta là <strong>resource owner</strong> (chủ tài nguyên), vì ta chính là chủ của những tấm hình của chính mình trên SnapStore. SnapStore là <strong>resource server</strong> (máy chủ tài nguyên), là thứ đang lưu hình ảnh. PrintMagic là <strong>client</strong> muốn truy cập vào kho hình. <strong>Authorization server</strong> (máy chủ định danh) có thể là một phần của SnapStore hoặc có thể từ một <strong>identity provider</strong> (nhà cung cấp danh tính) bên ngoài nào đó, nó chịu trách nhiệm xử lý quá trình OAuth2.</p>
 <p>Ta đi vào xem luồng OAuth2 cụ thể sẽ đi như thế nào nhé.</p>
@@ -1347,14 +1347,14 @@
 </ol>
 <p>OAuth2 đảm bảo rằng thông tin đăng nhập của SnapStore sẽ không bao giờ được lộ ra cho bên PrintMagic biết, và vẫn cho PrintMagic truy cập thông tin, nhưng chỉ những thông tin được trao quyền truy cập. Thêm một vấn đề nữa cần lưu ý là access token có thể hết hạn sau một khoảng thời gian hoặc có thể bị ta thu hồi bất cứ lúc nào, đây là một lớp bảo mật rất đáng giá.</p>
 <p>OAuth2 còn hỗ trợ <strong>refresh token</strong>, nó có thể được dùng để lấy access token mới khi cái cũ hết hạn mà không cần ta phải làm gì cả.</p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure5" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">20/07/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
       
         <br>
         Created:
