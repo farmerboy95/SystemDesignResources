@@ -17,7 +17,7 @@
         <link rel="next" href="../../scan_to_pay/scan_to_pay/">
       
       <link rel="icon" href="../../../img/logo.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -69,7 +69,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -978,6 +989,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize_api_performance/optimize_api_performance/" class="md-nav__link">
+        7 cách để tăng hiệu suất API của bạn
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1294,12 +1319,12 @@
 
 <h1 id="ssl-tls-va-https">SSL, TLS và HTTPS</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=j9QmMEWmcfo">SSL, TLS, HTTPS Explained</a></p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=j9QmMEWmcfo">SSL, TLS, HTTPS Explained</a></p>
 <h2 id="https">HTTPS</h2>
 <p>Với giao thức HTTP thông thường, giao tiếp giữa trình duyệt và máy chủ sẽ ở dưới dạng plain text (nghĩa là văn bản mà con người có thể đọc được). Điều này đồng nghĩa với việc mật khẩu hay số thẻ ngân hàng của người dùng có thể được đọc bởi bất cứ ai có thể chen vào giao tiếp này.</p>
 <p><strong>HTTPS</strong> được tạo ra để giải quyết vấn đề này. Nó giúp thông tin truyền đi trên internet sẽ không bị hiểu được trừ người gửi và người nhận.</p>
 <p>HTTPS là bản mở rộng của giao thức HTTP. Với HTTPS, thông tin được truyền đi dưới dạng mã hoá với một thứ được gọi là <strong>TLS</strong> (Transport Layer Security). Nếu thông tin mã hoá này lọt vào tay hacker, hắn cũng không thể đọc được nội dung thực sự trong đó.</p>
-<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="ssltls">SSL/TLS</h2>
 <p>Bắt tay TLS bao gồm một số bước như sau:</p>
 <p>Đầu tiên, giống như HTTP, trình duyệt sẽ tiến hành thiết lập một kết nối TCP với server thông qua bắt tay 3 bước TCP.</p>
@@ -1311,7 +1336,7 @@
 <p>Sau khi nhận tin hello, server có thể chọn cyber suite và phiên bản TLS để dùng dựa vào thông tin trong tin nhắn hello, sau đó nó sẽ gửi lại một tin hello trả về cho client để nói cho client biết là server sẽ dùng các công cụ gì trong việc giao tiếp với client. Tiếp đó server gửi một certificate cho client. Certificate chứa khá nhiều thứ nhưng trong đó <strong>public key</strong> rất quan trọng. Client dùng public key này để mã hoá thông tin cần gửi lên server, server sẽ giải mã bằng <strong>private key</strong> ở sẵn trên server, và chỉ có thể được giải mã bởi private key mà thôi. Đây là mã hoá bất đối xứng, public key và private key là một cặp đi đôi với nhau. Bước cuối của bước 2 là khi server gửi một request hello done về phía client. Đến đây thì client đã nhận được server certificate và cả hai đồng ý về phiên bản TLS, cũng như cyber suite sẽ dùng để giao tiếp với nhau.</p>
 <p>Ở bước 3, client và server sẽ tạo ra một key mã hoá dùng chung với nhau để mã hoá thông tin. Toàn bộ request trong bước này gửi từ client lên server sẽ được mã hoá bởi public key mà client đã nhận trong bước trước đó. Client sẽ tạo ra một key mã hoá khác được gọi là <strong>session key</strong>, sau đó dùng public key để mã hoá key này, rồi gửi key đã mã hoá này lên cho server, server giải mã cái key đã được mã hoá này (bằng private key) để lấy session key gốc.</p>
 <p>Giờ cả hai đều đã có session key, client và server đã có thể trao đổi thông tin (có mã hoá) trong bước 4. Ở đây ta dùng mã hoá đối xứng, dùng session key. Lý do vì sao hai bên có thể mã hoá và giải mã thì dựa vào cyber suite mà chúng đã trao đổi trước đó.</p>
-<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Đến đây bạn có thể có một câu hỏi, rằng sao không dùng mã hoá bất đối xứng luôn đi, lại còn đổi qua đối xứng làm gì? Lý do là bởi mã hoá bất đối xứng tốn nhiều tài nguyên (thời gian, bộ nhớ,...). Nó không thực sự phù hợp với việc truyền tải thông tin lớn.</p>
 <h2 id="mo-rong">Mở rộng</h2>
 <p>Có hai vấn đề cần bàn ở đây.</p>
@@ -1337,46 +1362,6 @@
   
 
 
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Bài viết này có tốt không?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi tích cực của bạn!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
 
 
 
@@ -1516,5 +1501,5 @@
     }
     </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

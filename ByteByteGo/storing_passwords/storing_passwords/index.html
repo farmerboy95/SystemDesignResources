@@ -17,7 +17,7 @@
         <link rel="next" href="../../api_gateway/api_gateway/">
       
       <link rel="icon" href="../../../img/logo.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -69,7 +69,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -991,6 +1002,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize_api_performance/optimize_api_performance/" class="md-nav__link">
+        7 cách để tăng hiệu suất API của bạn
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1320,28 +1345,28 @@
 
 <h1 id="luu-mat-khau-vao-database-nhu-the-nao-cho-ung">Lưu mật khẩu vào database như thế nào cho đúng?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=zt8Cocdy15c">System Design: How to store passwords in the database?</a></p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=zt8Cocdy15c">System Design: How to store passwords in the database?</a></p>
 <h2 id="luu-mat-khau-trong-database">Lưu mật khẩu trong database</h2>
 <p>Khi thiết kế ứng dụng có người dùng, một trong những điều tối quan trọng chính là lưu mật khẩu người dùng theo cách nào đó mà các hacker không thể lấy được mật khẩu gốc khi database gặp vấn đề bảo mật. Đầu tiên là điều cần tránh: <strong>Không lưu mật khẩu dưới dạng tường minh</strong></p>
 <p>Bất cứ ai có quyền truy cập nội bộ vào database đều có thể thấy các mật khẩu. Nếu database bị hack, kẻ tấn công sẽ dễ dàng lấy được tất cả các mật khẩu.</p>
 <p>Vậy ta cần làm gì để lưu mật khẩu một cách an toàn trong database? Open Web Application Security Project (OWASP) cung cấp cho chúng ta một số hướng dẫn làm sao để lưu mật khẩu. Một số cách như sau:</p>
 <h3 id="dung-mot-thuat-toan-hash-hien-ai">Dùng một thuật toán hash hiện đại</h3>
 <p>Hash là hàm một chiều. Nghĩa là bạn sẽ không thể giải mã một hash để ra giá trị gốc. Nếu kẻ tấn công lấy được mật khẩu đã hash, hắn không thể dùng cái hash đó để lấy quyền truy cập vào ứng dụng. </p>
-<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Quan trọng là phải dùng một hàm hash hiện đại được thiết kế cho việc lưu mật khẩu. Các hàm này thường "chậm" (ví dụ như <code>bcrypt</code>) vì cần nhiều tài nguyên hơn để tính giá trị hash. Điều đó làm cho việc tấn công khó khăn hơn. </p>
 <p>Lưu ý rằng một số hàm hash cũ như <code>MD5</code> hay <code>SHA-1</code> là các hàm "nhanh". Chúng ít an toàn hơn và không nên được sử dụng.</p>
 <h3 id="salt-mat-khau">Salt mật khẩu</h3>
 <p>Theo hướng dẫn của OWASP, salt là một xâu duy nhất được tạo ngẫu nhiên và nó sẽ được thêm vào mỗi mật khẩu trong quá trình hash.</p>
-<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Tại sao cần phải salt mật khẩu? Lưu mật khẩu theo dạng hash là điều kiện cần, nhưng chưa phải điều kiện đủ. Kẻ tấn công có thể bẻ được hash một chiều với các giá trị tính trước (ví dụ hash của <code>abc</code> là <code>xyz</code>, và sẽ có rât nhiều mapping như thế, khi kẻ tấn công thấy một hash <code>xyz</code> chẳng hạn, hắn sẽ so sánh với mapping và thấy xâu gốc là <code>abc</code>, vậy là hắn biết mật khẩu là <code>abc</code>). Một số kiểu tấn công phổ biến là rainbow table và lookup dựa trên database. Kẻ tấn công có thể dùng các kỹ thuật này để tìm ra mật khẩu trong vài giây.</p>
-<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Thêm salt vào sẽ giúp hash có giá trị duy nhất cho mỗi mật khẩu. Kĩ thuật đơn giản này làm cho việc tính trước giá trị hash kém hiệu quả hơn.</p>
 <p>Lưu mật khẩu với salt vào database kiểu gì? Đầu tiên thêm salt vào sau mật khẩu đã nhập. Sau đó tính hash của xâu kết quả với một hàm hash nào đó. Cái hash này sẽ được lưu vào database cùng với salt. Lưu ý rằng salt được dùng để tạo hash duy nhất. Nó không phải là xâu bí mật gì cả và có thể lưu dưới dạng tường minh trong database.</p>
-<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="xac-nhan-mot-mat-khau-trong-database">Xác nhận một mật khẩu trong database</h2>
 <p>Giờ khi user bấm nút Đăng nhập, làm sao ta có thể xác nhận mật khẩu đó đúng là mật khẩu của user?</p>
 <p>Đầu tiên, ta lấy salt của user từ database. Sau đó ta thêm salt vào sau mật khẩu mà user nhập vào, sau đó hash xâu kết quả. So sánh kết quả này với hash lưu trong database. Nếu giống nhau thì mật khẩu nhập vào là chính xác.</p>
-<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 
   <hr>
 <div class="md-source-file">
@@ -1362,46 +1387,6 @@
   
 
 
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Bài viết này có tốt không?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi tích cực của bạn!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
 
 
 
@@ -1541,5 +1526,5 @@
     }
     </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

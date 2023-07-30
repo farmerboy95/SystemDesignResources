@@ -17,7 +17,7 @@
         <link rel="next" href="../../choose_database/choose_database/">
       
       <link rel="icon" href="../../../img/logo.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -69,7 +69,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -978,6 +989,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize_api_performance/optimize_api_performance/" class="md-nav__link">
+        7 cách để tăng hiệu suất API của bạn
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1294,35 +1319,35 @@
 
 <h1 id="cicd-la-gi">CI/CD là gì?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=42UP1fxi2SY">CI/CD In 5 Minutes | Is It Worth The Hassle: Crash Course System Design #2</a></p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=42UP1fxi2SY">CI/CD In 5 Minutes | Is It Worth The Hassle: Crash Course System Design #2</a></p>
 <h2 id="tong-quan-ve-cicd">Tổng quan về CI/CD</h2>
 <p><strong>CI/CD (Continuous Integration / Continuous Delivery, lược dịch là Tích hợp Liên tục / Phân phối Liên tục)</strong> tự động hoá quy trình phát triển phần mềm từ code ban đầu cho đến khi deploy (triển khai). Nó loại bỏ phần lớn sự can thiệp thủ công của con người để đưa code mới lên môi trường live.</p>
-<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>CI/CD đảm nhiệm việc build, test và deploy code mới vào môi trường live. Về mặt lý thuyết thì nó cho phép các nhóm dev deploy phần mềm nhanh hơn. Nghe có vẻ hay nhưng có thực sự là như vậy không?</p>
 <p>Câu trả lời là <strong>còn tuỳ</strong>. Cùng xem xét từng phần của CI/CD nhé.</p>
 <h2 id="ci">CI</h2>
 <p>CI ít gây tranh cãi hơn và nó cũng phổ biến hơn CD. Sơ sơ thì nó là cách sử dụng tự dộng hoá để cho phép các team hợp nhất thay đổi về code vào repository (kho lưu trữ) sớm hơn và thường xuyên hơn. Mỗi commit sẽ kích hoạt một quy trình làm việc tự động trên một máy chủ CI, máy chủ này sau đó chạy một loạt các tác vụ để đảm bảo rằng commit đủ an toàn để merge vào main branch.</p>
-<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Một quy trình CI tốt dựa trên một tập các test ngon lành. Sẽ không dễ để duy trì một tập các test như vậy với phạm vi bao phủ (coverage) đầy đủ. Phạm vi test cao thường mất nhiều thời gian hơn để chạy. Điều này ảnh hưởng đến năng suất phát triển phần mềm. Khá khó để cân bằng việc này nhưng cũng đáng để làm cho tốt.</p>
 <p>Các công cụ phổ biến trong CI bao gồm những gì? Một hệ thống quản lý mã nguồn tốt sẽ là nền tảng phát triển. GitHub là một ví dụ rất nổi tiếng. Nó chứ mọi thứ cần để xây dựng phần mềm. Nó bao gồm mã nguồn, tập lệnh test, và các tập lệnh để build các ứng dụng phần mềm.</p>
-<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Có nhiều công cụ để quản lý quy trình CI. GitHub Actions và Buildkite là một số ví dụ. Jenkins, CircleCI và TravisCI cũng ngon. Các công cụ này quản lý build và các tác vụ test trong CI. </p>
 <p>Có nhiều công cụ test để viết và chạy test. Các công cụ này thường thiên về một ngôn ngữ và hệ sinh thái cụ thể nào đó. Ví dụ, với JS, Jest là một ví dụ về framework unit test, trong khi đó, playwright và cypress là các framework integration test cho ứng dụng web. </p>
 <p>Các công cụ build còn đa dạng hơn và thiên về một hệ sinh thái cụ thể. Gradle là một công cụ build mạnh mẽ cho Java. Hệ sinh thái build cho JavaScript bị phân mảnh và khó theo dõi. Webpack là tiêu chuẩn, nhưng nhiều công cụ build mới lại cho là mình nhanh hơn, nhưng chưa thể có tính mở rộng cao như Webpack.</p>
-<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="cd">CD</h2>
 <p>Thực ra, đạt được CD thực sự rất là khó. Có tồn tại chuyện đó, nhưng thực tế không phổ biến như CI.</p>
-<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Nhiều team chỉ thực hành CD trong những loại hệ thống cơ bản nhất. Các hệ thông này thường stateless, như API server hoặc web server. Với việc giám sát tốt trên live, các hệ thống này có thể được triển khai liên tục với rủi ro tối thiểu. Chúng stateless, và rollback cũng nhanh và ít ảnh hưởng.</p>
-<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Việc đặt cờ để bật tắt tính năng mới cũng phổ biến, nó giúp tách bạch việc phát triển và kích hoạt tính năng. Điều này cho phép ta có thể nhanh chóng tắt tính năng mới nếu có vấn đề mà không cần phải rollback. </p>
-<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Triển khai Canary cũng là một việc phổ biến cho những sản phẩm với hàng trăm triệu người dùng. Nó triển khai code mới cho một nhóm nhỏ người dùng thành thạo và các nhân viên - những người đánh giá cao các tính năng mới và sẵn sàng chấp nhận rủi ro để giúp phát hiện các sự cố trước khi code mới được đưa vào sử dụng rộng rãi. Điều này cho phép team có thể test code mới trong thế giới thực, đồng thời hạn chế thiệt hại khi có vấn đề phát sinh. Những kỹ thuật này hoạt động tốt cho các hệ thống stateless đơn giản.</p>
-<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Mặt khác, rất ít team có tài nguyên hoặc niềm tin để dùng CD trong các hệ thống stateful phức tạp như cụm database backend hoặc cụm websocket. Thay vào đó, các hệ thống này thường có quy trình triển khai ổn định, thủ công, rủi ro và tốn thời gian. Cần một team chuyên biệt để lo việc này. Rất hiếm khi thấy các hệ thống triển khai liên tục và tự động.</p>
-<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Có nhiều công cụ dùng cho CD. Các công cụ ở trên như GitHub Actions, Buildkite và Jenkins được sử dụng nhiều cho các tác vụ CD. Ngoài ra còn có các công cụ dành riêng cho cơ sở hạ tầng để giúp CD dễ bảo trì hơn. Ví dụ, trên Kubenetes, ArgoCD rất hay được dùng.</p>
-<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Tóm lại, CI/CD là một phương pháp phát triển phần mềm mạnh mẽ có thể giúp các team phát triển phần mềm nhanh và có chất lượng tốt hơn. Tuy nhiên, đây không phải là giải pháp cho mọi vấn đề và việc triển khai giải pháp này có thể khác nhau tuỳ vào mức độ phức tạp của hệ thống.</p>
 
   <hr>
@@ -1344,46 +1369,6 @@
   
 
 
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Bài viết này có tốt không?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi tích cực của bạn!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
 
 
 
@@ -1523,5 +1508,5 @@
     }
     </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

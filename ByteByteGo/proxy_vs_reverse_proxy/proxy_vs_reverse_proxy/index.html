@@ -17,7 +17,7 @@
         <link rel="next" href="../../design_location_based_service/design_location_based_service/">
       
       <link rel="icon" href="../../../img/logo.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -69,7 +69,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -991,6 +1002,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize_api_performance/optimize_api_performance/" class="md-nav__link">
+        7 cách để tăng hiệu suất API của bạn
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1320,11 +1345,11 @@
 
 <h1 id="proxy-vs-reverse-proxy">Proxy vs. Reverse Proxy</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=4NB0NDtOwIQ">Proxy vs Reverse Proxy (Real-world Examples)</a></p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=4NB0NDtOwIQ">Proxy vs Reverse Proxy (Real-world Examples)</a></p>
 <h2 id="forward-proxy">Forward Proxy</h2>
 <p>Có hai loại proxy phổ biến là forward proxy (proxy chuyển tiếp) và reverse proxy (proxy ngược).</p>
 <p><strong>Forward proxy</strong> là một server nằm giữa một nhóm các máy client và mạng internet. Khi những máy client đó gửi request lên các trang web trên mạng internet, forward proxy sẽ đóng vai trò là trung gian để chặn các request đó, và giao tiếp với web server thay mặt cho các máy client đó.</p>
-<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Người ta cần forward proxy vì một vài lý do sau.</p>
 <p>Thứ nhất, forward proxy bảo vệ danh tính trực tuyến của client. Bằng cách dùng forward proxy để kết nối với một trang web, địa chỉ IP của client sẽ không bị server tìm ra, server sẽ chỉ nhìn thấy địa chỉ của proxy. Như vậy sẽ khó hơn để tìm ra được client.</p>
 <p>Thứ hai, một forward proxy có thể được sử dụng để bỏ qua các hạn chế về duyệt web. Một số tổ chức như chính phủ, trường học và doanh nghiệp lớn sử dụng tường lửa để hạn chế quyền truy cập internet. Bằng cách kết nối với forward proxy bên ngoài tường lửa, client có khả năng vượt qua những hạn chế này. Tuy nhiên không phải lúc nào cũng vượt qua được vì bản thân tường lửa có thể chặn kết nối với proxy.</p>
@@ -1332,11 +1357,11 @@
 <h3 id="transparent-proxy">Transparent Proxy</h3>
 <p>Đối với các tổ chức lớn, họ thường sử dụng một kỹ thuật gọi là <strong>transparent proxy</strong> (proxy minh bạch) để hợp lý hoá quá trình.</p>
 <p>Một transparent proxy hoạt động với các công tắc tầng 4 (OSI) để tự động chuyển hướng một số loại lưu lượng truy cập nhất định đến proxy. Không cần phải cấu hình client để sử dụng nó. Rất khó để bỏ qua một transparent proxy khi client đang ở trên mạng của tổ chức.</p>
-<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Tóm lại, forward proxy nằm giữa client và internet và hoạt động thay mặt cho client.</p>
 <h2 id="reverse-proxy">Reverse Proxy</h2>
 <p><strong>Reverse proxy</strong> nằm giữa internet và các web server. Nó chặn các request từ client và giao tiếp với web server thay mặt cho client.</p>
-<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Có một số lý do vì sao một website sẽ dùng reverse proxy.</p>
 <p>Thứ nhất, một reverse proxy có thể được sử dụng để bảo vệ một trang web. Địa chỉ IP của trang web được ẩn đằng sau reverse proxy và không được tiết lộ cho client. Điều này khiến việc tổ chức một cuộc tấn công từ chối dịch vụ (DDoS) vào một trang web trở nên khó hơn nhiều.</p>
 <p>Thứ hai, một reverse proxy được sử dụng để cân bằng tải (load balancing). Một trang web nổi tiếng có thể phải xử lý hàng triệu người dùng mỗi ngày, nó khó có thể xử lý lưu lượng truy cập lớn như vậy với một server. Một reverse proxy có thể cân bằng một lượng lớn request đến web server bằng cách phân phối lưu lượng truy cập đến một nhóm lớn các web server, và ngăn chặn hiệu quả bất kỳ một server nào trong số chúng bị quá tải. Lưu ý rằng ta giả sử reverse proxy có thể xử lý lưu lượng truy cập đến.</p>
@@ -1348,7 +1373,7 @@
 <p>Lớp đầu tiên có thể là một dịch vụ biên như Cloudflare. Các reverse proxy được triển khai tới hàng trăm địa điểm trên toàn thế giới để gần với người dùng.</p>
 <p>Lớp thứ hai có thể là API gateway hoặc load balance tại nhà cung cấp dịch vụ host. Nhiều nhà cung cấp dịch vụ đám mây kết hợp 2 lớp này thành một dịch vụ đầu vào duy nhất.</p>
 <p>Người dùng sẽ vào mạng đám mây ở gần với người dùng và từ đó, reverse proxy kết nối qua mạng cáp quang tốc độ cao với load balancer, nơi request được phân phối đều trên một cụm web server.</p>
-<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 
   <hr>
 <div class="md-source-file">
@@ -1369,46 +1394,6 @@
   
 
 
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Bài viết này có tốt không?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi tích cực của bạn!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
 
 
 
@@ -1548,5 +1533,5 @@
     }
     </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

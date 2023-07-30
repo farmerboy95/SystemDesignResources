@@ -17,7 +17,7 @@
         <link rel="next" href="../../netflix_architecture_evolution/netflix_architecture_evolution/">
       
       <link rel="icon" href="../../../img/logo.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -69,7 +69,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -978,6 +989,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize_api_performance/optimize_api_performance/" class="md-nav__link">
+        7 cách để tăng hiệu suất API của bạn
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1294,13 +1319,13 @@
 
 <h1 id="he-thong-cua-stack-overflow-co-gi-hay">Hệ thống của Stack Overflow có gì hay?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=fKc050dvNIE">Uncovering Stack Overflow's Shocking Architecture</a></p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=fKc050dvNIE">Uncovering Stack Overflow's Shocking Architecture</a></p>
 <h2 id="trong-phim">Trong phim</h2>
 <p>Hãy tưởng tượng rằng bạn được giao cho việc thiết kế lại trang Stack Overflow (nếu bạn chưa biết nó là gì thì hãy ghé thăm tại <a href="https://stackoverflow.com/">đây</a>). Bạn trả lời rằng bạn sẽ thiết kế một số server tại chỗ trong một ứng dụng nguyên khối (monolith), chỉ để nhận về sự ngạc nhiên của đồng nghiệp. Thực ra thì, đó lại chính xác là điều mà Stack Overflow đã làm.</p>
 <p>Có lẽ bạn đã mong rằng một nền tảng khổng lồ như Stack Overflow sẽ đi theo những xu hướng thiết kế hệ thống thịnh hành vào thời điểm này. Một công ty công nghệ lớn sẽ phác thảo hệ thống với các microservice để chia hệ thống ra thành từng phần nhỏ, mỗi cái đều có database riêng. Nó sẽ dùng cache rất nhiều và giao tiếp bất đồng bộ qua message queue gì đó. Một số có thể theo CQRS cùng event sourcing. Thêm nữa thì ai lại chẳng muốn nắm bắt cơ hội để thêm thắt tí concept về hệ thống phân tán như eventual consistency hay định lý CAP. Khá là ấn tượng phải không. </p>
 <h2 id="ngoai-oi">Ngoài đời</h2>
 <p>Nhưng những thứ trên không hề tồn tại trong thiết kế hiện tại của Stack Overflow đâu nhé. Trong một thế giới phủ đầy microservice, Kubernetes và các giải pháp đám mây, Stack Overflow lại đi một mình một ngựa. Thay vì chạy theo xu hướng, Stack Overflow kiên định với kiến trúc mà họ cho là tốt nhất cho hoàn cảnh của họ.</p>
-<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.jpeg"><img alt="figure1" src="../figure1.jpeg" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure1.jpeg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.jpeg" style="display: block; margin: 0 auto" /></a></p>
 <p>Đó là một ứng dụng nguyên khối để xử lý trang hỏi đáp chính với chỉ 9 web server tại chỗ (hình trên ghi 6 nhưng đúng là 9 nhé). Họ không dùng giải pháp đám mây hay microservice gì cả nhưng vẫn có thể xử lý lượng truy cập cực lớn với cách tiếp cận độc đáo. Thay vì chuẩn bị cho việc thay đổi liên tục, họ đã thiết kế một hệ thống tối ưu cho độ trễ tải và phân phối bộ nhớ. Các server này chạy chỉ tốn tầm 5-10% sức chứa, nên có rất nhiều chỗ để phát triển. Dù 80% lượng truy cập là không đăng nhập (ẩn danh), trang web này vẫn cho thấy hiệu suất đáng kinh ngạc. Ngay cả trang được truy cập nhiều nhất là trang danh sách câu hỏi cũng không được cache mà vẫn có thể được render trong 20 ms.</p>
 <p>Hiệu suất kinh dị này được tiếp sức bởi 1.5 Terabyte RAM trong SQL Server của họ, để truy cập nhanh 33% cả database lớn trong bộ nhớ. Điều này chứng tỏ những concept mới nhất, thịnh hành nhất không phải lúc nào cũng là tốt nhất. Hiểu biết sâu về một hướng khó nào đó có thể có lợi hơn nhiều việc chạy theo xu hướng.</p>
 <h2 id="ket">Kết</h2>
@@ -1325,46 +1350,6 @@
   
 
 
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Bài viết này có tốt không?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi tích cực của bạn!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
 
 
 
@@ -1504,5 +1489,5 @@
     }
     </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -17,7 +17,7 @@
         <link rel="next" href="../../storing_passwords/storing_passwords/">
       
       <link rel="icon" href="../../../img/logo.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -69,7 +69,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -992,6 +1003,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize_api_performance/optimize_api_performance/" class="md-nav__link">
+        7 cách để tăng hiệu suất API của bạn
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1322,26 +1347,26 @@
 
 <h1 id="vi-sao-redis-lai-nhanh">Vì sao Redis lại nhanh?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=5TRFpFBccQM">System Design: Why is single-threaded Redis so fast?</a></p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=5TRFpFBccQM">System Design: Why is single-threaded Redis so fast?</a></p>
 <h2 id="redis-la-gi">Redis là gì?</h2>
 <p><strong>Redis</strong> là một dạng cơ sở dữ liệu lưu trữ data trong bộ nhớ. Nó thường được sử dụng như là cache. Nó hỗ trợ nhiều dạng cấu trúc dữ liệu khác nhau, như string, hash, list, set và sorted set. Redis rất chắc chắn, dễ sử dụng và có tốc độ rất tốt. Các yếu tố này lý giải vì sao nó là một trong những loại cơ sở dữ liệu được yêu thích nhất, theo khảo sát thường niên trên Stack Overflow.</p>
 <h2 id="co-so-du-lieu-in-memory">Cơ sở dữ liệu in-memory</h2>
 <p>Lý do đầu tiên mà Redis nhanh là vì nó là một cơ sở dữ liệu in-memory, tức là dùng RAM, chứ không phải ổ cứng. </p>
-<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Truy cập vào bộ nhớ nhanh hơn rất rất nhiều lần so với truy cập ngẫu nhiên trên đĩa. Việc truy cập vào bộ nhớ mang lại thông lượng đọc và ghi cao cùng với độ trễ thấp. Đổi lại thì dữ liệu không thể lớn hơn bộ nhớ.</p>
-<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Về mặt cài đặt, các cấu trúc dữ liệu trong bộ nhớ dễ cài đặt hơn nhiều so với cài trên đĩa. Điều này giúp code đơn giản và góp phần vào sự ổn định vững chắc của Redis.</p>
-<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="on-luong">Đơn luồng</h2>
 <p>Redis chủ yếu là đơn luồng. Vì sao một thiết kế đơn luồng lại cho ta hiệu suất cao như vậy? Tận dụng hết các core trong CPU với đa luồng không phải nhanh hơn sao?</p>
 <p>Các ứng dụng đa luồng yêu cầu lock hoặc các cơ chế đồng bộ hoá khác. Chúng nổi tiếng là khó giải thích. Trong nhiều ứng dụng, thêm phức tạp chỉ tổ gây thêm lỗi và mất đi sự ổn định, gây khó khăn cho việc duy trì hiệu suất cao.</p>
-<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Trong trường hợp của Redis, code đơn luồng rất dễ hiểu. Nhưng mà làm thế nào để code đơn luồng này có thể xử lý hàng ngàn request và response cùng lúc? Luồng không bị block để xử lý từng request một à? Đây là lúc <strong>I/O multiplexing</strong> phát huy tác dụng. Với I/O multiplexing, hệ điều hành cho phép một luồng có thể đợi cùng lúc trên nhiều kết nối socket. Thông thường thì điều này được thực hiện bởi các system call như <code>select</code> hay <code>poll</code>. Các system call này không hiệu quả lắm khi có hàng ngàn kết nối.</p>
-<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Trên linux, <code>epoll</code> là một biến thể hiệu quả của I/O multiplexing giúp hỗ trợ hàng ngàn kết nối cùng lúc. Một nhược điểm của thiết kế đơn luồng là nó không tận dụng được tất cả các core của CPU trong phần cứng ngày nay. Không hiếm các trường hợp có nhiều instance Redis chạy trên cùng một máy chủ để tận dụng nhiều core CPU hơn.</p>
 <h2 id="cac-cau-truc-du-lieu-hieu-qua">Các cấu trúc dữ liệu hiệu quả</h2>
 <p>Vì Redis là cơ sở dữ liệu in-memory, nó có thể tận dụng một số cấu trúc dữ liệu bậc thấp hiệu quả mà không phải lo lắng làm sao để lưu chúng vào đĩa một cách hiệu quả. Danh sách liên kết, skip list, hash table là một số ví dụ.</p>
-<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="ket">Kết</h2>
 <p>Ngày nay thì ta có thể thấy một số ứng dụng cài đặt tương thích với Redis để đạt được hiệu suất còn cao hơn nữa từ một máy chủ. Với tính dễ sử dụng, tính ổn định vững chắc và hiệu suất cao của Redis, nó vẫn cung cấp một giải pháp mạnh mẽ về mặt hiệu suất và độ ổn định cho thị trường.</p>
 
@@ -1364,46 +1389,6 @@
   
 
 
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Bài viết này có tốt không?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi tích cực của bạn!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
 
 
 
@@ -1543,5 +1528,5 @@
     }
     </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

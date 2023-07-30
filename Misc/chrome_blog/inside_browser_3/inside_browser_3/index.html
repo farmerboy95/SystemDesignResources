@@ -17,7 +17,7 @@
         <link rel="next" href="../../inside_browser_4/inside_browser_4/">
       
       <link rel="icon" href="../../../../img/logo.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -69,7 +69,18 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -914,6 +925,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ByteByteGo/optimize_api_performance/optimize_api_performance/" class="md-nav__link">
+        7 cách để tăng hiệu suất API của bạn
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1535,7 +1560,7 @@
 <h2 id="cac-renderer-process-xu-ly-noi-dung-web">Các renderer process xử lý nội dung web</h2>
 <p>Renderer process chịu trách nhiệm cho tất cả mọi thứ xảy ra trong một tab trên trình duyệt. Trong renderer process, main thread sẽ xử lý gần như mọi code bạn gửi cho user. Đôi khi các phần của code JavaScript được xử lý bởi các worker thread nếu bạn dùng một web worker hoặc một service worker. Các raster thread và compositor thread cũng được chạy trong renderer process để render trang một cách hiệu quả và mượt mà.</p>
 <p>Công việc chủ yếu của renderer process là chuyển HTML, CSS và JavaScript thành một trang web mà người dùng có thể tương tác.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong" href="../figure1.avif"><img alt="Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong" src="../figure1.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure1.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong" src="../figure1.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="parsing-phan-tich-cu-phap">Parsing (Phân tích cú pháp)</h2>
 <h3 id="xay-dung-dom">Xây dựng DOM</h3>
 <p>Khi renderer process nhận một thông báo commit cho điều hướng và bắt đầu nhận dữ liệu HTML, main thread bắt đầu parse (phân tích cú pháp) chuỗi văn bản (HTML) và biến nó thành Mô hình Đối tượng Tài liệu - <strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel (<strong>DOM</strong>).</p>
@@ -1543,20 +1568,20 @@
 <p>Parse một tài liệu HTML thành DOM được định nghĩa bởi <a href="https://html.spec.whatwg.org/">Tiêu chuẩn HTML</a>. Bạn có thể nhận thấy rằng việc cung cấp HTML cho trình duyệt không bao giờ gây ra lỗi. Ví dụ, thiếu thẻ đóng <code>&lt;/p&gt;</code> là một HTML hợp lệ. Markup sai như <code>Hi! &lt;b&gt;I'm &lt;i&gt;Chrome&lt;/b&gt;!&lt;/i&gt;</code> (tag b đóng trước tag i) sẽ được xem như bạn viết <code>Hi! &lt;b&gt;I'm &lt;i&gt;Chrome&lt;/i&gt;&lt;/b&gt;&lt;i&gt;!&lt;/i&gt;</code>. Điều này là do đặc tả HTML được thiết kế để linh hoạt xử lý các lỗi đó. Nếu bạn muốn biết chúng được thực hiện như thế nào, bạn có thể đọc phần "<a href="https://html.spec.whatwg.org/multipage/parsing.html#an-introduction-to-error-handling-and-strange-cases-in-the-parser">Giới thiệu về xử lý lỗi và các trường hợp lạ trong parser</a>" của đặc tả HTML.</p>
 <h3 id="tai-nguon-phu">Tải nguồn phụ</h3>
 <p>Một website thường dùng các tài nguyên bên ngoài như hình ảnh, CSS và JavaScript. Các file này cần được tải từ mạng hoặc cache. Main thread <em>có thể</em> yêu cầu từng cái một khi nó tìm ra các tài nguyên đó trong lúc parse để xây dựng DOM, nhưng để tăng tốc, "scanner tải trước" được chạy đồng thời. Nếu có những thứ như <code>&lt;img&gt;</code> hoặc <code>&lt;link&gt;</code> trong tài liệu HTML, scanner tải trước sẽ xem xét mã thông báo do HTML parser tạo và gửi request đến network thread trong browser process.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 2: Main thread parse HTML và xây dựng cây DOM" href="../figure2.avif"><img alt="Hình 2: Main thread parse HTML và xây dựng cây DOM" src="../figure2.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure2.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 2: Main thread parse HTML và xây dựng cây DOM" src="../figure2.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h3 id="javascript-co-the-chan-parsing">JavaScript có thể chặn parsing</h3>
 <p>Khi HTML parser tìm thấy thẻ <code>&lt;script&gt;</code>, nó sẽ tạm dừng việc parse tài liệu HTML và phải tải, parse và thực thi code JavaScript. Vì sao? Bởi vì JavaScript có thể thay đổi tài liệu HTML với những thứ như <code>document.write()</code>, nó sẽ thay đổi toàn bộ cấu trúc DROM (<a href="https://html.spec.whatwg.org/multipage/parsing.html#overview-of-the-parsing-model">tổng quan về mô hình parsing</a> trong đặc tả HTML có một sơ đồ rất đẹp). Đây là lý do vì sao HTML parser phải đợi JavaScript chạy trước khi tiếp tục parse tài liệu HTML. Nếu bạn tò mò về những thứ xảy ra trong quá trình thực thi JavaScript, <a href="https://mathiasbynens.be/notes/shapes-ics">team V8 đã có những buổi toạ đàm và bài viết về vấn đề đó</a>.</p>
 <h2 id="goi-y-cho-trinh-duyet-rang-ban-muon-tai-tai-nguyen-nhu-the-nao">Gợi ý cho trình duyệt rằng bạn muốn tải tài nguyên như thế nào</h2>
 <p>Có nhiều cách để các nhà phát triển ứng dụng web có thể gửi gợi ý đến trình duyệt để tải tài nguyên theo thứ tự nào đó. Nếu code JavaScript của bạn không dùng <code>document.write()</code>, bạn có thể thêm các thuộc tính <a href="https://developer.mozilla.org/docs/Web/HTML/Element/script#attr-async"><code>async</code></a> hay <a href="https://developer.mozilla.org/docs/Web/HTML/Element/script#attr-defer"><code>defer</code></a> cho thẻ <code>&lt;script&gt;</code>. Trình duyệt sẽ tải và chạy code JavaScript một cách bất đồng bộ và không làm gián đoạn việc parse. Bạn có thể dùng <a href="https://developers.google.com/web/fundamentals/primers/modules">JavaScript module</a> nếu thấy hợp lý. <code>&lt;link rel="preload"&gt;</code> là một cách để báo cho trình duyệt rằng tài nguyên là rất cần thiết cho việc điều hướng bây giờ và bạn muốn tải càng sớm càng tốt. Bạn có thể đọc thêm tại <a href="https://developers.google.com/web/fundamentals/performance/resource-prioritization">Ưu tiên tài nguyên - Nhờ trình duyệt giúp bạn</a>.</p>
 <h2 id="tinh-toan-cho-cac-style">Tính toán cho các style</h2>
 <p>DOM là chưa đủ để biết trang web sẽ trông như thế nào vì ta cần các style trong CSS. Main thread sẽ parse CSS và quyết định computed style cho từng node DOM. Đây là thông tin về loại style được áp dụng cho từng element dựa trên bộ chọn CSS. Bạn có thể xem thông tin này trong phần <code>computed</code> của DevTools.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 3: Main thread parse CSS để thêm các computed style vào" href="../figure3.avif"><img alt="Hình 3: Main thread parse CSS để thêm các computed style vào" src="../figure3.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure3.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 3: Main thread parse CSS để thêm các computed style vào" src="../figure3.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Ngay cả khi nếu bạn không cung cấp CSS, mỗi DOM node vẫn có một style được tính toán. Tag <code>&lt;h1&gt;</code> được hiển thị to hơn tag <code>&lt;h2&gt;</code> và margin được định nghĩa cho mỗi element. Lý do là vì browser có CSS mặc định. Nếu bạn muốn biết CSS mặc định của Chrome trông như nào, <a href="https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/html/resources/html.css">bạn có thể xem source code ở đây</a>.</p>
 <h2 id="layout">Layout</h2>
 <p>Giờ renderer process đã biết cấu trúc của tài liệu và style cho từng node, nhưng vẫn không đủ để render trang. Tưởng tượng bạn đang cố gắng miêu tả một bức vẽ cho bạn của mình qua điện thoại. "Có một hình tròn lớn màu đủ và một hình vuông nhỏ màu xanh" là không đủ thông tin để bạn của bạn biết chính xác bức vẽ trông thế nào.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác" href="../figure4.avif"><img alt="Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác" src="../figure4.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure4.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác" src="../figure4.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Layout (bố cục) là một process để tìm hình dạng của các element. Main thread sẽ đi qua DOM và các computed style và tạo cây layout, nó sẽ có các thông tin như toạ độ x y và kích thước hộp giới hạn. Cây layout có cấu trúc tương tự cây DOM, nhưng nó chỉ chứa thông tin liên quan đến những gì hiển thị trên trang. Nếu <code>display: none</code> được áp dụng, element đó không nằm trong layout tree (tuy nhiên, element với <code>visibility: hidden</code> vẫn nằm trên cây layout). Tương tự, nếu một lớp giả với nội dung như <code>p::before{content:"Hi!"}</code> được áp dụng, nó sẽ nằm trong cây layout mặc dù nó không nằm trong DOM.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout" href="../figure5.avif"><img alt="Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout" src="../figure5.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure5.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout" src="../figure5.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Xác định layout của trang là một việc khó. Ngay cả layout của trang đơn giản nhất như một đống block từ trên xuống dưới cũng phải xem xét độ lớn của font chữ và vị trí ngắt dòng vì chúng ảnh hưởng đến kích thước và hình dạng của đoạn văn; mà sau đó ảnh hưởng đến vị trí của đoạn sau, như video dưới đây.</p>
 <video controls>
     <source id="mp4" src="../figure6.mp4" type="video/mp4">
@@ -1565,11 +1590,11 @@
 <p>CSS có thể làm cho phần tử nổi sang một bên, che phần mục tràn và thay đổi hướng viết. Bạn có thể tưởng tượng, giai đoạn layout này có một nhiệm vụ to lớn. Trong Chrome, toàn bộ team kỹ sư làm việc trên layout. Nếu bạn muốn xem chi tiết về công việc của họ, bạn có thể xem <a href="https://www.youtube.com/watch?v=Y5Xa4H2wtVA">một vài buổi toạ đàm từ Hội nghị BlinkOn</a>.</p>
 <h2 id="ve">Vẽ</h2>
 <p>Có DOM, style, và layout vẫn chưa đủ để render trang. Giả sử bạn muốn vẽ lại bức tranh đó. Bạn biết kích thước, hình dáng và vị trí các element, nhưng theo thứ tự nào?</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước" href="../figure7.avif"><img alt="Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước" src="../figure7.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure7.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước" src="../figure7.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Ví dụ, <code>z-index</code> có thể được set cho một số element nhất định, trong trường hợp đó, vẽ theo thứ tự trên HTML sẽ cho ra kết quả sai khi render.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng" href="../figure8.avif"><img alt="Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng" src="../figure8.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure8.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng" src="../figure8.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Ở bước vẽ này, main thread sẽ đi qua cây layout để tạo ra các bản ghi vẽ. Bản ghi vẽ (paint record) là một ghi chú của quá trình vẽ như "nền trước, rồi chữ, rồi đến hình chữ nhật". Nếu bạn từng vẽ trên element <code>&lt;canvas&gt;</code> với JavaScript, bạn sẽ quen với quá trình này.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ" href="../figure9.avif"><img alt="Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ" src="../figure9.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure9.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ" src="../figure9.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h3 id="cap-nhat-rendering-pipeline-rat-ton-kem">Cập nhật rendering pipeline rất tốn kém.</h3>
 <p>Điều quan trọng nhất cần nắm bắt trong renderer pipeline là ở mỗi bước, kết quả của thao tác trước đó được sử dụng để tạo dữ liệu mới. Ví dụ, nếu có gì đó thay đổi trong cây layout, thì thứ tự vẽ cần được tạo lại cho các phần bị ảnh hưởng của tài liệu. Video bên dưới cho thấy các cây DOM + Style, Layout và Paint theo thứ tự chúng được sinh ra.</p>
 <video controls>
@@ -1577,11 +1602,11 @@
 </video>
 
 <p>Nếu bạn đang tạo hiệu ứng cho các element, trình duyệt phải chạy các thao tác này ở giữa mọi frame. Hầu hết các display sẽ refresh 60 lần một giây (60 frame/giây); hình ảnh động sẽ xuất hiện mượt mà đối với mắt người khi bạn di chuyển mọi thứ trên màn hình ở mọi frame. Tuy nhiên, nếu hoạt ảnh mất đi các frame ở giữa, thì trang sẽ xuất hiện một cách "lộn xộn".</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 11: Các frame hoạt ảnh trên dòng thời gian" href="../figure11.avif"><img alt="Hình 11: Các frame hoạt ảnh trên dòng thời gian" src="../figure11.avif" style="display: block; margin: 0 auto; height: 150px" /></a></div></p>
+<p><a class="glightbox" href="../figure11.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 11: Các frame hoạt ảnh trên dòng thời gian" src="../figure11.avif" style="display: block; margin: 0 auto; height: 150px" /></a></p>
 <p>Ngay cả khi các hoạt động render của bạn theo kịp quá trình refresh màn hình, thì các tính toán này vẫn đang chạy trên main thread, nghĩa là thread này có thể bị chặn khi ứng dụng của bạn đang chạy JavaScript.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript" href="../figure12.avif"><img alt="Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript" src="../figure12.avif" style="display: block; margin: 0 auto; height: 150px" /></a></div></p>
+<p><a class="glightbox" href="../figure12.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript" src="../figure12.avif" style="display: block; margin: 0 auto; height: 150px" /></a></p>
 <p>Bạn có thể chia thao tác JavaScript thành các phần nhỏ và lên lịch chạy ở mọi frame bằng cách sử dụng <code>requestAnimationFrame()</code>. Để biết thêm về chủ đề này, vui lòng xem <a href="https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution">Tối ưu hóa thực thi JavaScript</a>. Bạn cũng có thể chạy <a href="https://www.youtube.com/watch?v=X57mh8tKkgE">JavaScript trong Web Worker</a> để tránh chặn main thread.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh" href="../figure13.avif"><img alt="Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh" src="../figure13.avif" style="display: block; margin: 0 auto; height: 150px" /></a></div></p>
+<p><a class="glightbox" href="../figure13.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh" src="../figure13.avif" style="display: block; margin: 0 auto; height: 150px" /></a></p>
 <h2 id="compositor">Compositor</h2>
 <h3 id="ban-ve-mot-trang-nhu-the-nao">Bạn vẽ một trang như thế nào?</h3>
 <p>Bây giờ trình duyệt đã biết cấu trúc của tài liệu, style của từng element, hình dạng của trang và thứ tự tô màu, vậy nó sẽ vẽ một trang như thế nào? Biến thông tin này thành pixel trên màn hình được gọi là <strong>rasterizing</strong>.</p>
@@ -1599,11 +1624,11 @@
 <p>Bạn có thể xem cách trang web của mình được chia thành các layer trong DevTools bằng cách sử dụng <a href="https://blog.logrocket.com/eliminate-content-repaints-with-the-new-layers-panel-in-chrome-e2c306d4d752?gi=cd6271834cea">bảng Layers</a>.</p>
 <h3 id="chia-ra-thanh-cac-layer">Chia ra thành các layer</h3>
 <p>Để tìm ra mỗi element nằm trong layer nào, main thread đi qua cây layout để tạo cây layer (phần này được gọi là "Cập nhật cây layer" trong bảng hiệu suất DevTools). Nếu một số phần của trang lẽ ra là layer riêng biệt (như menu bên trượt vào) mà không có layer riêng, thì bạn có thể gợi ý cho trình duyệt bằng cách sử dụng thuộc tính <code>will-change</code> trong CSS.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 16: Main thread đi qua cây layout để tạo ra cây layer" href="../figure16.avif"><img alt="Hình 16: Main thread đi qua cây layout để tạo ra cây layer" src="../figure16.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure16.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 16: Main thread đi qua cây layout để tạo ra cây layer" src="../figure16.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Bạn có thể muốn cung cấp các layer cho mọi element, nhưng việc composite trên một số lượng lớn các layer có thể dẫn đến hoạt động chậm hơn so với việc rasterizing các phần nhỏ của trang trên mỗi frame, vì vậy, điều quan trọng là bạn phải đo hiệu suất render của ứng dụng của mình. Để biết thêm về chủ đề này, hãy xem <a href="https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count">Bám sát các thuộc tính chỉ dành cho Compositor và Quản lý số lượng Layer</a>.</p>
 <h3 id="raster-va-composite-khong-lien-quan-en-main-thread">Raster và composite không liên quan đến main thread</h3>
 <p>Khi cây layer được tạo và thứ tự vẽ được xác định, main thread sẽ commit thông tin đó cho compositor thread. Compositor thread sau đó rasterize từng layer. Một layer có thể lớn bằng toàn bộ chiều dài của một trang, do đó, compositor thread chia chúng thành các ô và gửi từng ô tới các raster thread. Các raster thread sẽ rasterize từng ô và lưu chúng trong bộ nhớ GPU.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU" href="../figure17.avif"><img alt="Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU" src="../figure17.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure17.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU" src="../figure17.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Compositor thread có thể ưu tiên các raster thread khác nhau để những thứ trong viewport(hoặc gần đó) có thể được raster trước. Một layer cũng có nhiều ô cho các độ phân giải khác nhau để xử lý những thứ như phóng to chẳng hạn.</p>
 <p>Sau khi các ô được raster, compositor thread sẽ thu thập thông tin ô được gọi là <strong>draw quads</strong> để tạo <strong>compositor frame</strong>.</p>
 <table>
@@ -1625,7 +1650,7 @@
 </tbody>
 </table>
 <p>Một compositor frame sau đó được gửi tới browser process thông qua IPC. Ở đây, một compositor frame khác có thể được thêm vào từ UI thread để thay đổi UI của trình duyệt hoặc từ các renderer process khác dành cho tiện ích mở rộng. Các compositor frame này được gửi đến GPU để hiển thị trên màn hình. Nếu một sự kiện cuộn xảy ra, compositor thread sẽ tạo một compositor frame khác để gửi tới GPU.</p>
-<p><div class="lightgallery"><a data-sub-html="Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU" href="../figure18.avif"><img alt="Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU" src="../figure18.avif" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure18.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU" src="../figure18.avif" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Lợi ích của việc composite là nó được thực hiện mà không liên quan đến main thread. Compositor thread không cần đợi tính toán style hoặc thực thi JavaScript. Đây là lý do tại sao các <a href="https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">hoạt-ảnh-chỉ-cần-composite</a> được coi là tốt nhất để có hiệu suất mượt mà. Nếu layout hoặc paint cần được tính toán lại thì main thread phải tham gia.</p>
 <h2 id="ket-phan-3">Kết phần 3</h2>
 <p>Trong phần này, ta đã xem qua rendering pipeline từ parsing đến compositing. Hi vọng rằng bạn đã đủ khả năng để đọc thêm về tối ưu hoá hiệu suất của một trang web.</p>
@@ -1650,46 +1675,6 @@
   
 
 
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Bài viết này có tốt không?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi tích cực của bạn!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
 
 
 
@@ -1829,5 +1814,5 @@
     }
     </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

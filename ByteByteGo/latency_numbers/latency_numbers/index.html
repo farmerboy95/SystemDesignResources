@@ -17,7 +17,7 @@
         <link rel="next" href="../../http_versions/http_versions/">
       
       <link rel="icon" href="../../../img/logo.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -69,7 +69,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1041,6 +1052,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize_api_performance/optimize_api_performance/" class="md-nav__link">
+        7 cách để tăng hiệu suất API của bạn
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1420,70 +1445,70 @@
 
 <h1 id="cac-moc-o-tre-ma-lap-trinh-vien-nen-biet">Các mốc độ trễ mà lập trình viên nên biết</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=FqR5vESuKe0">Latency Numbers Programmer Should Know</a></p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=FqR5vESuKe0">Latency Numbers Programmer Should Know</a></p>
 <h2 id="tai-sao-nen-noi-ve-o-tre">Tại sao nên nói về độ trễ?</h2>
 <p>Độ trễ (latency) là một yếu tố quan trọng trong các hệ thống ngày nay. Thực sự chúng ta không cần biết độ trễ chính xác mà chỉ cần ghi nhớ một số khoảng độ trễ nhất định để hình dung ra thứ ta đang làm sẽ tốn khoảng trễ như thế nào.</p>
 <p>Ta sẽ đi vào từng khoảng thời gian trễ để xem có những ứng dụng nào liên quan đến chúng hay không.</p>
-<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto; height: 200px" /></a></p>
 <h2 id="1-nano-giay">1 nano giây</h2>
 <p>Truy cập vào các thanh ghi CPU tốn khoảng dưới 1 nano giây. Ta chỉ có vài thanh ghi trong CPU nhưng truy cập chúng lại rất nhanh.</p>
-<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <p>Chu kỳ xung nhịp (clock cycle) của máy tính cũng tốn khoảng dưới 1 nano giây.</p>
-<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto; height: 200px" /></a></div></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto; height: 200px" /></a></p>
 <h2 id="1-10-nano-giay">1-10 nano giây</h2>
 <p>Truy cập vào bộ nhớ đệm (cache) L1 và L2 của CPU tốn từ 1 đến 10 nano giây. Một số thao tác tốn kém của CPU cũng ở trong khoảng này, ví dụ như branch mispredict penalty, tốn khoảng 20 chu kỳ xung nhịp.</p>
-<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <h2 id="10-100-nano-giay">10-100 nano giây</h2>
 <p>Truy cập vào bộ nhớ đệm L3 của CPU thường tốn khoảng 10 nano giây. </p>
-<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
+<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <p>Với các bộ xử lý hiện đại như Apple M1, tham chiếu vào bộ nhớ chính tốn khoảng gần 100 nano giây. Nói cách khác, truy cập vào bộ nhớ chính của máy tính hiện đại sẽ chậm hơn vài trăm lần truy cập vào thanh ghi CPU.</p>
 <h2 id="100-1000-nano-giay">100-1000 nano giây</h2>
 <p>Khoảng này sẽ gồm lệnh gọi hệ thống (system call). Trong Linux, gọi một lệnh hệ thống đơn giản sẽ tốn khoảng vài trăm nano giây. Lưu ý phần lớn thời gian trong này là chi phí để di chuyển vào kernel và đi ra, thời gian thực gọi lệnh hệ thống là rất ít.</p>
-<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
+<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <p>Ngoài ra, ta còn tốn khoảng 200 nano giây để MD5 hash một số 64 bit.</p>
-<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
+<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <h2 id="1-10-micro-giay">1-10 micro giây</h2>
 <p>Context switch giữa các thread trong Linux tốn tầm khoảng vài micro giây. Dù vậy thì đây là trường hợp tốt nhất để có độ trễ này. Tuỳ vào workload, nếu context switch bao gồm việc mang các trang dữ liệu từ bộ nhớ cho luồng mới, nó có thể tốn nhiều thời gian hơn.</p>
-<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Copy 64KB dữ liệu từ một chỗ trong bộ nhớ chính sang chỗ khác (cũng trong bộ nhớ chính) cũng tốn vài micro giây.</p>
-<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="10-100-micro-giay">10-100 micro giây</h2>
 <p>Network proxy như Nginx cần khoảng 50 micro giây để xử lý một HTTP request.</p>
-<p><div class="lightgallery"><a data-sub-html="figure12" href="../figure12.png"><img alt="figure12" src="../figure12.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure12" src="../figure12.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Đọc 1MB liên tiếp từ bộ nhớ chính sẽ tốn khoảng 50 micro giây.</p>
-<p><div class="lightgallery"><a data-sub-html="figure13" href="../figure13.png"><img alt="figure13" src="../figure13.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure13" src="../figure13.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Độ trễ đọc của ổ cứng SSD cũng trong khoảng này, tốn tầm 100 micro giây để đọc một trang 8K.</p>
-<p><div class="lightgallery"><a data-sub-html="figure14" href="../figure14.png"><img alt="figure14" src="../figure14.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure14" src="../figure14.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="100-1000-micro-giay">100-1000 micro giây</h2>
 <p>Độ trễ ghi của ở cứng SSD lớn hơn tầm 10 lần so với độ trễ đọc, gần 1000 micro giây để ghi một trang.</p>
-<p><div class="lightgallery"><a data-sub-html="figure15" href="../figure15.png"><img alt="figure15" src="../figure15.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure15" src="../figure15.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Thời gian trễ trọn vòng của mạng nội vùng (với các nền tảng đám mây hiện nay) là tầm khoảng vài trăm micro giây. Ngày nay độ trễ này có xu hướng giảm, đôi khi về dưới 100 micro giây.</p>
-<p><div class="lightgallery"><a data-sub-html="figure16" href="../figure16.png"><img alt="figure16" src="../figure16.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure16" src="../figure16.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Một thao tác thông thường trên Memcache hay Redis tốn khoảng 1000 micro giây, bao gồm cả thời gian trễ trọn vòng ở trên.</p>
-<p><div class="lightgallery"><a data-sub-html="figure17" href="../figure17.png"><img alt="figure17" src="../figure17.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure17" src="../figure17.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="1-10-mili-giay">1-10 mili giây</h2>
 <p>Thời gian trễ trọn vòng của mạng xuyên vùng là vào khoảng 5 mili giây.</p>
-<p><div class="lightgallery"><a data-sub-html="figure18" href="../figure18.png"><img alt="figure18" src="../figure18.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure18" src="../figure18.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Thời gian tìm (seek time) của ổ cứng cũng vào khoảng 5 mili giây.</p>
-<p><div class="lightgallery"><a data-sub-html="figure19" href="../figure19.png"><img alt="figure19" src="../figure19.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure19" src="../figure19.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="10-100-mili-giay">10-100 mili giây</h2>
 <p>Thời gian trễ trọn vòng của bờ đông và bờ tây nước Mỹ, hay bờ đông nước Mỹ và châu Âu nằm trong khoảng này.</p>
-<p><div class="lightgallery"><a data-sub-html="figure20" href="../figure20.png"><img alt="figure20" src="../figure20.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure20" src="../figure20.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Đọc 1GB liên tiếp từ bộ nhớ chính cũng nằm trong khoảng này.</p>
-<p><div class="lightgallery"><a data-sub-html="figure21" href="../figure21.png"><img alt="figure21" src="../figure21.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure21" src="../figure21.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="100-1000-mili-giay">100-1000 mili giây</h2>
 <p>Mất tầm 300 mili giây để bcrypt một mật khẩu.</p>
-<p><div class="lightgallery"><a data-sub-html="figure22" href="../figure22.png"><img alt="figure22" src="../figure22.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure22" src="../figure22.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Bắt tay TLS nằm trong khoảng 250 đến 500 mili giây. Nó bao gồm nhiều network round trip nên con số sẽ tuỳ vào khoảng cách giữa 2 máy.</p>
-<p><div class="lightgallery"><a data-sub-html="figure23" href="../figure23.png"><img alt="figure23" src="../figure23.png" style="display: block; margin: 0 auto; height: 500px" /></a></div></p>
+<p><a class="glightbox" href="../figure23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure23" src="../figure23.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <p>Thời gian trễ trọn vòng với mạng từ bờ tây nước Mỹ đến Singapore cũng trong khoảng 100 đến 1000 mili giây.</p>
-<p><div class="lightgallery"><a data-sub-html="figure24" href="../figure24.png"><img alt="figure24" src="../figure24.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure24.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure24" src="../figure24.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Đọc 1GB liên tiếp từ SSD cũng trong khoảng này.</p>
 <h2 id="1-giay">1 giây</h2>
 <p>Chuyển 1GB trên mạng trong cùng một vùng đám mây tốn khoảng 10 giây.</p>
-<p><div class="lightgallery"><a data-sub-html="figure25" href="../figure25.png"><img alt="figure25" src="../figure25.png" style="display: block; margin: 0 auto; height: 300px" /></a></div></p>
+<p><a class="glightbox" href="../figure25.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure25" src="../figure25.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 
   <hr>
 <div class="md-source-file">
@@ -1504,46 +1529,6 @@
   
 
 
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Bài viết này có tốt không?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi tích cực của bạn!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
 
 
 
@@ -1683,5 +1668,5 @@
     }
     </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

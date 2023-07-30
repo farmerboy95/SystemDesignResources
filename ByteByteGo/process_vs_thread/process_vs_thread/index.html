@@ -17,7 +17,7 @@
         <link rel="next" href="../../debugging_techniques/debugging_techniques/">
       
       <link rel="icon" href="../../../img/logo.jpg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -69,7 +69,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -985,6 +996,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize_api_performance/optimize_api_performance/" class="md-nav__link">
+        7 cách để tăng hiệu suất API của bạn
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1308,36 +1333,36 @@
 
 <h1 id="process-vs-thread">Process vs. Thread</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><img src="../../../img/bytebytego.png" width="16" height="16"/> <a href="https://www.youtube.com/watch?v=4rLW7zg21gI">FANG Interview Question | Process vs Thread</a></p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=4rLW7zg21gI">FANG Interview Question | Process vs Thread</a></p>
 <h2 id="chuong-trinh-program-la-gi">Chương trình (Program) là gì?</h2>
 <p>Một <strong>chương trình</strong> (Program) là một file thực thi (executable). Nó chứa mã nguồn, hoặc một tập các hướng dẫn xử lý được lưu trữ thành một file trên ổ đĩa.</p>
-<p><div class="lightgallery"><a data-sub-html="figure1" href="../figure1.png"><img alt="figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="tien-trinh-process-la-gi">Tiến trình (Process) là gì?</h2>
 <p>Khi mã nguồn của chương trình được đưa vào trong bộ nhớ và được thực thi bởi bộ xử lý, nó trở thành một <strong>tiến trình</strong> (Process).</p>
-<p><div class="lightgallery"><a data-sub-html="figure2" href="../figure2.png"><img alt="figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Một process đang hoạt động cũng cần tài nguyên mà chương trình cần để chạy. Tài nguyên này được quản lý bởi hệ điều hành. Một số ví dụ như thanh ghi xử lý, bộ đếm chương trình, con trỏ stack, các trang bộ nhớ được chỉ định cho stack và heap của process, vân vân...</p>
 <p>Mỗi process có không gian địa chỉ bộ nhớ riêng. Một process không thể gây hại đến không gian bộ nhớ của một process khác. Điều này có nghĩa là nếu một process gặp sự cố, các process khác vẫn có thể tiếp tục chạy. Trình duyệt Chrome vận dụng điều này rất tốt. Mỗi tab của Chrome là một process. Khi một tab gặp sự cố do lỗi hay bị tấn công, các tab khác không bị ảnh hưởng.</p>
 <h2 id="luong-thread-la-gi">Luồng (Thread) là gì?</h2>
 <p><strong>Luồng</strong> (thread) là một đơn vị thực thi bên trong một process. Mỗi process có ít nhất một thread, còn gọi là main thread. Một process có thể có nhiều thread.</p>
-<p><div class="lightgallery"><a data-sub-html="figure3" href="../figure3.png"><img alt="figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Mỗi thread có một stack riêng. Trước đó ta đề cập đến việc các thanh ghi, bộ đếm chương trình, con trỏ stack là một phần của một process. Giờ ta có thể nói đúng hơn rằng chúng là một phần của một thread.</p>
 <p>Các thread trong một process chia sẻ cùng một không gian địa chỉ bộ nhớ. Không gian địa chỉ bộ nhớ chung này cũng có thể được dùng để giao tiếp giữa các thread với nhau. Tuy nhiên, một thread gặp sự cố có thể dẫn đến cả process gặp lỗi.</p>
-<p><div class="lightgallery"><a data-sub-html="figure4" href="../figure4.png"><img alt="figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="he-ieu-hanh-khoi-chay-thread-hoac-process-tren-cpu-nhu-the-nao">Hệ điều hành khởi chạy thread hoặc process trên CPU như thế nào?</h2>
 <p>Việc này được thực hiện bởi <strong>context switching</strong> (thay đổi bối cảnh).</p>
-<p><div class="lightgallery"><a data-sub-html="figure5" href="../figure5.png"><img alt="figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Trong khi đang context switch, một process được mang ra (switch) khỏi CPU để cho một process khác có thể chạy. Hệ điều hành lưu trạng thái của process hiện tại (bị switch ra) để có thể khôi phục và tiếp tục chạy vào một thời điểm khác. Sau đó nó khôi phục trạng thái trước đó của một process khác và tiếp tục chạy process đó.</p>
-<p><div class="lightgallery"><a data-sub-html="figure6" href="../figure6.png"><img alt="figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="figure7" href="../figure7.png"><img alt="figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Context switch rất tốn kém. Nó bao gồm việc lưu và tải dữ liệu vào thanh ghi, thay đổi trang bộ nhớ, và cập nhật nhiều cấu trúc dữ liệu trong kernel. Thay đổi thực thi giữa các luồng cũng cần context switching.</p>
-<p><div class="lightgallery"><a data-sub-html="figure8" href="../figure8.png"><img alt="figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="figure9" href="../figure9.png"><img alt="figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Thông thường thì context switch trên thread sẽ nhanh hơn trên process. Thread thì có ít trạng thái hơn và quan trọng hơn là các thread có cùng không gian địa chỉ bộ nhớ, nên không cần phải thay đổi trang các bộ nhớ ảo, đây cũng là thao tác tốn kém nhất trong context switch.</p>
-<p><div class="lightgallery"><a data-sub-html="figure10" href="../figure10.png"><img alt="figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Context switch tốn kém nên có một số cơ chế để tối thiểu hoá sự tốn kém này, ví dụ như <strong>fiber</strong> và <strong>coroutine</strong>.</p>
-<p><div class="lightgallery"><a data-sub-html="figure11" href="../figure11.png"><img alt="figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Các cơ chế này giảm tốn kém nhưng tăng độ phức tạp của context switch. Nói chung, chúng được lên lịch một cách hợp tác với nhau, nghĩa là, một thằng phải đưa quyền điều khiển cho thằng còn lại để thằng còn lại có thể chạy, giúp cho ứng dụng tự mình lập lịch. Trách nhiệm thuộc về ứng dụng để đảm bảo rằng một task kéo dài có thể tạm ngưng bằng cách trao quyền điều khiến theo định kỳ.</p>
-<p><div class="lightgallery"><a data-sub-html="figure12" href="../figure12.png"><img alt="figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></div></p>
+<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
 
   <hr>
 <div class="md-source-file">
@@ -1358,46 +1383,6 @@
   
 
 
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Bài viết này có tốt không?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết rất hay" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="Bài viết cần được cải thiện" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi tích cực của bạn!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              Cảm ơn phản hồi của bạn! Nếu có thời gian mong bạn vui lòng giúp mình cải thiện bài viết bằng cách thêm issue vào  <a href="https://github.com/farmerboy95/SystemDesignResources/issues" target="_blank">GitHub</a> của trang này.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
 
 
 
@@ -1537,5 +1522,5 @@
     }
     </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
