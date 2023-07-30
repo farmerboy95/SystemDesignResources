@@ -1381,21 +1381,21 @@
 <p>Redis nổi tiếng vì tốc độ cực cao. Và vì sao lại như vậy thì đã có một <a href="../../why_redis_fast/why_redis_fast/">bài viết</a> nói về điều này rồi.</p>
 <h2 id="cache">Cache</h2>
 <p>Ứng dụng đầu tiên của Redis dĩ nhiên là lưu tạm data để làm cho ứng dụng web nhanh hơn. Với ứng dụng này, Redis lưu trữ các data được request thường xuyên trong bộ nhớ. Nó cho phép web server trả về các data này một cách nhanh chóng. Điều này làm giảm tải lên database và cải thiện thời gian trả về của ứng dụng.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Với quy mô lớn hơn, cache được phân phối trong một cụm các Redis server. Sharding là một kĩ thuật phổ biến để phân phối tải đều cho các server trong cụm.</p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Một số ứng dụng nhỏ khác khi dùng distributed Redis cache có việc set TTL (Time-To-Live - thời gian sống) và xử lý thundering herd (<a href="https://en.wikipedia.org/wiki/Thundering_herd_problem">Thundering herd</a> xảy ra khi có một lượng lớn process hay thread đợi một event nào đó nhưng chỉ có một process được xử lý event đó thôi. Khi các process được bật, chúng sẽ giành nhau để xử lý event. Các process này sẽ tranh nhau tài nguyên, có thể làm treo máy).</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="session-data">Session Data</h2>
 <p>Ứng dụng tiếp theo là khi dùng Redis như một nơi chứa session. Nó cho phép chia sẻ session data giữa các stateless server. Khi một user đăng nhập vào một ứng dụng web, session data sẽ được lưu vào Redis, cùng với session ID duy nhất được trả về cho client dưới dạng cookie. Khi user gửi request lên cho ứng dụng, session ID sẽ được lồng vào request, và server sẽ lấy session data từ Redis với ID này. Lưu ý rằng Redis là in-memory database, nên session data lưu trong Redis sẽ bị mất nếu Redis server khởi động lại.</p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="replication">Replication</h2>
 <p>Mặc dù Redis cung cấp tính lâu dài cho dữ liệu được lưu với các lựa chọn như snapshot và AOF (Append-Only File), thứ có thể giúp ta lưu session data vào ổ cứng và reload lại nó vào memory nếu khởi động lại server, các lựa chọn này thường mất rất nhiều thời gian để đưa dữ liệu từ ổ cứng vào memory để có thể sử dụng trong thực tế. Trong nhiều trường hợp, replication thường được sử dụng hơn. Data sẽ được sao chép vào một bản sao Redis. Trong trường hợp Redis chính bị crash, bản sao sẽ được đưa vào thay thế bản gốc để tiếp tục công việc.</p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure5" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure6" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="distributed-lock">Distributed Lock</h2>
 <p><strong>Distributed Lock</strong> (khoá) được sử dụng khi nhiều node trong ứng dụng cần truy cập vào một số tài nguyên được chia sẻ. </p>
-<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure7" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Redis được dùng làm distributed lock với các lệnh có tính atomic như <code>SETNX</code> (<code>SET if Not eXists</code>). Nó cho phép người gọi set một key chỉ khi key đó chưa tồn tại trong Redis.</p>
 <p>Nó hoạt động như sau: </p>
 <ul>
@@ -1403,23 +1403,23 @@
 <li>Nếu key không tồn tại trong Redis, <code>SETNX</code> sẽ trả về 1, cho biết rằng lock đã được lấy bởi client 1. Client 1 xong việc và thả lock ra bằng cách xoá cái key đó. </li>
 <li>Nếu key vẫn còn đang tồn tại trong Redis, <code>SETNX</code> trả về 0, cho biết là lock đã được lấy bởi một client khác. Trong trường hợp này, client 1 đợi và thử <code>SETNX</code> lại cho đến khi lock được thả bởi client kia đó.</li>
 </ul>
-<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure8" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Lưu ý rằng phần cài đặt này có thể đủ tốt với nhiều use case, nhưng vẫn sinh ra lỗi. Trong thực tế, có rất nhiều thư viện Redis cung cấp cho chúng ta nhiều kiểu cài đặt distributed lock chất lượng cao như sau:</p>
-<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure9" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="rate-limiter">Rate Limiter</h2>
 <p>Rate Limiter là một công cụ để kiểm soát số lượng request đến với server trong một khoảng thời gian. Redis có thể được dùng như một rate limiter bằng cách sử dụng các lệnh tăng bộ đếm và thiết lập thời gian sống cho các bộ đếm đó.</p>
-<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure10" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Một thuật toán rate limiter đơn giản hoạt động như sau: Với một request đến server, IP của request hay user ID được dùng làm key. Số request của cái key đó được tăng lên nhờ lệnh <code>INCR</code> trong Redis. Biến đếm hiện tại được so với giới hạn (rate limit). Nếu vẫn trong giới hạn, request được cho tiếp tục xử lý, còn nếu không thì request bị từ chối.</p>
-<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure11" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure12" data-desc-position="bottom"><img alt="!figure12" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Các key được set để hết hạn sau một khoảng thời gian, ví dụ như một phút, để reset biến đếm cho khoảng thời gian tiếp theo. </p>
-<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure13" src="../figure13.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure13" data-desc-position="bottom"><img alt="!figure13" src="../figure13.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Một số thuật toán rate limiter phức tạp hơn như Leaky Bucket cũng có thể được cài đặt bằng Redis.</p>
-<p><a class="glightbox" href="../figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure14" src="../figure14.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure14.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure14" data-desc-position="bottom"><img alt="!figure14" src="../figure14.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="gaming-leaderboard">Gaming Leaderboard</h2>
 <p>Với một số game vừa và nhỏ, Redis cung cấp khả năng để các lập trình viên tạo ra nhiều loại bảng xếp hạng khác nhau. Sorted Set là một dạng cấu trúc dữ liệu có thể làm được điều này. Sorted Set là một tập các phần tử khác nhau đôi một, với một trọng số được gán cho mỗi phần tử. Các phần tử được sắp xếp theo trọng số này. Điều này cho phép việc lấy nhanh các phần tử bằng trọng số trong thời gian <span class="arithmatex">\(log\)</span>.</p>
-<p><a class="glightbox" href="../figure15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure15" src="../figure15.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure16" src="../figure16.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure15.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure15" data-desc-position="bottom"><img alt="!figure15" src="../figure15.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure16.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure16" data-desc-position="bottom"><img alt="!figure16" src="../figure16.png" style="display: block; margin: 0 auto" /></a></p>
 
   <hr>
 <div class="md-source-file">

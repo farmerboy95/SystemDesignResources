@@ -1315,7 +1315,7 @@
 <li>Giám sát, logging, phân tích và thanh toán.</li>
 <li>Caching.</li>
 </ul>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <h2 id="quy-trinh">Quy trình</h2>
 <p>Ta hãy xem xét một quy trình thông thường của một request từ client qua API gateway đến backend service.</p>
 <p><strong>Bước 1</strong>: Client gửi một request đến API gateway. Request này thường qua giao thức HTTP. Nó có thể là REST, GraphQL, v.v...</p>
@@ -1324,14 +1324,14 @@
 <p><strong>Bước 4</strong>: API gateway đưa request đến một bên xác thực danh tính để xác thực và uỷ quyền cho request. API gateway nhận một phiên xác thực từ bên đó với phạm vi về những thứ được phép làm của client.</p>
 <p><strong>Bước 5</strong>: Một rate limit check chặt chẽ hơn được dùng để kiểm tra phiên xác thực ban nãy. Nếu vượt quá giới hạn, request sẽ bị từ chối.</p>
 <p><strong>Bước 6 và 7</strong>: Với sự giúp đỡ của thành phần khám phá dịch vụ (service discovery component), API gateway định vị dịch vụ phù hợp ở backend để xử lý request bằng cách so đường dẫn.</p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p><strong>Bước 8</strong>: API gateway chuyển đổi request thành một giao thức phù hợp và gửi request mới sang backend service. Một ví dụ là gRPC. </p>
 <p>Khi response trở lại từ backend service, API gateway sẽ chuyển đổi response lại thành giao thức cũ (trước bước 8) và trả lại response này cho client.</p>
 <p>Một API gateway chuẩn cũng cung cấp các dịch vụ quan trọng khác. Ví dụ, một API gateway sẽ theo dõi lỗi và cung cấp chức năng ngắt mạch để bào vệ service khỏi bị quá tải. API gateway cũng cần cung cấp logging, giám sát, và dịch vụ phân tích để phục vụ mục đích theo dõi.</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Một API gateway là một yếu tố quan trọng trong cơ sở hạ tầng. Nó nên được triển khai cho nhiều khu vực để cải thiện tính khả dụng. Với nhiều dịch vụ đám mây từ các nhà cung cấp, API gateway được triển khai trên toàn thế giới để gần với khách hàng hơn.</p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure5" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
 
   <hr>
 <div class="md-source-file">

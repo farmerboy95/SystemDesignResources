@@ -1401,10 +1401,10 @@
 <p>Ngoài ra, chúng tôi thấy rất vui khi viết code với sự trợ giúp của compiler, sự rõ ràng của các thông báo lỗi, cấu trúc ngôn ngữ và sự nhấn mạnh về tính an toàn. Chúng tôi trở nên khá thích cách mà một khi code được biên dịch, nó thường hoạt động tốt. Tuy nhiên, điều quan trọng nhất là nó cho phép chúng tôi nói rằng chúng tôi đã viết lại nó bằng Rust.</p>
 <p>Các data service nằm giữa API và các ScyllaDB cluster. Chúng chứa một gRPC endpoint cho mỗi truy vấn database và cố ý không chứa business logic. Tính năng quan trọng mà các data service của chúng tôi cung cấp là kết hợp request (request coalescing). Nếu nhiều người dùng đang request cùng một row cùng lúc, nó sẽ chỉ truy vấn database một lần. Người dùng đầu tiên đưa ra request sẽ khiến worker task xuất hiện trong server. Các request tiếp theo sẽ kiểm tra sự tồn tại của worker task đó và theo dõi nó. Worker task đó sẽ truy vấn database và trả lại row cho tất cả các bên theo dõi.</p>
 <p>Đây chính là sức mạnh của Rust: nó giúp dễ dàng viết concurrent code một cách an toàn.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Tưởng tượng rằng có một thông báo lớn trên một server Discord có tag <code>@everyone</code>: người dùng sẽ mở ứng dụng và đọc tin nhắn, gửi hàng tấn lưu lượng truy cập đến database. Trước đây, điều này có thể tạo ra một phân vùng nóng và on-call sẽ phải theo ca để giúp hệ thống phục hồi. Với các data service này, chúng tôi có thể giảm đáng kể lưu lượng truy cập tăng đột biến đối với database.</p>
 <p>Phần thứ hai của phép thuật ở đây là phần trên của các data service. Chúng tôi đã triển khai định tuyến dựa trên hàm băm nhất quán cho các data service để cho phép kết hợp request hiệu quả hơn. Đối với mỗi request đến data service, chúng tôi cung cấp một khóa định tuyến (routing key). Đối với tin nhắn, đây là <code>channel_id</code>, vì vậy tất cả các request cho cùng một channel sẽ chuyển đến cùng một instance của service. Định tuyến này tiếp tục giúp giảm tải cho database.</p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Những cải tiến này giúp ích rất nhiều, nhưng chúng không giải quyết được tất cả các vấn đề của chúng tôi. Chúng tôi vẫn thấy các phân vùng nóng và độ trễ tăng lên trên cluster Cassandra, chỉ là không quá thường xuyên như trước. Nó giúp câu giờ để chúng tôi có thể chuẩn bị cluster ScyllaDB tối ưu mới của mình và thực hiện quá trình di chuyển.</p>
 <h2 id="chuyen-di-cu-sieu-to-khong-lo">Chuyến di cư siêu to khổng lồ</h2>
 <p>Các yêu cầu đối với việc di cư khá đơn giản: chúng tôi cần di chuyển hàng nghìn tỷ tin nhắn mà không có downtime và cần thực hiện điều đó một cách nhanh chóng bởi vì mặc dù tình hình của Cassandra đã phần nào được cải thiện, nhưng chúng tôi vẫn thường xuyên phải tự sửa.</p>
@@ -1420,7 +1420,7 @@
 <p>Đó là một database hoạt động rất tốt. Không còn những cuộc sửa lỗi kéo dài cả tuần, cũng không tung hứng các node trong cluster để cố gắng duy trì thời gian hoạt động. Đó là một database hiệu quả hơn nhiều — chúng tôi đang chuyển từ chạy 177 node Cassandra sang chỉ 72 node ScyllaDB. Mỗi node ScyllaDB có 9 TB dung lượng ổ đĩa, tăng từ mức trung bình 4 TB cho mỗi node Cassandra.</p>
 <p>Độ trễ đuôi cũng được cải thiện đáng kể. Ví dụ: tìm tin nhắn trong quá khứ có p99 trong khoảng 40-125 ms trên Cassandra, với ScyllaDB có độ trễ 15 ms p99 ngon lành, đồng thời hiệu suất chèn tin nhắn giảm từ 5-70 ms p99 trên Cassandra, xuống 5ms p99 ổn định trên ScyllaDB. Nhờ những cải tiến về hiệu suất nói trên, chúng tôi đã mở khóa nhiều use case mới.</p>
 <p>Vào cuối năm 2022, mọi người trên khắp thế giới đang xem World Cup. Một điều mà chúng tôi phát hiện ra rất nhanh là các bàn thắng được ghi xuất hiện trong biểu đồ theo dõi. Điều này rất thú vị vì không chỉ dễ dàng xem các sự kiện trong thế giới thực hiển thị trong hệ thống của bạn, điều này còn giúp team có lý do để xem bóng đá trong các cuộc họp. Chúng tôi không thực sự "xem bóng đá trong các cuộc họp", chúng tôi chỉ "chủ động theo dõi hiệu suất của hệ thống" thôi.</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Chúng tôi thực sự có thể kể lại trận Chung kết World Cup thông qua biểu đồ gửi tin nhắn. Trận đấu thật tuyệt vời. Lionel Messi đang cố gắng hoàn thành thành tích cuối cùng trong sự nghiệp và củng cố tuyên bố trở thành cầu thủ vĩ đại nhất mọi thời đại và dẫn dắt Argentina đến chức vô địch, nhưng trước mặt Messi là Kylian Mbappe và tuyển Pháp vô cùng tài năng.</p>
 <p>Mỗi trong số 10 lần lưu lượng tăng trong biểu đồ này biểu thị một sự kiện trong trận đấu.</p>
 <ol>
@@ -1435,7 +1435,7 @@
 <li>Hết hiệp phụ rồi, chúng ta sẽ bước vào loạt sút luân lưu!</li>
 <li>Sự phấn khích và căng thẳng tăng dần trong suốt loạt đá luân lưu cho đến khi Pháp sút hỏng còn Argentina thì không! Argentina vô địch World Cup 2022!</li>
 </ol>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
 <p>Mọi người trên khắp thế giới đang căng thẳng khi xem trận đấu đáng kinh ngạc này, nhưng trong khi đó, Discord và database tin nhắn không gặp vấn đề gì. Hình trên là số lượng request kết hợp trong suốt thời gian diễn ra trận đấu. Không có bất cứ sự trục trặc nào, hệ thống mới chạy một cách hoàn hảo. Với các data service dựa trên Rust và ScyllaDB, chúng tôi có thể gánh vác lưu lượng này và cung cấp một nền tảng để người dùng giao tiếp.</p>
 
   <hr>
@@ -1443,7 +1443,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">24/07/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
       
         <br>
         Created:

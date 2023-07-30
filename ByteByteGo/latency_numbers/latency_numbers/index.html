@@ -1449,66 +1449,66 @@
 <h2 id="tai-sao-nen-noi-ve-o-tre">Tại sao nên nói về độ trễ?</h2>
 <p>Độ trễ (latency) là một yếu tố quan trọng trong các hệ thống ngày nay. Thực sự chúng ta không cần biết độ trễ chính xác mà chỉ cần ghi nhớ một số khoảng độ trễ nhất định để hình dung ra thứ ta đang làm sẽ tốn khoảng trễ như thế nào.</p>
 <p>Ta sẽ đi vào từng khoảng thời gian trễ để xem có những ứng dụng nào liên quan đến chúng hay không.</p>
-<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
-<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto; height: 200px" /></a></p>
+<p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure1" data-desc-position="bottom"><img alt="!figure1" src="../figure1.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure2" data-desc-position="bottom"><img alt="!figure2" src="../figure2.png" style="display: block; margin: 0 auto; height: 200px" /></a></p>
 <h2 id="1-nano-giay">1 nano giây</h2>
 <p>Truy cập vào các thanh ghi CPU tốn khoảng dưới 1 nano giây. Ta chỉ có vài thanh ghi trong CPU nhưng truy cập chúng lại rất nhanh.</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure3" data-desc-position="bottom"><img alt="!figure3" src="../figure3.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <p>Chu kỳ xung nhịp (clock cycle) của máy tính cũng tốn khoảng dưới 1 nano giây.</p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto; height: 200px" /></a></p>
+<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure4" data-desc-position="bottom"><img alt="!figure4" src="../figure4.png" style="display: block; margin: 0 auto; height: 200px" /></a></p>
 <h2 id="1-10-nano-giay">1-10 nano giây</h2>
 <p>Truy cập vào bộ nhớ đệm (cache) L1 và L2 của CPU tốn từ 1 đến 10 nano giây. Một số thao tác tốn kém của CPU cũng ở trong khoảng này, ví dụ như branch mispredict penalty, tốn khoảng 20 chu kỳ xung nhịp.</p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
-<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure5" data-desc-position="bottom"><img alt="!figure5" src="../figure5.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure6" data-desc-position="bottom"><img alt="!figure6" src="../figure6.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <h2 id="10-100-nano-giay">10-100 nano giây</h2>
 <p>Truy cập vào bộ nhớ đệm L3 của CPU thường tốn khoảng 10 nano giây. </p>
-<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure7" data-desc-position="bottom"><img alt="!figure7" src="../figure7.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <p>Với các bộ xử lý hiện đại như Apple M1, tham chiếu vào bộ nhớ chính tốn khoảng gần 100 nano giây. Nói cách khác, truy cập vào bộ nhớ chính của máy tính hiện đại sẽ chậm hơn vài trăm lần truy cập vào thanh ghi CPU.</p>
 <h2 id="100-1000-nano-giay">100-1000 nano giây</h2>
 <p>Khoảng này sẽ gồm lệnh gọi hệ thống (system call). Trong Linux, gọi một lệnh hệ thống đơn giản sẽ tốn khoảng vài trăm nano giây. Lưu ý phần lớn thời gian trong này là chi phí để di chuyển vào kernel và đi ra, thời gian thực gọi lệnh hệ thống là rất ít.</p>
-<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure8" data-desc-position="bottom"><img alt="!figure8" src="../figure8.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <p>Ngoài ra, ta còn tốn khoảng 200 nano giây để MD5 hash một số 64 bit.</p>
-<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure9" data-desc-position="bottom"><img alt="!figure9" src="../figure9.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <h2 id="1-10-micro-giay">1-10 micro giây</h2>
 <p>Context switch giữa các thread trong Linux tốn tầm khoảng vài micro giây. Dù vậy thì đây là trường hợp tốt nhất để có độ trễ này. Tuỳ vào workload, nếu context switch bao gồm việc mang các trang dữ liệu từ bộ nhớ cho luồng mới, nó có thể tốn nhiều thời gian hơn.</p>
-<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure10" data-desc-position="bottom"><img alt="!figure10" src="../figure10.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Copy 64KB dữ liệu từ một chỗ trong bộ nhớ chính sang chỗ khác (cũng trong bộ nhớ chính) cũng tốn vài micro giây.</p>
-<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure11" data-desc-position="bottom"><img alt="!figure11" src="../figure11.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="10-100-micro-giay">10-100 micro giây</h2>
 <p>Network proxy như Nginx cần khoảng 50 micro giây để xử lý một HTTP request.</p>
-<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure12" src="../figure12.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure12" data-desc-position="bottom"><img alt="!figure12" src="../figure12.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Đọc 1MB liên tiếp từ bộ nhớ chính sẽ tốn khoảng 50 micro giây.</p>
-<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure13" src="../figure13.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure13" data-desc-position="bottom"><img alt="!figure13" src="../figure13.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Độ trễ đọc của ổ cứng SSD cũng trong khoảng này, tốn tầm 100 micro giây để đọc một trang 8K.</p>
-<p><a class="glightbox" href="../figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure14" src="../figure14.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure14.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure14" data-desc-position="bottom"><img alt="!figure14" src="../figure14.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="100-1000-micro-giay">100-1000 micro giây</h2>
 <p>Độ trễ ghi của ở cứng SSD lớn hơn tầm 10 lần so với độ trễ đọc, gần 1000 micro giây để ghi một trang.</p>
-<p><a class="glightbox" href="../figure15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure15" src="../figure15.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure15.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure15" data-desc-position="bottom"><img alt="!figure15" src="../figure15.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Thời gian trễ trọn vòng của mạng nội vùng (với các nền tảng đám mây hiện nay) là tầm khoảng vài trăm micro giây. Ngày nay độ trễ này có xu hướng giảm, đôi khi về dưới 100 micro giây.</p>
-<p><a class="glightbox" href="../figure16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure16" src="../figure16.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure16.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure16" data-desc-position="bottom"><img alt="!figure16" src="../figure16.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Một thao tác thông thường trên Memcache hay Redis tốn khoảng 1000 micro giây, bao gồm cả thời gian trễ trọn vòng ở trên.</p>
-<p><a class="glightbox" href="../figure17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure17" src="../figure17.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure17.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure17" data-desc-position="bottom"><img alt="!figure17" src="../figure17.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="1-10-mili-giay">1-10 mili giây</h2>
 <p>Thời gian trễ trọn vòng của mạng xuyên vùng là vào khoảng 5 mili giây.</p>
-<p><a class="glightbox" href="../figure18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure18" src="../figure18.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure18.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure18" data-desc-position="bottom"><img alt="!figure18" src="../figure18.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Thời gian tìm (seek time) của ổ cứng cũng vào khoảng 5 mili giây.</p>
-<p><a class="glightbox" href="../figure19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure19" src="../figure19.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure19.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure19" data-desc-position="bottom"><img alt="!figure19" src="../figure19.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="10-100-mili-giay">10-100 mili giây</h2>
 <p>Thời gian trễ trọn vòng của bờ đông và bờ tây nước Mỹ, hay bờ đông nước Mỹ và châu Âu nằm trong khoảng này.</p>
-<p><a class="glightbox" href="../figure20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure20" src="../figure20.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure20.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure20" data-desc-position="bottom"><img alt="!figure20" src="../figure20.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Đọc 1GB liên tiếp từ bộ nhớ chính cũng nằm trong khoảng này.</p>
-<p><a class="glightbox" href="../figure21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure21" src="../figure21.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure21.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure21" data-desc-position="bottom"><img alt="!figure21" src="../figure21.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <h2 id="100-1000-mili-giay">100-1000 mili giây</h2>
 <p>Mất tầm 300 mili giây để bcrypt một mật khẩu.</p>
-<p><a class="glightbox" href="../figure22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure22" src="../figure22.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure22.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure22" data-desc-position="bottom"><img alt="!figure22" src="../figure22.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Bắt tay TLS nằm trong khoảng 250 đến 500 mili giây. Nó bao gồm nhiều network round trip nên con số sẽ tuỳ vào khoảng cách giữa 2 máy.</p>
-<p><a class="glightbox" href="../figure23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure23" src="../figure23.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
+<p><a class="glightbox" href="../figure23.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure23" data-desc-position="bottom"><img alt="!figure23" src="../figure23.png" style="display: block; margin: 0 auto; height: 500px" /></a></p>
 <p>Thời gian trễ trọn vòng với mạng từ bờ tây nước Mỹ đến Singapore cũng trong khoảng 100 đến 1000 mili giây.</p>
-<p><a class="glightbox" href="../figure24.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure24" src="../figure24.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure24.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure24" data-desc-position="bottom"><img alt="!figure24" src="../figure24.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 <p>Đọc 1GB liên tiếp từ SSD cũng trong khoảng này.</p>
 <h2 id="1-giay">1 giây</h2>
 <p>Chuyển 1GB trên mạng trong cùng một vùng đám mây tốn khoảng 10 giây.</p>
-<p><a class="glightbox" href="../figure25.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!figure25" src="../figure25.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
+<p><a class="glightbox" href="../figure25.png" data-type="image" data-width="100%" data-height="auto" data-title="!figure25" data-desc-position="bottom"><img alt="!figure25" src="../figure25.png" style="display: block; margin: 0 auto; height: 300px" /></a></p>
 
   <hr>
 <div class="md-source-file">
