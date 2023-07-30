@@ -20,17 +20,17 @@ Có một quan niện sai lầm phổ biến là truy cập vào ổ đĩa thì 
 
 Đối với ổ cứng, nó cần thời gian để điều chỉnh con chạy (arm), theo nghĩa đen, đến các vị trí khác nhau trên đĩa từ. Đây là nguyên nhân khiến truy cập ngẫu nhiên bị chậm. Tuy nhiên, đối với truy cập tuần tự, con chạy không cần chạy nhiều như thế, nên việc đọc và ghi từng khối dữ liệu một sẽ nhanh hơn nhiều.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Kafka tận dụng lợi thế này bằng cách sử dụng log chỉ thêm vào sau (append-only log) là cấu trúc dữ liệu chính của nó. Append-only log chỉ thêm dữ liệu mới vào cuối file. Kiểu truy cập này là tuần tự.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Giờ thêm một chút thống kê nhé. Với phần cứng hiện đại, giả sử ta có một loạt các ổ cứng như thế, tốc độ ghi tuần tự đạt hàng trăm MB mỗi giây, trong khi tốc độ ghi ngẫu nhiên chỉ được vài trăm KB trên giây. **Truy cập tuần tự rõ ràng là nhanh hơn.** Sử dụng ổ cứng cũng có lợi thế về chi phí. So với SSD, HDD có giá chỉ bằng một phần ba nhưng dung lượng thì gấp khoảng ba lần. 
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 Cung cấp cho Kafka một lượng lớn dung lượng giá rẻ mà không phải đánh đổi về mặt hiệu năng nghĩa là Kafka có thể lưu giữ thông tin một cách hiệu quả về mặt chi phí trong thời gian dài. Trước Kafka thì hầu như ít người dám nghĩ tới điều này.
 
@@ -44,6 +44,6 @@ Rõ ràng là như vậy không ổn. Có 4 bản sao dữ liệu và 2 system c
 
 Với zero-copy, ứng dụng Kafka dùng một system call gọi là `sendfile()` để nói cho hệ điều hành sao chép thẳng dữ liệu từ cache hệ điều hành sang bộ đệm NIC. Với cách này, bản sao duy nhất là từ cache hệ điều hành sang bộ đệm NIC. Với một network card hiện đại, sao chép được thực hiện bởi DMA (direct memory access - truy cập bộ nhớ trực tiếp). Khi dùng DMA, CPU không tham gia vào nhiệm vụ này, khiến cho nó còn hiệu quả hơn.
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }
 
 Tóm lại, I/O tuần tự và nguyên tắc không sao chép là nền tảng cho hiệu suất cao của Kafka. Kafka sử dụng các kĩ thuật khác để tối đa hoá hiệu quả từ phần cứng, nhưng hai tính chất này vẫn là quan trọng nhất.

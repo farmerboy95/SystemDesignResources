@@ -8,13 +8,13 @@
 
 **Kubernetes** là một nền tảng điều phối container mã nguồn mở. Nó tự động hoá việc deploy, mở rộng quy mô và quản lý các ứng dụng được đóng gói.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Kubernetes có khởi điểm là hệ thống điều phối container nội bộ của Google, tên là **Borg**. Nó quản lý việc triển khai hàng ngàn ứng dụng trong nội bộ Google. Vào năm 2014, Google công bố một phiên bản mã nguồn mở của Borg, đó chính là Kubernetes.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Sao nó lại được gọi là **k8s**? Tương tự với *i18n* với *internationalization* và *l10n* với *localization*, số 8 trong **k8s** chỉ 8 ký tự nằm giữa chữ **k** và **s** trong kubernetes.
 
@@ -22,15 +22,15 @@ Sao nó lại được gọi là **k8s**? Tương tự với *i18n* với *inter
 
 Một cụm Kubernetes là một tập các máy, gọi là các node, được dùng để chạy các ứng dụng được đóng gói. 
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 Có hai phần cốt lõi trong một cụm Kubernetes. Đầu tiên là phần điều khiển (control plane). Nó chịu trách nhiệm quản lý trạng thái của cụm. Trong môi trường thực tế, control plane thường chạy trên nhiều node, trải rộng trên một số vùng data center. 
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }
 
 Thứ hai là các worker node. Các node này chạy việc cho ứng dụng được đóng gói. Các ứng dụng được đóng gọi chạy trong một Pod. 
 
-![!figure6](figure6.png){ style="display: block; margin: 0 auto" }
+![](figure6.png){ style="display: block; margin: 0 auto" }
 
 Pod là đơn vị triển khai nhỏ nhất trong Kubernetes. Một pod sẽ host một hoặc nhiều container và cung cấp bộ nhớ dùng chung cũng như kết nối mạng cho các container đó. Các pod được tạo ra và quản lý bởi control plane của Kubernetes. Chúng là các kết cấu cơ bản của các ứng dụng Kubernetes.
 
@@ -40,9 +40,9 @@ Control plane bao gồm một số thành phần chính. Chúng là **API server
 
 API server là interface chính giữa control plane và phần còn lại của cụm. Nó mở một API RESTful cho phép các client tương tác với control plane và gửi các request để quản lý cụm. etcd là một kho lưu trữ key-value từ xa. Nó lưu trữ trạng thái của cụm. Nó được dùng bởi API server và các thành phần khác của control plane để lưu và lấy thông tin về cụm.
 
-![!figure7](figure7.png){ style="display: block; margin: 0 auto" }
+![](figure7.png){ style="display: block; margin: 0 auto" }
 
-![!figure8](figure8.png){ style="display: block; margin: 0 auto" }
+![](figure8.png){ style="display: block; margin: 0 auto" }
 
 Bộ lập lịch chịu trách nhiệm lập lịch cho các pod trên các worker node trong cụm. Nó sử dụng thông tin về tài nguyên cần bởi các pod và tài nguyên đang có trên các worker node để đưa ra quyết định phân phối.
 
@@ -52,11 +52,11 @@ Trình quản lý bộ điều khiển chịu trách nhiệm chạy các bộ đ
 
 Tiếp theo, ta hãy đi sâu vào các worker node. Các thành phần cốt lõi của Kubernetes chạy trên worker node bao gồm **kubelet**, **container runtime** và **kube-proxy**. 
 
-![!figure9](figure9.png){ style="display: block; margin: 0 auto" }
+![](figure9.png){ style="display: block; margin: 0 auto" }
 
 Kubelet là một daemon chạy trên mỗi worker node. Nó chịu trách nhiệm giao tiếp với control plane. Nó nhận chỉ thị từ control plane về việc các pod nào sẽ chạy trên node và đảm bảo rằng trạng thái mong muốn trên pod được duy trì.
 
-![!figure10](figure10.png){ style="display: block; margin: 0 auto" }
+![](figure10.png){ style="display: block; margin: 0 auto" }
 
 Container runtime chạy các container trên các worker node. Nó chịu trách nhiệm kéo container image từ registry, chạy và dừng các container, và quản lý tài nguyên của các container. 
 

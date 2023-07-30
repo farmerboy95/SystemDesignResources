@@ -32,10 +32,10 @@ ROM thì bao gồm firmware và BIOS.
 
 - **NVMe** (Non-Volatile Memory Express) là interface hiệu suất cao dành cho SSD. NVMe kết nối trực tiếp đến CPU qua các liên kết PCIe. Điều này cho phép độ trễ thấp và tốc độ truyền data tăng một cách đáng kể, so với SATA SSD.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 **Ổ USB** là một thiết bị nhỏ mà bạn có thể cắm vào cổng USB để gửi / nhận data đến / từ thiết bị có cổng USB đó. Nó rất dễ dùng và được dùng để truyền data giữa các máy tính với nhau.
 
 **Thẻ nhớ SD** là một loại thẻ nhỏ bằng con tem (hoặc nhỏ hơn như Mini SD hay Micro SD), có khả năng chứa data được dùng để lưu trữ data trong máy ảnh số hay điện thoại thông minh. Nó có thể chứa hàng trăm GB hoặc thậm chí vài TB bộ nhớ.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }

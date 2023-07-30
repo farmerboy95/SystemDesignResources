@@ -10,7 +10,7 @@ Có hai loại proxy phổ biến là forward proxy (proxy chuyển tiếp) và 
 
 **Forward proxy** là một server nằm giữa một nhóm các máy client và mạng internet. Khi những máy client đó gửi request lên các trang web trên mạng internet, forward proxy sẽ đóng vai trò là trung gian để chặn các request đó, và giao tiếp với web server thay mặt cho các máy client đó.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Người ta cần forward proxy vì một vài lý do sau.
 
@@ -26,7 +26,7 @@ Thứ ba, có thể sử dụng forward proxy để chặn quyền truy cập v�
 
 Một transparent proxy hoạt động với các công tắc tầng 4 (OSI) để tự động chuyển hướng một số loại lưu lượng truy cập nhất định đến proxy. Không cần phải cấu hình client để sử dụng nó. Rất khó để bỏ qua một transparent proxy khi client đang ở trên mạng của tổ chức.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Tóm lại, forward proxy nằm giữa client và internet và hoạt động thay mặt cho client.
 
@@ -34,7 +34,7 @@ Tóm lại, forward proxy nằm giữa client và internet và hoạt động th
 
 **Reverse proxy** nằm giữa internet và các web server. Nó chặn các request từ client và giao tiếp với web server thay mặt cho client.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Có một số lý do vì sao một website sẽ dùng reverse proxy.
 
@@ -58,4 +58,4 @@ Lớp thứ hai có thể là API gateway hoặc load balance tại nhà cung c�
 
 Người dùng sẽ vào mạng đám mây ở gần với người dùng và từ đó, reverse proxy kết nối qua mạng cáp quang tốc độ cao với load balancer, nơi request được phân phối đều trên một cụm web server.
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }

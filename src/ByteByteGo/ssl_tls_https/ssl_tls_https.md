@@ -12,7 +12,7 @@ Với giao thức HTTP thông thường, giao tiếp giữa trình duyệt và m
 
 HTTPS là bản mở rộng của giao thức HTTP. Với HTTPS, thông tin được truyền đi dưới dạng mã hoá với một thứ được gọi là **TLS** (Transport Layer Security). Nếu thông tin mã hoá này lọt vào tay hacker, hắn cũng không thể đọc được nội dung thực sự trong đó.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 ## SSL/TLS
 
@@ -31,7 +31,7 @@ Sau khi nhận tin hello, server có thể chọn cyber suite và phiên bản T
 
 Giờ cả hai đều đã có session key, client và server đã có thể trao đổi thông tin (có mã hoá) trong bước 4. Ở đây ta dùng mã hoá đối xứng, dùng session key. Lý do vì sao hai bên có thể mã hoá và giải mã thì dựa vào cyber suite mà chúng đã trao đổi trước đó.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Đến đây bạn có thể có một câu hỏi, rằng sao không dùng mã hoá bất đối xứng luôn đi, lại còn đổi qua đối xứng làm gì? Lý do là bởi mã hoá bất đối xứng tốn nhiều tài nguyên (thời gian, bộ nhớ,...). Nó không thực sự phù hợp với việc truyền tải thông tin lớn.
 

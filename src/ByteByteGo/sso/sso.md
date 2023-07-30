@@ -8,15 +8,15 @@
 
 **SSO (hay Single Sign-on, Đăng nhập một lần)** là một sơ đồ xác thực. Nó cho phép người dùng truy cập an toàn vào nhiều ứng dụng và dịch vụ với một ID duy nhất. 
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Khi SSO được tích hợp vào các ứng dụng như Gmail, Workday hay Slack, nó cung cấp một cửa sổ hay trang đăng nhập cho cùng một bộ thông tin xác thực. Với SSO, người dùng có thể truy cập nhiều ứng dụng mà không phải đăng nhập mỗi lần.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 SSO được xây dựng trên một khái niệm gọi là danh tính liên kết (federated identity). Nó cho phép chia sẻ thông tin nhận dạng trên các hệ thống đáng tin cậy nhưng độc lập. 
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Có hai giao thức phổ biến cho quá trình xác thực này.
 
@@ -46,7 +46,7 @@ Ta sẽ tập trung vào SAML.
 
 Vậy là xong quy trình đăng nhập SSO cơ bản.
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 Giờ ta cùng xem điều gì sẽ xảy ra khi người dùng điều hướng đến một ứng dụng tích hợp SSO khác, như Workday. 
 
@@ -62,11 +62,11 @@ Giờ ta cùng xem điều gì sẽ xảy ra khi người dùng điều hướng
 
 (7) + (8) Workday xác thực xác nhận đã ký và cấp cho người dùng quyền truy cập tương ứng.
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }
 
 Trước đó ta cũng đã đề cập đến OpenID Connect. Quy trình của OpenID Connect tương tự như SAML, nhưng thay vì chuyển tài liệu XML đã ký, OpenID Connect chuyển với JWT. JWT là một tài liệu JSON đã ký.
 
-![!figure6](figure6.png){ style="display: block; margin: 0 auto" }
+![](figure6.png){ style="display: block; margin: 0 auto" }
 
 Chi tiết triển khai hơi khác một chút, nhưng khái niệm tổng thể thì tương tự nhau. 
 

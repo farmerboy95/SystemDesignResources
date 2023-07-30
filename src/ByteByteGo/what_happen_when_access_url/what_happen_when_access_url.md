@@ -8,7 +8,7 @@
 
 **URL**, hay tên đầy đủ là **Universal Resources Locator**, bao gồm 4 phần. Ví dụ với URL sau:
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Trong đó:
 
@@ -24,7 +24,7 @@ Thông thường, địa chỉ IP ứng với tên miền được cached lại 
 
 ## Vậy chuyện gì sẽ xảy ra khi truy cập vào một đường dẫn (URL) trên trình duyệt?
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Đầu tiên, người dùng sẽ gõ URL vào thanh địa chỉ (Address) trên trình duyệt.
 

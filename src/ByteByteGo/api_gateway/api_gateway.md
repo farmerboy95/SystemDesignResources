@@ -14,7 +14,7 @@ Một API gateway là một điểm truy cập duy nhất của các client vào
 - Giám sát, logging, phân tích và thanh toán.
 - Caching.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 ## Quy trình
 
@@ -32,7 +32,7 @@ Ta hãy xem xét một quy trình thông thường của một request từ clie
 
 **Bước 6 và 7**: Với sự giúp đỡ của thành phần khám phá dịch vụ (service discovery component), API gateway định vị dịch vụ phù hợp ở backend để xử lý request bằng cách so đường dẫn.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 **Bước 8**: API gateway chuyển đổi request thành một giao thức phù hợp và gửi request mới sang backend service. Một ví dụ là gRPC. 
 
@@ -40,10 +40,10 @@ Khi response trở lại từ backend service, API gateway sẽ chuyển đổi 
 
 Một API gateway chuẩn cũng cung cấp các dịch vụ quan trọng khác. Ví dụ, một API gateway sẽ theo dõi lỗi và cung cấp chức năng ngắt mạch để bào vệ service khỏi bị quá tải. API gateway cũng cần cung cấp logging, giám sát, và dịch vụ phân tích để phục vụ mục đích theo dõi.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Một API gateway là một yếu tố quan trọng trong cơ sở hạ tầng. Nó nên được triển khai cho nhiều khu vực để cải thiện tính khả dụng. Với nhiều dịch vụ đám mây từ các nhà cung cấp, API gateway được triển khai trên toàn thế giới để gần với khách hàng hơn.
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }

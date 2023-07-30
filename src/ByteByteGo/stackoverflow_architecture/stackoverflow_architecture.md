@@ -14,7 +14,7 @@ Có lẽ bạn đã mong rằng một nền tảng khổng lồ như Stack Overf
 
 Nhưng những thứ trên không hề tồn tại trong thiết kế hiện tại của Stack Overflow đâu nhé. Trong một thế giới phủ đầy microservice, Kubernetes và các giải pháp đám mây, Stack Overflow lại đi một mình một ngựa. Thay vì chạy theo xu hướng, Stack Overflow kiên định với kiến trúc mà họ cho là tốt nhất cho hoàn cảnh của họ.
 
-![!figure1](figure1.jpeg){ style="display: block; margin: 0 auto" }
+![](figure1.jpeg){ style="display: block; margin: 0 auto" }
 
 Đó là một ứng dụng nguyên khối để xử lý trang hỏi đáp chính với chỉ 9 web server tại chỗ (hình trên ghi 6 nhưng đúng là 9 nhé). Họ không dùng giải pháp đám mây hay microservice gì cả nhưng vẫn có thể xử lý lượng truy cập cực lớn với cách tiếp cận độc đáo. Thay vì chuẩn bị cho việc thay đổi liên tục, họ đã thiết kế một hệ thống tối ưu cho độ trễ tải và phân phối bộ nhớ. Các server này chạy chỉ tốn tầm 5-10% sức chứa, nên có rất nhiều chỗ để phát triển. Dù 80% lượng truy cập là không đăng nhập (ẩn danh), trang web này vẫn cho thấy hiệu suất đáng kinh ngạc. Ngay cả trang được truy cập nhiều nhất là trang danh sách câu hỏi cũng không được cache mà vẫn có thể được render trong 20 ms.
 

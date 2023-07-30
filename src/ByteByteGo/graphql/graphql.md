@@ -8,59 +8,59 @@
 
 **GraphQL** là ngôn ngữ truy vấn dành cho API do Meta phát triển. Nó cung cấp một data schema trong API và cung cấp cho client quyền yêu cầu chính xác những gì client cần.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 GraphQL nằm giữa client và backend service. Nó có thể tổng hợp nhiều yêu cầu tài nguyên vào một truy vấn duy nhất. Nó cũng hỗ trợ mutation và subscription.
 
 **Mutation** là cách GraphQL áp dụng các sửa đổi data cho tài nguyên.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 **Subscription** là cách GraphQL cho client nhận thông báo về các thay đổi trong dữ liệu.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 ## So sánh với REST
 
 Trong thực tế, cả GraphQL và REST đều gửi HTTP request và nhận HTTP response.
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 Ta sẽ so sánh các thao tác REST và GraphQL đơn giản trông như thế nào.
 
 REST xoay quanh các tài nguyên. Mỗi tài nguyên được xác định bằng một URL. Để lấy thông tin của một cuốn sách từ API của nhà sách, nó có thể giống như thế này. Lưu ý trường tác giả tuỳ vào việc cài đặt. Một số triển khai REST API có thể chia chúng thành các lời gọi REST riêng biệt.
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }
 
 Tuy nhiên, điều này sẽ khác với GraphQL. Đầu tiên ta xác định các type (loại). Trong ví dụ này ta có các type là Book và Author. Các type này mô tả các loại dữ liệu có sẵn.
 
-![!figure6](figure6.png){ style="display: block; margin: 0 auto" }
+![](figure6.png){ style="display: block; margin: 0 auto" }
 
 Chúng không chỉ định cách truy xuất dữ liệu qua GraphQL. Để làm được điều đó, ta cần định nghĩa một truy vấn, như sau.
 
-![!figure7](figure7.png){ style="display: block; margin: 0 auto" }
+![](figure7.png){ style="display: block; margin: 0 auto" }
 
 Giờ ta cần gửi một request đến GraphQL endpoint để lấy data.
 
-![!figure8](figure8.png){ style="display: block; margin: 0 auto" }
+![](figure8.png){ style="display: block; margin: 0 auto" }
 
-![!figure9](figure9.png){ style="display: block; margin: 0 auto" }
+![](figure9.png){ style="display: block; margin: 0 auto" }
 
 Như ta thấy thì cả REST và GraphQL đều dùng HTTP. Cả hai đều gửi request qua một URL, và chúng đều có thể trả về một JSON response như nhau. Nhưng đây là sự khác biệt: Với GraphQL, ta chỉ định chính xác các tài nguyên mà ta muốn, và cả những trường mà ta muốn.
 
-![!figure10](figure10.png){ style="display: block; margin: 0 auto" }
+![](figure10.png){ style="display: block; margin: 0 auto" }
 
 Trong ví dụ về REST, trường Author có sẵn trong response. Nhưng với GraphQL, client quyết định những gì có trong response.
 
-![!figure11](figure11.png){ style="display: block; margin: 0 auto" }
+![](figure11.png){ style="display: block; margin: 0 auto" }
 
 Điều này mang đến một trong những lợi ích chính của GraphQL. GraphQL không sử dụng URL để chỉ định tài nguyên có sẵn trong API. Thay vào đó nó sử dụng GraphQL schema. Ta có thể gửi một truy vấn phức tạp để lấy data bổ sung theo các quan hệ được xác định trong schema. 
 
-![!figure12](figure12.png){ style="display: block; margin: 0 auto" }
+![](figure12.png){ style="display: block; margin: 0 auto" }
 
 Điều này sẽ phức tạp hơn nếu ta muốn làm trong REST. Ta sẽ phải thực hiện điều đó ở client với nhiều request. Đây là vấn đề phổ biến dẫn đến N+1 truy vấn.
 
-![!figure13](figure13.png){ style="display: block; margin: 0 auto" }
+![](figure13.png){ style="display: block; margin: 0 auto" }
 
 ## Nhược điểm
 

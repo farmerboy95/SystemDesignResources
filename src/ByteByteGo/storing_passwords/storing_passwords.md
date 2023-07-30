@@ -16,7 +16,7 @@ Vậy ta cần làm gì để lưu mật khẩu một cách an toàn trong datab
 
 Hash là hàm một chiều. Nghĩa là bạn sẽ không thể giải mã một hash để ra giá trị gốc. Nếu kẻ tấn công lấy được mật khẩu đã hash, hắn không thể dùng cái hash đó để lấy quyền truy cập vào ứng dụng. 
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Quan trọng là phải dùng một hàm hash hiện đại được thiết kế cho việc lưu mật khẩu. Các hàm này thường "chậm" (ví dụ như `bcrypt`) vì cần nhiều tài nguyên hơn để tính giá trị hash. Điều đó làm cho việc tấn công khó khăn hơn. 
 
@@ -26,17 +26,17 @@ Lưu ý rằng một số hàm hash cũ như `MD5` hay `SHA-1` là các hàm "nh
 
 Theo hướng dẫn của OWASP, salt là một xâu duy nhất được tạo ngẫu nhiên và nó sẽ được thêm vào mỗi mật khẩu trong quá trình hash.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
   
 Tại sao cần phải salt mật khẩu? Lưu mật khẩu theo dạng hash là điều kiện cần, nhưng chưa phải điều kiện đủ. Kẻ tấn công có thể bẻ được hash một chiều với các giá trị tính trước (ví dụ hash của `abc` là `xyz`, và sẽ có rât nhiều mapping như thế, khi kẻ tấn công thấy một hash `xyz` chẳng hạn, hắn sẽ so sánh với mapping và thấy xâu gốc là `abc`, vậy là hắn biết mật khẩu là `abc`). Một số kiểu tấn công phổ biến là rainbow table và lookup dựa trên database. Kẻ tấn công có thể dùng các kỹ thuật này để tìm ra mật khẩu trong vài giây.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Thêm salt vào sẽ giúp hash có giá trị duy nhất cho mỗi mật khẩu. Kĩ thuật đơn giản này làm cho việc tính trước giá trị hash kém hiệu quả hơn.
 
 Lưu mật khẩu với salt vào database kiểu gì? Đầu tiên thêm salt vào sau mật khẩu đã nhập. Sau đó tính hash của xâu kết quả với một hàm hash nào đó. Cái hash này sẽ được lưu vào database cùng với salt. Lưu ý rằng salt được dùng để tạo hash duy nhất. Nó không phải là xâu bí mật gì cả và có thể lưu dưới dạng tường minh trong database.
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 ## Xác nhận một mật khẩu trong database
 
@@ -44,4 +44,4 @@ Giờ khi user bấm nút Đăng nhập, làm sao ta có thể xác nhận mật
 
 Đầu tiên, ta lấy salt của user từ database. Sau đó ta thêm salt vào sau mật khẩu mà user nhập vào, sau đó hash xâu kết quả. So sánh kết quả này với hash lưu trong database. Nếu giống nhau thì mật khẩu nhập vào là chính xác.
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }

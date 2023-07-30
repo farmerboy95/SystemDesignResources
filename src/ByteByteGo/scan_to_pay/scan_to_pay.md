@@ -21,6 +21,6 @@ Khi khách hàng muốn thanh toán, thu ngân nhấn nút Checkout **(1)**. Má
 
 Giờ khách hàng sẽ trả bằng ứng dụng ví điện tử bằng cách quét mã QR này **(8)**. Tổng tiền cần trả sẽ được hiển thị trên ứng dụng. Sau khi xác nhận tổng tiền cần thanh toán, khách bấm nút Thanh toán **(9)**. Ứng dụng ví điện tử báo cho PSP rằng QR code đã được thanh toán **(10)**. PSP đánh dấu rằng QR code đã được thanh toán và trả về thành công cho ứng dụng ví điện tử **(11)**. PSP sau đó báo cho người bán rằng khách đã trả với mã QR kia **(12)**.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Đây là cách thanh toán dùng mã QR động. Nó "động" vì QR được sinh ra chỉ cho một lần sử dụng. Ta cũng có thể thanh toán bằng cách quét mã QR được in ở điểm bán hàng. Đây được gọi là mã QR tĩnh. Nó hoạt động hơi khác một chút và sẽ được đề cập trong một bài viết khác.

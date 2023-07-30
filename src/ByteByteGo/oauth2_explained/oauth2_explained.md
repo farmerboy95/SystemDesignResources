@@ -8,7 +8,7 @@
 
 Ta cùng nhau nhớ lại thời kỳ sơ khai của Internet, việc chia sẻ thông tin lúc đó khá là chân phương. Bạn chỉ cần đưa service tên đăng nhập và mật khẩu của bạn và cái service đó có thể truy cập vào bất cứ thứ gì nó muốn. Cách làm này khá là khó chịu, tuy nhiên vẫn có một số chỗ vẫn còn sử dụng, như trong một số phần mềm tài chính cá nhân để lấy thông tin từ một số ngân hàng cũ nào đó.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 May mắn là ta có thứ khác ngon hơn, đó là **OAuth2**.
 
@@ -16,7 +16,7 @@ May mắn là ta có thứ khác ngon hơn, đó là **OAuth2**.
 
 OAuth2 sẽ kiểu như bạn đưa cho ai đó một cái key đặc biệt, key này cho phép người đó truy cập vào một số phần thông tin nhất định của ta trong một ứng dụng khác. Ta sẽ kiểm soát được ai có quyền truy cập thông tin của mình mà không phải chia sẻ mật khẩu. Và điều tuyệt vời nữa là ta có thể thu hồi cái key đó bất kỳ lúc nào.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 ## Ví dụ
 
@@ -24,11 +24,11 @@ Xét một ví dụ như sau: Ta có một ứng dụng lưu trữ ảnh tên l�
 
 Thay vì phải upload bằng tay mỗi tấm hình lên PrintMagic, ta có thể yêu cầu PrintMagic làm điều đó luôn. Với chỉ một cú click chuột, ta trao (grant) cho PrintMagic quyền để truy cập vào các hình ảnh của ta trên SnapStore.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Với OAuth2, PrintMagic sẽ thay mặt ta truy cập vào kho hình trên SnapStore mà không cần biết thông tin đăng nhập của chúng ta.
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 Đây là một ví dụ về luồng OAuth, được dẫn đầu bởi OAuth2. Hãy cùng đi sâu hơn chút nhé.
 
@@ -48,4 +48,4 @@ OAuth2 đảm bảo rằng thông tin đăng nhập của SnapStore sẽ không 
 
 OAuth2 còn hỗ trợ **refresh token**, nó có thể được dùng để lấy access token mới khi cái cũ hết hạn mà không cần ta phải làm gì cả.
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }

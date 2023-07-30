@@ -8,7 +8,7 @@
 
 Định lý CAP (CAP Theorem) là một khái niệm trong khoa học máy tính giải thích sự đánh đổi giữa **tính nhất quán (consistency - C)**, **tính khả dụng (availability - A)** và **sức chịu đựng sự phân vùng trong mạng (partition tolerance - P)** trong các hệ thống phân tán.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 **Tính nhất quán (consistency - C)** là thuộc tính của một hệ thống trong đó tất cả các node có cùng một kết quả khi đọc dữ liệu. Điều đó có nghĩa là tất cả client đều nhìn thấy cùng một dữ liệu trong cùng thời điểm, bất kể việc client kết nối với node nào.
 
@@ -24,7 +24,7 @@ Khi có phân vùng mạng, hệ thống phải chọn giữa tính nhất quán
 
 Nếu hệ thống ưu tiên tính nhất quán, nó có thể không khả dụng cho đến khi phân vùng được giải quyết. Nếu hệ thống ưu tiên tính khả dụng, nó có thể cho phép cập nhật dữ liệu. Nhưng sự không thống nhất về mặt dữ liệu có thể xảy ra cho đến khi phân vùng được giải quyết.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Cùng xem một ví dụ nhé.
 
@@ -38,25 +38,25 @@ Nếu có một phân vùng mạng và các máy ATM không thể giao tiếp v�
 
 Nếu ngân hàng ưu tiên tính nhất quán, máy ATM có thể từ chối xử lý tiền gửi hoặc rút tiền cho đến khi phân vùng được giải quyết. Điều này đảm bảo rằng số dư vẫn nhất quán nhưng hệ thống không khả dụng với khách hàng.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Nếu ngân hàng ưu tiên tính khả dụng, thì máy ATM có thể cho phép gửi và rút tiền, nhưng số dư có thể không ổn định cho đến khi phân vùng được giải quyết.
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 Khi có phân vùng mạng, khách hàng có thể rút toàn bộ số dư từ cả hai máy ATM. Khi phân vùng mạng được khắc phục, sự không nhất quán được giải quyết và bây giờ số dư là số âm. Đó là điều không được phép xảy ra.
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }
 
 Hãy cùng xem một ví dụ khác và xem cách một mạng xã hội có thể áp dụng định lý CAP
 
 Trong khi mạng bị phân vùng, nếu hai người dùng cùng bình luận một bài đăng cùng lúc, bình luận của một người dùng có thể không được hiển thị đến người dùng kia cho đến khi phân vùng được giải quyết. 
 
-![!figure6](figure6.png){ style="display: block; margin: 0 auto" }
+![](figure6.png){ style="display: block; margin: 0 auto" }
 
 Ngoài ra, nếu mạng xã hội ưu tiên tính nhất quán, thì tính năng comment có thể không khả dụng cho đến khi phân vùng được giải quyết. Đối với mạng xã hội, việc ưu tiên tính khả dụng thường được chấp nhận với cái giá là người dùng đôi khi thấy các data hơi khác nhau.
 
-![!figure7](figure7.png){ style="display: block; margin: 0 auto" }
+![](figure7.png){ style="display: block; margin: 0 auto" }
 
 Định lý CAP nghe có vẻ rất đơn giản, nhưng thế giới thực lại rất hỗn loạn.
 
@@ -64,19 +64,19 @@ Cũng giống như nhiều thứ trong công nghệ phần mềm, tất cả đ�
 
 Quay lại ví dụ ngân hàng, trong quá trình phân vùng mạng, máy ATM chỉ có thể cho phép xử lý các yêu cầu về số dư, trong khi các khoản tiền gửi hoặc rút tiền bị chặn. 
 
-![!figure8](figure8.png){ style="display: block; margin: 0 auto" }
+![](figure8.png){ style="display: block; margin: 0 auto" }
 
 Ngoài ra, ngân hàng có thể triển khai một phương pháp kết hợp. Ví dụ, ATM có thể cho phép xử lý các yêu cầu về số dư và các khoản tiền nhỏ khi mạng đang bị phần vùng, nhưng chặn các khoản rút tiền hoặc gửi tiền lớn cho đến khi phân vùng được giải quyết.
 
-![!figure9](figure9.png){ style="display: block; margin: 0 auto" }
+![](figure9.png){ style="display: block; margin: 0 auto" }
 
 Cần lưu ý là trong thực tế, việc đối soát sau phân vùng mạng có thể rất là lộn xộn. Với ví dụ ngân hàng ở trên thì việc đối soát là tương đối đơn giản. Trong thực tế, các cấu trúc dữ liệu liên quan có thể phức tạp và khó dung hoà.
 
-![!figure10](figure10.png){ style="display: block; margin: 0 auto" }
+![](figure10.png){ style="display: block; margin: 0 auto" }
 
 Một ví dụ điển hình về cấu trúc dữ liệu phức tạp là Google Docs. Giải quyết các bản cập nhật xung đột có thể rất phức tạp.
 
-![!figure11](figure11.png){ style="display: block; margin: 0 auto" }
+![](figure11.png){ style="display: block; margin: 0 auto" }
 
 ## Kết luận
 
@@ -84,4 +84,4 @@ Vậy định lý CAP có hữu ích không? Có, đó là một công cụ hữ
 
 Cụ thể, khi hệ thống hoạt động bình thường mà không có bất kỳ sự cố mạng nào (hầu hết thời gian là như vậy), ta lại có những đánh đổi khác để xem xét giữa độ trễ và tính nhất quán. Nó lại thuộc về định lý PACELC. Ta sẽ nói về nó trong một bài viết khác.
 
-![!figure12](figure12.png){ style="display: block; margin: 0 auto" }
+![](figure12.png){ style="display: block; margin: 0 auto" }

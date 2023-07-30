@@ -14,7 +14,7 @@ Một lệnh gọi thủ tục cục bộ (local procedure call) là lệnh gọ
 
 Một lệnh gọi thủ tục từ xa (remote proceduree call) cho phép một máy gọi một số code trên máy khác như thể đó là lệnh gọi hàm cục bộ từ góc nhìn của người dùng.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 gRPC là một triển khai phổ biến của RPC.
 
@@ -28,7 +28,7 @@ Nhiều tổ chức đã sử dụng gRPC làm cơ chế RPC ưu tiên để k�
 
 Protocol Buffers là một cơ chế không phụ thuộc vào ngôn ngữ và nền tảng để mã hoá dữ liệu có cấu trúc. gRPC sử dụng Protocol Buffers để mã hoá và gửi dữ liệu qua dây dẫn như bình thường. 
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Mặc dù gRPC có thể hỗ trợ các định dạng mã hoá khác như JSON, Protocol Buffers lại cung cấp một số lợi thế khiến nó trở thành định dạng mã hoá được lựa chọn cho gRPC.
 
@@ -36,19 +36,19 @@ Protocol Buffers hỗ trợ các định nghĩa schema strongly-typed (nghĩa l�
 
 Protocol Buffers cung cấp nhiều công cụ hỗ trợ để chuyển schema được định nghĩa trong file proto thành các lớp truy cập dữ liệu cho tất cả các ngôn ngữ lập trình phổ biến.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Một gRPC service cũng được định nghĩa trong file proto bằng cách chỉ định các tham số và kiểu trả về của phương thức gRPC. Công cụ tương tự cũng được sử dụng để sinh code client và server từ file proto. 
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 Dev sẽ sử dụng các lớp được sinh ra này trong client để thực hiện các lệnh gọi RPC, và trong server để phục vụ các request RPC.
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }
 
 Bằng cách hỗ trợ nhiều ngôn ngữ lập trình, client và server có thể độc lập chọn ngôn ngữ lập trình và hệ sinh thái phù hợp nhất cho các use case cụ thể. Thông thường thì điều này không khả thi với hầu hết các RPC framework khác.
 
-![!figure6](figure6.png){ style="display: block; margin: 0 auto" }
+![](figure6.png){ style="display: block; margin: 0 auto" }
 
 ### Hiệu suất cao
 
@@ -56,11 +56,11 @@ Lý do thứ hai khiến gRPC trở nên phổ biến là vì nó có hiệu su�
 
 Thứ nhất, Protocol Buffers là một định dạng mã hoá nhị phân rất hiệu quả. Nó nhanh hơn nhiều so với JSON.
 
-![!figure7](figure7.png){ style="display: block; margin: 0 auto" }
+![](figure7.png){ style="display: block; margin: 0 auto" }
 
 Thứ hai, gRPC được xây dựng dựa trên HTTP/2 để cung cấp nền tảng hiệu suất cao trên quy mô lớn. Việc sử dụng HTTP/2 mang lại nhiều lợi ích, có một bài viết về các phiên bản HTTP, trong đó có HTTP/2, bạn có thể đọc bài đó.
 
-![!figure8](figure8.png){ style="display: block; margin: 0 auto" }
+![](figure8.png){ style="display: block; margin: 0 auto" }
 
 gRPC sử dụng các stream trong HTTP/2. Nó cho phép nhiều stream gói tin thông qua một kết nối TCP tồn tại lâu. Điều này cho phép gRPC framework xử lý nhiều lời gọi RPC đồng thời qua một số lượng nhỏ kết nối TCP giữa client và server. Để hiểu cách gRPC hoạt động, ta cùng xem qua một flow từ gRPC client đến gRPC server.
 
@@ -80,7 +80,7 @@ Trong ví dụ này, Order Service là gRPC client, và Payment Service là gRPC
 
 (10), (11), (12), (13) Order Service nhận các gói tin, giải mã chúng và gửi kết quả đến client app.
 
-![!figure10](figure10.png){ style="display: block; margin: 0 auto" }
+![](figure10.png){ style="display: block; margin: 0 auto" }
 
 ## Hạn chế
 
@@ -92,13 +92,13 @@ Có thể thực hiện lệnh gọi gRPC từ trình duyệt với sự trợ 
 
 Tuy nhiên, tính năng này không hoàn toàn tương thích với gRPC và mức độ sử dụng của nó vẫn thấp so với gRPC.
 
-![!figure11](figure11.png){ style="display: block; margin: 0 auto" }
+![](figure11.png){ style="display: block; margin: 0 auto" }
 
 ## Khi nào sử dụng
 
 gRPC là cơ chế giao tiếp liên dịch vụ được lựa chọn giữa các microservice trong data center.
 
-![!figure12](figure12.png){ style="display: block; margin: 0 auto" }
+![](figure12.png){ style="display: block; margin: 0 auto" }
 
 Khả năng hỗ trợ lớn của nó đối với nhiều ngôn ngữ lập trình cho phép các dịch vụ chọn ngôn ngữ riêng và hệ sinh thái dev phù hợp với use case của người dùng. Ta cũng có thể thấy việc sử dụng gRPC ngày càng tăng trong các ứng dụng di động.
 

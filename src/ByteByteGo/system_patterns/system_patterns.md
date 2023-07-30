@@ -16,7 +16,7 @@ Ví dụ, Kubenetes sử dụng Envoy làm Ambassador để đơn giản hoá vi
 
 Hệ thống kiểu Ambassador sẽ giúp giảm độ trễ, tăng cường bảo mật và cải thiện kiến trúc tổng thể của các hệ thống phân tán.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 ## Circuit Breaker
 
@@ -26,11 +26,11 @@ Tưởng tượng một đường ống nước trong nhà bạn bị vỡ. Đi�
 
 Khi một service bị hỏng, Circuit Breaker sẽ dừng các request, cho phép service đó khôi phục lại. Thư viện Hystrix của Netflix sử dụng thiết kế này. 
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Nó đảm bảo một hệ thống linh hoạt hơn. Thiết kế này có thể đặc biệt hữu ích khi xử lý các microservice hoặc ứng dụng đám mây, nơi có nhiều khả năng xảy ra lỗi hơn.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 ## CQRS
 
@@ -42,13 +42,13 @@ Ví dụ, một trang thương mại điện tử có thể có nhiều request
 
 CQRS cho phép xử lý từng thao tác một cách hiệu quả. Thiết kế kiểu này trở nên hiệu quả trong các hệ thống mà hoạt động đọc và ghi có các đặc điểm hiệu suất khác nhau, với các yêu cầu về độ trễ hoặc tài nguyên khác nhau.
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 ## Event Sourcing
 
 Tiếp theo là **Event Sourcing**. Ta có thể xem Event Sourcing như việc ghi nhật ký về các sự kiện xảy ra trong cuộc sống. Thay vì cập nhật trực tiếp các bản ghi, ta lưu các sự kiện đại diện cho các thay đổi đã xảy ra.
 
-![!figure5](figure5.png){ style="display: block; margin: 0 auto" }
+![](figure5.png){ style="display: block; margin: 0 auto" }
 
 Phương pháp này cung cấp toàn bộ lịch sử của hệ thống, đồng thời cho phép kiểm tra và gỡ lỗi tốt hơn.
 
@@ -56,7 +56,7 @@ Git version control là một ví dụ hay về Event Sourcing, trong đó mỗi
 
 Với Event Sourcing, ta có thể triển khai các tính năng nâng cao như time-travel debugging hoặc phát lại các sự kiện với mục đích phân tích.
 
-![!figure6](figure6.png){ style="display: block; margin: 0 auto" }
+![](figure6.png){ style="display: block; margin: 0 auto" }
 
 ## Leader Election
 
@@ -68,7 +68,7 @@ ZooKeeper và etcd sử dụng thiết kế này để quản lý cấu hình p
 
 Bằng cách có một leader được chỉ định, ta có thể tránh xung đột và đảm bảo việc ra quyết định nhất quán trên toàn hệ thống phân tán.
 
-![!figure7](figure7.png){ style="display: block; margin: 0 auto" }
+![](figure7.png){ style="display: block; margin: 0 auto" }
 
 ## Pub / Sub
 
@@ -76,7 +76,7 @@ Thiết kế **Publisher / Subscriber** (xuất bản / đăng ký, viết tắt
 
 Các publisher phát ra các event mà không biết ai sẽ nhận các event đó, và các subscriber lắng nghe các event mà chúng quan tâm.
 
-![!figure8](figure8.png){ style="display: block; margin: 0 auto" }
+![](figure8.png){ style="display: block; margin: 0 auto" }
 
 Thiết này cho phép khả năng mở rộng và tính mô-đun hoá tốt hơn.
 
@@ -84,7 +84,7 @@ Ví dụ, Google Cloud Pub/Sub cho phép nhắn tin không đồng bộ giữa c
 
 Các hệ thống Pub/Sub rất phù hợp với các trường hợp khi ta cần phổ biến các thay đổi hoặc cập nhật trên nhiều thành phần, chẳng hạn như cập nhật hồ sơ của người dùng trên các service khác nhau.
 
-![!figure9](figure9.png){ style="display: block; margin: 0 auto" }
+![](figure9.png){ style="display: block; margin: 0 auto" }
 
 ## Sharding
 
@@ -96,13 +96,13 @@ Nó cải thiện hiệu suất và khả năng mở rộng.
 
 Mỗi shard chứa một tập hợp con dữ liệu, giúp giảm tải cho bất kỳ node nào.
 
-![!figure13](figure13.png){ style="display: block; margin: 0 auto" }
+![](figure13.png){ style="display: block; margin: 0 auto" }
 
 Các cơ sở dữ liệu như MongoDB và Cassandra sử dụng sharding để xử lý lượng lớn dữ liệu một cách hiệu quả.
  
 Sharding cũng có thể giúp ta đạt được data locality tốt hơn, giảm độ trễ của mạng và tăng tốc thực thi truy vấn.
 
-![!figure10](figure10.png){ style="display: block; margin: 0 auto" }
+![](figure10.png){ style="display: block; margin: 0 auto" }
 
 ## Bonus
 
@@ -110,7 +110,7 @@ Trong phần này ta sẽ nói về thiết kế kiểu Strangler Fig.
 
 Thiết kế này được lấy cảm hứng từ cây sung bóp cổ, là cây mọc xung quanh các cây khác và cuối cùng thay thế chúng.
 
-![!figure11](figure11.png){ style="display: block; margin: 0 auto" }
+![](figure11.png){ style="display: block; margin: 0 auto" }
 
 Trong phần mềm, thiết kế Strangler Fig là một phương pháp để dần dần thay thế các hệ thống cũ bằng các hệ thống mới.
 
@@ -118,4 +118,4 @@ Thay vì thực hiện migrate thẳng sang hệ thống mới một cách đầ
 
 Thiết này có thể giúp ta quản lý rủi ro và sự phức tạp liên quan đến việc migrate hệ thống.
 
-![!figure12](figure12.png){ style="display: block; margin: 0 auto" }
+![](figure12.png){ style="display: block; margin: 0 auto" }

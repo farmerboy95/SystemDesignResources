@@ -34,11 +34,11 @@ Những dev như chúng ta thường bị thu hút bởi cái mới, như nhữn
 
 Phát triển phần mềm là về sự đánh đổi. Khi nhắc đến database, nó càng đúng hơn. Cần nhớ là **không có gì miễn phí** hết. Cẩn thận với những lời tiếp thị thái quá. Sẽ luôn có những chi phí ẩn sau những lời có cánh như "khả năng mở rộng đến vô hạn mà không tốn công sức". Hãy đào sâu nghiên cứu để xem bạn cần đánh đổi gì. Hãy đọc hướng dẫn sử dụng thay vì xem mỗi quảng cáo. Ở đó thường sẽ có một phần gọi là "Giới hạn" (Limits). Phần FAQ cũng rất hữu ích. Các phần này là nơi những giới hạn của database thực sự được phơi bày.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Theo kinh nghiệm của chúng tôi, càng tuyên bố hấp dẫn thì các tuyên bố từ chối trách nhiệm (disclaimers) càng dài hơn ở sau. Ví dụ, nhiều database NoSQL hỗ trợ mở rộng nhiều hơn so với các database quan hệ cũ. Chúng thường tuyên bố rằng có thể hỗ trợ mở rộng theo chiều ngang gần như là tuyến tính. Tuy nhiên, đi đôi với đó là những đánh đổi như sau. Một, chúng loại bỏ hoặc hạn chế việc đảm bảo tính transactional. Hai, chúng hạn chế nghiêm trọng tính linh hoạt của mô hình dữ liệu. Không có truy vấn nào giữa các data entity. Data bị denormalize khi cùng một data được lưu tại nhiều collection khác nhau để hỗ trợ nhiều kiểu truy cập data khác nhau. 
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Để biết thêm về một loại database nào đó, gia nhập nhóm chat. Hỏi nhiều câu hỏi. Với các project mã nguồn mở, đọc GitHub issues. Cố gắng biết càng nhiều càng tốt về các ứng viên database mà ta đang cân nhắc. Thời gian đầu tư vào cho đến giờ giờ vẫn tương đối nhỏ đấy.
 
@@ -50,7 +50,7 @@ Tạo bench test với data của chính chúng ta cho mỗi ứng viên, với 
 
 Trong khi benchmark, hãy chú ý đến các ngoại lệ. Đo p99 của mọi thứ. p50 không có ý nghĩa gì đâu. Cố gắng mô phỏng lại môi trường live, và đẩy giới hạn đi xa hơn xem nó chịu được đến đâu. 
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Thử một số tác vụ vận hành rủi ro hơn, như phá hỏng một node, hoặc test xem có hỏng data khi bị phân vùng dữ liệu không. Thử tăng, giảm sharding, nếu có thể. Sau khi kiểm tra hết, lên kế hoạch chuyển đổi database cẩn thận. Viết ra một kế hoạch chuyển đổi từng bước và nhờ đồng nghiệp review lại cho cẩn thận. Nếu có thể, chuyển một service nhỏ trước, và lấy thật nhiều thông tin từ nó.
 
