@@ -8,7 +8,7 @@ pip3 install mkdocs-material
 pip3 install mkdocs-literate-nav
 pip3 install mkdocs-git-authors-plugin
 pip3 install mkdocs-git-revision-date-localized-plugin
-pip3 install lightgallery
+pip3 install mkdocs-glightbox
 ```
 
 Then run by this command:
