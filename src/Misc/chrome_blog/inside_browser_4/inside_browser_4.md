@@ -14,21 +14,30 @@ Khi nghe "input event", bạn có thể nghĩ ngay đến việc nhập vào m�
 
 Khi hành động của người dùng như chạm vào màn hình xảy ra, browser process sẽ nhận hành động đó trước. Tuy nhiên, browser process chỉ biết nơi hành động đó xảy ra do nội dung bên trong tab được xử lý bởi renderer process. Vì vậy, browser process sẽ gửi loại event (như `touchstart`) và toạ độ của nó đến renderer process. Renderer process xử lý event một cách thích hợp bằng cách tìm event target và chạy event listener được đính kèm.
 
-![!Hình 1: Input event được dẫn qua browser process sang renderer process](figure1.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figure markdown>
+![Hình 1: Input event được dẫn qua browser process sang renderer process](figure1.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figcaption>Hình 1: Input event được dẫn qua browser process sang renderer process</figcaption>
+</figure>
 
 ## Compositor nhận các input event
 
 Trong phần trước, ta đã xem cách compositor có thể xử lý cuộn một cách mượt mà bằng cách tổng hợp các rasterized layer. Nếu không có input event listener nào được đính kèm vào trang, compositor thread có thể tạo một composite frame mới hoàn toàn độc lập với main thread. Nhưng nếu có listener thì sao? Làm sao compositor thread tìm ra event cần được xử lý.
 
+<figure markdown>
 <video controls>
     <source id="mp4" src="../figure2.mp4" type="video/mp4">
 </video>
+<figcaption>Hình 2: Khung nhìn (viewport) trên các layer</figcaption>
+</figure>
 
 ## Hiểu về non-fast scrollable region
 
 Vì chạy JavaScript là việc của main thread, nên khi có một trang được tổng hợp (composited), compositor thread sẽ đánh dấu một vùng của trang có đính kém các event handler là "vùng cuộn không nhanh" (Non-Fast Scrollable Region). Với thông tin này, compositor thread có thể đảm bảo gửi input event đến main thread nến event xảy ra trong vùng đó. Nếu input event đến từ ngoài vùng, compositor thread sẽ tiếp tục tổng hợp frame mới mà không cần đợi main thread.
 
-![!Hình 3: Sơ đồ mô tả input vào non-fast scrollable region](figure3.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figure markdown>
+![Hình 3: Sơ đồ mô tả input vào non-fast scrollable region](figure3.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figcaption>Hình 3: Sơ đồ mô tả input vào non-fast scrollable region</figcaption>
+</figure>
 
 ### Để ý khi viết event handler
 
@@ -44,7 +53,10 @@ document.body.addEventListener('touchstart', event => {
 
 Vì ta chỉ cần viết một event handler cho tất cả element, pattern uỷ quyền event này rất hấp dẫn. Tuy nhiên, nếu bạn ở góc nhìn của trình duyệt, toàn bộ trang sẽ được xem như non-fast scrollable region. Nghĩa là ngay cả khi ứng dụng của bạn không quan tâm đến input từ một số phần nhất định của trang, compositor thread sẽ phải giao tiếp với main thread và đợi nó mỗi khi có input event đến. Do đó, khả năng cuộn mượt mà của compositor sẽ không còn.
 
-![!Hình 4: Sơ đồ cho thấy input vào non-fast scrollable region mà bao trọn toàn bộ trang](figure4.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figure markdown>
+![Hình 4: Sơ đồ cho thấy input vào non-fast scrollable region mà bao trọn toàn bộ trang](figure4.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figcaption>Hình 4: Sơ đồ cho thấy input vào non-fast scrollable region mà bao trọn toàn bộ trang</figcaption>
+</figure>
 
 Để giảm thiểu điều này, bạn có thể truyền `passive : true` vào event listener. Nó sẽ gợi ý cho trình duyệt rằng bạn vẫn muốn tiếp tục lắng nghe event ở main thread, nhưng compositor vẫn có thể chạy tiếp và tạo frame mới.
 
@@ -60,7 +72,10 @@ document.body.addEventListener('touchstart', event => {
 
 Giả sử bạn có một cái khung trong trang, bạn muốn cái khung này chỉ cuộn ngang.
 
-![!Hình 5: Trang web với khung chỉ cho cuộn ngang](figure5.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figure markdown>
+![Hình 5: Trang web với khung chỉ cho cuộn ngang](figure5.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figcaption>Hình 5: Trang web với khung chỉ cho cuộn ngang</figcaption>
+</figure>
 
 Dùng `passive: true` trong pointer event nghĩa là trang có thể cuộn một cách mượt mà, nhưng cuộn dọc có thể đã bắt đầu khi bạn muốn `preventDefault` để chặn cuộn dọc. Bạn có thể kiểm tra bằng cách dùng `event.cancelable`.
 
@@ -87,7 +102,10 @@ Thay vào đó, bạn có thể dùng CSS rule như `touch-action` để loại 
 
 Khi compositor thread gửi một input event đến main thread, nó sẽ chạy một hit test để tìm event target. Hit test dùng dữ liệu paint record, được tạo ra trong rendering process để tìm hiểu những thứ nằm dưới toạ độ điểm mà event xảy ra.
 
-![!Hình 6: Main thread kiểm tra paint record để xem điểm x.y có gì](figure6.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figure markdown>
+![Hình 6: Main thread kiểm tra paint record để xem điểm x.y có gì](figure6.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figcaption>Hình 6: Main thread kiểm tra paint record để xem điểm x.y có gì</figcaption>
+</figure>
 
 ## Giảm thiểu việc gửi event đến main thread
 
@@ -95,11 +113,17 @@ Trong bài trước, ta đã xem cách màn hình refresh 60 lần trên giây v
 
 Nếu một event liên tục như `touchmove` được gửi đến main thread 120 lần mỗi giây, nó sẽ kích hoạt quá nhiều hit test và thực thi JavaScript so với mức mà màn hình có thể refresh.
 
-![!Hình 7: Quá nhiều event trong khung thời gian làm trang bị giật](figure7.avif){ style="display: block; margin: 0 auto; height: 200px" }
+<figure markdown>
+![Hình 7: Quá nhiều event trong khung thời gian làm trang bị giật](figure7.avif){ style="display: block; margin: 0 auto; height: 200px" }
+<figcaption>Hình 7: Quá nhiều event trong khung thời gian làm trang bị giật</figcaption>
+</figure>
 
 Để giảm thiểu quá nhiều lệnh gọi đến main thread, Chrome kết hợp các event liên tục (như `wheel`, `mousewheel`, `mousemove`, `pointermove`, `touchmove`) và trì hoãn việc gửi đến main thread cho đến ngay trước `requestAnimationFrame` tiếp theo.
 
-![!Hình 8: Vẫn cái dòng thời gian đó, nhưng các event được kết hợp và trì hoãn](figure8.avif){ style="display: block; margin: 0 auto; height: 200px" }
+<figure markdown>
+![Hình 8: Vẫn cái dòng thời gian đó, nhưng các event được kết hợp và trì hoãn](figure8.avif){ style="display: block; margin: 0 auto; height: 200px" }
+<figcaption>Hình 8: Vẫn cái dòng thời gian đó, nhưng các event được kết hợp và trì hoãn</figcaption>
+</figure>
 
 Các event rời rạc như `keydown`, `keyup`, `mouseup`, `mousedown`, `touchstart`, và `touchend` được gửi ngay lập tức.
 
@@ -107,7 +131,10 @@ Các event rời rạc như `keydown`, `keyup`, `mouseup`, `mousedown`, `touchst
 
 Với hầu hết cac ứng dụng web, các event được kết hợp phải đủ để cung cấp trải nghiệm người dùng tốt. Tuy nhiên, nếu bạn đang làm những thứ như ứng dụng vẽ và tạo một đường thẳng dựa trên các toạ độ `touchmove`, bạn có thể mất các toạ độ ở giữa để vẽ ra một đường thẳng đẹp. Trong trường hợp đó, bạn có thể dùng phương thức `getCoalescedEvents` trong pointer event để lấy thông tin về các event kết hợp đó.
 
-![!Hình 9: Hành động touch trong thực tế ở bên trái, và sau khi bị kết hợp ở bên phải](figure9.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figure markdown>
+![Hình 9: Hành động touch trong thực tế ở bên trái, và sau khi bị kết hợp ở bên phải](figure9.avif){ style="display: block; margin: 0 auto; height: 300px" }
+<figcaption>Hình 9: Hành động touch trong thực tế ở bên trái, và sau khi bị kết hợp ở bên phải</figcaption>
+</figure>
 
 ```javascript
 window.addEventListener('pointermove', event => {

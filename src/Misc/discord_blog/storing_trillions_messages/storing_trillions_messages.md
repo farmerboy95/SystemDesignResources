@@ -75,13 +75,13 @@ Các data service nằm giữa API và các ScyllaDB cluster. Chúng chứa mộ
 
 Đây chính là sức mạnh của Rust: nó giúp dễ dàng viết concurrent code một cách an toàn.
 
-![!figure1](figure1.png){ style="display: block; margin: 0 auto" }
+![](figure1.png){ style="display: block; margin: 0 auto" }
 
 Tưởng tượng rằng có một thông báo lớn trên một server Discord có tag `@everyone`: người dùng sẽ mở ứng dụng và đọc tin nhắn, gửi hàng tấn lưu lượng truy cập đến database. Trước đây, điều này có thể tạo ra một phân vùng nóng và on-call sẽ phải theo ca để giúp hệ thống phục hồi. Với các data service này, chúng tôi có thể giảm đáng kể lưu lượng truy cập tăng đột biến đối với database.
 
 Phần thứ hai của phép thuật ở đây là phần trên của các data service. Chúng tôi đã triển khai định tuyến dựa trên hàm băm nhất quán cho các data service để cho phép kết hợp request hiệu quả hơn. Đối với mỗi request đến data service, chúng tôi cung cấp một khóa định tuyến (routing key). Đối với tin nhắn, đây là `channel_id`, vì vậy tất cả các request cho cùng một channel sẽ chuyển đến cùng một instance của service. Định tuyến này tiếp tục giúp giảm tải cho database.
 
-![!figure2](figure2.png){ style="display: block; margin: 0 auto" }
+![](figure2.png){ style="display: block; margin: 0 auto" }
 
 Những cải tiến này giúp ích rất nhiều, nhưng chúng không giải quyết được tất cả các vấn đề của chúng tôi. Chúng tôi vẫn thấy các phân vùng nóng và độ trễ tăng lên trên cluster Cassandra, chỉ là không quá thường xuyên như trước. Nó giúp câu giờ để chúng tôi có thể chuẩn bị cluster ScyllaDB tối ưu mới của mình và thực hiện quá trình di chuyển.
 
@@ -113,7 +113,7 @@ Chúng tôi đã chuyển đổi database tin nhắn của mình vào tháng 5 n
 
 Vào cuối năm 2022, mọi người trên khắp thế giới đang xem World Cup. Một điều mà chúng tôi phát hiện ra rất nhanh là các bàn thắng được ghi xuất hiện trong biểu đồ theo dõi. Điều này rất thú vị vì không chỉ dễ dàng xem các sự kiện trong thế giới thực hiển thị trong hệ thống của bạn, điều này còn giúp team có lý do để xem bóng đá trong các cuộc họp. Chúng tôi không thực sự "xem bóng đá trong các cuộc họp", chúng tôi chỉ "chủ động theo dõi hiệu suất của hệ thống" thôi.
 
-![!figure3](figure3.png){ style="display: block; margin: 0 auto" }
+![](figure3.png){ style="display: block; margin: 0 auto" }
 
 Chúng tôi thực sự có thể kể lại trận Chung kết World Cup thông qua biểu đồ gửi tin nhắn. Trận đấu thật tuyệt vời. Lionel Messi đang cố gắng hoàn thành thành tích cuối cùng trong sự nghiệp và củng cố tuyên bố trở thành cầu thủ vĩ đại nhất mọi thời đại và dẫn dắt Argentina đến chức vô địch, nhưng trước mặt Messi là Kylian Mbappe và tuyển Pháp vô cùng tài năng.
 
@@ -130,6 +130,6 @@ Mỗi trong số 10 lần lưu lượng tăng trong biểu đồ này biểu th�
 9. Hết hiệp phụ rồi, chúng ta sẽ bước vào loạt sút luân lưu!
 10. Sự phấn khích và căng thẳng tăng dần trong suốt loạt đá luân lưu cho đến khi Pháp sút hỏng còn Argentina thì không! Argentina vô địch World Cup 2022!
 
-![!figure4](figure4.png){ style="display: block; margin: 0 auto" }
+![](figure4.png){ style="display: block; margin: 0 auto" }
 
 Mọi người trên khắp thế giới đang căng thẳng khi xem trận đấu đáng kinh ngạc này, nhưng trong khi đó, Discord và database tin nhắn không gặp vấn đề gì. Hình trên là số lượng request kết hợp trong suốt thời gian diễn ra trận đấu. Không có bất cứ sự trục trặc nào, hệ thống mới chạy một cách hoàn hảo. Với các data service dựa trên Rust và ScyllaDB, chúng tôi có thể gánh vác lưu lượng này và cung cấp một nền tảng để người dùng giao tiếp.

@@ -33,6 +33,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - attr_list
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -89,5 +90,5 @@ plugins:
       draggable: true
       skip_classes:
         - custom-skip-class-name
-      auto_caption: false
+      auto_caption: true
       caption_position: bottom
