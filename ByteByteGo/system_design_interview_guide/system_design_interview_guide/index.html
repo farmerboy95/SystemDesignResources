@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/rest_api/rest_api/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/system_design_interview_guide/system_design_interview_guide/">
       
       
-        <link rel="prev" href="../../http_versions/http_versions/">
+        <link rel="prev" href="../../optimize_api_performance/optimize_api_performance/">
       
       
-        <link rel="next" href="../../ssl_tls_https/ssl_tls_https/">
+        <link rel="next" href="../../../Misc/chrome_blog/inside_browser_1/inside_browser_1/">
       
       <link rel="icon" href="../../../img/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>REST API là gì? - farmerboy's System Design Resources</title>
+        <title>Hướng dẫn từng bước phỏng vấn System Design - farmerboy's System Design Resources</title>
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rest-api-la-gi" class="md-skip">
+        <a href="#huong-dan-tung-buoc-phong-van-system-design" class="md-skip">
           Skip to content
         </a>
       
@@ -134,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              REST API là gì?
+              Hướng dẫn từng bước phỏng vấn System Design
             
           </span>
         </div>
@@ -469,73 +469,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          REST API là gì?
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../rest_api/rest_api/" class="md-nav__link">
         REST API là gì?
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-la-gi" class="md-nav__link">
-    API là gì?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#co-ban-ve-rest-api" class="md-nav__link">
-    Cơ bản về REST API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#crud-la-gi" class="md-nav__link">
-    CRUD là gì?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1007,11 +945,121 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../system_design_interview_guide/system_design_interview_guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hướng dẫn từng bước phỏng vấn System Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Hướng dẫn từng bước phỏng vấn System Design
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-buoc-phong-van" class="md-nav__link">
+    Các bước phỏng vấn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-1-hieu-van-e-va-xac-inh-pham-vi-thiet-ke-he-thong" class="md-nav__link">
+    Bước 1 - Hiểu vấn đề và xác định phạm vi thiết kế hệ thống
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-2-e-xuat-thiet-ke-tong-quan-cho-he-thong" class="md-nav__link">
+    Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống
+  </a>
+  
+    <nav class="md-nav" aria-label="Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thiet-ke-api" class="md-nav__link">
+    Thiết kế API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-bieu-o-thiet-ke-tong-quan" class="md-nav__link">
+    Vẽ biểu đồ thiết kế tổng quan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thiet-ke-data-model-va-schema" class="md-nav__link">
+    Thiết kế data model và schema
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-3-thiet-ke-chi-tiet" class="md-nav__link">
+    Bước 3 - Thiết kế chi tiết
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-4-ket-thuc" class="md-nav__link">
+    Bước 4 - Kết thúc
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1292,22 +1340,70 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-la-gi" class="md-nav__link">
-    API là gì?
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#co-ban-ve-rest-api" class="md-nav__link">
-    Cơ bản về REST API
+  <a href="#cac-buoc-phong-van" class="md-nav__link">
+    Các bước phỏng vấn
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#crud-la-gi" class="md-nav__link">
-    CRUD là gì?
+  <a href="#buoc-1-hieu-van-e-va-xac-inh-pham-vi-thiet-ke-he-thong" class="md-nav__link">
+    Bước 1 - Hiểu vấn đề và xác định phạm vi thiết kế hệ thống
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-2-e-xuat-thiet-ke-tong-quan-cho-he-thong" class="md-nav__link">
+    Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống
+  </a>
+  
+    <nav class="md-nav" aria-label="Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thiet-ke-api" class="md-nav__link">
+    Thiết kế API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-bieu-o-thiet-ke-tong-quan" class="md-nav__link">
+    Vẽ biểu đồ thiết kế tổng quan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thiet-ke-data-model-va-schema" class="md-nav__link">
+    Thiết kế data model và schema
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-3-thiet-ke-chi-tiet" class="md-nav__link">
+    Bước 3 - Thiết kế chi tiết
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-4-ket-thuc" class="md-nav__link">
+    Bước 4 - Kết thúc
   </a>
   
 </li>
@@ -1331,43 +1427,73 @@
   
 
 
-<h1 id="rest-api-la-gi">REST API là gì?</h1>
+<h1 id="huong-dan-tung-buoc-phong-van-system-design">Hướng dẫn từng bước phỏng vấn System Design</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=-mN3VyJuCjM">What Is REST API? Examples And How To Use It</a></p>
-<h2 id="api-la-gi">API là gì?</h2>
-<p><strong>API</strong>, hay đầy đủ hơn là <strong>Application Programming Interface</strong>, là một cách để hai máy tính giao tiếp với nhau.</p>
-<p>Chuẩn API chung được dùng bởi phần lớn các ứng dụng web và di động để giao tiếp với các server được gọi là <strong>REST</strong>, hay đầy đủ hơn là <strong>REpresentational State Transfer</strong>.</p>
-<p>REST nghe có vẻ hàn lâm. Nó không phải là một dạng đặc tả gì cả. Nó là một tập hợp các quy tắc đã trở thành chuẩn chung cho việc xây dựng web API từ đầu những năm 2000. Một API tuân thủ chuẩn REST thì được gọi là một <strong>RESTful API</strong>. Một số ví dụ có thể kể ra là Twilio, Stripe và Google Maps.</p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=i7twT3x5yv8">System Design Interview: A Step-By-Step Guide</a></p>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>Trong bài này, ta sẽ nói về khuôn mẫu phỏng vấn System Design (thiết kế hệ thống) mà chúng tôi đã sử dụng trong sách của mình (System Design Interview - An Insider's Guide - Alex Xu, sách này đã có Volume 2).</p>
+<p>Mà vì sao lại cần một cái khuôn mẫu như thế nhỉ? Phỏng vấn là một quá trình căng thẳng. Ta có rất ít thời gian để thể hiện những gì mình có thể làm được. Nếu không có sườn, dàn ý, khuôn mẫu hay một cấu trúc nào để theo, ta có thể sẽ lãng phí thời gian quý báu vào những vấn đề hệ thống không quan trọng. Phỏng vấn không có cấu trúc làm cho người phỏng vấn bạn gặp khó để theo dõi.</p>
+<h2 id="cac-buoc-phong-van">Các bước phỏng vấn</h2>
+<p>Khuôn mẫu của chúng tôi là một cấu trúc đã được chứng minh hiệu quả trong thời gian dài. Nó đơn giản và mạnh mẽ. Nó giúp ta hỏi đúng câu hỏi và tập trung vào đúng thứ cần thiết trong phỏng vấn. Dưới đây là 4 bước trong khuôn mẫu này.</p>
+<ol>
+<li>Hiểu vấn đề và xác định phạm vi thiết kế hệ thống.</li>
+<li>Đề xuất thiết kế tổng quan cho hệ thống.</li>
+<li>Thiết kế chi tiết.</li>
+<li>Kết thúc.</li>
+</ol>
+<p>Cấu trúc này hiệu quả trong một cuộc phỏng vấn System Design dài 45 đến 60 phút. Thông thường, <strong>5 phút đầu là cho phần giới thiệu</strong> và <strong>5 phút cuối là cho phần hỏi đáp</strong>. Phần chính của cuộc phỏng vấn chỉ khoảng 35 đến 45 phút.</p>
+<p>Chúng tôi đề xuất dành khoảng <strong>5 phút cho bước 1</strong>, <strong>20 phút cho bước 2</strong>, <strong>15 phút cho bước 3</strong> và <strong>5 phút cho bước 4</strong>. Bạn có thể điều chỉnh thời gian mỗi phần theo ý thích, không nhất thiết phải theo chính xác như vậy, miễn là bạn đủ thời gian.</p>
+<p>Cùng đi vào từng bước nhé.</p>
+<h2 id="buoc-1-hieu-van-e-va-xac-inh-pham-vi-thiet-ke-he-thong">Bước 1 - Hiểu vấn đề và xác định phạm vi thiết kế hệ thống</h2>
+<p>Câu hỏi thiết kế hệ thường là câu hỏi mở. Đôi khi câu hỏi được trình bày một cách khá mơ hồ. Điều này giúp kiểm tra khả năng tổ chức suy nghĩ và tập trung vào những gì quan trọng.</p>
+<p>Nhiệm vụ của ta là hỏi càng nhiều câu hỏi càng tốt để hiểu rõ câu hỏi. Nếu ta đi ngay vào giải pháp mà không hiểu rõ vấn đề, người phỏng vấn sẽ không đánh giá tốt bạn và sẽ loại bạn gần như ngay lập tức.</p>
+<p>Mà nên hỏi những câu nào nhỉ? Mục tiêu của ta là làm rõ đề bài. Ta muốn hiểu tại sao ta xây dựng cái hệ thống này, người dùng là ai và cần xây dựng những tính năng nào (<strong>yêu cầu chức năng - functional requirements</strong>).</p>
+<p>Ví dụ, nếu đề bài là thiết kế một ứng dụng chat, bạn cần phải thấy rằng có nhiều loại ứng dụng chat khác nhau trên thị trường. Có ứng dụng chat nhóm riêng tư và nhóm nhỏ như WhatsApp, ứng dụng chat văn phòng như Slack hoặc ứng dụng chat nhóm lớn như Discord. Mỗi loại đều có những khó khăn và ràng buộc thiết kế riêng. Đích đến là hiểu rõ các tính năng ta đang xây dựng theo thứ tự ưu tiên. Ta nên tập trung vào một số tính năng quan trọng nhất thôi. Bạn cần thảo luận và nhận sự đồng ý của người phỏng vấn về danh sách các tính năng.</p>
+<p>Ngoài các tính năng cần xây dựng (<strong>functional requirements</strong>), bạn cũng cần hỏi người phỏng vấn để làm rõ các yêu cầu phi chức năng (<strong>non-functional requirements</strong>). Với phỏng vấn System Design, ta nên tập trung vào <strong>quy mô (scale) và hiệu suất (performance)</strong>. Các yêu cầu phi chức năng này làm cho thiết kế trở nên độc đáo và thách thức hơn. Ví dụ, thiết kế một ứng dụng nhái Twitter dành cho vài trăm người dùng thì dễ hơn là thiết kế nó cho hàng triệu người dùng với một số tài khoản phổ biến có hàng triệu người theo dõi. Thế mới độc và khó. Kinh nghiệm mà công việc mới yêu cầu càng nhiều thì bạn càng cần phải chứng tỏ năng lực xử lý các yêu cầu phi chức năng này.</p>
+<p>Để có được cái nhìn tổng quan về quy mô của hệ thống cùng những khó khăn có thể xảy ra khi thiết kế, ta có thể thực hiện một số tính toán về hệ thống. Nên nhớ là đến đây ta vẫn chưa thiết kế gì cả, cho nên tính toán ở đây chỉ ước chừng thôi. Mục tiêu là có được cái nhìn tổng quan về quy mô hệ thống.</p>
+<p>Toàn bộ bước 1 này cần khoảng 5 phút. Cuối cùng, ta sẽ có một danh sách ngắn các tính năng để thiết kế, cùng với một số yêu cầu phi chức năng cần phải thoả mãn.</p>
+<h2 id="buoc-2-e-xuat-thiet-ke-tong-quan-cho-he-thong">Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống</h2>
+<p>Trong bước này, mục tiêu là đề xuất một thiết kế tổng quan và nhận sự đồng thuận của người phỏng vấn.</p>
+<h3 id="thiet-ke-api">Thiết kế API</h3>
+<p>Với phần lớn các đề bài, ta sẽ theo cách tiếp cận từ trên xuống và <strong>bắt đầu với các API</strong>. Các API tạo nên một thoả thuận giữa người dùng cuối và backend. Sau khi thu thập các yêu cầu, ta sẽ biết được những API nào cần thiết. Trừ khi có chỉ định khác, ta nên tuân theo quy ước RESTful. Định nghĩa cẩn thận các tham số request và response của mỗi API. Nhớ dành thời gian để xem xét kỹ các API, xác minh rằng chúng đáp ứng các yêu cầu chức năng. Một điều quan trọng cần nhớ là không tạo ra các API không liên quan gì đến các yêu cầu chức năng.</p>
+<p>Thêm nữa, một số đề bài có thể yêu cầu giao tiếp hai chiều giữa client và server. WebSocket là một lựa chọn tốt, nhưng nhớ rằng socket service như websocket thì stateful, nó khá khó để vận hành ở quy mô lớn. Nếu phải thiết kế ở quy mô lớn, nên chuẩn bị một cách thiết kế WebSocket trong phần Thiết kế chi tiết.</p>
+<h3 id="ve-bieu-o-thiet-ke-tong-quan">Vẽ biểu đồ thiết kế tổng quan</h3>
+<p>Sau khi xong phần API giữa client và server, phần tiếp theo là <strong>vẽ biểu đồ thiết kế tổng quan</strong>. Biểu đồ là bản thiết kế tổng quan mà ta có thể tham khảo. Ta dùng nó để xác minh rằng thiết kế đáp ứng tất cả các yêu cầu chức năng. Ví dụ như hình dưới.</p>
 <p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
-<h2 id="co-ban-ve-rest-api">Cơ bản về REST API</h2>
-<p>Một RESTful API tổ chức các tài nguyên theo một tập các <strong>URI</strong> duy nhất, hay đầy đủ hơn là <strong>Uniform Resource Identifier</strong>. Các URI này phân biệt các loại tài nguyên khác nhau trên server. Sau đây là vài ví dụ.</p>
+<p>Với nhiều đề bài, mọi thứ thường bắt đầu với một <strong>load balancer</strong> hoặc một <strong>API gateway</strong>. Sau đó là các service đáp ứng các yêu cầu chức năng. Nhiều service cần một số hình thức lưu trữ. Đây là nơi ta sẽ hoàn thiện thiết kế bằng các giới thiệu lớp lưu trữ dữ liệu.</p>
+<p>Thường thì ta chưa cần phải nói ra ta sẽ dùng database gì ở đây, cái này sẽ nói trong phần Thiết kế chi tiết nếu cần, và chỉ sau khi ta đã ra được data schema. Ví dụ, với một service bản đồ như Google Maps, client thường cần gửi các cập nhật vị trí GPS thường xuyên đến server. Ta sẽ thêm vào thiết kế một cái data store vị trí, service cập nhật vị trí sẽ cho data vào đó.</p>
 <p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Các tài nguyên nên được nhóm theo danh từ, không nên là động từ. Một API dùng để lấy tất cả products nên dùng <code>/products</code> chứ không nên dùng <code>/getAllProducts</code>. Client tương tác với tài nguyên bằng cách tạo một request đến endpoint tương ứng với tài nguyên đó thông qua HTTP. Request này có format cụ thể. Nó bao gồm URI của tài nguyên ta muốn truy cập, trước URI là một HTTP verb, thứ sẽ nói cho server biết ta muốn làm gì với tài nguyên đó.</p>
-<p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
-<h2 id="crud-la-gi">CRUD là gì?</h2>
-<p>Một POST request cho thấy ta muốn tạo (CREATE) một tài nguyên mới. Một GET request cho thấy ta muốn đọc (READ) tài nguyên có sẵn. Một PUT request cho thấy ta muốn cập nhật (UPDATE) một tài nguyên hiện có. Một DELETE request cho thấy ta muốn xoá (DELETE) một tài nguyên hiện có. Bạn có thể đã nghe qua từ viêt tắt CRUD, 4 thứ trên kết hợp lại chính là nó.</p>
-<p>Body của request có thể có HTTP request body chứa data, thường là mã hoá theo JSON. </p>
-<p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Server nhận request, xử lý nó, sau đó format kết quả thành một response. Dòng đầu tiên của response chứa HTTP status code để nói cho client biết chuyện gì đã xảy ra với request.</p>
-<p>Một RESTful API được cài đặt tốt sẽ trả về đúng HTTP status code. Code 2xx nghĩa là request đã thực hiện thành công. Code 4xx nghĩa là đã có lỗi gì đó xảy ra với request, ví dụ như request không đúng định dạng. Code 5xx nghĩa là có vấn đề với server khi thực hiện request, như việc server sập.</p>
-<p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Client có thể chọn để thử lại request 5xx vừa rồi. Ta nói "có thể thử lại" vì một số request không idempotent, và các request đó cần được chú ý nhiều hơn khi thử lại. Một API gọi là idempotent nghĩa là khi gọi cùng một request nhiều lần thì ảnh hưởng đến tài nguyên sẽ như khi chỉ gọi một lần. Các POST request thường không idempotent vì chùng thường được dùng để tạo tài nguyên mới.</p>
-<p>Response body có thể có hoặc không, và có thể chứa data, thường được mã hoá theo JSON.</p>
-<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Cài đặt REST nên theo hướng stateless, nghĩa là cả 2 phía server và client đều không lưu thông tin của nhau và mọi vòng request response (chu kì) đều độc lập với nhau. Điều này khiến cho các ứng dụng web dễ dàng scale up hơn.</p>
-<p>Nếu một endpoint trả về lượng thông tin lớn, cần dùng pagination (phân trang). Chuẩn pagination thường được dùng là với các tham số "offset" và "limit". Ví dụ <code>/products?offset=50&amp;limit=25</code> nghĩa là ta lấy 25 product từ product thứ 50 trở đi. Nếu các tham số trên không được truyền vào, ta cần dùng các tham số mặc định của chúng.</p>
-<p>Cuối cùng, versioning API rất quan trọng. Versioning cho phép kĩ sư có thể tiếp tục cung cấp các phiên bản trước của các API mà không phải xoá hoàn toàn chúng đi. Điều này giúp client có đủ thời gian để chuyển qua API version mới. Có nhiều cách versioning, phổ biến nhất là đặt tiền tố <code>/v1/</code>, <code>/v2/</code> trước tài nguyên trên URI, ví dụ <code>/v1/products</code>, <code>/v2/products</code>.</p>
+<p>Lặp lại các bước trên và hoàn thiện biểu đồ thiết kế tổng quan cho tất cả các tính năng chính. Một mẹo nhỏ này, trong bước thiết kế tổng quan, <strong>hãy chuẩn bị các điểm cần thảo luận cho phần sau</strong>, tránh sa vào chi tiết thiết kế quá sớm. Cuối cùng, ta sẽ có một biểu đồ thiết kế tổng quan hoàn chỉnh.</p>
+<h3 id="thiet-ke-data-model-va-schema">Thiết kế data model và schema</h3>
+<p>Phần cuối cùng trong thiết kế tổng quan là <strong>thiết kế ra data model và schema</strong>. Ở đây ta nên thảo luận về những <strong>khuôn mẫu truy cập dữ liệu</strong> và <strong>tỷ lệ đọc/ghi dữ liệu</strong>. Khi ở quy mô lớn, mô hình dữ liệu có thể ảnh hưởng đáng kể đến hiệu suất của thiết kế. Nếu nó đơn giản, ta cũng có thể thảo luận về các database và các tùy chọn indexing.</p>
+<p>Ở đây ta cần quyết định một số thứ. Nếu mô hình dữ liệu là phần quan trọng của thiết kế để đáp ứng các yêu cầu phi chức năng, ta có thể hoãn phần thảo luận này cho phần thiết kế chi tiết.</p>
+<p>Sau khi xong phần tổng quan rồi, hãy review lại thiết kế. Hãy đảm bảo rằng mỗi tính năng xong từ đầu tới cuối về cơ bản.</p>
+<h2 id="buoc-3-thiet-ke-chi-tiet">Bước 3 - Thiết kế chi tiết</h2>
+<p>Mục tiêu của bước này là để chứng minh rằng ta có thể xác định các vấn đề tiềm tàng và đưa ra các giải pháp và thảo luận về các trade-off. Ta nên làm việc cùng với người phỏng vấn để quyết định những gì nên được thảo luận sâu hơn. </p>
+<p>Bước này là nơi các yêu cầu phi chức năng lên ngôi. Level càng cao thì bước này càng quan trọng. Nên nhớ là không có một cách tiếp cận nào phù hợp với tất cả các trường hợp.</p>
+<p>Trực giác của bạn sẽ có tác dụng ở đây. Đôi khi ngôn ngữ cơ thể của người phỏng vấn sẽ là gợi ý cho bạn rằng họ không hài lòng với một số phần của thiết kế. Quan trọng là phải nhận ra những gợi ý này và đảm bảo các vấn đề được giải quyết. </p>
+<p>Một cách mà ta có thể áp dụng là hỏi. Ta có thể liệt kê các lý do để chọn một giải pháp cụ thể và hỏi xem họ có thắc mắc gì không. Khi ta đã chọn ra một hoặc hai vấn đề để thảo luận sâu hơn, ta nên đưa ra nhiều giải pháp và thảo luận về các trade-off của mỗi lựa chọn.</p>
+<p>Có một số mẹo như sau:</p>
+<ol>
+<li>Ta nên nêu rõ vấn đề. Ví dụ, đối với thiết kế Google Maps, việc ghi QPS ở mức 1 triệu / giây vào database thì quá cao so với khả năng xử lý của một database. </li>
+<li>Ta nên đưa ra ít nhất hai giải pháp. Tiếp tục với ví dụ trên, ta có thể đề xuất giảm tần suất cập nhật vị trí cho mỗi người dùng, hoặc chọn một database NoSQL có thể xử lý được tốc độ ghi. </li>
+<li>Ta nên thảo luận về các trade-off của các giải pháp. Nhớ sử dụng các con số để chứng minh lựa chọn của mình.</li>
+<li>Cuối cùng, ta chọn một giải pháp và thảo luận với người phỏng vấn. Lặp lại các bước này cho các vấn đề khác.</li>
+</ol>
+<p>Trung bình trong một cuộc phỏng vấn, ta chỉ có thời gian để thảo luận sâu hơn vào 2 hoặc 3 vấn đề. </p>
+<h2 id="buoc-4-ket-thuc">Bước 4 - Kết thúc</h2>
+<p>Ta nên dành vài phút để tóm tắt thiết kế. Ở đây ta nên tập trung vào những phần độc đáo thôi, và làm nhanh thôi nhé. Nên để lại đủ thời gian ở cuối cuộc phỏng vấn để hỏi người phỏng vấn các câu hỏi về công ty.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">12/08/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/02/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">12/08/2023 (GMT+07)</span>
       
     
   </small>
