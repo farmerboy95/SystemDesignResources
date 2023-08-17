@@ -48,6 +48,7 @@ comment: false
     - [Hướng dẫn từng bước phỏng vấn System Design](ByteByteGo/system_design_interview_guide/system_design_interview_guide.md)
     - [Consistent Hashing là gì?](ByteByteGo/consistent_hashing/consistent_hashing.md)
     - [Git Merge vs Rebase](ByteByteGo/git_merge_vs_rebase/git_merge_vs_rebase.md)
+    - [6 thuật toán load balancing phổ biến](ByteByteGo/load_balancing_algorithms/load_balancing_algorithms.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
