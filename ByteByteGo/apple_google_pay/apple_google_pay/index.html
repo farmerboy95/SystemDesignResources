@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/cdn/cdn/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/apple_google_pay/apple_google_pay/">
       
       
-        <link rel="prev" href="../../debugging_techniques/debugging_techniques/">
+        <link rel="prev" href="../../sql_execution_order/sql_execution_order/">
       
       
-        <link rel="next" href="../../top_redis_use_cases/top_redis_use_cases/">
+        <link rel="next" href="../../../Misc/chrome_blog/inside_browser_1/inside_browser_1/">
       
       
       <link rel="icon" href="../../../img/logo.jpg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Tìm hiểu về CDN - farmerboy's System Design Resources</title>
+        <title>Apple Pay và Google Pay hoạt động như thế nào? - farmerboy's System Design Resources</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tim-hieu-ve-cdn" class="md-skip">
+        <a href="#apple-pay-va-google-pay-hoat-ong-nhu-the-nao" class="md-skip">
           Skip to content
         </a>
       
@@ -137,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tìm hiểu về CDN
+              Apple Pay và Google Pay hoạt động như thế nào?
             
           </span>
         </div>
@@ -626,29 +626,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Tìm hiểu về CDN
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../cdn/cdn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -657,47 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cdn-la-gi" class="md-nav__link">
-    CDN là gì?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cdn-ngay-nay-lam-uoc-gi-cho-chung-ta" class="md-nav__link">
-    CDN ngày nay làm được gì cho chúng ta?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1367,9 +1306,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../apple_google_pay/apple_google_pay/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Apple Pay và Google Pay hoạt động như thế nào?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1378,6 +1337,134 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
+  </a>
+  
+    <nav class="md-nav" aria-label="Giới thiệu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-thuc-hoat-ong" class="md-nav__link">
+    Cách thức hoạt động
+  </a>
+  
+    <nav class="md-nav" aria-label="Cách thức hoạt động">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenization" class="md-nav__link">
+    Tokenization
+  </a>
+  
+    <nav class="md-nav" aria-label="Tokenization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay_1" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay_1" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thanh-toan" class="md-nav__link">
+    Thanh toán
+  </a>
+  
+    <nav class="md-nav" aria-label="Thanh toán">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay_2" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay_2" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    Kết luận
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1731,15 +1818,102 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cdn-la-gi" class="md-nav__link">
-    CDN là gì?
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
   </a>
+  
+    <nav class="md-nav" aria-label="Giới thiệu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cdn-ngay-nay-lam-uoc-gi-cho-chung-ta" class="md-nav__link">
-    CDN ngày nay làm được gì cho chúng ta?
+  <a href="#cach-thuc-hoat-ong" class="md-nav__link">
+    Cách thức hoạt động
+  </a>
+  
+    <nav class="md-nav" aria-label="Cách thức hoạt động">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenization" class="md-nav__link">
+    Tokenization
+  </a>
+  
+    <nav class="md-nav" aria-label="Tokenization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay_1" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay_1" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thanh-toan" class="md-nav__link">
+    Thanh toán
+  </a>
+  
+    <nav class="md-nav" aria-label="Thanh toán">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay_2" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay_2" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    Kết luận
   </a>
   
 </li>
@@ -1763,50 +1937,57 @@
   
 
 
-<h1 id="tim-hieu-ve-cdn">Tìm hiểu về CDN</h1>
+<h1 id="apple-pay-va-google-pay-hoat-ong-nhu-the-nao">Apple Pay và Google Pay hoạt động như thế nào?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=RI9np1LWzqw">What Is A CDN? How Does It Work?</a></p>
-<h2 id="cdn-la-gi">CDN là gì?</h2>
-<p><strong>CDN</strong> (Content Delivery Network - Mạng lưới phân phối nội dung) được ra đời vào cuối những năm 90 của thế kỉ 20 (1998). Ban đầu nó được phát triển để tăng tốc việc phân phối content HTML tĩnh cho user trên toàn thế giới.</p>
+<p><a class="glightbox" href="../../../img/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../img/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=cHv8LqkbPHk">How Does Apple/Google Pay Work?</a></p>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>Apple Pay và Google Pay xử lý thông tin thẻ tín dụng nhạy cảm của khách như thế nào? Cái nào ngon hơn? Cùng tìm hiểu nhé.</p>
+<h3 id="apple-pay">Apple Pay</h3>
+<p><strong>Apple Pay</strong> ra mắt vào năm 2013. Đó là một ý tưởng mới lạ vào thời điểm đó. Nó hoàn thiện khái niệm gọi là <strong>tokenization</strong>, trong đó chỉ cần một token thanh toán đại diện cho thông tin thẻ tín dụng nhạy cảm là đủ để hoàn tất một giao dịch. </p>
 <p><a class="glightbox" href="../figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure1.png" style="display: block; margin: 0 auto" /></a></p>
-<p>CDN phát triển mạnh mẽ trong những thập niên tiếp theo. Ngày nay, một CDN cần được sử dụng bất kì khi nào có HTTP traffic.</p>
-<h2 id="cdn-ngay-nay-lam-uoc-gi-cho-chung-ta">CDN ngày nay làm được gì cho chúng ta?</h2>
-<p>Ở cấp độ cơ bản, một CDN mang content lại gần user hơn. Điều này cải thiện hiệu suất của web service dưới góc nhìn user. Thống kê chỉ ra rằng hiệu suất rất quan trọng cho việc tiếp cận và giữ chân user.</p>
+<p>Apple Pay yêu cầu sự hợp tác chặt chẽ từ các mạng thanh toán như Visa và các ngân hàng phát hành lớn, như JPMC, để xây dựng một hệ thống mới để hỗ trợ việc chấp nhận thanh toán dựa trên token.</p>
+<h3 id="google-pay">Google Pay</h3>
+<p><strong>Google Pay</strong> ra mắt vào năm 2018. Trước đó nó có tên là <strong>Android Pay</strong> (2015), và trước đó nữa lại được gọi là <strong>Google Wallet</strong> (2014). Tên thương hiệu kiểu này nghe khá khó hiểu và có vẻ như bây giờ Google Pay lại là Google Wallet ở một số quốc gia. Ta sẽ gọi phiên bản hiện tại sử dụng token thanh toán là Google Pay.</p>
+<h2 id="cach-thuc-hoat-ong">Cách thức hoạt động</h2>
+<p>Thực tế cả hai đều an toàn, nhưng chi tiết kỹ thuật có chút khác biệt.</p>
+<h3 id="tokenization">Tokenization</h3>
+<p>Cả hai nền tảng đều sử dụng tokenization để bảo vệ thông tin thẻ tín dụng nhạy cảm của khách hàng. Chú ý rằng cả hai nền tảng đều tuyên bố rằng họ không lưu <strong>PAN</strong> (Primary Account Number - số tài khoản chính) trên thiết bị. PAN sau đó được gửi đến những server tương ứng thông qua HTTPS.</p>
+<h4 id="apple-pay_1">Apple Pay</h4>
+<p>Tại Apple server, thông tin thẻ tín dụng không được lưu ở đâu cả. Nó được dùng để định danh mạng thanh toán và ngân hàng phát hành thẻ tín dụng. Để dễ hình dung, ta sẽ gọi mạng thanh toán, như Visa và ngân hàng phát hành thẻ tín dụng, từ bây giờ là ngân hàng nói chung.</p>
+<p>Thông tin thẻ tín dụng sau đó được gửi từ Apple server đến ngân hàng một cách an toàn qua mạng. Ngân hàng xác thực số tài khoản và trả về một token gọi là <strong>DAN</strong> (Device Account Number - số tài khoản thiết bị). Số này được tạo ra chỉ cho thiết bị tương ứng sử dụng. Việc tạo ra token và ánh xạ token với PAN thường được giao cho một <strong>TSP</strong> (Token Service Provider - nhà cung cấp dịch vụ token). TSP là nơi chứa thông tin nhạy cảm nhất. Token sau đó được trả về Apple server. Apple server chuyển tiếp token đến iPhone, nơi nó được lưu trữ an toàn trong một chip đặc biệt gọi là <strong>Secure Element</strong>. Về logic thì Apple server chỉ là một bộ lọc. Nó kiểu như là iPhone gửi thông tin thẻ tín dụng trực tiếp đến ngân hàng để đổi lấy token.</p>
 <p><a class="glightbox" href="../figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure2.png" style="display: block; margin: 0 auto" /></a></p>
+<h4 id="google-pay_1">Google Pay</h4>
+<p>Với Google Pay, quá trình này hơi khác một chút. Giống như Apple, PAN cũng được gửi một cách an toàn từ thiết bị đến server của Google. Server của Google sử dụng PAN để xác định ngân hàng. PAN sau đó được gửi một cách an toàn đến ngân hàng qua mạng. Ngân hàng xác thực PAN và chuyển nó đến TSP để đổi lấy token thanh toán. Token được gọi là <strong>D-PAN</strong> (Device PAN - số tài khoản thiết bị). Token sau đó được gửi trở lại server của Google, nơi nó được chuyển đến thiết bị để lưu trữ an toàn.</p>
 <p><a class="glightbox" href="../figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure3.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Để mang service lại gần user hơn, CDN triển khai rất nhiều server tại hàng trăm địa điểm trên thế giới. Các địa điểm này được gọi là <strong>PoP</strong> (Point of Presence - điểm tồn tại). Server nằm trong PoP thường được gọi là <strong>edge server</strong>. PoP hiện diện ở nhiều nơi trên thế giới giúp đảm bảo rằng mọi user có thể kết nối đến edge server gần họ nhất.</p>
+<p>Bây giờ, có hai điểm cần đề cập ở đây khác với Apple. </p>
+<ol>
+<li>Token của Google Pay không được lưu trữ trong một secure element như các thiết bị Apple. Nó được lưu trữ trong ứng dụng ví. </li>
+<li>Apple khẳng định họ không bao giờ lưu trữ token thanh toán trên server của họ. Google không có tuyên bố như vậy, và thực tế, trong điều khoản dịch vụ của họ, họ khẳng định thông tin thanh toán được lưu trữ trên server của họ.</li>
+</ol>
+<h3 id="thanh-toan">Thanh toán</h3>
+<p>Rồi mấy cái token này được dùng để thanh toán kiểu gì?</p>
+<h4 id="apple-pay_2">Apple Pay</h4>
+<p>Với iPhone, khi ta bấm Thanh toán, token được lấy từ secure element và gửi đến <strong>terminal Point-of-Sale</strong> (là cái máy mà chủ quán đưa ra để cho bạn quẹt điện thoại hay thẻ vào ấy) của merchant qua <strong>NFC</strong> (near-field communication, hay còn gọi là giao tiếp không chạm). Nó thực sự an toàn vì token được gửi trực tiếp từ secure element đến bộ điều khiển NFC trên thiết bị, nơi nó được truyền đến terminal Point-of-Sale.</p>
+<p>Bây giờ từ terminal Point-of-Sale, token được gửi đến ngân hàng của merchant. Ngân hàng của merchant xác định mạng thanh toán từ token, và định tuyến an toàn nó đến mạng thanh toán. Mạng thanh toán xác thực token sau đó yêu cầu TSP đổi nó trở lại thành PAN gốc. Số gốc được gửi an toàn từ TSP đến ngân hàng, ở đây thanh toán được xác nhận.</p>
 <p><a class="glightbox" href="../figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure4.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Các CDN khác nhau triển khai các công nghệ khác nhau để điều hướng request của user đến PoP gần nhất. Hai công nghệ phổ biến nhất là <strong>routing dựa trên DNS</strong> và <strong>Anycast</strong>.</p>
-<p>Với routing dựa trên DNS, mỗi PoP có một địa chỉ IP riêng. Khi user tìm địa chỉ IP của CDN, DNS trả về địa chỉ IP của PoP gần với user nhất.</p>
+<h4 id="google-pay_2">Google Pay</h4>
+<p>Với Google Pay, quá trình cũng tương tự sau khi token thanh toán đến terminal Point-of-Sale. Bây giờ cách nó được gửi từ thiết bị đến terminal Point-of-Sale khác một chút. Thiết bị Android không lưu trữ token thanh toán trong secure element. Thay vào đó, nó sử dụng cái gọi là <strong>HCE</strong> (host card emulation). Với HCE, token thanh toán được lưu trữ trong ứng dụng ví, và được lấy ra khi cần thiết bởi ứng dụng ví an toàn từ đám mây. Bộ điều khiển NFC và ứng dụng ví làm việc cùng nhau để truyền token thanh toán qua NFC đến terminal Point-of-Sale. Đến đây, phần còn lại của giao dịch giống như Apple.</p>
 <p><a class="glightbox" href="../figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure5.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Với Anycast, các PoP chia sẻ cùng một địa chỉ IP. Khi một request vào mạng Anycast của địa chỉ IP đó, mạng này sẽ gửi request đến PoP gần nhất với user.</p>
-<p><a class="glightbox" href="../figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure6.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Mỗi edge server đóng vai trò là reverse proxy với content cache rất lớn. Content tĩnh được cache trong những content cache trên edge server. Nếu một content nằm trong cache, nó có thể được nhanh chóng trả về cho user. Edge server chỉ cần một bản sao của content tĩnh từ server gốc nếu content không nằm trong cache nên việc này giúp giảm yêu cầu tải và băng thông cho server gốc rất nhiều.</p>
-<p><a class="glightbox" href="../figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure7.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure8.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Một CDN hiện đại còn có thể chuyển đổi content tĩnh thành một dạng tối ưu hơn. Ví dụ, CDN có thể minify Javascript bundle trước khi đến tay user, hoặc chuyển đổi một file hình ảnh từ dạng cũ thành những dạng mới hơn như WebP hay AVIF.</p>
-<p><a class="glightbox" href="../figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure9.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Edge server còn đóng vai trò cực kỳ quan trọng trong HTTP stack hiện đại. Tất cả TLS connection kết thúc tại edge server. Bắt tay TLS rất tốn kém. Các phiên bản TLS thịnh hành như TLS 1.2 cần vài network round trip để tạo connection. Thế nên kết thúc TLS connection tại edge server giúp giảm độ trễ để tạo TLS connection. Đây là lý do vì sao nhiều ứng dụng ngày nay gửi HTTP content động không cache được qua CDN.</p>
-<p><a class="glightbox" href="../figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure10.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure11.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Bên cạnh hiệu suất, CDN hiện đại còn có hai lợi ích lớn nữa. </p>
-<p>Thứ nhất là bảo mật. Tất cả các mạng CDN đều có dung lượng mạng lớn tại edge server. Đây là mấu chốt để chống tần công từ chối dịch vụ (DDoS) quy mô lớn một cách hiệu quả, bằng việc có một mạng có dung lượng còn lớn hơn của kẻ tấn công. Điều này thật sự hiệu quả với CDN trên nền mạng Anycast. Nó cho phép CDN khuếch tán traffic tấn công trên một lượng lớn server.</p>
-<p><a class="glightbox" href="../figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure12.png" style="display: block; margin: 0 auto" /></a></p>
-<p><a class="glightbox" href="../figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure13.png" style="display: block; margin: 0 auto" /></a></p>
-<p>Thứ hai, CDN hiện đại cải thiện tính thường trực (availability). CDN có tính phân bố rất lớn. Với việc có bản sao content trên nhiều PoP, CDN có thể chịu được nhiều sự cố phần cứng hơn server gốc.</p>
-<p><a class="glightbox" href="../figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../figure14.png" style="display: block; margin: 0 auto" /></a></p>
-<p>CDN hiện đại mang lại rất nhiều lợi ích. Hãy dùng CDN khi ta có HTTP traffic.</p>
+<h2 id="ket-luan">Kết luận</h2>
+<p>Tóm lại, cả Apple Pay và Google Pay đều sử dụng tokenization. </p>
+<p>Apple Pay hoàn thiện công nghệ và làm cho nó dễ sử dụng và an toàn. </p>
+<p>Cách triển khai của Google cũng tương tự. Sự khác biệt chính là cách token thanh toán được lưu trữ, xử lý và truyền trên thiết bị, và cách token thanh toán có thể được lưu trữ trên server của Google.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">30/07/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">23/08/2023 (GMT+07)</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/02/2023 (GMT+07)</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">23/08/2023 (GMT+07)</span>
       
     
   </small>
