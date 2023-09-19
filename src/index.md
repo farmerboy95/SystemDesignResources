@@ -27,7 +27,7 @@ Giới thiệu sơ về mình thì hiện tại mình đang tham gia Competitive
 
 Ngoài ra, các bạn có thể tìm được các tài khoản của mình trên các trang Competitive Programming tại [clist.by](https://clist.by/coder/farmerboy/).
 
-Nếu các bạn thấy website này hữu ích, có thể ủng hộ mình thông qua Buy Me A Coffee dưới đây:
+Nếu các bạn thấy website này hữu ích, có thể ủng hộ mình thông qua **Buy Me A Coffee** ở duới đây hoặc ở góc phải dưới màn hình.
 
-<a href="https://www.buymeacoffee.com/farmerboy"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=farmerboy&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="farmerboy" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
 

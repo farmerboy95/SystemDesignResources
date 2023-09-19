@@ -51,6 +51,7 @@ comment: false
     - [6 thuật toán load balancing phổ biến](ByteByteGo/load_balancing_algorithms/load_balancing_algorithms.md)
     - [Thứ tự thực thi câu lệnh SQL](ByteByteGo/sql_execution_order/sql_execution_order.md)
     - [Apple Pay và Google Pay hoạt động như thế nào?](ByteByteGo/apple_google_pay/apple_google_pay.md)
+    - [Những hiểu nhầm về Bare Metal, Virtual Machine và Container](ByteByteGo/container_concepts/container_concepts.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1/inside_browser_1.md)
