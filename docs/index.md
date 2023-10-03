@@ -16,18 +16,18 @@ Lưu ý, nếu bạn thắc mắc vì sao mình viết tiếng Việt mà vẫn 
 
 Giới thiệu sơ về mình thì hiện tại mình đang tham gia Competitive Programming với các tài khoản như:
 
-- <img src="img/codeforces.png" width="16" height="16"/>  [farmerboy](https://codeforces.com/profile/farmerboy)
-- <img src="img/atcoder.png" width="16" height="16"/>  [farmerboy](https://atcoder.jp/users/farmerboy)
-- <img src="img/codechef.png" width="16" height="16"/>  [farmerboy](https://www.codechef.com/users/farmerboy)
-- <img src="img/leetcode.png" width="16" height="16"/>  [farmerboy](https://leetcode.com/farmerboy/)
-- <img src="img/topcoder.png" width="16" height="16"/>  [farmerboy](https://www.topcoder.com/members/farmerboy)
-- <img src="img/toki.png" width="16" height="16"/>  [farmerboy](https://tlx.toki.id/profiles/farmerboy)
-- <img src="img/hackerrank.png" width="16" height="16"/>  [farmerboy](https://www.hackerrank.com/profile/farmerboy)
-- <img src="img/uva.ico" width="16" height="16"/>  [farmerboy](https://uhunt.onlinejudge.org/id/762901)
+- <img src="assets/images/codeforces.png" width="16" height="16"/>  [farmerboy](https://codeforces.com/profile/farmerboy)
+- <img src="assets/images/atcoder.png" width="16" height="16"/>  [farmerboy](https://atcoder.jp/users/farmerboy)
+- <img src="assets/images/codechef.png" width="16" height="16"/>  [farmerboy](https://www.codechef.com/users/farmerboy)
+- <img src="assets/images/leetcode.png" width="16" height="16"/>  [farmerboy](https://leetcode.com/farmerboy/)
+- <img src="assets/images/topcoder.png" width="16" height="16"/>  [farmerboy](https://www.topcoder.com/members/farmerboy)
+- <img src="assets/images/toki.png" width="16" height="16"/>  [farmerboy](https://tlx.toki.id/profiles/farmerboy)
+- <img src="assets/images/hackerrank.png" width="16" height="16"/>  [farmerboy](https://www.hackerrank.com/profile/farmerboy)
+- <img src="assets/images/uva.ico" width="16" height="16"/>  [farmerboy](https://uhunt.onlinejudge.org/id/762901)
 
 Ngoài ra, các bạn có thể tìm được các tài khoản của mình trên các trang Competitive Programming tại [clist.by](https://clist.by/coder/farmerboy/).
 
 Nếu các bạn thấy website này hữu ích, có thể ủng hộ mình thông qua **Buy Me A Coffee** ở duới đây hoặc ở góc phải dưới màn hình.
 
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="farmerboy" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="farmerboy" data-color="#FFDD00" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
 

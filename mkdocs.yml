@@ -7,8 +7,8 @@ repo_name: farmerboy95/SystemDesignResources
 theme:
   name: material
   custom_dir: overrides
-  logo: img/logo.jpg
-  favicon: img/logo.jpg
+  logo: assets/images/logo.jpg
+  favicon: assets/images/logo.jpg
   features:
     - navigation.tabs
     - navigation.top
