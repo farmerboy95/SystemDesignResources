@@ -1,0 +1,65 @@
+---
+hide:
+  - feedback
+comment: false
+---
+
+- Trang chủ
+    - [Lời chào](index.md)
+    - [Các tài liệu](navigation.md)
+- ByteByteGo
+    - [Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?](ByteByteGo/what_happen_when_access_url.md)
+    - [Các mốc độ trễ mà lập trình viên nên biết](ByteByteGo/latency_numbers.md)
+    - [HTTP/1 đến HTTP/2 đến HTTP/3](ByteByteGo/http_versions.md)
+    - [REST API là gì?](ByteByteGo/rest_api.md)
+    - [SSL, TLS và HTTPS](ByteByteGo/ssl_tls_https.md)
+    - [Scan to Pay là gì?](ByteByteGo/scan_to_pay.md)
+    - [Process vs. Thread](ByteByteGo/process_vs_thread.md)
+    - [Các kĩ thuật debug](ByteByteGo/debugging_techniques.md)
+    - [Tìm hiểu về CDN](ByteByteGo/cdn.md)
+    - [Top 5 ứng dụng của Redis](ByteByteGo/top_redis_use_cases.md)
+    - [Vì sao Redis lại nhanh?](ByteByteGo/why_redis_fast.md)
+    - [Lưu mật khẩu vào database như thế nào cho đúng?](ByteByteGo/storing_passwords.md)
+    - [API Gateway là gì?](ByteByteGo/api_gateway.md)
+    - [Tại sao Kafka lại nhanh như vậy?](ByteByteGo/why_kafka_fast.md)
+    - [Single Sign-on (SSO) là gì?](ByteByteGo/sso.md)
+    - [Mô hình OSI là gì?](ByteByteGo/osi_model.md)
+    - [Những thứ bạn cần biết về DNS](ByteByteGo/dns.md)
+    - [Bộ nhớ và ổ cứng trong máy tính](ByteByteGo/computer_memory_and_storage.md)
+    - [7 cách mà lập trình viên tận dụng ChatGPT](ByteByteGo/chatgpt_hacks.md)
+    - [Định lý CAP - CAP theorem](ByteByteGo/cap_theorem.md)
+    - [gRPC là gì?](ByteByteGo/grpc.md)
+    - [GraphQL là gì?](ByteByteGo/graphql.md)
+    - [Proxy vs. Reverse Proxy](ByteByteGo/proxy_vs_reverse_proxy.md)
+    - [Thiết kế hệ thống: Thiết kế Location Based Service](ByteByteGo/design_location_based_service.md)
+    - [7 kiểu hệ thống phân tán thông dụng](ByteByteGo/system_patterns.md)
+    - [Bí mật đằng sau NoSQL: Cây LSM](ByteByteGo/lsm_tree.md)
+    - [Bloom Filter là gì?](ByteByteGo/bloom_filter.md)
+    - [CI/CD là gì?](ByteByteGo/ci_cd.md)
+    - [Làm sao chọn database cho đúng?](ByteByteGo/choose_database.md)
+    - [Kiến trúc Kubernetes](ByteByteGo/kubernetes.md)
+    - [Microservices là gì?](ByteByteGo/microservices.md)
+    - [Vì sao phỏng vấn System Design lại quan trọng?](ByteByteGo/why_system_design_interview_important.md)
+    - [Hệ thống của Stack Overflow có gì hay?](ByteByteGo/stackoverflow_architecture.md)
+    - [Giải mã sự phát triển trong kiến trúc API của Netflix](ByteByteGo/netflix_architecture_evolution.md)
+    - [Giải thích dễ hiểu OAuth2](ByteByteGo/oauth2_explained.md)
+    - [Discord lưu hàng nghìn tỉ tin nhắn như thế nào?](ByteByteGo/discord_messages_migration.md)
+    - [7 cách để tăng hiệu suất API của bạn](ByteByteGo/optimize_api_performance.md)
+    - [Hướng dẫn từng bước phỏng vấn System Design](ByteByteGo/system_design_interview_guide.md)
+    - [Consistent Hashing là gì?](ByteByteGo/consistent_hashing.md)
+    - [Git Merge vs Rebase](ByteByteGo/git_merge_vs_rebase.md)
+    - [6 thuật toán load balancing phổ biến](ByteByteGo/load_balancing_algorithms.md)
+    - [Thứ tự thực thi câu lệnh SQL](ByteByteGo/sql_execution_order.md)
+    - [Apple Pay và Google Pay hoạt động như thế nào?](ByteByteGo/apple_google_pay.md)
+    - [Những hiểu nhầm về Bare Metal, Virtual Machine và Container](ByteByteGo/container_concepts.md)
+- Nguồn khác
+    - Chrome Developers Blog
+        - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1.md)
+        - [Bên trong các trình duyệt ngày nay (Phần 2)](Misc/chrome_blog/inside_browser_2.md)
+        - [Bên trong các trình duyệt ngày nay (Phần 3)](Misc/chrome_blog/inside_browser_3.md)
+        - [Bên trong các trình duyệt ngày nay (Phần 4)](Misc/chrome_blog/inside_browser_4.md)
+    - Discord Blog
+        - [Discord lưu trữ hàng tỉ tin nhắn như thế nào?](Misc/discord_blog/storing_billions_messages.md)
+        - [Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?](Misc/discord_blog/storing_trillions_messages.md)
+    - Công cụ linh tinh
+        - [Vim Cheat Sheet](Misc/tools/vim_cheat_sheet.md)
