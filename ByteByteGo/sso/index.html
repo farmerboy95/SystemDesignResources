@@ -8,29 +8,35 @@
       
       
       
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/sso/">
       
       
+        <link rel="prev" href="../why_kafka_fast/">
       
-      <link rel="icon" href="/SystemDesignResources/assets/images/logo.jpg">
+      
+        <link rel="next" href="../osi_model/">
+      
+      
+      <link rel="icon" href="../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
-        <title>farmerboy's System Design Resources</title>
+        <title>Single Sign-on (SSO) là gì? - farmerboy's System Design Resources</title>
       
     
     
     
-      <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
       
         
-        <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="/SystemDesignResources//assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
     
@@ -47,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("/SystemDesignResources/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -64,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,6 +102,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#single-sign-on-sso-la-gi" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,9 +117,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Single Sign-on (SSO) là gì?
             
           </span>
         </div>
@@ -220,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -234,11 +256,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../what_happen_when_access_url/" class="md-tabs__link">
           
   
   ByteByteGo
@@ -262,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
+        <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -298,9 +322,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's System Design Resources
@@ -365,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/navigation/" class="md-nav__link">
+      <a href="../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,6 +434,8 @@
       
   
   
+    
+  
   
     
     
@@ -419,12 +445,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -438,7 +464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ByteByteGo
@@ -451,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-nav__link">
+      <a href="../what_happen_when_access_url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/latency_numbers/" class="md-nav__link">
+      <a href="../latency_numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/http_versions/" class="md-nav__link">
+      <a href="../http_versions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/rest_api/" class="md-nav__link">
+      <a href="../rest_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ssl_tls_https/" class="md-nav__link">
+      <a href="../ssl_tls_https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/scan_to_pay/" class="md-nav__link">
+      <a href="../scan_to_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/process_vs_thread/" class="md-nav__link">
+      <a href="../process_vs_thread/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/debugging_techniques/" class="md-nav__link">
+      <a href="../debugging_techniques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cdn/" class="md-nav__link">
+      <a href="../cdn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/top_redis_use_cases/" class="md-nav__link">
+      <a href="../top_redis_use_cases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_redis_fast/" class="md-nav__link">
+      <a href="../why_redis_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/storing_passwords/" class="md-nav__link">
+      <a href="../storing_passwords/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/api_gateway/" class="md-nav__link">
+      <a href="../api_gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_kafka_fast/" class="md-nav__link">
+      <a href="../why_kafka_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,9 +755,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sso/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Single Sign-on (SSO) là gì?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -740,6 +786,54 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ang-nhap-mot-lan-single-sign-on-sso-la-gi" class="md-nav__link">
+    Đăng nhập một lần (Single Sign-on - SSO) là gì?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quy-trinh-sso" class="md-nav__link">
+    Quy trình SSO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vay-chung-ta-nen-su-dung-phuong-phap-sso-nao" class="md-nav__link">
+    Vậy chúng ta nên sử dụng phương pháp SSO nào?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -751,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/osi_model/" class="md-nav__link">
+      <a href="../osi_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/dns/" class="md-nav__link">
+      <a href="../dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/computer_memory_and_storage/" class="md-nav__link">
+      <a href="../computer_memory_and_storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/chatgpt_hacks/" class="md-nav__link">
+      <a href="../chatgpt_hacks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cap_theorem/" class="md-nav__link">
+      <a href="../cap_theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/grpc/" class="md-nav__link">
+      <a href="../grpc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/graphql/" class="md-nav__link">
+      <a href="../graphql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/proxy_vs_reverse_proxy/" class="md-nav__link">
+      <a href="../proxy_vs_reverse_proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/design_location_based_service/" class="md-nav__link">
+      <a href="../design_location_based_service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_patterns/" class="md-nav__link">
+      <a href="../system_patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/lsm_tree/" class="md-nav__link">
+      <a href="../lsm_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/bloom_filter/" class="md-nav__link">
+      <a href="../bloom_filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ci_cd/" class="md-nav__link">
+      <a href="../ci_cd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/choose_database/" class="md-nav__link">
+      <a href="../choose_database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/microservices/" class="md-nav__link">
+      <a href="../microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1071,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_system_design_interview_important/" class="md-nav__link">
+      <a href="../why_system_design_interview_important/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/stackoverflow_architecture/" class="md-nav__link">
+      <a href="../stackoverflow_architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/netflix_architecture_evolution/" class="md-nav__link">
+      <a href="../netflix_architecture_evolution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/oauth2_explained/" class="md-nav__link">
+      <a href="../oauth2_explained/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/discord_messages_migration/" class="md-nav__link">
+      <a href="../discord_messages_migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/optimize_api_performance/" class="md-nav__link">
+      <a href="../optimize_api_performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_design_interview_guide/" class="md-nav__link">
+      <a href="../system_design_interview_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1211,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/consistent_hashing/" class="md-nav__link">
+      <a href="../consistent_hashing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/git_merge_vs_rebase/" class="md-nav__link">
+      <a href="../git_merge_vs_rebase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1251,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/load_balancing_algorithms/" class="md-nav__link">
+      <a href="../load_balancing_algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sql_execution_order/" class="md-nav__link">
+      <a href="../sql_execution_order/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/apple_google_pay/" class="md-nav__link">
+      <a href="../apple_google_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/container_concepts/" class="md-nav__link">
+      <a href="../container_concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
+      <a href="../../Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,6 +1761,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ang-nhap-mot-lan-single-sign-on-sso-la-gi" class="md-nav__link">
+    Đăng nhập một lần (Single Sign-on - SSO) là gì?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quy-trinh-sso" class="md-nav__link">
+    Quy trình SSO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vay-chung-ta-nen-su-dung-phuong-phap-sso-nao" class="md-nav__link">
+    Vậy chúng ta nên sử dụng phương pháp SSO nào?
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1678,7 +1810,133 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+  
+                  
+
+  
+  
+
+
+<h1 id="single-sign-on-sso-la-gi">Single Sign-on (SSO) là gì?</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=O1cRJWYF-g4">What Is Single Sign-on (SSO)? How It Works</a></p>
+<h2 id="ang-nhap-mot-lan-single-sign-on-sso-la-gi">Đăng nhập một lần (Single Sign-on - SSO) là gì?</h2>
+<p><strong>SSO (hay Single Sign-on, Đăng nhập một lần)</strong> là một sơ đồ xác thực. Nó cho phép người dùng truy cập an toàn vào nhiều ứng dụng và dịch vụ với một ID duy nhất. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sso/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sso/figure1.png" /></a></p>
+<p>Khi SSO được tích hợp vào các ứng dụng như Gmail, Workday hay Slack, nó cung cấp một cửa sổ hay trang đăng nhập cho cùng một bộ thông tin xác thực. Với SSO, người dùng có thể truy cập nhiều ứng dụng mà không phải đăng nhập mỗi lần.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sso/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sso/figure2.png" /></a></p>
+<p>SSO được xây dựng trên một khái niệm gọi là danh tính liên kết (federated identity). Nó cho phép chia sẻ thông tin nhận dạng trên các hệ thống đáng tin cậy nhưng độc lập. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sso/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sso/figure3.png" /></a></p>
+<p>Có hai giao thức phổ biến cho quá trình xác thực này.</p>
+<p><strong>SAML, hay ngôn ngữ đánh dấu xác nhận bảo mật (Security assertion markup language)</strong>, là một tiêu chuẩn mở dựa trên XML để trao đổi thông tin nhân dạng giữa các dịch vụ. Ta thường thấy nó trong môi trường làm việc, công sở. </p>
+<p>Một giao thức khác là <strong>OpenID Connect</strong>. Có lẽ ai cũng biết cái này rồi. Khi ta dùng tài khoản Google cá nhân để đăng nhập vào các ứng dụng như YouTuble, ta đang dùng OpenID Connect. Nó dùng JWT (JSON Web Token) để chia sẻ thông tin nhân dạng giữa các dịch vụ.</p>
+<h2 id="quy-trinh-sso">Quy trình SSO</h2>
+<p>Ta sẽ tập trung vào SAML.</p>
+<p>(1) Một nhân viên văn phòng truy cập một ứng dụng như Gmail. Theo SAML, Gmail trong trường hợp này là một nhà cung cấp dịch vụ (Service Provider). </p>
+<p>(2) Máy chủ Gmail phát hiện ra người dùng này đến từ một work domain (nghĩa là không phải từ <code>@gmail.com</code>, có thể đến từ <code>@sea.com</code> chẳng hạn), và trả về một yêu cầu xác thực SAML (SAML Authentication Request - SAR) về cho trình duyệt. </p>
+<p>(3) Trình duyệt chuyển hướng người dùng đến nhà cung cấp danh tính (Identity Provider) cho công ty được chỉ định trong yêu cầu xác thực SAML. Okta, Auth0 và OneLogin là một số ví dụ về nhà cung cấp danh tính thương mại. </p>
+<p>(4) + (5) Nhà cung cấp danh tính hiển thị trang đăng nhập để người dùng đăng nhập vào. </p>
+<p>(6) Sau khi được xác thực, nhà cung cấp danh tính tạo SAML response và trả về cho trình duyệt. Đây được gọi là xác nhận SAML (SAML Assertion). Xác nhận SAML là một tài liệu XML được ký bằng khoá có chứa thông tin về người dùng và những gì người dùng có thể truy cập với nhà cung cấp dịch vụ.</p>
+<p>(7) Trình duyệt chuyển tiếp xác nhận SAML đã ký tới nhà cung cấp dịch vụ.</p>
+<p>(8) Nhà cung cấp dịch vụ xác thực rằng xác nhận SAML đã được ký bởi bên cung cấp danh tính. Quá trình xác thực này thường được thực hiện bởi mã hoá khoá công khai. </p>
+<p>(9) Nhà cung cấp dịch vụ trả lại tài nguyên được bảo vệ cho trình duyệt dựa trên những gì người dùng được phép truy cập như được chỉ định trong xác nhận SAML. </p>
+<p>Vậy là xong quy trình đăng nhập SSO cơ bản.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sso/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sso/figure4.png" /></a></p>
+<p>Giờ ta cùng xem điều gì sẽ xảy ra khi người dùng điều hướng đến một ứng dụng tích hợp SSO khác, như Workday. </p>
+<p>(1) Người dùng truy cập Workday.</p>
+<p>(2) Máy chủ Workday, như trong ví dụ với Gmail, phát hiện work domain và gửi yêu cầu xác thực SAML về trình duyệt. </p>
+<p>(3) Trình duyệt lại chuyển hướng người dùng đến Nhà cung cấp danh tính. </p>
+<p>(4) Vì người dùng đã đăng nhập bằng Nhà cung cấp danh tính nên người dùng sẽ bỏ qua quy trình đăng nhập và thay vào đó, nó sẽ tạo một xác nhận SAML cho Workday, nêu chi tiết những gì người dùng có thể truy cập ở đó. </p>
+<p>(5) + (6) Xác nhận SAML được trả về trình duyệt và chuyển tiếp đến Workday. </p>
+<p>(7) + (8) Workday xác thực xác nhận đã ký và cấp cho người dùng quyền truy cập tương ứng.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sso/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sso/figure5.png" /></a></p>
+<p>Trước đó ta cũng đã đề cập đến OpenID Connect. Quy trình của OpenID Connect tương tự như SAML, nhưng thay vì chuyển tài liệu XML đã ký, OpenID Connect chuyển với JWT. JWT là một tài liệu JSON đã ký.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sso/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sso/figure6.png" /></a></p>
+<p>Chi tiết triển khai hơi khác một chút, nhưng khái niệm tổng thể thì tương tự nhau. </p>
+<h2 id="vay-chung-ta-nen-su-dung-phuong-phap-sso-nao">Vậy chúng ta nên sử dụng phương pháp SSO nào?</h2>
+<p>Cả hai cách triển khai đều an toàn. Đối với môi trường doanh nghiệp, nơi thường chuyển việc quản lý danh tính cho một nền tảng danh tính thương mại (như Microsoft, Okta, Thales, JumpCloud, Duo, PingIdentity, RSA, OneLogin, SecureAuth), thì các nền tảng này hỗ trợ mạnh mẽ cho cả hai. </p>
+<p>Quyết định sau đó sẽ phụ thuộc vào ứng dụng được tích hợp và giao thức nào dễ tích hợp hơn. Nếu viết một ứng dụng web mới, việc tích hợp với một số nền tảng OpenID Connect phổ biến hơn như Google, Facebook và Github có lẽ là một lựa chọn an toàn.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">03/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/03/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/SystemDesignResources"
+    data-repo-id="R_kgDOI0Ndtw"
+    data-category="General"
+    data-category-id="DIC_kwDOI0Ndt84CVvKb"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
 
               </article>
             </div>
@@ -1737,11 +1995,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/SystemDesignResources/", "features": ["navigation.tabs", "navigation.top"], "search": "/SystemDesignResources/assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
     
-      <script src="/SystemDesignResources/assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1762,5 +2020,5 @@
       data-y_margin="18"
     ></script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

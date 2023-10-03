@@ -8,29 +8,35 @@
       
       
       
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/debugging_techniques/">
       
       
+        <link rel="prev" href="../process_vs_thread/">
       
-      <link rel="icon" href="/SystemDesignResources/assets/images/logo.jpg">
+      
+        <link rel="next" href="../cdn/">
+      
+      
+      <link rel="icon" href="../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
-        <title>farmerboy's System Design Resources</title>
+        <title>Các kĩ thuật debug - farmerboy's System Design Resources</title>
       
     
     
     
-      <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
       
         
-        <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="/SystemDesignResources//assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
     
@@ -47,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("/SystemDesignResources/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -64,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,6 +102,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#cac-ki-thuat-debug" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,9 +117,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Các kĩ thuật debug
             
           </span>
         </div>
@@ -220,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -234,11 +256,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../what_happen_when_access_url/" class="md-tabs__link">
           
   
   ByteByteGo
@@ -262,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
+        <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -298,9 +322,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's System Design Resources
@@ -365,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/navigation/" class="md-nav__link">
+      <a href="../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,6 +434,8 @@
       
   
   
+    
+  
   
     
     
@@ -419,12 +445,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -438,7 +464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ByteByteGo
@@ -451,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-nav__link">
+      <a href="../what_happen_when_access_url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/latency_numbers/" class="md-nav__link">
+      <a href="../latency_numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/http_versions/" class="md-nav__link">
+      <a href="../http_versions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/rest_api/" class="md-nav__link">
+      <a href="../rest_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ssl_tls_https/" class="md-nav__link">
+      <a href="../ssl_tls_https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/scan_to_pay/" class="md-nav__link">
+      <a href="../scan_to_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/process_vs_thread/" class="md-nav__link">
+      <a href="../process_vs_thread/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,9 +615,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/debugging_techniques/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Các kĩ thuật debug
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -600,6 +646,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mo-au" class="md-nav__link">
+    Mở đầu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nhung-ieu-co-ban" class="md-nav__link">
+    Những điều cơ bản
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -611,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cdn/" class="md-nav__link">
+      <a href="../cdn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/top_redis_use_cases/" class="md-nav__link">
+      <a href="../top_redis_use_cases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_redis_fast/" class="md-nav__link">
+      <a href="../why_redis_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/storing_passwords/" class="md-nav__link">
+      <a href="../storing_passwords/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/api_gateway/" class="md-nav__link">
+      <a href="../api_gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_kafka_fast/" class="md-nav__link">
+      <a href="../why_kafka_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sso/" class="md-nav__link">
+      <a href="../sso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/osi_model/" class="md-nav__link">
+      <a href="../osi_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/dns/" class="md-nav__link">
+      <a href="../dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/computer_memory_and_storage/" class="md-nav__link">
+      <a href="../computer_memory_and_storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/chatgpt_hacks/" class="md-nav__link">
+      <a href="../chatgpt_hacks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cap_theorem/" class="md-nav__link">
+      <a href="../cap_theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/grpc/" class="md-nav__link">
+      <a href="../grpc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/graphql/" class="md-nav__link">
+      <a href="../graphql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/proxy_vs_reverse_proxy/" class="md-nav__link">
+      <a href="../proxy_vs_reverse_proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/design_location_based_service/" class="md-nav__link">
+      <a href="../design_location_based_service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_patterns/" class="md-nav__link">
+      <a href="../system_patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/lsm_tree/" class="md-nav__link">
+      <a href="../lsm_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/bloom_filter/" class="md-nav__link">
+      <a href="../bloom_filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ci_cd/" class="md-nav__link">
+      <a href="../ci_cd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/choose_database/" class="md-nav__link">
+      <a href="../choose_database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/microservices/" class="md-nav__link">
+      <a href="../microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1071,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_system_design_interview_important/" class="md-nav__link">
+      <a href="../why_system_design_interview_important/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/stackoverflow_architecture/" class="md-nav__link">
+      <a href="../stackoverflow_architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/netflix_architecture_evolution/" class="md-nav__link">
+      <a href="../netflix_architecture_evolution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/oauth2_explained/" class="md-nav__link">
+      <a href="../oauth2_explained/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/discord_messages_migration/" class="md-nav__link">
+      <a href="../discord_messages_migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/optimize_api_performance/" class="md-nav__link">
+      <a href="../optimize_api_performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_design_interview_guide/" class="md-nav__link">
+      <a href="../system_design_interview_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1211,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/consistent_hashing/" class="md-nav__link">
+      <a href="../consistent_hashing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/git_merge_vs_rebase/" class="md-nav__link">
+      <a href="../git_merge_vs_rebase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1251,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/load_balancing_algorithms/" class="md-nav__link">
+      <a href="../load_balancing_algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sql_execution_order/" class="md-nav__link">
+      <a href="../sql_execution_order/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/apple_google_pay/" class="md-nav__link">
+      <a href="../apple_google_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/container_concepts/" class="md-nav__link">
+      <a href="../container_concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
+      <a href="../../Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,6 +1754,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mo-au" class="md-nav__link">
+    Mở đầu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nhung-ieu-co-ban" class="md-nav__link">
+    Những điều cơ bản
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1678,7 +1796,131 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+  
+                  
+
+  
+  
+
+
+<h1 id="cac-ki-thuat-debug">Các kĩ thuật debug</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=J8uAiZJMfzQ">Debugging Like A Pro</a></p>
+<h2 id="mo-au">Mở đầu</h2>
+<p>Bạn có bao giờ tự hỏi vì sao ở trường người ta không dạy <strong>gỡ lỗi</strong> (debug) hay không? Phần lớn lập trình viên học debug thông qua công việc, và chỉ có một vài thanh niên may mắn có người hướng dẫn để chỉ cho họ debug như nào cho chuẩn.</p>
+<p>Hôm nay, ta sẽ nghiên cứu một cách tiếp cận có hệ thống cho việc debug, bạn có thể dùng nó như một checklist trong quá trình debug của chính bản thân bạn. Debug đòi hỏi kỉ luật, bạn có thể dễ dàng xao nhãng và phí phạm thời gian quý giá. Ta sẽ nghiên cứu làm sao để có trực giác tốt và những sự đánh đổi cần thiết trong việc debug. Hãy nhớ rằng, bạn có thể dùng những kĩ thuật này theo thứ tự nào cũng được, không có cách đúng hoặc sai gì để debug.</p>
+<p>Ta bắt đầu với tầm quan trọng của việc có một tư duy đúng đắn khi debug. Nó cũng có nghĩa là sự khác nhau giữa việc đầu hàng quá sớm hoặc giải quyết vấn đề hoàn toàn. Khi gặp những lỗi khó debug, việc giữ được những tư duy như sau rất quan trọng: </p>
+<ol>
+<li>Nhớ rằng máy tính hoạt động theo logic, và luôn có một cách giải thích logic cho vấn đề mà bạn đang gặp phải, ngay cả khi nghe nó thật vô lý trong thời điểm bạn đánh giá.</li>
+<li>Khó khăn chỉ là tạm thời, và với sự kiên nhẫn và nỗ lực, vấn đề rồi sẽ được giải quyết.</li>
+<li>Biết được giới hạn của bản thân và nhận ra khi nào cần đến sự giúp đỡ từ người chuyên nghiệp hơn là điều rất quan trọng</li>
+<li>Không phải lúc nào ta cũng cần nỗ lực lớn để giải quyết mọi loại bug. Ta cần sắp xếp chúng theo thứ tự ưu tiên dựa vào độ nghiêm trọng và sự ảnh hưởng đến hệ thống hoặc chương trình. Ta cần chấp nhận một thực tế rằng một số bug thực sự không đáng để ta bỏ nhiều công sức đến như thế.</li>
+</ol>
+<p><a class="glightbox" href="../../assets/ByteByteGo/debugging_techniques/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/debugging_techniques/figure1.png" /></a></p>
+<h2 id="nhung-ieu-co-ban">Những điều cơ bản</h2>
+<p>Khi ta nhận được báo cáo lỗi từ khách hàng, ta cần phải thu thập nhiều thông tin nhất có thể. Xin ảnh chụp màn hình hoặc video mô tả lỗi từ khách hàng nếu có thể. Thêm vào đó, thu thập các bước để tái tạo lại lỗi và các log có liên quan, kể cả các error message liên quan đến lỗi. Mục tiêu là để lấy được nhiều thông tin nhất có thể để giúp chúng ta tái tạo lại lỗi.</p>
+<p>Nếu ta có thể cô lập môi trường và hoàn cảnh nơi mà lỗi xảy ra, ta có thể thử tạo lại lỗi đó trên một server test và xem thử nó có hiện ra hay không. Có được một môi trường để tạo lại lỗi đã là đi được nửa chẳng đường.</p>
+<p>Giờ tạo được lỗi lại rồi thì làm gì nữa. Đây là một số phương pháp để bạn cân nhắc:</p>
+<p>Thứ nhất, dùng print một cách tự do. Chúng có thể giúp ta tạo ra được một timeline về những gì đã xảy ra và xem thử code có chạy theo thứ tự như ta print ra hay không. Với một số hệ sinh thái ngôn ngữ, setup một debugger có vẻ như khả thi hơn. Ví dụ, các hệ thống như Erlang/OTP có debugger rất mạnh, giúp ích nhiều cho lập trình viên khi gặp khó khăn. Nói chung, nếu có thể tái tạo lại lỗi, sẽ không quá khó để debug. Nó có thể mất chút thời gian và sự kiên nhẫn, nhưng nếu làm theo những phương pháp ở trên thì cuối cùng lỗi cũng sẽ được giải quyết.</p>
+<p>Cơ mà nếu không tái tạo lại được lỗi thì sao? Khá là khó đấy. Ta cần chút may mắn cùng với rất nhiều sự kiên nhẫn. Hãy xem thử vì sao đôi khi tái tạo lỗi lại rất khó. Một số trường hợp thường gặp là:</p>
+<p>Thứ nhất, một số lỗi chỉ phát sinh trên môi trường live.</p>
+<p>Thứ hai, một số lỗi chỉ phát sinh trên môi trường live trong một số race condition cụ thể. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/debugging_techniques/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/debugging_techniques/figure2.png" /></a></p>
+<p>Thứ ba, một số hoàn cảnh hoặc môi trường trên thiết bị của người dùng gây phát sinh lỗi, như là khi một người dùng twitter có quá nhiều followers chẳng hạn.</p>
+<p>Rồi làm gì nữa? Một số cách bạn có thể dùng là:</p>
+<p>Nếu có một lỗi cụ thể nào đó, traceback code với call stack.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/debugging_techniques/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/debugging_techniques/figure3.png" /></a></p>
+<p>Thu thập hết các log và xây dựng timeline bằng cách theo một request thất bại qua hết toàn bộ vòng đời của request. Nếu may mắn, ta có thể suy ra chuyện gì đã xảy ra.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/debugging_techniques/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/debugging_techniques/figure4.png" /></a></p>
+<p>Sau đó, ta có thể thêm log vào code để chứng minh luận điểm trên và push lên môi trường live. Lặp lại quy trình này cho đến khi ta có thêm thông tin và cuối cùng giải quyết được lỗi. Lưu ý rằng quá trình này có thể dài và mệt mỏi, nhưng sự kiên nhẫn rất quan trọng.</p>
+<p>Cuối cùng, ta hãy review một số phương pháp chung để cân nhắc khi ta thực sự bế tắc: </p>
+<ol>
+<li>Nghỉ tí đi. Đôi khi rời máy tính một lát và quay lại với tâm hồn tươi mới có thể cho bạn nhiều ý tưởng. Ngủ một giấc, tập thể dục, hay làm gì đó khác để thanh tẩy tâm trí bạn.</li>
+<li>Độc thoại. Đôi khi nói ra cái vấn đề bạn đang gặp phải có thể dẫn đến một khoảnh khắc Eureka nào đó. Với một số người khác, viết vấn đề ra giấy hoặc gửi email cho một người bạn tưởng tượng có thể giúp họ có một số ý tưởng hoặc góc nhìn mới. </li>
+<li>Nhờ giúp đỡ. Đừng ngần ngại nhờ ai đó giúp bạn. Hai cái đầu thì tốt hơn một. Một góc nhìn khác bạn thường giúp bạn rất nhiều trong việc giải quyết vấn đề.</li>
+</ol>
+<p>Debug có thể khó, nhưng với một tư duy và chiến lược đúng đắn, bạn có thể vượt qua mọi trở ngại. Chúc bạn thành công! </p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">03/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/02/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/SystemDesignResources"
+    data-repo-id="R_kgDOI0Ndtw"
+    data-category="General"
+    data-category-id="DIC_kwDOI0Ndt84CVvKb"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
 
               </article>
             </div>
@@ -1737,11 +1979,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/SystemDesignResources/", "features": ["navigation.tabs", "navigation.top"], "search": "/SystemDesignResources/assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
     
-      <script src="/SystemDesignResources/assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1762,5 +2004,5 @@
       data-y_margin="18"
     ></script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

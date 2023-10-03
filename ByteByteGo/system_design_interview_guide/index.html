@@ -8,29 +8,35 @@
       
       
       
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/system_design_interview_guide/">
       
       
+        <link rel="prev" href="../optimize_api_performance/">
       
-      <link rel="icon" href="/SystemDesignResources/assets/images/logo.jpg">
+      
+        <link rel="next" href="../consistent_hashing/">
+      
+      
+      <link rel="icon" href="../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
-        <title>farmerboy's System Design Resources</title>
+        <title>Hướng dẫn từng bước phỏng vấn System Design - farmerboy's System Design Resources</title>
       
     
     
     
-      <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
       
         
-        <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="/SystemDesignResources//assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
     
@@ -47,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("/SystemDesignResources/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -64,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,6 +102,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#huong-dan-tung-buoc-phong-van-system-design" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,9 +117,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Hướng dẫn từng bước phỏng vấn System Design
             
           </span>
         </div>
@@ -220,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -234,11 +256,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../what_happen_when_access_url/" class="md-tabs__link">
           
   
   ByteByteGo
@@ -262,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
+        <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -298,9 +322,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's System Design Resources
@@ -365,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/navigation/" class="md-nav__link">
+      <a href="../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,6 +434,8 @@
       
   
   
+    
+  
   
     
     
@@ -419,12 +445,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -438,7 +464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ByteByteGo
@@ -451,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-nav__link">
+      <a href="../what_happen_when_access_url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/latency_numbers/" class="md-nav__link">
+      <a href="../latency_numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/http_versions/" class="md-nav__link">
+      <a href="../http_versions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/rest_api/" class="md-nav__link">
+      <a href="../rest_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ssl_tls_https/" class="md-nav__link">
+      <a href="../ssl_tls_https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/scan_to_pay/" class="md-nav__link">
+      <a href="../scan_to_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/process_vs_thread/" class="md-nav__link">
+      <a href="../process_vs_thread/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/debugging_techniques/" class="md-nav__link">
+      <a href="../debugging_techniques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cdn/" class="md-nav__link">
+      <a href="../cdn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/top_redis_use_cases/" class="md-nav__link">
+      <a href="../top_redis_use_cases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_redis_fast/" class="md-nav__link">
+      <a href="../why_redis_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/storing_passwords/" class="md-nav__link">
+      <a href="../storing_passwords/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/api_gateway/" class="md-nav__link">
+      <a href="../api_gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_kafka_fast/" class="md-nav__link">
+      <a href="../why_kafka_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sso/" class="md-nav__link">
+      <a href="../sso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/osi_model/" class="md-nav__link">
+      <a href="../osi_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/dns/" class="md-nav__link">
+      <a href="../dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/computer_memory_and_storage/" class="md-nav__link">
+      <a href="../computer_memory_and_storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/chatgpt_hacks/" class="md-nav__link">
+      <a href="../chatgpt_hacks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cap_theorem/" class="md-nav__link">
+      <a href="../cap_theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/grpc/" class="md-nav__link">
+      <a href="../grpc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/graphql/" class="md-nav__link">
+      <a href="../graphql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/proxy_vs_reverse_proxy/" class="md-nav__link">
+      <a href="../proxy_vs_reverse_proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/design_location_based_service/" class="md-nav__link">
+      <a href="../design_location_based_service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_patterns/" class="md-nav__link">
+      <a href="../system_patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/lsm_tree/" class="md-nav__link">
+      <a href="../lsm_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/bloom_filter/" class="md-nav__link">
+      <a href="../bloom_filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ci_cd/" class="md-nav__link">
+      <a href="../ci_cd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/choose_database/" class="md-nav__link">
+      <a href="../choose_database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/microservices/" class="md-nav__link">
+      <a href="../microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1071,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_system_design_interview_important/" class="md-nav__link">
+      <a href="../why_system_design_interview_important/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/stackoverflow_architecture/" class="md-nav__link">
+      <a href="../stackoverflow_architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/netflix_architecture_evolution/" class="md-nav__link">
+      <a href="../netflix_architecture_evolution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/oauth2_explained/" class="md-nav__link">
+      <a href="../oauth2_explained/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/discord_messages_migration/" class="md-nav__link">
+      <a href="../discord_messages_migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/optimize_api_performance/" class="md-nav__link">
+      <a href="../optimize_api_performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1189,9 +1215,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_design_interview_guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hướng dẫn từng bước phỏng vấn System Design
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1200,6 +1246,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-buoc-phong-van" class="md-nav__link">
+    Các bước phỏng vấn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-1-hieu-van-e-va-xac-inh-pham-vi-thiet-ke-he-thong" class="md-nav__link">
+    Bước 1 - Hiểu vấn đề và xác định phạm vi thiết kế hệ thống
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-2-e-xuat-thiet-ke-tong-quan-cho-he-thong" class="md-nav__link">
+    Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống
+  </a>
+  
+    <nav class="md-nav" aria-label="Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thiet-ke-api" class="md-nav__link">
+    Thiết kế API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-bieu-o-thiet-ke-tong-quan" class="md-nav__link">
+    Vẽ biểu đồ thiết kế tổng quan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thiet-ke-data-model-va-schema" class="md-nav__link">
+    Thiết kế data model và schema
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-3-thiet-ke-chi-tiet" class="md-nav__link">
+    Bước 3 - Thiết kế chi tiết
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-4-ket-thuc" class="md-nav__link">
+    Bước 4 - Kết thúc
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1211,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/consistent_hashing/" class="md-nav__link">
+      <a href="../consistent_hashing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/git_merge_vs_rebase/" class="md-nav__link">
+      <a href="../git_merge_vs_rebase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1251,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/load_balancing_algorithms/" class="md-nav__link">
+      <a href="../load_balancing_algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sql_execution_order/" class="md-nav__link">
+      <a href="../sql_execution_order/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/apple_google_pay/" class="md-nav__link">
+      <a href="../apple_google_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/container_concepts/" class="md-nav__link">
+      <a href="../container_concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
+      <a href="../../Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,6 +1809,92 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-buoc-phong-van" class="md-nav__link">
+    Các bước phỏng vấn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-1-hieu-van-e-va-xac-inh-pham-vi-thiet-ke-he-thong" class="md-nav__link">
+    Bước 1 - Hiểu vấn đề và xác định phạm vi thiết kế hệ thống
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-2-e-xuat-thiet-ke-tong-quan-cho-he-thong" class="md-nav__link">
+    Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống
+  </a>
+  
+    <nav class="md-nav" aria-label="Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thiet-ke-api" class="md-nav__link">
+    Thiết kế API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ve-bieu-o-thiet-ke-tong-quan" class="md-nav__link">
+    Vẽ biểu đồ thiết kế tổng quan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thiet-ke-data-model-va-schema" class="md-nav__link">
+    Thiết kế data model và schema
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-3-thiet-ke-chi-tiet" class="md-nav__link">
+    Bước 3 - Thiết kế chi tiết
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-4-ket-thuc" class="md-nav__link">
+    Bước 4 - Kết thúc
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1678,7 +1906,150 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+  
+                  
+
+  
+  
+
+
+<h1 id="huong-dan-tung-buoc-phong-van-system-design">Hướng dẫn từng bước phỏng vấn System Design</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=i7twT3x5yv8">System Design Interview: A Step-By-Step Guide</a></p>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>Trong bài này, ta sẽ nói về khuôn mẫu phỏng vấn System Design (thiết kế hệ thống) mà chúng tôi đã sử dụng trong sách của mình (System Design Interview - An Insider's Guide - Alex Xu, sách này đã có Volume 2).</p>
+<p>Mà vì sao lại cần một cái khuôn mẫu như thế nhỉ? Phỏng vấn là một quá trình căng thẳng. Ta có rất ít thời gian để thể hiện những gì mình có thể làm được. Nếu không có sườn, dàn ý, khuôn mẫu hay một cấu trúc nào để theo, ta có thể sẽ lãng phí thời gian quý báu vào những vấn đề hệ thống không quan trọng. Phỏng vấn không có cấu trúc làm cho người phỏng vấn bạn gặp khó để theo dõi.</p>
+<h2 id="cac-buoc-phong-van">Các bước phỏng vấn</h2>
+<p>Khuôn mẫu của chúng tôi là một cấu trúc đã được chứng minh hiệu quả trong thời gian dài. Nó đơn giản và mạnh mẽ. Nó giúp ta hỏi đúng câu hỏi và tập trung vào đúng thứ cần thiết trong phỏng vấn. Dưới đây là 4 bước trong khuôn mẫu này.</p>
+<ol>
+<li>Hiểu vấn đề và xác định phạm vi thiết kế hệ thống.</li>
+<li>Đề xuất thiết kế tổng quan cho hệ thống.</li>
+<li>Thiết kế chi tiết.</li>
+<li>Kết thúc.</li>
+</ol>
+<p>Cấu trúc này hiệu quả trong một cuộc phỏng vấn System Design dài 45 đến 60 phút. Thông thường, <strong>5 phút đầu là cho phần giới thiệu</strong> và <strong>5 phút cuối là cho phần hỏi đáp</strong>. Phần chính của cuộc phỏng vấn chỉ khoảng 35 đến 45 phút.</p>
+<p>Chúng tôi đề xuất dành khoảng <strong>5 phút cho bước 1</strong>, <strong>20 phút cho bước 2</strong>, <strong>15 phút cho bước 3</strong> và <strong>5 phút cho bước 4</strong>. Bạn có thể điều chỉnh thời gian mỗi phần theo ý thích, không nhất thiết phải theo chính xác như vậy, miễn là bạn đủ thời gian.</p>
+<p>Cùng đi vào từng bước nhé.</p>
+<h2 id="buoc-1-hieu-van-e-va-xac-inh-pham-vi-thiet-ke-he-thong">Bước 1 - Hiểu vấn đề và xác định phạm vi thiết kế hệ thống</h2>
+<p>Câu hỏi thiết kế hệ thường là câu hỏi mở. Đôi khi câu hỏi được trình bày một cách khá mơ hồ. Điều này giúp kiểm tra khả năng tổ chức suy nghĩ và tập trung vào những gì quan trọng.</p>
+<p>Nhiệm vụ của ta là hỏi càng nhiều câu hỏi càng tốt để hiểu rõ câu hỏi. Nếu ta đi ngay vào giải pháp mà không hiểu rõ vấn đề, người phỏng vấn sẽ không đánh giá tốt bạn và sẽ loại bạn gần như ngay lập tức.</p>
+<p>Mà nên hỏi những câu nào nhỉ? Mục tiêu của ta là làm rõ đề bài. Ta muốn hiểu tại sao ta xây dựng cái hệ thống này, người dùng là ai và cần xây dựng những tính năng nào (<strong>yêu cầu chức năng - functional requirements</strong>).</p>
+<p>Ví dụ, nếu đề bài là thiết kế một ứng dụng chat, bạn cần phải thấy rằng có nhiều loại ứng dụng chat khác nhau trên thị trường. Có ứng dụng chat nhóm riêng tư và nhóm nhỏ như WhatsApp, ứng dụng chat văn phòng như Slack hoặc ứng dụng chat nhóm lớn như Discord. Mỗi loại đều có những khó khăn và ràng buộc thiết kế riêng. Đích đến là hiểu rõ các tính năng ta đang xây dựng theo thứ tự ưu tiên. Ta nên tập trung vào một số tính năng quan trọng nhất thôi. Bạn cần thảo luận và nhận sự đồng ý của người phỏng vấn về danh sách các tính năng.</p>
+<p>Ngoài các tính năng cần xây dựng (<strong>functional requirements</strong>), bạn cũng cần hỏi người phỏng vấn để làm rõ các yêu cầu phi chức năng (<strong>non-functional requirements</strong>). Với phỏng vấn System Design, ta nên tập trung vào <strong>quy mô (scale) và hiệu suất (performance)</strong>. Các yêu cầu phi chức năng này làm cho thiết kế trở nên độc đáo và thách thức hơn. Ví dụ, thiết kế một ứng dụng nhái Twitter dành cho vài trăm người dùng thì dễ hơn là thiết kế nó cho hàng triệu người dùng với một số tài khoản phổ biến có hàng triệu người theo dõi. Thế mới độc và khó. Kinh nghiệm mà công việc mới yêu cầu càng nhiều thì bạn càng cần phải chứng tỏ năng lực xử lý các yêu cầu phi chức năng này.</p>
+<p>Để có được cái nhìn tổng quan về quy mô của hệ thống cùng những khó khăn có thể xảy ra khi thiết kế, ta có thể thực hiện một số tính toán về hệ thống. Nên nhớ là đến đây ta vẫn chưa thiết kế gì cả, cho nên tính toán ở đây chỉ ước chừng thôi. Mục tiêu là có được cái nhìn tổng quan về quy mô hệ thống.</p>
+<p>Toàn bộ bước 1 này cần khoảng 5 phút. Cuối cùng, ta sẽ có một danh sách ngắn các tính năng để thiết kế, cùng với một số yêu cầu phi chức năng cần phải thoả mãn.</p>
+<h2 id="buoc-2-e-xuat-thiet-ke-tong-quan-cho-he-thong">Bước 2 - Đề xuất thiết kế tổng quan cho hệ thống</h2>
+<p>Trong bước này, mục tiêu là đề xuất một thiết kế tổng quan và nhận sự đồng thuận của người phỏng vấn.</p>
+<h3 id="thiet-ke-api">Thiết kế API</h3>
+<p>Với phần lớn các đề bài, ta sẽ theo cách tiếp cận từ trên xuống và <strong>bắt đầu với các API</strong>. Các API tạo nên một thoả thuận giữa người dùng cuối và backend. Sau khi thu thập các yêu cầu, ta sẽ biết được những API nào cần thiết. Trừ khi có chỉ định khác, ta nên tuân theo quy ước RESTful. Định nghĩa cẩn thận các tham số request và response của mỗi API. Nhớ dành thời gian để xem xét kỹ các API, xác minh rằng chúng đáp ứng các yêu cầu chức năng. Một điều quan trọng cần nhớ là không tạo ra các API không liên quan gì đến các yêu cầu chức năng.</p>
+<p>Thêm nữa, một số đề bài có thể yêu cầu giao tiếp hai chiều giữa client và server. WebSocket là một lựa chọn tốt, nhưng nhớ rằng socket service như websocket thì stateful, nó khá khó để vận hành ở quy mô lớn. Nếu phải thiết kế ở quy mô lớn, nên chuẩn bị một cách thiết kế WebSocket trong phần Thiết kế chi tiết.</p>
+<h3 id="ve-bieu-o-thiet-ke-tong-quan">Vẽ biểu đồ thiết kế tổng quan</h3>
+<p>Sau khi xong phần API giữa client và server, phần tiếp theo là <strong>vẽ biểu đồ thiết kế tổng quan</strong>. Biểu đồ là bản thiết kế tổng quan mà ta có thể tham khảo. Ta dùng nó để xác minh rằng thiết kế đáp ứng tất cả các yêu cầu chức năng. Ví dụ như hình dưới.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/system_design_interview_guide/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/system_design_interview_guide/figure1.png" /></a></p>
+<p>Với nhiều đề bài, mọi thứ thường bắt đầu với một <strong>load balancer</strong> hoặc một <strong>API gateway</strong>. Sau đó là các service đáp ứng các yêu cầu chức năng. Nhiều service cần một số hình thức lưu trữ. Đây là nơi ta sẽ hoàn thiện thiết kế bằng các giới thiệu lớp lưu trữ dữ liệu.</p>
+<p>Thường thì ta chưa cần phải nói ra ta sẽ dùng database gì ở đây, cái này sẽ nói trong phần Thiết kế chi tiết nếu cần, và chỉ sau khi ta đã ra được data schema. Ví dụ, với một service bản đồ như Google Maps, client thường cần gửi các cập nhật vị trí GPS thường xuyên đến server. Ta sẽ thêm vào thiết kế một cái data store vị trí, service cập nhật vị trí sẽ cho data vào đó.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/system_design_interview_guide/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/system_design_interview_guide/figure2.png" /></a></p>
+<p>Lặp lại các bước trên và hoàn thiện biểu đồ thiết kế tổng quan cho tất cả các tính năng chính. Một mẹo nhỏ này, trong bước thiết kế tổng quan, <strong>hãy chuẩn bị các điểm cần thảo luận cho phần sau</strong>, tránh sa vào chi tiết thiết kế quá sớm. Cuối cùng, ta sẽ có một biểu đồ thiết kế tổng quan hoàn chỉnh.</p>
+<h3 id="thiet-ke-data-model-va-schema">Thiết kế data model và schema</h3>
+<p>Phần cuối cùng trong thiết kế tổng quan là <strong>thiết kế ra data model và schema</strong>. Ở đây ta nên thảo luận về những <strong>khuôn mẫu truy cập dữ liệu</strong> và <strong>tỷ lệ đọc/ghi dữ liệu</strong>. Khi ở quy mô lớn, mô hình dữ liệu có thể ảnh hưởng đáng kể đến hiệu suất của thiết kế. Nếu nó đơn giản, ta cũng có thể thảo luận về các database và các tùy chọn indexing.</p>
+<p>Ở đây ta cần quyết định một số thứ. Nếu mô hình dữ liệu là phần quan trọng của thiết kế để đáp ứng các yêu cầu phi chức năng, ta có thể hoãn phần thảo luận này cho phần thiết kế chi tiết.</p>
+<p>Sau khi xong phần tổng quan rồi, hãy review lại thiết kế. Hãy đảm bảo rằng mỗi tính năng xong từ đầu tới cuối về cơ bản.</p>
+<h2 id="buoc-3-thiet-ke-chi-tiet">Bước 3 - Thiết kế chi tiết</h2>
+<p>Mục tiêu của bước này là để chứng minh rằng ta có thể xác định các vấn đề tiềm tàng và đưa ra các giải pháp và thảo luận về các trade-off. Ta nên làm việc cùng với người phỏng vấn để quyết định những gì nên được thảo luận sâu hơn. </p>
+<p>Bước này là nơi các yêu cầu phi chức năng lên ngôi. Level càng cao thì bước này càng quan trọng. Nên nhớ là không có một cách tiếp cận nào phù hợp với tất cả các trường hợp.</p>
+<p>Trực giác của bạn sẽ có tác dụng ở đây. Đôi khi ngôn ngữ cơ thể của người phỏng vấn sẽ là gợi ý cho bạn rằng họ không hài lòng với một số phần của thiết kế. Quan trọng là phải nhận ra những gợi ý này và đảm bảo các vấn đề được giải quyết. </p>
+<p>Một cách mà ta có thể áp dụng là hỏi. Ta có thể liệt kê các lý do để chọn một giải pháp cụ thể và hỏi xem họ có thắc mắc gì không. Khi ta đã chọn ra một hoặc hai vấn đề để thảo luận sâu hơn, ta nên đưa ra nhiều giải pháp và thảo luận về các trade-off của mỗi lựa chọn.</p>
+<p>Có một số mẹo như sau:</p>
+<ol>
+<li>Ta nên nêu rõ vấn đề. Ví dụ, đối với thiết kế Google Maps, việc ghi QPS ở mức 1 triệu / giây vào database thì quá cao so với khả năng xử lý của một database. </li>
+<li>Ta nên đưa ra ít nhất hai giải pháp. Tiếp tục với ví dụ trên, ta có thể đề xuất giảm tần suất cập nhật vị trí cho mỗi người dùng, hoặc chọn một database NoSQL có thể xử lý được tốc độ ghi. </li>
+<li>Ta nên thảo luận về các trade-off của các giải pháp. Nhớ sử dụng các con số để chứng minh lựa chọn của mình.</li>
+<li>Cuối cùng, ta chọn một giải pháp và thảo luận với người phỏng vấn. Lặp lại các bước này cho các vấn đề khác.</li>
+</ol>
+<p>Trung bình trong một cuộc phỏng vấn, ta chỉ có thời gian để thảo luận sâu hơn vào 2 hoặc 3 vấn đề. </p>
+<h2 id="buoc-4-ket-thuc">Bước 4 - Kết thúc</h2>
+<p>Ta nên dành vài phút để tóm tắt thiết kế. Ở đây ta nên tập trung vào những phần độc đáo thôi, và làm nhanh thôi nhé. Nên để lại đủ thời gian ở cuối cuộc phỏng vấn để hỏi người phỏng vấn các câu hỏi về công ty.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">03/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">12/08/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/SystemDesignResources"
+    data-repo-id="R_kgDOI0Ndtw"
+    data-category="General"
+    data-category-id="DIC_kwDOI0Ndt84CVvKb"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
 
               </article>
             </div>
@@ -1737,11 +2108,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/SystemDesignResources/", "features": ["navigation.tabs", "navigation.top"], "search": "/SystemDesignResources/assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
     
-      <script src="/SystemDesignResources/assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1762,5 +2133,5 @@
       data-y_margin="18"
     ></script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -8,29 +8,35 @@
       
       
       
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/apple_google_pay/">
       
       
+        <link rel="prev" href="../sql_execution_order/">
       
-      <link rel="icon" href="/SystemDesignResources/assets/images/logo.jpg">
+      
+        <link rel="next" href="../container_concepts/">
+      
+      
+      <link rel="icon" href="../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
-        <title>farmerboy's System Design Resources</title>
+        <title>Apple Pay và Google Pay hoạt động như thế nào? - farmerboy's System Design Resources</title>
       
     
     
     
-      <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
       
         
-        <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="/SystemDesignResources//assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
     
@@ -47,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("/SystemDesignResources/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -64,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,6 +102,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#apple-pay-va-google-pay-hoat-ong-nhu-the-nao" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,9 +117,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Apple Pay và Google Pay hoạt động như thế nào?
             
           </span>
         </div>
@@ -220,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -234,11 +256,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../what_happen_when_access_url/" class="md-tabs__link">
           
   
   ByteByteGo
@@ -262,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
+        <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -298,9 +322,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's System Design Resources
@@ -365,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/navigation/" class="md-nav__link">
+      <a href="../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,6 +434,8 @@
       
   
   
+    
+  
   
     
     
@@ -419,12 +445,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -438,7 +464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ByteByteGo
@@ -451,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-nav__link">
+      <a href="../what_happen_when_access_url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/latency_numbers/" class="md-nav__link">
+      <a href="../latency_numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/http_versions/" class="md-nav__link">
+      <a href="../http_versions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/rest_api/" class="md-nav__link">
+      <a href="../rest_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ssl_tls_https/" class="md-nav__link">
+      <a href="../ssl_tls_https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/scan_to_pay/" class="md-nav__link">
+      <a href="../scan_to_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/process_vs_thread/" class="md-nav__link">
+      <a href="../process_vs_thread/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/debugging_techniques/" class="md-nav__link">
+      <a href="../debugging_techniques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cdn/" class="md-nav__link">
+      <a href="../cdn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/top_redis_use_cases/" class="md-nav__link">
+      <a href="../top_redis_use_cases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_redis_fast/" class="md-nav__link">
+      <a href="../why_redis_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/storing_passwords/" class="md-nav__link">
+      <a href="../storing_passwords/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/api_gateway/" class="md-nav__link">
+      <a href="../api_gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_kafka_fast/" class="md-nav__link">
+      <a href="../why_kafka_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sso/" class="md-nav__link">
+      <a href="../sso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/osi_model/" class="md-nav__link">
+      <a href="../osi_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/dns/" class="md-nav__link">
+      <a href="../dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/computer_memory_and_storage/" class="md-nav__link">
+      <a href="../computer_memory_and_storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/chatgpt_hacks/" class="md-nav__link">
+      <a href="../chatgpt_hacks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cap_theorem/" class="md-nav__link">
+      <a href="../cap_theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/grpc/" class="md-nav__link">
+      <a href="../grpc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/graphql/" class="md-nav__link">
+      <a href="../graphql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/proxy_vs_reverse_proxy/" class="md-nav__link">
+      <a href="../proxy_vs_reverse_proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/design_location_based_service/" class="md-nav__link">
+      <a href="../design_location_based_service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_patterns/" class="md-nav__link">
+      <a href="../system_patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/lsm_tree/" class="md-nav__link">
+      <a href="../lsm_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/bloom_filter/" class="md-nav__link">
+      <a href="../bloom_filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ci_cd/" class="md-nav__link">
+      <a href="../ci_cd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/choose_database/" class="md-nav__link">
+      <a href="../choose_database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/microservices/" class="md-nav__link">
+      <a href="../microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1071,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_system_design_interview_important/" class="md-nav__link">
+      <a href="../why_system_design_interview_important/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/stackoverflow_architecture/" class="md-nav__link">
+      <a href="../stackoverflow_architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/netflix_architecture_evolution/" class="md-nav__link">
+      <a href="../netflix_architecture_evolution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/oauth2_explained/" class="md-nav__link">
+      <a href="../oauth2_explained/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/discord_messages_migration/" class="md-nav__link">
+      <a href="../discord_messages_migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/optimize_api_performance/" class="md-nav__link">
+      <a href="../optimize_api_performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_design_interview_guide/" class="md-nav__link">
+      <a href="../system_design_interview_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1211,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/consistent_hashing/" class="md-nav__link">
+      <a href="../consistent_hashing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/git_merge_vs_rebase/" class="md-nav__link">
+      <a href="../git_merge_vs_rebase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1251,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/load_balancing_algorithms/" class="md-nav__link">
+      <a href="../load_balancing_algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sql_execution_order/" class="md-nav__link">
+      <a href="../sql_execution_order/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1289,9 +1315,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/apple_google_pay/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Apple Pay và Google Pay hoạt động như thế nào?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1300,6 +1346,134 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
+  </a>
+  
+    <nav class="md-nav" aria-label="Giới thiệu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-thuc-hoat-ong" class="md-nav__link">
+    Cách thức hoạt động
+  </a>
+  
+    <nav class="md-nav" aria-label="Cách thức hoạt động">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenization" class="md-nav__link">
+    Tokenization
+  </a>
+  
+    <nav class="md-nav" aria-label="Tokenization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay_1" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay_1" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thanh-toan" class="md-nav__link">
+    Thanh toán
+  </a>
+  
+    <nav class="md-nav" aria-label="Thanh toán">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay_2" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay_2" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    Kết luận
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1311,7 +1485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/container_concepts/" class="md-nav__link">
+      <a href="../container_concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
+      <a href="../../Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,6 +1841,124 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
+  </a>
+  
+    <nav class="md-nav" aria-label="Giới thiệu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-thuc-hoat-ong" class="md-nav__link">
+    Cách thức hoạt động
+  </a>
+  
+    <nav class="md-nav" aria-label="Cách thức hoạt động">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenization" class="md-nav__link">
+    Tokenization
+  </a>
+  
+    <nav class="md-nav" aria-label="Tokenization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay_1" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay_1" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thanh-toan" class="md-nav__link">
+    Thanh toán
+  </a>
+  
+    <nav class="md-nav" aria-label="Thanh toán">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay_2" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-pay_2" class="md-nav__link">
+    Google Pay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    Kết luận
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1678,7 +1970,134 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+  
+                  
+
+  
+  
+
+
+<h1 id="apple-pay-va-google-pay-hoat-ong-nhu-the-nao">Apple Pay và Google Pay hoạt động như thế nào?</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=cHv8LqkbPHk">How Does Apple/Google Pay Work?</a></p>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>Apple Pay và Google Pay xử lý thông tin thẻ tín dụng nhạy cảm của khách như thế nào? Cái nào ngon hơn? Cùng tìm hiểu nhé.</p>
+<h3 id="apple-pay">Apple Pay</h3>
+<p><strong>Apple Pay</strong> ra mắt vào năm 2013. Đó là một ý tưởng mới lạ vào thời điểm đó. Nó hoàn thiện khái niệm gọi là <strong>tokenization</strong>, trong đó chỉ cần một token thanh toán đại diện cho thông tin thẻ tín dụng nhạy cảm là đủ để hoàn tất một giao dịch. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apple_google_pay/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apple_google_pay/figure1.png" /></a></p>
+<p>Apple Pay yêu cầu sự hợp tác chặt chẽ từ các mạng thanh toán như Visa và các ngân hàng phát hành lớn, như JPMC, để xây dựng một hệ thống mới để hỗ trợ việc chấp nhận thanh toán dựa trên token.</p>
+<h3 id="google-pay">Google Pay</h3>
+<p><strong>Google Pay</strong> ra mắt vào năm 2018. Trước đó nó có tên là <strong>Android Pay</strong> (2015), và trước đó nữa lại được gọi là <strong>Google Wallet</strong> (2014). Tên thương hiệu kiểu này nghe khá khó hiểu và có vẻ như bây giờ Google Pay lại là Google Wallet ở một số quốc gia. Ta sẽ gọi phiên bản hiện tại sử dụng token thanh toán là Google Pay.</p>
+<h2 id="cach-thuc-hoat-ong">Cách thức hoạt động</h2>
+<p>Thực tế cả hai đều an toàn, nhưng chi tiết kỹ thuật có chút khác biệt.</p>
+<h3 id="tokenization">Tokenization</h3>
+<p>Cả hai nền tảng đều sử dụng tokenization để bảo vệ thông tin thẻ tín dụng nhạy cảm của khách hàng. Chú ý rằng cả hai nền tảng đều tuyên bố rằng họ không lưu <strong>PAN</strong> (Primary Account Number - số tài khoản chính) trên thiết bị. PAN sau đó được gửi đến những server tương ứng thông qua HTTPS.</p>
+<h4 id="apple-pay_1">Apple Pay</h4>
+<p>Tại Apple server, thông tin thẻ tín dụng không được lưu ở đâu cả. Nó được dùng để định danh mạng thanh toán và ngân hàng phát hành thẻ tín dụng. Để dễ hình dung, ta sẽ gọi mạng thanh toán, như Visa và ngân hàng phát hành thẻ tín dụng, từ bây giờ là ngân hàng nói chung.</p>
+<p>Thông tin thẻ tín dụng sau đó được gửi từ Apple server đến ngân hàng một cách an toàn qua mạng. Ngân hàng xác thực số tài khoản và trả về một token gọi là <strong>DAN</strong> (Device Account Number - số tài khoản thiết bị). Số này được tạo ra chỉ cho thiết bị tương ứng sử dụng. Việc tạo ra token và ánh xạ token với PAN thường được giao cho một <strong>TSP</strong> (Token Service Provider - nhà cung cấp dịch vụ token). TSP là nơi chứa thông tin nhạy cảm nhất. Token sau đó được trả về Apple server. Apple server chuyển tiếp token đến iPhone, nơi nó được lưu trữ an toàn trong một chip đặc biệt gọi là <strong>Secure Element</strong>. Về logic thì Apple server chỉ là một bộ lọc. Nó kiểu như là iPhone gửi thông tin thẻ tín dụng trực tiếp đến ngân hàng để đổi lấy token.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apple_google_pay/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apple_google_pay/figure2.png" /></a></p>
+<h4 id="google-pay_1">Google Pay</h4>
+<p>Với Google Pay, quá trình này hơi khác một chút. Giống như Apple, PAN cũng được gửi một cách an toàn từ thiết bị đến server của Google. Server của Google sử dụng PAN để xác định ngân hàng. PAN sau đó được gửi một cách an toàn đến ngân hàng qua mạng. Ngân hàng xác thực PAN và chuyển nó đến TSP để đổi lấy token thanh toán. Token được gọi là <strong>D-PAN</strong> (Device PAN - số tài khoản thiết bị). Token sau đó được gửi trở lại server của Google, nơi nó được chuyển đến thiết bị để lưu trữ an toàn.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apple_google_pay/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apple_google_pay/figure3.png" /></a></p>
+<p>Bây giờ, có hai điểm cần đề cập ở đây khác với Apple. </p>
+<ol>
+<li>Token của Google Pay không được lưu trữ trong một secure element như các thiết bị Apple. Nó được lưu trữ trong ứng dụng ví. </li>
+<li>Apple khẳng định họ không bao giờ lưu trữ token thanh toán trên server của họ. Google không có tuyên bố như vậy, và thực tế, trong điều khoản dịch vụ của họ, họ khẳng định thông tin thanh toán được lưu trữ trên server của họ.</li>
+</ol>
+<h3 id="thanh-toan">Thanh toán</h3>
+<p>Rồi mấy cái token này được dùng để thanh toán kiểu gì?</p>
+<h4 id="apple-pay_2">Apple Pay</h4>
+<p>Với iPhone, khi ta bấm Thanh toán, token được lấy từ secure element và gửi đến <strong>terminal Point-of-Sale</strong> (là cái máy mà chủ quán đưa ra để cho bạn quẹt điện thoại hay thẻ vào ấy) của merchant qua <strong>NFC</strong> (near-field communication, hay còn gọi là giao tiếp không chạm). Nó thực sự an toàn vì token được gửi trực tiếp từ secure element đến bộ điều khiển NFC trên thiết bị, nơi nó được truyền đến terminal Point-of-Sale.</p>
+<p>Bây giờ từ terminal Point-of-Sale, token được gửi đến ngân hàng của merchant. Ngân hàng của merchant xác định mạng thanh toán từ token, và định tuyến an toàn nó đến mạng thanh toán. Mạng thanh toán xác thực token sau đó yêu cầu TSP đổi nó trở lại thành PAN gốc. Số gốc được gửi an toàn từ TSP đến ngân hàng, ở đây thanh toán được xác nhận.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apple_google_pay/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apple_google_pay/figure4.png" /></a></p>
+<h4 id="google-pay_2">Google Pay</h4>
+<p>Với Google Pay, quá trình cũng tương tự sau khi token thanh toán đến terminal Point-of-Sale. Bây giờ cách nó được gửi từ thiết bị đến terminal Point-of-Sale khác một chút. Thiết bị Android không lưu trữ token thanh toán trong secure element. Thay vào đó, nó sử dụng cái gọi là <strong>HCE</strong> (host card emulation). Với HCE, token thanh toán được lưu trữ trong ứng dụng ví, và được lấy ra khi cần thiết bởi ứng dụng ví an toàn từ đám mây. Bộ điều khiển NFC và ứng dụng ví làm việc cùng nhau để truyền token thanh toán qua NFC đến terminal Point-of-Sale. Đến đây, phần còn lại của giao dịch giống như Apple.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apple_google_pay/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apple_google_pay/figure5.png" /></a></p>
+<h2 id="ket-luan">Kết luận</h2>
+<p>Tóm lại, cả Apple Pay và Google Pay đều sử dụng tokenization. </p>
+<p>Apple Pay hoàn thiện công nghệ và làm cho nó dễ sử dụng và an toàn. </p>
+<p>Cách triển khai của Google cũng tương tự. Sự khác biệt chính là cách token thanh toán được lưu trữ, xử lý và truyền trên thiết bị, và cách token thanh toán có thể được lưu trữ trên server của Google.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">03/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">23/08/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/SystemDesignResources"
+    data-repo-id="R_kgDOI0Ndtw"
+    data-category="General"
+    data-category-id="DIC_kwDOI0Ndt84CVvKb"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
 
               </article>
             </div>
@@ -1737,11 +2156,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/SystemDesignResources/", "features": ["navigation.tabs", "navigation.top"], "search": "/SystemDesignResources/assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
     
-      <script src="/SystemDesignResources/assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1762,5 +2181,5 @@
       data-y_margin="18"
     ></script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

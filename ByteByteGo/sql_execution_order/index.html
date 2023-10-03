@@ -8,29 +8,35 @@
       
       
       
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/sql_execution_order/">
       
       
+        <link rel="prev" href="../load_balancing_algorithms/">
       
-      <link rel="icon" href="/SystemDesignResources/assets/images/logo.jpg">
+      
+        <link rel="next" href="../apple_google_pay/">
+      
+      
+      <link rel="icon" href="../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
-        <title>farmerboy's System Design Resources</title>
+        <title>Thứ tự thực thi câu lệnh SQL - farmerboy's System Design Resources</title>
       
     
     
     
-      <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
       
         
-        <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="/SystemDesignResources//assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
     
@@ -47,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("/SystemDesignResources/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -64,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,6 +102,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#thu-tu-thuc-thi-truy-van-sql" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,9 +117,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Thứ tự thực thi câu lệnh SQL
             
           </span>
         </div>
@@ -220,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -234,11 +256,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../what_happen_when_access_url/" class="md-tabs__link">
           
   
   ByteByteGo
@@ -262,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
+        <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -298,9 +322,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's System Design Resources
@@ -365,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/navigation/" class="md-nav__link">
+      <a href="../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,6 +434,8 @@
       
   
   
+    
+  
   
     
     
@@ -419,12 +445,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -438,7 +464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ByteByteGo
@@ -451,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-nav__link">
+      <a href="../what_happen_when_access_url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/latency_numbers/" class="md-nav__link">
+      <a href="../latency_numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/http_versions/" class="md-nav__link">
+      <a href="../http_versions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/rest_api/" class="md-nav__link">
+      <a href="../rest_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ssl_tls_https/" class="md-nav__link">
+      <a href="../ssl_tls_https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/scan_to_pay/" class="md-nav__link">
+      <a href="../scan_to_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/process_vs_thread/" class="md-nav__link">
+      <a href="../process_vs_thread/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/debugging_techniques/" class="md-nav__link">
+      <a href="../debugging_techniques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cdn/" class="md-nav__link">
+      <a href="../cdn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/top_redis_use_cases/" class="md-nav__link">
+      <a href="../top_redis_use_cases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_redis_fast/" class="md-nav__link">
+      <a href="../why_redis_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/storing_passwords/" class="md-nav__link">
+      <a href="../storing_passwords/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/api_gateway/" class="md-nav__link">
+      <a href="../api_gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_kafka_fast/" class="md-nav__link">
+      <a href="../why_kafka_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sso/" class="md-nav__link">
+      <a href="../sso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/osi_model/" class="md-nav__link">
+      <a href="../osi_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/dns/" class="md-nav__link">
+      <a href="../dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/computer_memory_and_storage/" class="md-nav__link">
+      <a href="../computer_memory_and_storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/chatgpt_hacks/" class="md-nav__link">
+      <a href="../chatgpt_hacks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cap_theorem/" class="md-nav__link">
+      <a href="../cap_theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/grpc/" class="md-nav__link">
+      <a href="../grpc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/graphql/" class="md-nav__link">
+      <a href="../graphql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/proxy_vs_reverse_proxy/" class="md-nav__link">
+      <a href="../proxy_vs_reverse_proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/design_location_based_service/" class="md-nav__link">
+      <a href="../design_location_based_service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_patterns/" class="md-nav__link">
+      <a href="../system_patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/lsm_tree/" class="md-nav__link">
+      <a href="../lsm_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/bloom_filter/" class="md-nav__link">
+      <a href="../bloom_filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ci_cd/" class="md-nav__link">
+      <a href="../ci_cd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/choose_database/" class="md-nav__link">
+      <a href="../choose_database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/microservices/" class="md-nav__link">
+      <a href="../microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1071,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_system_design_interview_important/" class="md-nav__link">
+      <a href="../why_system_design_interview_important/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/stackoverflow_architecture/" class="md-nav__link">
+      <a href="../stackoverflow_architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/netflix_architecture_evolution/" class="md-nav__link">
+      <a href="../netflix_architecture_evolution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/oauth2_explained/" class="md-nav__link">
+      <a href="../oauth2_explained/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/discord_messages_migration/" class="md-nav__link">
+      <a href="../discord_messages_migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/optimize_api_performance/" class="md-nav__link">
+      <a href="../optimize_api_performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_design_interview_guide/" class="md-nav__link">
+      <a href="../system_design_interview_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1211,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/consistent_hashing/" class="md-nav__link">
+      <a href="../consistent_hashing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/git_merge_vs_rebase/" class="md-nav__link">
+      <a href="../git_merge_vs_rebase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1251,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/load_balancing_algorithms/" class="md-nav__link">
+      <a href="../load_balancing_algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1269,9 +1295,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sql_execution_order/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Thứ tự thực thi câu lệnh SQL
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1280,6 +1326,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cau-lenh-sql-mau" class="md-nav__link">
+    Câu lệnh SQL mẫu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ke-hoach-thuc-thi-truy-van" class="md-nav__link">
+    Kế hoạch thực thi truy vấn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-from-va-join" class="md-nav__link">
+    Mệnh đề FROM và JOIN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-where" class="md-nav__link">
+    Mệnh đề WHERE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-group-by-va-having" class="md-nav__link">
+    Mệnh đề GROUP BY và HAVING
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-select" class="md-nav__link">
+    Mệnh đề SELECT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-order-by-va-limit" class="md-nav__link">
+    Mệnh đề ORDER BY và LIMIT
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1291,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/apple_google_pay/" class="md-nav__link">
+      <a href="../apple_google_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/container_concepts/" class="md-nav__link">
+      <a href="../container_concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
+      <a href="../../Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,6 +1796,79 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    Giới thiệu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cau-lenh-sql-mau" class="md-nav__link">
+    Câu lệnh SQL mẫu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ke-hoach-thuc-thi-truy-van" class="md-nav__link">
+    Kế hoạch thực thi truy vấn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-from-va-join" class="md-nav__link">
+    Mệnh đề FROM và JOIN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-where" class="md-nav__link">
+    Mệnh đề WHERE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-group-by-va-having" class="md-nav__link">
+    Mệnh đề GROUP BY và HAVING
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-select" class="md-nav__link">
+    Mệnh đề SELECT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menh-e-order-by-va-limit" class="md-nav__link">
+    Mệnh đề ORDER BY và LIMIT
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1678,7 +1880,139 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+  
+                  
+
+  
+  
+
+
+<h1 id="thu-tu-thuc-thi-truy-van-sql">Thứ tự thực thi truy vấn SQL</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=BHwzDmr6d7s">Secret To Optimizing SQL Queries - Understand The SQL Execution Order</a></p>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>Trong bài này, ta sẽ nói về việc thực thi truy vấn SQL. Ta sẽ đi qua quá trình thực thi của một truy vấn SQL, các kỹ thuật tối ưu và những cách sử dụng tốt nhất.</p>
+<h2 id="cau-lenh-sql-mau">Câu lệnh SQL mẫu</h2>
+<p>Dưới đây sẽ là truy vấn mà ta sẽ dùng:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sql_execution_order/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sql_execution_order/figure1.png" /></a></p>
+<p>Trong truy vấn này, ta tìm top 10 khách hàng (<code>customers</code>) chi tiêu ít nhất 1000 đô (<code>total_spent</code>) cho các đơn hàng kể từ ngày 01/01/2023 bằng cách join 2 bảng <code>customers</code> và <code>orders</code>, nhóm theo <code>customer_id</code>. Ta hiển thị tổng số đơn hàng (<code>total_orders</code>) và tổng số tiền đã chi (<code>total_spent</code>) của mỗi khách hàng, sắp xếp theo tổng số tiền đã chi giảm dần.</p>
+<h2 id="ke-hoach-thuc-thi-truy-van">Kế hoạch thực thi truy vấn</h2>
+<p>Trước khi phân tích truy vấn ở trên, ta sẽ cùng thảo luận về kế hoạch thực thi (execution plan) truy vấn SQL.</p>
+<p>Các hệ thống database tạo ra các plan này để tối ưu hoá truy vấn, cũng như khiến nó dùng ít tài nguyên nhất có thể. Hiểu được plan sẽ giúp bạn tối ưu được truy vấn của mình, làm tăng hiệu suất truy vấn.</p>
+<p>Các execution plan cung cấp các thông tin như chi phí ước tính của truy vấn, các thuật toán join được chọn và danh sách các thao tác thực thi.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sql_execution_order/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sql_execution_order/figure2.png" /></a></p>
+<h2 id="menh-e-from-va-join">Mệnh đề FROM và JOIN</h2>
+<p>Đây là nơi ta sẽ chọn các bảng để sử dụng và chỉ định cách để join chúng.</p>
+<p>Trong truy vấn ở trên, ta dùng bảng <code>customers</code> và join nó với bảng <code>orders</code> với một cái ID chung và tuỳ chỉnh các cột để hiển thị. Dùng index cho các cột dùng để join sẽ tăng hiệu suất join lên đáng kể. Nhớ đặt index thích hợp cho các bảng trước khi join nhé.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sql_execution_order/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sql_execution_order/figure3.png" /></a></p>
+<p>Các kiểu index như B-Tree hay Bitmap Index có thể ảnh hưởng đến hiệu suất truy vấn dựa trên việc phân phối dữ liệu (data distribution) và loại truy vấn (query type).</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sql_execution_order/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sql_execution_order/figure4.png" /></a></p>
+<h2 id="menh-e-where">Mệnh đề WHERE</h2>
+<p>Mệnh đề WHERE lọc dữ liệu bằng cách cho nó qua một điều kiện nào đó. Trong trường hợp này, nó sẽ lọc các đơn hàng từ ngày 01/01/2023. Điều quan trọng cần nhớ là phải viết được một truy vấn <strong>sargable</strong> để tận dụng được index một cách hiệu quả.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sql_execution_order/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sql_execution_order/figure5.png" /></a></p>
+<p><strong>Sargable</strong> ở đây là <strong>Search ARGument ABLE</strong>. Ở đây nó nói đến các truy vấn có thể tận dụng được index để thực thi nhanh hơn. Ta cùng đi sâu vào xem nó như thế nào nhé.</p>
+<p>Khi bạn nói một truy vấn là sargable, nó có nghĩa là truy vấn có thể sử dụng index một cách hiệu quả để tăng tốc thực thi. Nói cách khác, nó có thể sử dụng index để lọc dữ liệu nhanh hơn. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sql_execution_order/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sql_execution_order/figure6.png" /></a></p>
+<p>Viết ra được truy vấn sargable rất là quan trọng trong việc tối ưu hiệu suất database. Trong một truy vấn sargable (như trong ví dụ của chúng ta), ta trực tiếp so sánh cột <code>order_date</code> với một ngày tháng cụ thể, điều này giúp database engine có thể sử dụng index trên cột đó, nhằm nhanh chóng lọc dữ liệu theo điều kiện ta đặt ra.</p>
+<p>Trái lại, nếu ta viết mệnh đề <code>WHERE</code> là <code>WHERE YEAR(order_date) &gt;= 2023</code> thì database engine không thể tận dụng được index trên cột <code>order_date</code>, bởi vì hàm <code>YEAR()</code> sẽ phải được gọi trên mỗi dòng dữ liệu, điều này sẽ làm chậm truy vấn đi rất nhiều, ngay cả khi có index trên cột. Nó chậm do phải quét qua nhiều dòng hơn. Những mệnh đề như vậy sẽ làm truy vấn của chúng ta trở thành truy vấn <strong>non-sargable</strong>.</p>
+<p>Để viết được truy vấn sargable, ta cần:</p>
+<ol>
+<li>Tránh dùng các hàm hoặc tính toán trên các cột đã index trong mệnh đề <code>WHERE</code>.</li>
+<li>So sánh trực tiếp nếu có thể, thay vì dùng hàm trên cột.</li>
+<li>Nếu thực sự phải dùng một hàm trên cột, bạn có thể tạo một cột mới đã tính toán sẵn, hoặc dùng index dựa trên hàm, nếu database hỗ trợ.</li>
+</ol>
+<h2 id="menh-e-group-by-va-having">Mệnh đề GROUP BY và HAVING</h2>
+<p>Ta nhóm các bản ghi theo <code>customer_id</code> và lọc các nhóm theo điều kiện <code>total_spent &gt;= 1000</code>. Truy vấn này tìm các khách hàng chi tiêu ít nhất 1000 đô.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sql_execution_order/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sql_execution_order/figure7.png" /></a></p>
+<h2 id="menh-e-select">Mệnh đề SELECT</h2>
+<p>Giờ ta mới <code>SELECT</code> nó ra đây. Nó chỉ định các cột ta muốn trong kết quả. Trong trường hợp này, ta chọn <code>customer_id</code>, <code>total_orders</code> và <code>total_spent</code>. Mặc dù <code>SELECT</code> thường được ghi ra đầu tiên trong truy vấn, nó được thực thi rất xa trong thứ tự thực thi truy vấn.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sql_execution_order/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sql_execution_order/figure8.png" /></a></p>
+<p>Để tối ưu mệnh đề <code>SELECT</code>, bạn nên index một số cột trước đó, đặc biệt là các cột được sử dụng trong mệnh đề <code>SELECT</code>, <code>WHERE</code> và <code>JOIN</code>. Điều này giúp database engine lấy được dữ liệu trực tiếp từ index, giúp giảm chi phí truy vấn, thay vì phải quét qua nhiều dòng dữ liệu.</p>
+<h2 id="menh-e-order-by-va-limit">Mệnh đề ORDER BY và LIMIT</h2>
+<p>Để tối ưu 2 mệnh đề <code>ORDER BY</code> và <code>LIMIT</code>, bạn nên sử dụng một tập kết quả nhỏ hơn để sắp xếp và giới hạn số lượng kết quả trả về. Điều này giúp giảm chi phí sắp xếp và giới hạn số lượng kết quả trả về.</p>
+<p>Với tập lớn, tránh sắp xếp cả tập, gây tăng bộ nhớ cần sử dụng và tăng thời gian thực thi. Dùng các index thích hợp để tăng tốc sắp xếp và giảm số lượng dữ liệu cần sắp xếp trong bộ nhớ.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/sql_execution_order/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/sql_execution_order/figure1.png" /></a></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">03/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">22/08/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/SystemDesignResources"
+    data-repo-id="R_kgDOI0Ndtw"
+    data-category="General"
+    data-category-id="DIC_kwDOI0Ndt84CVvKb"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
 
               </article>
             </div>
@@ -1737,11 +2071,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/SystemDesignResources/", "features": ["navigation.tabs", "navigation.top"], "search": "/SystemDesignResources/assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
     
-      <script src="/SystemDesignResources/assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1762,5 +2096,5 @@
       data-y_margin="18"
     ></script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

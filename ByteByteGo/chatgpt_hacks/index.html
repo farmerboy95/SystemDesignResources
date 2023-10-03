@@ -8,29 +8,35 @@
       
       
       
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/chatgpt_hacks/">
       
       
+        <link rel="prev" href="../computer_memory_and_storage/">
       
-      <link rel="icon" href="/SystemDesignResources/assets/images/logo.jpg">
+      
+        <link rel="next" href="../cap_theorem/">
+      
+      
+      <link rel="icon" href="../../assets/images/logo.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
-        <title>farmerboy's System Design Resources</title>
+        <title>7 cách mà lập trình viên tận dụng ChatGPT - farmerboy's System Design Resources</title>
       
     
     
     
-      <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/main.79e020e9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
       
         
-        <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="/SystemDesignResources//assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
     
@@ -47,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("/SystemDesignResources/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -64,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,6 +102,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#7-cach-ma-lap-trinh-vien-tan-dung-chatgpt" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,9 +117,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              7 cách mà lập trình viên tận dụng ChatGPT
             
           </span>
         </div>
@@ -220,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -234,11 +256,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../what_happen_when_access_url/" class="md-tabs__link">
           
   
   ByteByteGo
@@ -262,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
+        <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -298,9 +322,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/logo.jpg" alt="logo">
+  <img src="../../assets/images/logo.jpg" alt="logo">
 
     </a>
     farmerboy's System Design Resources
@@ -365,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/navigation/" class="md-nav__link">
+      <a href="../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,6 +434,8 @@
       
   
   
+    
+  
   
     
     
@@ -419,12 +445,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -438,7 +464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ByteByteGo
@@ -451,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/what_happen_when_access_url/" class="md-nav__link">
+      <a href="../what_happen_when_access_url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/latency_numbers/" class="md-nav__link">
+      <a href="../latency_numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/http_versions/" class="md-nav__link">
+      <a href="../http_versions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/rest_api/" class="md-nav__link">
+      <a href="../rest_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ssl_tls_https/" class="md-nav__link">
+      <a href="../ssl_tls_https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/scan_to_pay/" class="md-nav__link">
+      <a href="../scan_to_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/process_vs_thread/" class="md-nav__link">
+      <a href="../process_vs_thread/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/debugging_techniques/" class="md-nav__link">
+      <a href="../debugging_techniques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cdn/" class="md-nav__link">
+      <a href="../cdn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/top_redis_use_cases/" class="md-nav__link">
+      <a href="../top_redis_use_cases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_redis_fast/" class="md-nav__link">
+      <a href="../why_redis_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/storing_passwords/" class="md-nav__link">
+      <a href="../storing_passwords/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/api_gateway/" class="md-nav__link">
+      <a href="../api_gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_kafka_fast/" class="md-nav__link">
+      <a href="../why_kafka_fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sso/" class="md-nav__link">
+      <a href="../sso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/osi_model/" class="md-nav__link">
+      <a href="../osi_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/dns/" class="md-nav__link">
+      <a href="../dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/computer_memory_and_storage/" class="md-nav__link">
+      <a href="../computer_memory_and_storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,9 +835,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/chatgpt_hacks/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    7 cách mà lập trình viên tận dụng ChatGPT
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -820,6 +866,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mo-au" class="md-nav__link">
+    Mở đầu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#giai-thich-code" class="md-nav__link">
+    Giải thích code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tim-loi-va-review-code" class="md-nav__link">
+    Tìm lỗi và review code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chuyen-code-tu-ngon-ngu-nay-sang-ngon-ngu-khac" class="md-nav__link">
+    Chuyển code từ ngôn ngữ này sang ngôn ngữ khác
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoc-ngon-ngu-moi" class="md-nav__link">
+    Học ngôn ngữ mới
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viet-unit-test" class="md-nav__link">
+    Viết unit test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#them-tinh-nang-cho-code" class="md-nav__link">
+    Thêm tính năng cho code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viet-docs-va-comment-cho-code" class="md-nav__link">
+    Viết docs và comment cho code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luu-y" class="md-nav__link">
+    Lưu ý
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tong-ket" class="md-nav__link">
+    Tổng kết
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -831,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cap_theorem/" class="md-nav__link">
+      <a href="../cap_theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/grpc/" class="md-nav__link">
+      <a href="../grpc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/graphql/" class="md-nav__link">
+      <a href="../graphql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/proxy_vs_reverse_proxy/" class="md-nav__link">
+      <a href="../proxy_vs_reverse_proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/design_location_based_service/" class="md-nav__link">
+      <a href="../design_location_based_service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_patterns/" class="md-nav__link">
+      <a href="../system_patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/lsm_tree/" class="md-nav__link">
+      <a href="../lsm_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/bloom_filter/" class="md-nav__link">
+      <a href="../bloom_filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ci_cd/" class="md-nav__link">
+      <a href="../ci_cd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +1154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/choose_database/" class="md-nav__link">
+      <a href="../choose_database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/microservices/" class="md-nav__link">
+      <a href="../microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1071,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why_system_design_interview_important/" class="md-nav__link">
+      <a href="../why_system_design_interview_important/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/stackoverflow_architecture/" class="md-nav__link">
+      <a href="../stackoverflow_architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/netflix_architecture_evolution/" class="md-nav__link">
+      <a href="../netflix_architecture_evolution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/oauth2_explained/" class="md-nav__link">
+      <a href="../oauth2_explained/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/discord_messages_migration/" class="md-nav__link">
+      <a href="../discord_messages_migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/optimize_api_performance/" class="md-nav__link">
+      <a href="../optimize_api_performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system_design_interview_guide/" class="md-nav__link">
+      <a href="../system_design_interview_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1211,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/consistent_hashing/" class="md-nav__link">
+      <a href="../consistent_hashing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/git_merge_vs_rebase/" class="md-nav__link">
+      <a href="../git_merge_vs_rebase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1251,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/load_balancing_algorithms/" class="md-nav__link">
+      <a href="../load_balancing_algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sql_execution_order/" class="md-nav__link">
+      <a href="../sql_execution_order/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,7 +1434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/apple_google_pay/" class="md-nav__link">
+      <a href="../apple_google_pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/container_concepts/" class="md-nav__link">
+      <a href="../container_concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
+      <a href="../../Misc/chrome_blog/inside_browser_4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_billions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
+      <a href="../../Misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
+      <a href="../../Misc/tools/vim_cheat_sheet.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,6 +1810,93 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mo-au" class="md-nav__link">
+    Mở đầu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#giai-thich-code" class="md-nav__link">
+    Giải thích code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tim-loi-va-review-code" class="md-nav__link">
+    Tìm lỗi và review code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chuyen-code-tu-ngon-ngu-nay-sang-ngon-ngu-khac" class="md-nav__link">
+    Chuyển code từ ngôn ngữ này sang ngôn ngữ khác
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoc-ngon-ngu-moi" class="md-nav__link">
+    Học ngôn ngữ mới
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viet-unit-test" class="md-nav__link">
+    Viết unit test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#them-tinh-nang-cho-code" class="md-nav__link">
+    Thêm tính năng cho code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viet-docs-va-comment-cho-code" class="md-nav__link">
+    Viết docs và comment cho code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luu-y" class="md-nav__link">
+    Lưu ý
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tong-ket" class="md-nav__link">
+    Tổng kết
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1678,7 +1908,162 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+  
+                  
+
+  
+  
+
+
+<h1 id="7-cach-ma-lap-trinh-vien-tan-dung-chatgpt">7 cách mà lập trình viên tận dụng ChatGPT</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=9W_U1y7RYuE">Top 7 ChatGPT Developer Hacks</a></p>
+<h2 id="mo-au">Mở đầu</h2>
+<p>ChatGPT đang cách mạng hoá cách thức làm việc của dev và nếu bạn chưa tham gia, bạn đang bỏ lỡ một lợi thế cạnh tranh rất lớn. Trong bài này, ta sẽ cùng tìm hiểu ChatGPT và cho thấy cách nó có thể tăng tốc công việc hàng ngày và nâng cao hiệu suất của bạn.</p>
+<p>Đừng để bị bỏ lại phía sau - hãy khám phá cách khai thác sức mạnh của ChatGPT và đi đầu trong thế giới đang phát triển rất nhanh chóng này.</p>
+<h2 id="giai-thich-code">Giải thích code</h2>
+<p>Một trong những cách thông dụng mà dev hay dùng với ChatGPT là nhờ nó giải thích những đoạn code khó hiểu. ChatGPT biết rất nhiều về các ngôn ngữ lập trình và có thể giải thích các phần code hoạt động như thế nào theo một cách đơn giản.</p>
+<p>Ví dụ, giả sử ta có một đoạn code Python dùng một số tính năng nâng cao như list comprehension hay lambda function như sau:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure1.png" /></a></p>
+<p>Nếu ta không hiểu hoặc cảm thấy code khó hiểu, ta có thể dùng ChatGPT để nó giải thích code. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure2.png" /></a></p>
+<p>Với sự trợ giúp của ChatGPT, ta có thể hiểu rõ hơn về code mà ta đang dùng và cảm thấy tự tin hơn với những đoạn code phức tạp.</p>
+<h2 id="tim-loi-va-review-code">Tìm lỗi và review code</h2>
+<p>Một cách khác để dùng ChatGPT là tìm lỗi và review code. ChatGPT có thể giúp ta tìm lỗi trong code và đề xuất những cải tiến cho code. Khi ta đang làm trong một dự án, thường thì sẽ có lúc một số thứ không hoạt động như cách ta mong muốn. ChatGPT có thể đọc code và chỉ ra các lỗi hoặc phần code nào cần được sửa. Nó cũng có thể đưa ra các đề xuất làm sao cho code của ta ngon hơn.</p>
+<p>Ta cùng xem xét một ví dụ với ngôn ngữ C với một hàm đảo ngược xâu tại chỗ. Đây là code có bug:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure3.png" /></a></p>
+<p>Ta có thể dùng ChatGPT để xác định và sửa lỗi trong code này. Nó cho ta biết rằng có một lỗi nhỏ (cụ thể là vị trí nên là <code>len-i-1</code> chứ không phải <code>len-i</code>, trong hình dưới thì lỗi trong code vẫn ở đó, rất xin lỗi các bạn) nằm trong hàm <code>reverse_string</code> khi hoán đổi các ký tự. Thậm chí nó còn sinh code chính xác cho chúng ta.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure4.png" /></a></p>
+<h2 id="chuyen-code-tu-ngon-ngu-nay-sang-ngon-ngu-khac">Chuyển code từ ngôn ngữ này sang ngôn ngữ khác</h2>
+<p>Ta cũng có thể dùng ChatGPT để chuyển code từ ngôn ngữ này sang ngôn ngữ khác. Điều này thực sự có ích khi ta có code ở ngôn ngữ A, nhưng ta đang làm việc với ngôn ngữ B. ChatGPT biết nhiều ngôn ngữ lập trình, nên nó có thể chuyển đổi code.</p>
+<p>Ví dụ, ta có code Python giúp sửa một lỗi bảo mât, nhưng project của chúng ta đang dùng Rust. Ta cần chuyển code Python thành Rust và ChatGPT có thể làm được điều đó. Đây là code mẫu bên Python:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure5.png" /></a></p>
+<p>Ta có thể nhờ ChatGPT giúp viết lại code theo ngôn ngữ Rust, có thể như sau:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure6.png" /></a></p>
+<p>Với sự trợ giúp của ChatGPT, ta có thể chuyển code từ ngôn ngữ này sang ngôn ngữ khác một cách dễ dàng, giúp ta tiết kiệm thời gian, tránh lỗi khi thực hiện thủ công và dạy ta thêm về các ngôn ngữ lập trình khác nhau.</p>
+<h2 id="hoc-ngon-ngu-moi">Học ngôn ngữ mới</h2>
+<p>Ta cũng có thể học ngôn ngữ lập trình mới với sự giúp đỡ của ChatGPT. </p>
+<p>Một ví dụ thực tế là chúng tôi cần phải xong một project với Rust, mà chúng tôi không biết Rust nhiều lắm. Chúng tôi cần đọc một object từ Google Cloud Storage bucket theo đoạn để làm nó hiệu quả hơn. Vì vậy, chúng tôi nhờ ChatGPT cách để làm.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure7.png" /></a></p>
+<p>ChatGPT có thể cung cấp cho chúng ta những hướng dẫn, ví dụ và thậm chí cả code để giúp ta thực hiện công việc của mình. Bằng cách đặt câu hỏi cụ thể hoặc lấy ví dụ, ta có thể học cách sử dụng các thư viện, chức năng mới, hoặc các tính năng ngôn ngữ mà chúng ta không quen dùng.</p>
+<p>Chẳng hạn, trong trường hợp này, ChatGPT cho chúng tôi ví dụ về cách đọc một đối tượng từ nhóm GCS theo từng đoạn bằng cách sử dụng Rust, gồm cả các đề xuất về thư viện và code mẫu để thực hiện yêu cầu của chúng tôi.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure8.png" /></a></p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure9.png" /></a></p>
+<p>Bằng cách làm theo hướng dẫn do ChatGPT cung cấp, chúng tôi đã nhanh chóng hiểu rõ hơn về Rust và hoàn thành project của mình một cách hiệu quả.</p>
+<p>Bằng cách dựa vào ChatGPT khi học một ngôn ngữ lập trình mới, ta có thể tiết kiệm thời gian và rút ngắn thời gian học tập, giúp dễ dàng thích nghi với ngôn ngữ mới và dần dần thành thạo ngôn ngữ đó.</p>
+<h2 id="viet-unit-test">Viết unit test</h2>
+<p>ChatGPT cũng có thể viết unit test cho code. Unit test rất quan trọng vì nó giúp đảm bảo code chạy đúng và những thay đổi về sau không phá vỡ chức năng hiện có. Viết tốt unit test là việc không dễ dàng, đôi khi rất là chán, nhưng ChatGPT có thể làm được điều này.</p>
+<p>Xét một ví dụ thực tế khi ta có một hàm TypeScript nhận một xâu và tránh các ký tự đặc biệt để dùng trong HTML. Hàm như sau:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure10.png" /></a></p>
+<p>Ta có thể dùng ChatGPT để tạo các test case để xác thực tính chính xác của hàm <code>sanitizeHtml</code>.</p>
+<p>Nó cho ta một số test case khá tốt, và cũng có thể viết test case nữa:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure11.png" /></a></p>
+<p>Nhờ ChatGPT, ta có thể tạo các test case cho code, đảm bảo code hoạt động chính xác và duy trì chất lượng phần mềm ở mức cao.</p>
+<h2 id="them-tinh-nang-cho-code">Thêm tính năng cho code</h2>
+<p>Bạn có thể dùng ChatGPT để thêm tính năng cho code hiện tại. Với sự hiểu biết về ngôn ngữ lập trình và các khái niệm về công nghệ phần mềm, nó có thể giúp ta nâng cấp code bằng cách đề xuất các thay đổi và các code snippet mới.</p>
+<p>Thử lấy một ví dụ thực tế trong đó ta có một hàm TypeScript lọc các phần tử từ một mảng dựa trên một hàm vị từ. Đây là hàm ban đầu:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure12.png" /></a></p>
+<p>Giả sử ta muốn sửa hàm này để có thêm một tính năng: một tham số tuỳ chọn cho phép ta giới hạn số lượng phần tử trả về sau khi lọc. Ta có thể nhờ ChatGPT giúp trong việc thêm tính năng này. ChatGPT có thể đề xuất thêm tham số này và cập nhật điều kiện vòng lặp để dừng sau khi đạt đến số phần tử cần lọc.</p>
+<p>Đây là hàm sau khi sửa:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure13.png" /></a></p>
+<p>Bằng cách sử dụng ChatGPT để sửa code và thêm tính năng, ta có thể tiết kiệm thời gian, đảm bảo rằng các thay đổi được cài đặt chính xác, và học thêm nhiều kỹ thuật để cải tiến code.</p>
+<h2 id="viet-docs-va-comment-cho-code">Viết docs và comment cho code</h2>
+<p>Cuối cùng, ta có thể dùng ChatGPT để viết docs và comment cho code. Tài liệu và comment được viết tốt là rất quan trọng để duy trì khả năng bảo trì codebase của chúng ta.</p>
+<p>ChatGPT có thể giúp viết các comment và tài liệu rõ ràng, ngắn gọn và đầy đủ thông tin, ngay cả với các code phức tạp trong thế giới thực.</p>
+<p>Ví dụ như ta có một hàm TypeScript tìm kiếm một pattern nào đó trong một đoạn văn bản và trả về tất cả các nơi nó xuất hiện trong văn bản.</p>
+<p>Đây là hàm đó:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure14.png" /></a></p>
+<p>Ta có thể yêu cầu ChatGPT giúp viết docs và comment cho hàm này, giải thích mục đích, thông số và giá trị trả về của nó.</p>
+<p>Đây là những gì ChatGPT có thể đề xuất:</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/chatgpt_hacks/figure15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/chatgpt_hacks/figure15.png" /></a></p>
+<p>Bằng cách dùng ChatGPT để viết docs và comment, ta có thể đảm bảo rằng code dễ hiểu và dễ bảo trì, giúp các dev khác dễ tiếp cận code hơn.</p>
+<h2 id="luu-y">Lưu ý</h2>
+<p>Cần nhớ là ChatGPT cũng có những hạn chế và không nên dựa vào một cách mù quáng. Đôi khi nó có thể đưa ra câu trả lời không tối ưu hoặc sai, nên ta cần suy nghĩ chín chắn và đặt câu hỏi đúng. Ví dụ, nếu ta kiểm tra ví dụ Rust được tạo trước đó để đọc một object từ một GCS bucket theo đoạn, ta sẽ thấy rằng nó không lý tưởng cho các object rất lớn vì nó đọc toàn bộ object vào bộ nhớ.</p>
+<p>Là dev, ta phải chịu trách nhiệm về code và giải pháp của chính chúng ta. Sử dụng ChatGPT chỉ nên dừng ở mức trợ giúp, hãy đảm bảo kiểm tra kỹ các đề xuất của nó và duy trì quyền kiểm soát công việc của bản thân.</p>
+<h2 id="tong-ket">Tổng kết</h2>
+<p>ChatGPT là một công cụ thay đổi cuộc chơi dành cho các dev. Nó giúp ta giải quyết các bài toán phức tạp, hiểu ngôn ngữ mới và cải thiện code của chúng ta một cách hiệu quả.</p>
+<p>Bằng cách sử dụng ChatGPT, ta có thể trở thành dev giỏi hơn và làm cho công việc của mình trở nên thú vị hơn.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">03/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">14/04/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/SystemDesignResources"
+    data-repo-id="R_kgDOI0Ndtw"
+    data-category="General"
+    data-category-id="DIC_kwDOI0Ndt84CVvKb"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
 
               </article>
             </div>
@@ -1737,11 +2122,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/SystemDesignResources/", "features": ["navigation.tabs", "navigation.top"], "search": "/SystemDesignResources/assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
     
-      <script src="/SystemDesignResources/assets/javascripts/bundle.6eac0284.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1762,5 +2147,5 @@
       data-y_margin="18"
     ></script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
