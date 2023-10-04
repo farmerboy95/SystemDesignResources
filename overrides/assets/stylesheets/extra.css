@@ -2,3 +2,23 @@
   display: block;
   margin: 0 auto;
 }
+
+img.h-150 {
+  height: 150px;
+}
+
+img.h-200 {
+  height: 200px;
+}
+
+img.h-300 {
+  height: 300px;
+}
+
+img.h-400 {
+  height: 400px;
+}
+
+img.h-500 {
+  height: 500px;
+}

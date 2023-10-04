@@ -19,7 +19,7 @@ Trong phần 1 của series này, ta sẽ xem xét đến thuật ngữ core com
 Đầu tiên là **CPU** (**C**entral **P**rocessing **U**nit - đơn vị xử lý trung tâm). CPU có thể được xem như não bộ của máy tính. Một nhân CPU, như trong hình là một kiểu nhân viên văn phòng, có thể xử lý nhiều tác vụ lần lượt. Nó có thể xử lý mọi thứ từ toán cho đến mỹ thuật. Trong quá khứ, hầu hết các CPU là một chip đơn. Một core giống như một CPU khác ở trong cùng một con chịp. Trong phần cứng hiện đại, ta thường có nhiều hơn một core, mang lại nhiều sức mạnh tính toán hơn cho điện thoại và laptop của bạn.
 
 <figure markdown>
-![Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được](../../assets/Misc/chrome_blog/inside_browser_1/figure1.avif){:class="centered-img" style="height: 200px"}
+![Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được](../../assets/Misc/chrome_blog/inside_browser_1/figure1.avif){:class="centered-img h-200"}
 <figcaption>Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được</figcaption>
 </figure>
 
@@ -28,14 +28,14 @@ Trong phần 1 của series này, ta sẽ xem xét đến thuật ngữ core com
 **GPU** (**G**raphics **P**rocessing **U**nit - đơn vị xử lý đồ hoạ) là một phần khác của máy tính. Khác với CPU, GPU xử lý các tác vụ đơn giản nhưng trên nhiều core một lần. Giống như tên gọi thì ban đầu nó được phát triển để xử lý đồ hoạ. Đây là lý do vì sao mà trong các trường hợp "dùng GPU" hay "được hỗ trợ bởi GPU" thường đi liền với render nhanh và tương tác mượt mà. Trong những năm gần đây, với điện toán được GPU tăng tốc, ngày càng có thể thực hiện được nhiều tính toán hơn chỉ trên GPU.
 
 <figure markdown>
-![Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản](../../assets/Misc/chrome_blog/inside_browser_1/figure2.avif){:class="centered-img" style="height: 200px"}
+![Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản](../../assets/Misc/chrome_blog/inside_browser_1/figure2.avif){:class="centered-img h-200"}
 <figcaption>Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản</figcaption>
 </figure>
 
 Khi bạn khởi động một ứng dụng trên máy tính hoặc điện thoại, CPU và GPU là những thứ chính yếu của ứng dụng. Thông thường, các ứng dụng chạy trên CPU và GPU sử dụng các cơ chế do hệ điều hành cung cấp.
 
 <figure markdown>
-![Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng](../../assets/Misc/chrome_blog/inside_browser_1/figure3.avif){:class="centered-img" style="height: 200px"}
+![Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng](../../assets/Misc/chrome_blog/inside_browser_1/figure3.avif){:class="centered-img h-200"}
 <figcaption>Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng</figcaption>
 </figure>
 
@@ -44,21 +44,21 @@ Khi bạn khởi động một ứng dụng trên máy tính hoặc điện tho�
 Một khái niệm nữa cần nắm trước khi đi sâu vào kiến trúc trình duyệt là Process và Thread. Một process có thể được xem như một chương trình thực thi của ứng dụng. Một thread là thứ nằm bên trong process và thực thi bất kỳ phần nào trong chương trình của process của nó.
 
 <figure markdown>
-![Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process](../../assets/Misc/chrome_blog/inside_browser_1/figure4.avif){:class="centered-img" style="height: 200px"}
+![Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process](../../assets/Misc/chrome_blog/inside_browser_1/figure4.avif){:class="centered-img h-200"}
 <figcaption>Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process</figcaption>
 </figure>
 
 Khi bạn khởi động một ứng dụng, một process sẽ được tạo ra. Chương trình có thể tạo các thread để giúp chương trình hoạt động, nhưng không bắt buộc. Hệ điều hành cung cấp cho process một khối bộ nhớ để hoạt động và tất cả các trạng thái của ứng dụng được giữ trong không gian bộ nhớ riêng đó. Khi đóng ứng dụng, process này cũng biến mất và hệ điều hành sẽ giải phóng bộ nhớ.
 
 <figure markdown>
-![Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng](../../assets/Misc/chrome_blog/inside_browser_1/figure5.svg){:class="centered-img" style="height: 200px"}
+![Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng](../../assets/Misc/chrome_blog/inside_browser_1/figure5.svg){:class="centered-img h-200"}
 <figcaption>Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng</figcaption>
 </figure>
 
 Một process có thể yêu cầu hệ điều hành khởi động một process khác để chạy các tác vụ khác nhau. Khi điều này xảy ra, các phần khác nhau của bộ nhớ được phân bố cho process mới. Nếu hai process cần giao tiếp với nhau, chúng sẽ dùng **IPC** (**I**nter **P**rocess **C**ommunication - Giao tiếp giữa các process). Nhiều ứng dụng được thiết kế để hoạt động theo cách này sao cho nếu một worker process bị treo, nó có thể được khởi động lại mà không phải dừng các process khác đang chạy các phần khác nhau của ứng dụng.
 
 <figure markdown>
-![Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC](../../assets/Misc/chrome_blog/inside_browser_1/figure6.svg){:class="centered-img" style="height: 200px"}
+![Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC](../../assets/Misc/chrome_blog/inside_browser_1/figure6.svg){:class="centered-img h-200"}
 <figcaption>Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC</figcaption>
 </figure>
 
@@ -67,7 +67,7 @@ Một process có thể yêu cầu hệ điều hành khởi động một proce
 Giờ thì trình duyệt được xây dựng dựa trên process và thread như thế nào? Có thể là một process với nhiều thread khác nhau hoặc nhiều process khác nhau với một ít thread giao tiếp với nhau qua IPC.
 
 <figure markdown>
-![Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread](../../assets/Misc/chrome_blog/inside_browser_1/figure7.avif){:class="centered-img" style="height: 200px"}
+![Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread](../../assets/Misc/chrome_blog/inside_browser_1/figure7.avif){:class="centered-img h-200"}
 <figcaption>Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Ta sẽ chỉ tập trung vào kiến trúc bây giờ của Chrome được mi�
 Ở trên cùng là process trình duyệt phối hợp với các process khác để đảm nhiệm các phần khác nhau của ứng dụng. Với renderer process, nhiều process được tạo ra và gán cho mỗi tab. Cho đến gần đây, Chrome cho mỗi tab một process khi có thể; giờ nó cố gắng cho mỗi trang một process riêng, kể cả iframe (Ở phần Site Isolation).
 
 <figure markdown>
-![Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab](../../assets/Misc/chrome_blog/inside_browser_1/figure8.avif){:class="centered-img" style="height: 300px"}
+![Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab](../../assets/Misc/chrome_blog/inside_browser_1/figure8.avif){:class="centered-img h-300"}
 <figcaption>Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ Bảng sau cho thấy các process của Chrome và những thứ chúng điều
 | GPU | Xử lý các tác vụ GPU riêng biệt, tách ra khỏi các process khác. Nó được phân ra riêng vì các GPU xử lý các yêu cầu từ nhiều ứng dụng và vẽ chúng trên cùng một chỗ |
 
 <figure markdown>
-![Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt](../../assets/Misc/chrome_blog/inside_browser_1/figure9.avif){:class="centered-img" style="height: 400px"}
+![Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt](../../assets/Misc/chrome_blog/inside_browser_1/figure9.avif){:class="centered-img h-400"}
 <figcaption>Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt</figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ Còn có nhiều process hơn nữa như là process cho các tiện ích mở r
 Trước đó, ta đã đề cập đến việc Chrome sử dụng nhiều renderer process. Trong trường hợp đơn giản nhất, ta có thể tưởng tượng mỗi tab có một renderer process riêng. Giả sử bạn có 3 tab đang mở và mỗi tab được chạy bởi một renderer process độc lập. Nếu một tab bị treo, thì bạn có thể đóng tab đó trong khi vẫn giữ cho các tab khác hoạt động. Nếu tất cả các tab đang chạy trên một process, khi một tab treo, các tab khác cũng treo luôn. Khá buồn.
 
 <figure markdown>
-![Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab](../../assets/Misc/chrome_blog/inside_browser_1/figure10.avif){:class="centered-img" style="height: 400px"}
+![Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab](../../assets/Misc/chrome_blog/inside_browser_1/figure10.avif){:class="centered-img h-400"}
 <figcaption>Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ Cách tiếp cận tương tự cũng được áp dụng cho process trình duy
 Ý tưởng chung là khi Chrome đang chạy trên phần cứng mạnh mẽ, nó có thể chia từng service thành các process khác nhau để giữ tính ổn định. Nhưng nếu chạy trên một thiết bị hạn chế tài nguyên, Chrome sẽ hợp nhất các service thành một process để tiết kiệm bộ nhớ. Cách tiếp cận tương tự về hợp nhất các process để sử dụng ít bộ nhớ hơn đã được dùng trên các nền tảng khác như Android trước khi có sự thay đổi này.
 
 <figure markdown>
-![Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn](../../assets/Misc/chrome_blog/inside_browser_1/figure11.svg){:class="centered-img" style="height: 400px"}
+![Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn](../../assets/Misc/chrome_blog/inside_browser_1/figure11.svg){:class="centered-img h-400"}
 <figcaption>Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn</figcaption>
 </figure>
 
@@ -129,7 +129,7 @@ Cách tiếp cận tương tự cũng được áp dụng cho process trình duy
 [Site Isolation](https://developers.google.com//web/updates/2018/07/site-isolation) (cách ly trang web) là một tính năng được giới thiệu gần đây trong Chrome, nó chạy các renderer process khác nhau cho từng iframe của các trang web khác (cross-site iframe) trên cùng một tab. Ta đã nói về một renderer process trên mỗi tab cho phép các iframe của các trang web khác chạy một renderer process với không gian bộ nhớ chia sẻ trên các site khác nhau. Chạy `a.com` và `b.com` trên cùng một renderer process nghe có vẻ ổn. [Same Origin Policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy) (chính sách xuất xứ giống nhau) là mô hình bảo mật cốt lõi của web; nó bảo đảm một trang web không thể truy cập dữ liệu từ các web khác mà không có sự đồng ý. Bỏ qua chính sách này là một lỗ hổng lớn cho các cuộc tấn công mạng. Việc cách ly các process là cách hiệu quả nhất để tách các trang web. Với [Meltdown và Spectre](https://developers.google.com/web/updates/2018/02/meltdown-spectre), rõ ràng hơn là chúng ta cần tách các trang web bằng các process. Với Site Isolation được áp dụng mặc định trên Chrome desktop từ bản 67, mỗi iframe của các trang web khác trong một tab có một renderer process riêng.
 
 <figure markdown>
-![Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web](../../assets/Misc/chrome_blog/inside_browser_1/figure12.avif){:class="centered-img" style="height: 400px"}
+![Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web](../../assets/Misc/chrome_blog/inside_browser_1/figure12.avif){:class="centered-img h-400"}
 <figcaption>Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web</figcaption>
 </figure>
 

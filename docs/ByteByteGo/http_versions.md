@@ -8,23 +8,23 @@
 
 HTTP/1 ra mắt vào năm 1996, được xây dựng dựa trên TCP. Mỗi request đến cùng một server cần một TCP connection riêng.
 
-![](../assets/ByteByteGo/http_versions/figure1.png){ style="display: block; margin: 0 auto; height: 500px" }
+![](../assets/ByteByteGo/http_versions/figure1.png){:class="centered-img h-500"}
 
 ## HTTP/1.1
 
 HTTP/1.1 ra mắt sau HTTP/1 một năm, vào năm 1997. Nó giới thiệu cơ chế **keep-alive** nhằm giúp cho một connection có thể được sử dụng lại cho nhiều request. Duy trì kết nối (persistent connection) sẽ giúp giảm độ trễ khi request vì client sẽ không cần phải khởi tạo lại connection cho các request sau đó (bắt tay 3 bước TCP).
 
-![](../assets/ByteByteGo/http_versions/figure2.png){ style="display: block; margin: 0 auto; height: 500px" }
+![](../assets/ByteByteGo/http_versions/figure2.png){:class="centered-img h-500"}
 
 Một chi tiết đáng chú ý nữa của HTTP/1.1 là chức năng **HTTP pipelining**. Về mặt lý thuyết, chức năng này cho phép client gửi nhiều request lên server trước khi đợi mỗi response. Các response phải được nhận theo thứ tự được request để đảm bảo tính chính xác.
 
 Lưu ý là HTTP pipelining khá khó để cài đặt và nhiều proxy server ở giữa không thể nào xử lý pipelining chính xác được. Chức năng này vì thế không còn được hỗ trợ bởi nhiều trình duyệt ngày nay.
 
-![](../assets/ByteByteGo/http_versions/figure3.png){ style="display: block; margin: 0 auto; height: 500px" }
+![](../assets/ByteByteGo/http_versions/figure3.png){:class="centered-img h-500"}
 
 HTTP/1.1 với pipelining còn có một vấn đề nữa được gọi là **head-of-line blocking** (HOL blocking). Đại khái thì với cùng một connection, các request sau sẽ phải đợi request trước đó xong (nghĩa là request đã được gửi lên server). Nếu một request bị chặn vì một số lý do như mất gói tin (packet loss), các request sau nó trên cùng một connection cũng bị ảnh hưởng.
 
-![](../assets/ByteByteGo/http_versions/figure4.png){ style="display: block; margin: 0 auto; height: 500px" }
+![](../assets/ByteByteGo/http_versions/figure4.png){:class="centered-img h-500"}
 
 Để giữ cho kết nối có tốc độ ở mức chấp nhận được, trình duyệt thường giữ nhiều TCP connection đến cùng một server và gửi các request song song với nhau đến server.
 
@@ -50,6 +50,6 @@ QUIC được thiết kế cho việc sử dụng nhiều internet trên điện
 
 QUIC sử dụng một concept gọi là **connection ID**, giúp cho connection có thể di chuyển giữa các địa chỉ IP và giao diện mạng dễ dàng, nhanh chóng và đáng tin cậy.
 
-![](../assets/ByteByteGo/http_versions/figure8.png){ style="display: block; margin: 0 auto; height: 500px" }
+![](../assets/ByteByteGo/http_versions/figure8.png){:class="centered-img h-500"}
 
 Dù HTTP/3 mới chỉ được chuẩn hoá, nó đã được dùng bởi 25% số website và được hỗ trợ bởi nhiều trình duyệt trên thị trường.

@@ -8,7 +8,7 @@
 
 **Redis** là một dạng cơ sở dữ liệu lưu trữ data trong bộ nhớ. Nó thường được sử dụng như là cache. Nó hỗ trợ nhiều dạng cấu trúc dữ liệu khác nhau, như string, hash, list, set và sorted set.
 
-Redis nổi tiếng vì tốc độ cực cao. Và vì sao lại như vậy thì đã có một [bài viết](../why_redis_fast/why_redis_fast.md) nói về điều này rồi.
+Redis nổi tiếng vì tốc độ cực cao. Và vì sao lại như vậy thì đã có một [bài viết](./why_redis_fast.md) nói về điều này rồi.
 
 ## Cache
 
