@@ -123,21 +123,21 @@ Ví dụ, `z-index` có thể được set cho một số element nhất định
 Nếu bạn đang tạo hiệu ứng cho các element, trình duyệt phải chạy các thao tác này ở giữa mọi frame. Hầu hết các display sẽ refresh 60 lần một giây (60 frame/giây); hình ảnh động sẽ xuất hiện mượt mà đối với mắt người khi bạn di chuyển mọi thứ trên màn hình ở mọi frame. Tuy nhiên, nếu hoạt ảnh mất đi các frame ở giữa, thì trang sẽ xuất hiện một cách "lộn xộn".
 
 <figure markdown>
-![Hình 11: Các frame hoạt ảnh trên dòng thời gian](../../assets/Misc/chrome_blog/inside_browser_3/figure11.avif){:class="centered-img" height: 150px" }
+![Hình 11: Các frame hoạt ảnh trên dòng thời gian](../../assets/Misc/chrome_blog/inside_browser_3/figure11.avif){:class="centered-img h-150"}
 <figcaption>Hình 11: Các frame hoạt ảnh trên dòng thời gian</figcaption>
 </figure>
 
 Ngay cả khi các hoạt động render của bạn theo kịp quá trình refresh màn hình, thì các tính toán này vẫn đang chạy trên main thread, nghĩa là thread này có thể bị chặn khi ứng dụng của bạn đang chạy JavaScript.
 
 <figure markdown>
-![Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript](../../assets/Misc/chrome_blog/inside_browser_3/figure12.avif){:class="centered-img" height: 150px" }
+![Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript](../../assets/Misc/chrome_blog/inside_browser_3/figure12.avif){:class="centered-img h-150"}
 <figcaption>Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript</figcaption>
 </figure>
 
 Bạn có thể chia thao tác JavaScript thành các phần nhỏ và lên lịch chạy ở mọi frame bằng cách sử dụng `requestAnimationFrame()`. Để biết thêm về chủ đề này, vui lòng xem [Tối ưu hóa thực thi JavaScript](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution). Bạn cũng có thể chạy [JavaScript trong Web Worker](https://www.youtube.com/watch?v=X57mh8tKkgE) để tránh chặn main thread.
 
 <figure markdown>
-![Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh](../../assets/Misc/chrome_blog/inside_browser_3/figure13.avif){:class="centered-img" height: 150px" }
+![Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh](../../assets/Misc/chrome_blog/inside_browser_3/figure13.avif){:class="centered-img h-150"}
 <figcaption>Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh</figcaption>
 </figure>
 
