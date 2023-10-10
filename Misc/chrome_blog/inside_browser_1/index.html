@@ -11,10 +11,6 @@
         <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/Misc/chrome_blog/inside_browser_1/">
       
       
-        <link rel="prev" href="../../../ByteByteGo/container_concepts/">
-      
-      
-        <link rel="next" href="../inside_browser_2/">
       
       
       <link rel="icon" href="../../../assets/images/logo.jpg">
@@ -274,21 +270,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../misc/chrome_blog/inside_browser_1.md" class="md-tabs__link">
           
   
   Nguồn khác
@@ -1362,8 +1354,6 @@
       
   
   
-    
-  
   
     
     
@@ -1373,12 +1363,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -1392,7 +1382,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Nguồn khác
@@ -1403,20 +1393,18 @@
                 
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -1430,7 +1418,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             Chrome Developers Blog
@@ -1441,29 +1429,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Bên trong các trình duyệt ngày nay (Phần 1)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../misc/chrome_blog/inside_browser_1.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1472,116 +1440,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    Nguồn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cpu-gpu-bo-nho-va-kien-truc-a-tien-trinh" class="md-nav__link">
-    CPU, GPU, bộ nhớ, và kiến trúc đa tiến trình
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nhan-may-tinh-chua-cpu-va-gpu" class="md-nav__link">
-    Nhân máy tính chứa CPU và GPU
-  </a>
-  
-    <nav class="md-nav" aria-label="Nhân máy tính chứa CPU và GPU">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    CPU
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpu" class="md-nav__link">
-    GPU
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#khoi-chay-chuong-trinh-tren-process-va-thread" class="md-nav__link">
-    Khởi chạy chương trình trên Process và Thread
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kien-truc-trinh-duyet" class="md-nav__link">
-    Kiến trúc trình duyệt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cac-process-ieu-khien-cai-gi" class="md-nav__link">
-    Các Process điều khiển cái gì?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#loi-ich-cua-kien-truc-a-tien-trinh-trong-chrome" class="md-nav__link">
-    Lợi ích của kiến trúc đa tiến trình trong Chrome
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tiet-kiem-nhieu-bo-nho-hon-servicification-trong-chrome" class="md-nav__link">
-    Tiết kiệm nhiều bộ nhớ hơn - Servicification trong Chrome
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#renderer-process-tren-moi-frame-site-isolation" class="md-nav__link">
-    Renderer process trên mỗi frame - Site Isolation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-phan-1" class="md-nav__link">
-    Kết phần 1
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1593,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inside_browser_2/" class="md-nav__link">
+      <a href="../../../misc/chrome_blog/inside_browser_2.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1613,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inside_browser_3/" class="md-nav__link">
+      <a href="../../../misc/chrome_blog/inside_browser_3.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1633,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inside_browser_4/" class="md-nav__link">
+      <a href="../../../misc/chrome_blog/inside_browser_4.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1697,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../discord_blog/storing_billions_messages/" class="md-nav__link">
+      <a href="../../../misc/discord_blog/storing_billions_messages.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1717,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../discord_blog/storing_trillions_messages/" class="md-nav__link">
+      <a href="../../../misc/discord_blog/storing_trillions_messages.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1892,47 +1750,47 @@
 <h3 id="cpu">CPU</h3>
 <p>Đầu tiên là <strong>CPU</strong> (<strong>C</strong>entral <strong>P</strong>rocessing <strong>U</strong>nit - đơn vị xử lý trung tâm). CPU có thể được xem như não bộ của máy tính. Một nhân CPU, như trong hình là một kiểu nhân viên văn phòng, có thể xử lý nhiều tác vụ lần lượt. Nó có thể xử lý mọi thứ từ toán cho đến mỹ thuật. Trong quá khứ, hầu hết các CPU là một chip đơn. Một core giống như một CPU khác ở trong cùng một con chịp. Trong phần cứng hiện đại, ta thường có nhiều hơn một core, mang lại nhiều sức mạnh tính toán hơn cho điện thoại và laptop của bạn.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure1.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được" data-desc-position="bottom"><img alt="Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được" class="centered-img h-200" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure1.avif" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure1.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được" data-desc-position="bottom"><img alt="Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được" class="centered-img h-200" src="../../assets/misc/chrome_blog/inside_browser_1/figure1.avif" /></a></p>
 <figcaption>Hình 1: 4 core làm việc như nhân viên văn phòng xử lý các lần lượt các tác vụ nhận được</figcaption>
 </figure>
 <h3 id="gpu">GPU</h3>
 <p><strong>GPU</strong> (<strong>G</strong>raphics <strong>P</strong>rocessing <strong>U</strong>nit - đơn vị xử lý đồ hoạ) là một phần khác của máy tính. Khác với CPU, GPU xử lý các tác vụ đơn giản nhưng trên nhiều core một lần. Giống như tên gọi thì ban đầu nó được phát triển để xử lý đồ hoạ. Đây là lý do vì sao mà trong các trường hợp "dùng GPU" hay "được hỗ trợ bởi GPU" thường đi liền với render nhanh và tương tác mượt mà. Trong những năm gần đây, với điện toán được GPU tăng tốc, ngày càng có thể thực hiện được nhiều tính toán hơn chỉ trên GPU.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure2.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản" data-desc-position="bottom"><img alt="Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản" class="centered-img h-200" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure2.avif" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure2.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản" data-desc-position="bottom"><img alt="Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản" class="centered-img h-200" src="../../assets/misc/chrome_blog/inside_browser_1/figure2.avif" /></a></p>
 <figcaption>Hình 2: Nhiều core cầm cờ lê cho thấy chúng đang xử lý một tác vụ đơn giản</figcaption>
 </figure>
 <p>Khi bạn khởi động một ứng dụng trên máy tính hoặc điện thoại, CPU và GPU là những thứ chính yếu của ứng dụng. Thông thường, các ứng dụng chạy trên CPU và GPU sử dụng các cơ chế do hệ điều hành cung cấp.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure3.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng" data-desc-position="bottom"><img alt="Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng" class="centered-img h-200" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure3.avif" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure3.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng" data-desc-position="bottom"><img alt="Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng" class="centered-img h-200" src="../../assets/misc/chrome_blog/inside_browser_1/figure3.avif" /></a></p>
 <figcaption>Hình 3: Ba lớp kiến trúc máy tính. Phần cứng máy tính nằm dưới cùng, Hệ điều hành nằm giữa, còn Ứng dụng nằm trên cùng</figcaption>
 </figure>
 <h2 id="khoi-chay-chuong-trinh-tren-process-va-thread">Khởi chạy chương trình trên Process và Thread</h2>
 <p>Một khái niệm nữa cần nắm trước khi đi sâu vào kiến trúc trình duyệt là Process và Thread. Một process có thể được xem như một chương trình thực thi của ứng dụng. Một thread là thứ nằm bên trong process và thực thi bất kỳ phần nào trong chương trình của process của nó.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure4.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process" data-desc-position="bottom"><img alt="Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process" class="centered-img h-200" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure4.avif" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure4.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process" data-desc-position="bottom"><img alt="Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process" class="centered-img h-200" src="../../assets/misc/chrome_blog/inside_browser_1/figure4.avif" /></a></p>
 <figcaption>Hình 4: Process là hình chữ nhật nằm ngoài, còn Thread thì là mấy con cá bên trong Process</figcaption>
 </figure>
 <p>Khi bạn khởi động một ứng dụng, một process sẽ được tạo ra. Chương trình có thể tạo các thread để giúp chương trình hoạt động, nhưng không bắt buộc. Hệ điều hành cung cấp cho process một khối bộ nhớ để hoạt động và tất cả các trạng thái của ứng dụng được giữ trong không gian bộ nhớ riêng đó. Khi đóng ứng dụng, process này cũng biến mất và hệ điều hành sẽ giải phóng bộ nhớ.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure5.svg" data-type="image" data-width="100%" data-height="auto" data-title="Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng" data-desc-position="bottom"><img alt="Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng" class="centered-img h-200" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure5.svg" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure5.svg" data-type="image" data-width="100%" data-height="auto" data-title="Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng" data-desc-position="bottom"><img alt="Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng" class="centered-img h-200" src="../../assets/misc/chrome_blog/inside_browser_1/figure5.svg" /></a></p>
 <figcaption>Hình 5: Sơ đồ process sử dụng không gian bộ nhớ và lưu trữ dữ liệu của ứng dụng</figcaption>
 </figure>
 <p>Một process có thể yêu cầu hệ điều hành khởi động một process khác để chạy các tác vụ khác nhau. Khi điều này xảy ra, các phần khác nhau của bộ nhớ được phân bố cho process mới. Nếu hai process cần giao tiếp với nhau, chúng sẽ dùng <strong>IPC</strong> (<strong>I</strong>nter <strong>P</strong>rocess <strong>C</strong>ommunication - Giao tiếp giữa các process). Nhiều ứng dụng được thiết kế để hoạt động theo cách này sao cho nếu một worker process bị treo, nó có thể được khởi động lại mà không phải dừng các process khác đang chạy các phần khác nhau của ứng dụng.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure6.svg" data-type="image" data-width="100%" data-height="auto" data-title="Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC" data-desc-position="bottom"><img alt="Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC" class="centered-img h-200" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure6.svg" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure6.svg" data-type="image" data-width="100%" data-height="auto" data-title="Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC" data-desc-position="bottom"><img alt="Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC" class="centered-img h-200" src="../../assets/misc/chrome_blog/inside_browser_1/figure6.svg" /></a></p>
 <figcaption>Hình 6: Sơ đồ các process riêng biệt giao tiếp với nhau thông qua IPC</figcaption>
 </figure>
 <h2 id="kien-truc-trinh-duyet">Kiến trúc trình duyệt</h2>
 <p>Giờ thì trình duyệt được xây dựng dựa trên process và thread như thế nào? Có thể là một process với nhiều thread khác nhau hoặc nhiều process khác nhau với một ít thread giao tiếp với nhau qua IPC.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure7.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread" data-desc-position="bottom"><img alt="Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread" class="centered-img h-200" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure7.avif" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure7.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread" data-desc-position="bottom"><img alt="Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread" class="centered-img h-200" src="../../assets/misc/chrome_blog/inside_browser_1/figure7.avif" /></a></p>
 <figcaption>Hình 7: Các kiến trúc trình duyệt khác nhau trong sơ đồ process/thread</figcaption>
 </figure>
 <p>Một lưu ý quan trọng là các kiến trúc khác nhau này là các chi tiết cài đặt. Không có một chuẩn nào cho việc tạo ra một trình duyệt. Cách tiếp cận để xây dựng trình duyệt này có thể khác hoàn toàn với cách tiếp cận để xây dựng một trình duyệt khác.</p>
 <p>Ta sẽ chỉ tập trung vào kiến trúc bây giờ của Chrome được miêu tả trong sơ đồ bên dưới.</p>
 <p>Ở trên cùng là process trình duyệt phối hợp với các process khác để đảm nhiệm các phần khác nhau của ứng dụng. Với renderer process, nhiều process được tạo ra và gán cho mỗi tab. Cho đến gần đây, Chrome cho mỗi tab một process khi có thể; giờ nó cố gắng cho mỗi trang một process riêng, kể cả iframe (Ở phần Site Isolation).</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure8.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab" data-desc-position="bottom"><img alt="Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab" class="centered-img h-300" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure8.avif" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure8.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab" data-desc-position="bottom"><img alt="Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab" class="centered-img h-300" src="../../assets/misc/chrome_blog/inside_browser_1/figure8.avif" /></a></p>
 <figcaption>Hình 8: Sơ đồ kiến trúc đa tiến trình của Chrome. Renderer Process có nhiều lớp để biểu diễn việc Chrome chạy nhiều process ở đây cho mỗi tab</figcaption>
 </figure>
 <h2 id="cac-process-ieu-khien-cai-gi">Các Process điều khiển cái gì?</h2>
@@ -1964,14 +1822,14 @@
 </tbody>
 </table>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure9.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt" data-desc-position="bottom"><img alt="Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt" class="centered-img h-400" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure9.avif" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure9.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt" data-desc-position="bottom"><img alt="Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt" class="centered-img h-400" src="../../assets/misc/chrome_blog/inside_browser_1/figure9.avif" /></a></p>
 <figcaption>Hình 9: Các process khác nhau trỏ vào các phần khác nhau trên UI của trình duyệt</figcaption>
 </figure>
 <p>Còn có nhiều process hơn nữa như là process cho các tiện ích mở rộng hay process cho các tiện ích khác. Nếu bạn muốn xem có bao nhiêu process đang chạy trong Chrome, bấm vào dấu ba chấm ở góc phải trên của Chrome, chọn More Tools, rồi chọn Task Manager. Một cửa sổ sẽ hiện lên với danh sách các process đang chạy và chúng đang dùng bao nhiêu CPU / Bộ nhớ.</p>
 <h2 id="loi-ich-cua-kien-truc-a-tien-trinh-trong-chrome">Lợi ích của kiến trúc đa tiến trình trong Chrome</h2>
 <p>Trước đó, ta đã đề cập đến việc Chrome sử dụng nhiều renderer process. Trong trường hợp đơn giản nhất, ta có thể tưởng tượng mỗi tab có một renderer process riêng. Giả sử bạn có 3 tab đang mở và mỗi tab được chạy bởi một renderer process độc lập. Nếu một tab bị treo, thì bạn có thể đóng tab đó trong khi vẫn giữ cho các tab khác hoạt động. Nếu tất cả các tab đang chạy trên một process, khi một tab treo, các tab khác cũng treo luôn. Khá buồn.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure10.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab" data-desc-position="bottom"><img alt="Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab" class="centered-img h-400" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure10.avif" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure10.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab" data-desc-position="bottom"><img alt="Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab" class="centered-img h-400" src="../../assets/misc/chrome_blog/inside_browser_1/figure10.avif" /></a></p>
 <figcaption>Hình 10: Sơ đồ cho thấy nhiều process chạy trên mỗi tab</figcaption>
 </figure>
 <p>Một lợi ích khác của việc tách công việc của trình duyệt thành nhiều process là do tính bảo mật và độc lập. Vì các hệ điều hành cung cấp một cách để hạn chế các quyền của các process, trình duyệt có thể sandbox một số process nhất định từ các tính năng nhất định. Ví dụ, trình duyệt Chrome hạn chế quyền truy cập file tuỳ ý đối với các process xử lý đầu vào tuỳ ý của người dùng như renderer process.</p>
@@ -1980,13 +1838,13 @@
 <p>Cách tiếp cận tương tự cũng được áp dụng cho process trình duyệt. Chrome đang tiến hành các thay đổi về kiến trúc để chạy từng phần của trình duyệt dưới dạng một service cho phép phân chia dễ dàng các process khác nhau hoặc tổng hợp thành một.</p>
 <p>Ý tưởng chung là khi Chrome đang chạy trên phần cứng mạnh mẽ, nó có thể chia từng service thành các process khác nhau để giữ tính ổn định. Nhưng nếu chạy trên một thiết bị hạn chế tài nguyên, Chrome sẽ hợp nhất các service thành một process để tiết kiệm bộ nhớ. Cách tiếp cận tương tự về hợp nhất các process để sử dụng ít bộ nhớ hơn đã được dùng trên các nền tảng khác như Android trước khi có sự thay đổi này.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure11.svg" data-type="image" data-width="100%" data-height="auto" data-title="Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn" data-desc-position="bottom"><img alt="Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn" class="centered-img h-400" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure11.svg" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure11.svg" data-type="image" data-width="100%" data-height="auto" data-title="Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn" data-desc-position="bottom"><img alt="Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn" class="centered-img h-400" src="../../assets/misc/chrome_blog/inside_browser_1/figure11.svg" /></a></p>
 <figcaption>Hình 11: Sơ đồ Servicification trong Chrome dịch chuyển các service khác nhau vào nhiều process và một process trình duyệt đơn</figcaption>
 </figure>
 <h2 id="renderer-process-tren-moi-frame-site-isolation">Renderer process trên mỗi frame - Site Isolation</h2>
 <p><a href="https://developers.google.com//web/updates/2018/07/site-isolation">Site Isolation</a> (cách ly trang web) là một tính năng được giới thiệu gần đây trong Chrome, nó chạy các renderer process khác nhau cho từng iframe của các trang web khác (cross-site iframe) trên cùng một tab. Ta đã nói về một renderer process trên mỗi tab cho phép các iframe của các trang web khác chạy một renderer process với không gian bộ nhớ chia sẻ trên các site khác nhau. Chạy <code>a.com</code> và <code>b.com</code> trên cùng một renderer process nghe có vẻ ổn. <a href="https://developer.mozilla.org/docs/Web/Security/Same-origin_policy">Same Origin Policy</a> (chính sách xuất xứ giống nhau) là mô hình bảo mật cốt lõi của web; nó bảo đảm một trang web không thể truy cập dữ liệu từ các web khác mà không có sự đồng ý. Bỏ qua chính sách này là một lỗ hổng lớn cho các cuộc tấn công mạng. Việc cách ly các process là cách hiệu quả nhất để tách các trang web. Với <a href="https://developers.google.com/web/updates/2018/02/meltdown-spectre">Meltdown và Spectre</a>, rõ ràng hơn là chúng ta cần tách các trang web bằng các process. Với Site Isolation được áp dụng mặc định trên Chrome desktop từ bản 67, mỗi iframe của các trang web khác trong một tab có một renderer process riêng.</p>
 <figure>
-<p><a class="glightbox" href="../../../assets/Misc/chrome_blog/inside_browser_1/figure12.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web" data-desc-position="bottom"><img alt="Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web" class="centered-img h-400" src="../../../assets/Misc/chrome_blog/inside_browser_1/figure12.avif" /></a></p>
+<p><a class="glightbox" href="../../assets/misc/chrome_blog/inside_browser_1/figure12.avif" data-type="image" data-width="100%" data-height="auto" data-title="Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web" data-desc-position="bottom"><img alt="Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web" class="centered-img h-400" src="../../assets/misc/chrome_blog/inside_browser_1/figure12.avif" /></a></p>
 <figcaption>Hình 12: Sơ đồ Site Isolation; nhiều renderer process trỏ vào các iframe trong cùng một trang web</figcaption>
 </figure>
 <p>Cho phép Site Isolation là một nỗ lực trong nhiều năm của đội ngũ kỹ sư. Site Isolation không đơn giản chỉ là chỉ định các renderer process khác nhau; về cơ bản nó thay đổi cách các iframe giao tiếp với nhau. Mở devtools trên một trang có iframe chạy trên các process khác nhau nghĩa là devtools phải triển khai công việc hậu trường để làm nó xuất hiện liền mạch. Ngay cả việc chạy <code>Ctrl+F</code> đơn giản để tìm một từ trong trang cũng có nghĩa là tìm kiếm trên nhiều renderer process khác nhau. Bạn có thể thấy vì sao các kỹ sư trình duyệt nói về việc phát hành Site Isolation như là một cột mốc đỉnh cao!</p>
@@ -1998,7 +1856,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">04/10/2023 (GMT+07)</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">10/10/2023 (GMT+07)</span>
       
         <br>
         Created:
