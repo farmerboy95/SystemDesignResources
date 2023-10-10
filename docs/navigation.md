@@ -61,5 +61,3 @@ comment: false
     - Discord Blog
         - [Discord lưu trữ hàng tỉ tin nhắn như thế nào?](Misc/discord_blog/storing_billions_messages.md)
         - [Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?](Misc/discord_blog/storing_trillions_messages.md)
-    - Công cụ linh tinh
-        - [Vim Cheat Sheet](Misc/tools/vim_cheat_sheet.md)
