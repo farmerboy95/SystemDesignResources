@@ -16,7 +16,7 @@ Ta bắt đầu với một use case đơn giản như sau: Bạn điền URL v�
 Như ta đã biết từ phần 1, mọi thứ không trong tab sẽ được xử lý bởi browser process. Browser process này có các thread như UI thread, nó sẽ vẽ các nút bấm và ô nhập liệu (như thanh địa chỉ) của trình duyệt. browser process còn có network thread, nó sẽ xử lý các network stack để nhận data từ internet. Storage thread cũng là một thành phần của browser process, nó kiểm soát quyền truy cập file. Và còn một số loại thread nữa. Khi bạn nhập URL vào thanh địa chỉ, nó sẽ được xử lý bởi UI thread của browser process.
 
 <figure markdown>
-![Hình 1: UI của trình duyệt ở trên, sơ đồ của browser process với UI, network và storage thread bên trong](../../assets/Misc/chrome_blog/inside_browser_2/figure1.avif){:class="centered-img h-300"}
+![Hình 1: UI của trình duyệt ở trên, sơ đồ của browser process với UI, network và storage thread bên trong](../../assets/misc/chrome_blog/inside_browser_2/figure1.avif){:class="centered-img h-300"}
 <figcaption>Hình 1: UI của trình duyệt ở trên, sơ đồ của browser process với UI, network và storage thread bên trong</figcaption>
 </figure>
 
@@ -27,7 +27,7 @@ Như ta đã biết từ phần 1, mọi thứ không trong tab sẽ được x�
 Khi người dùng bắt đầu nhập vào thanh địa chỉ, đầu tiên UI thread sẽ hỏi là "Đây là truy vấn tìm kiếm hay URL vây?". Trong Chrome, thanh địa chỉ cũng là thanh tìm kiếm, nên UI thread cần phải kiểm tra và quyết định xem nên gửi người dùng đến bộ máy tìm kiếm hay đi đến cái trang mà người ta muốn đến.
 
 <figure markdown>
-![Hình 2: UI thread hỏi xem input là truy vấn tìm kiếm hay URL](../../assets/Misc/chrome_blog/inside_browser_2/figure2.avif){:class="centered-img h-300"}
+![Hình 2: UI thread hỏi xem input là truy vấn tìm kiếm hay URL](../../assets/misc/chrome_blog/inside_browser_2/figure2.avif){:class="centered-img h-300"}
 <figcaption>Hình 2: UI thread hỏi xem input là truy vấn tìm kiếm hay URL</figcaption>
 </figure>
 
@@ -36,7 +36,7 @@ Khi người dùng bắt đầu nhập vào thanh địa chỉ, đầu tiên UI 
 Khi người dùng bấm Enter, UI thread khởi tạo network call để lấy nội dung trang web. Biểu tượng xoay (loading) sẽ xuất hiện ở góc của tab, và network thread đi qua các giao thức thích hợp như tra cứu DNS và thiết lập kết nối TLS cho request.
 
 <figure markdown>
-![Hình 3: UI thread giao tiếp với network thread để điều hướng đến mysite.com](../../assets/Misc/chrome_blog/inside_browser_2/figure3.avif){:class="centered-img h-300"}
+![Hình 3: UI thread giao tiếp với network thread để điều hướng đến mysite.com](../../assets/misc/chrome_blog/inside_browser_2/figure3.avif){:class="centered-img h-300"}
 <figcaption>Hình 3: UI thread giao tiếp với network thread để điều hướng đến mysite.com</figcaption>
 </figure>
 
@@ -47,14 +47,14 @@ Tại thời điểm này, network thread có thể được nhận header chuy�
 Khi mà response body bắt đầu đến, network thread đọc một vài byte đầu của stream nếu cần. Content-Type header của response cho nó biết loại data là gì, nhưng vì thông tìn này có thể bị thiếu hoặc sai, [kiểm tra MIME Type (MIME Type sniffing)](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) sẽ được thực hiện tại đây. Đây là một "công việc khó khăn" như được comment trong [code](https://cs.chromium.org/chromium/src/net/base/mime_sniffer.cc?sq=package:chromium&dr=CS&l=5). Bạn có thể đọc comment để xem các trình duyệt khác nhau xử lý cặp Content-Type - response body như thế nào.
 
 <figure markdown>
-![Hình 4: Response header chứa Content-Type và response body chứa data thực sự](../../assets/Misc/chrome_blog/inside_browser_2/figure4.avif){:class="centered-img h-200"}
+![Hình 4: Response header chứa Content-Type và response body chứa data thực sự](../../assets/misc/chrome_blog/inside_browser_2/figure4.avif){:class="centered-img h-200"}
 <figcaption>Hình 4: Response header chứa Content-Type và response body chứa data thực sự</figcaption>
 </figure>
 
 Nếu response là một file HTML, thì bước tiếp theo sẽ là chuyển data cho renderer process, nhưng nếu nó là file zip hoặc các loại file khác thì nghĩa là nó là một request tại file, nên data được chuyển qua cho bên download manager.
 
 <figure markdown>
-![Hình 5: Network thread hỏi xem response data có phải HTML từ một trang an toàn không](../../assets/Misc/chrome_blog/inside_browser_2/figure5.avif){:class="centered-img h-300"}
+![Hình 5: Network thread hỏi xem response data có phải HTML từ một trang an toàn không](../../assets/misc/chrome_blog/inside_browser_2/figure5.avif){:class="centered-img h-300"}
 <figcaption>Hình 5: Network thread hỏi xem response data có phải HTML từ một trang an toàn không</figcaption>
 </figure>
 
@@ -65,7 +65,7 @@ Nếu response là một file HTML, thì bước tiếp theo sẽ là chuyển d
 Sau khi các kiểm tra đều đã xong và network thread chắc chắn rằng trình duyệt sẽ được điều hướng đến trang web được yêu cầu, network thread sẽ bảo UI thread rằng data đã sắn sàng. UI thread sau đó tìm một renderer process để thực hiện quá trình render trang web
 
 <figure markdown>
-![Hình 6: Network thread kêu UI thread tìm Renderer Process](../../assets/Misc/chrome_blog/inside_browser_2/figure6.avif){:class="centered-img h-300"}
+![Hình 6: Network thread kêu UI thread tìm Renderer Process](../../assets/misc/chrome_blog/inside_browser_2/figure6.avif){:class="centered-img h-300"}
 <figcaption>Hình 6: Network thread kêu UI thread tìm Renderer Process</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Giờ data và renderer process đã sẵn sàng, một IPC được gửi từ 
 Tại thời điểm này, thanh địa chỉ được cập nhật và giao diện người dùng cài đặt trang và chỉ báo bảo mật phản ánh thông tin trang của trang mới. Lịch sử phiên cho tab sẽ được cập nhật để các nút quay lại / chuyển tiếp sẽ chuyển qua trang web vừa được điều hướng đến. Để tạo điều kiện khôi phục tab / phiên khi bạn đóng tab hoặc cửa sổ trình duyệt, lịch sử phiên sẽ được lưu trên đĩa.
 
 <figure markdown>
-![Hình 7: IPC giữa trình duyệt và các renderer process, để yêu cầu render trang](../../assets/Misc/chrome_blog/inside_browser_2/figure7.avif){:class="centered-img h-300"}
+![Hình 7: IPC giữa trình duyệt và các renderer process, để yêu cầu render trang](../../assets/misc/chrome_blog/inside_browser_2/figure7.avif){:class="centered-img h-300"}
 <figcaption>Hình 7: IPC giữa trình duyệt và các renderer process, để yêu cầu render trang</figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ Khi điều hướng được cam kết, renderer process tiếp tục tải tà
 Ta nói "hoàn tất" vì JavaScript phía client vẫn có thể tải các tài nguyên bổ sung và render các view mới sau bước này.
 
 <figure markdown>
-![Hình 8: IPC từ renderer process sang browser process để báo rằng trang đã được tải](../../assets/Misc/chrome_blog/inside_browser_2/figure8.avif){:class="centered-img h-300"}
+![Hình 8: IPC từ renderer process sang browser process để báo rằng trang đã được tải](../../assets/misc/chrome_blog/inside_browser_2/figure8.avif){:class="centered-img h-300"}
 <figcaption>Hình 8: IPC từ renderer process sang browser process để báo rằng trang đã được tải</figcaption>
 </figure>
 
@@ -103,7 +103,7 @@ Ta nói "hoàn tất" vì JavaScript phía client vẫn có thể tải các tà
     Không thêm `beforeunload` handler vô điều kiện. Nó tạo ra độ trễ lớn hơn vì handler cần được thực thi trước khi có thể bắt đầu điều hướng. Chỉ nên thêm event handler này khi cần thiết, chẳng hạn như nếu người dùng cần được cảnh báo rằng họ có thể mất dữ liệu đã nhập trên trang.
 
 <figure markdown>
-![Hình 9: IPC từ browser process sang một renderer process để nói cho nó biết rằng trình duyệt chuẩn bị điều hướng tới một trang web khác](../../assets/Misc/chrome_blog/inside_browser_2/figure9.avif){:class="centered-img h-300"}
+![Hình 9: IPC từ browser process sang một renderer process để nói cho nó biết rằng trình duyệt chuẩn bị điều hướng tới một trang web khác](../../assets/misc/chrome_blog/inside_browser_2/figure9.avif){:class="centered-img h-300"}
 <figcaption>Hình 9: IPC từ browser process sang một renderer process để nói cho nó biết rằng trình duyệt chuẩn bị điều hướng tới một trang web khác</figcaption>
 </figure>
 
@@ -112,7 +112,7 @@ Nếu điều hướng được khởi tạo từ renderer process (chẳng hạ
 Khi điều hướng mới được tạo cho một trang web khác với trang web được render hiện tại, một renderer process riêng biệt sẽ được gọi để xử lý điều hướng mới trong khi renderer process hiện tại được giữ lại để xử lý các event như `unload`. Để biết thêm thông tin, vui lòng xem [tổng quan về trạng thái vòng đời của trang](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#overview_of_page_lifecycle_states_and_events) và cách bạn có thể kết nối với các event bằng [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api).
 
 <figure markdown>
-![Hình 10: Các IPC từ browser process sang một renderer process mới để render trang mới và sang renderer process cũ để unload trang cũ](../../assets/Misc/chrome_blog/inside_browser_2/figure10.avif){:class="centered-img h-300"}
+![Hình 10: Các IPC từ browser process sang một renderer process mới để render trang mới và sang renderer process cũ để unload trang cũ](../../assets/misc/chrome_blog/inside_browser_2/figure10.avif){:class="centered-img h-300"}
 <figcaption>Hình 10: Các IPC từ browser process sang một renderer process mới để render trang mới và sang renderer process cũ để unload trang cũ</figcaption>
 </figure>
 
@@ -123,14 +123,14 @@ Một thay đổi gần đây đối với quy trình điều hướng này là 
 Điều quan trọng cần nhớ là Service worker là code JavaScript chạy trong renderer process. Nhưng khi có yêu cầu điều hướng, làm thế nào để trình duyệt biết trang web có Service worker?
 
 <figure markdown>
-![Hình 11: Network thread trong browser process tra cứu phạm vi của Service worker](../../assets/Misc/chrome_blog/inside_browser_2/figure11.avif){:class="centered-img h-300"}
+![Hình 11: Network thread trong browser process tra cứu phạm vi của Service worker](../../assets/misc/chrome_blog/inside_browser_2/figure11.avif){:class="centered-img h-300"}
 <figcaption>Hình 11: Network thread trong browser process tra cứu phạm vi của Service worker</figcaption>
 </figure>
 
 Khi một Service worker được đăng ký, phạm vi của Service worker được giữ làm tham chiếu (bạn có thể đọc thêm về phạm vi trong bài viết [Vòng đời của Service worker](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle) này). Khi một quá trình điều hướng diễn ra, network thread sẽ kiểm tra miền dựa trên phạm vi của Service worker đã đăng ký, nếu một Service worker được đăng ký cho URL đó, thì UI thread sẽ tìm một renderer process để thực thi code của Service worker. Service worker có thể tải data từ cache, loại bỏ nhu cầu yêu cầu data từ mạng hoặc có thể yêu cầu tài nguyên mới từ mạng.
 
 <figure markdown>
-![Hình 12: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker; một worker thread trong renderer process sau đó yêu cầu data từ mạng](../../assets/Misc/chrome_blog/inside_browser_2/figure12.avif){:class="centered-img h-300"}
+![Hình 12: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker; một worker thread trong renderer process sau đó yêu cầu data từ mạng](../../assets/misc/chrome_blog/inside_browser_2/figure12.avif){:class="centered-img h-300"}
 <figcaption>Hình 12: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker; một worker thread trong renderer process sau đó yêu cầu data từ mạng</figcaption>
 </figure>
 
@@ -139,7 +139,7 @@ Khi một Service worker được đăng ký, phạm vi của Service worker đ�
 Bạn có thể thấy round trip này giữa browser process và renderer process có thể dẫn đến delay nếu Service worker quyết định yêu cầu data từ mạng. Tải trước điều hướng là một cơ chế để tăng tốc quá trình này bằng cách tải tài nguyên song song với khởi động Service worker. Nó đánh dấu các request này bằng một header, cho phép các máy chủ quyết định gửi nội dung khác nhau cho các request này; ví dụ: chỉ cập nhật data thay vì full data.
 
 <figure markdown>
-![Hình 13: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker trong khi bắt đầu network request cùng lúc đó](../../assets/Misc/chrome_blog/inside_browser_2/figure13.avif){:class="centered-img h-300"}
+![Hình 13: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker trong khi bắt đầu network request cùng lúc đó](../../assets/misc/chrome_blog/inside_browser_2/figure13.avif){:class="centered-img h-300"}
 <figcaption>Hình 13: UI thread trong browser process khởi tạo một renderer process để xử lý các service worker trong khi bắt đầu network request cùng lúc đó</figcaption>
 </figure>
 

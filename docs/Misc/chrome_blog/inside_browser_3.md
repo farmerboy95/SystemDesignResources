@@ -17,7 +17,7 @@ Renderer process chịu trách nhiệm cho tất cả mọi thứ xảy ra trong
 Công việc chủ yếu của renderer process là chuyển HTML, CSS và JavaScript thành một trang web mà người dùng có thể tương tác.
 
 <figure markdown>
-![Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong](../../assets/Misc/chrome_blog/inside_browser_3/figure1.avif){:class="centered-img h-300"}
+![Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong](../../assets/misc/chrome_blog/inside_browser_3/figure1.avif){:class="centered-img h-300"}
 <figcaption>Hình 1: Renderer process với một main thread, các worker thread, một compositor thread và một raster thread bên trong</figcaption>
 </figure>
 
@@ -36,7 +36,7 @@ Parse một tài liệu HTML thành DOM được định nghĩa bởi [Tiêu chu
 Một website thường dùng các tài nguyên bên ngoài như hình ảnh, CSS và JavaScript. Các file này cần được tải từ mạng hoặc cache. Main thread *có thể* yêu cầu từng cái một khi nó tìm ra các tài nguyên đó trong lúc parse để xây dựng DOM, nhưng để tăng tốc, "scanner tải trước" được chạy đồng thời. Nếu có những thứ như `<img>` hoặc `<link>` trong tài liệu HTML, scanner tải trước sẽ xem xét mã thông báo do HTML parser tạo và gửi request đến network thread trong browser process.
 
 <figure markdown>
-![Hình 2: Main thread parse HTML và xây dựng cây DOM](../../assets/Misc/chrome_blog/inside_browser_3/figure2.avif){:class="centered-img h-300"}
+![Hình 2: Main thread parse HTML và xây dựng cây DOM](../../assets/misc/chrome_blog/inside_browser_3/figure2.avif){:class="centered-img h-300"}
 <figcaption>Hình 2: Main thread parse HTML và xây dựng cây DOM</figcaption>
 </figure>
 
@@ -53,7 +53,7 @@ Có nhiều cách để các nhà phát triển ứng dụng web có thể gửi
 DOM là chưa đủ để biết trang web sẽ trông như thế nào vì ta cần các style trong CSS. Main thread sẽ parse CSS và quyết định computed style cho từng node DOM. Đây là thông tin về loại style được áp dụng cho từng element dựa trên bộ chọn CSS. Bạn có thể xem thông tin này trong phần `computed` của DevTools.
 
 <figure markdown>
-![Hình 3: Main thread parse CSS để thêm các computed style vào](../../assets/Misc/chrome_blog/inside_browser_3/figure3.avif){:class="centered-img h-300"}
+![Hình 3: Main thread parse CSS để thêm các computed style vào](../../assets/misc/chrome_blog/inside_browser_3/figure3.avif){:class="centered-img h-300"}
 <figcaption>Hình 3: Main thread parse CSS để thêm các computed style vào</figcaption>
 </figure>
 
@@ -64,14 +64,14 @@ Ngay cả khi nếu bạn không cung cấp CSS, mỗi DOM node vẫn có một 
 Giờ renderer process đã biết cấu trúc của tài liệu và style cho từng node, nhưng vẫn không đủ để render trang. Tưởng tượng bạn đang cố gắng miêu tả một bức vẽ cho bạn của mình qua điện thoại. "Có một hình tròn lớn màu đủ và một hình vuông nhỏ màu xanh" là không đủ thông tin để bạn của bạn biết chính xác bức vẽ trông thế nào.
 
 <figure markdown>
-![Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác](../../assets/Misc/chrome_blog/inside_browser_3/figure4.avif){:class="centered-img h-300"}
+![Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác](../../assets/misc/chrome_blog/inside_browser_3/figure4.avif){:class="centered-img h-300"}
 <figcaption>Hình 4: Một người đứng trước một bức vẽ, với kết nối điện thoại đến một người khác</figcaption>
 </figure>
 
 Layout (bố cục) là một process để tìm hình dạng của các element. Main thread sẽ đi qua DOM và các computed style và tạo cây layout, nó sẽ có các thông tin như toạ độ x y và kích thước hộp giới hạn. Cây layout có cấu trúc tương tự cây DOM, nhưng nó chỉ chứa thông tin liên quan đến những gì hiển thị trên trang. Nếu `display: none` được áp dụng, element đó không nằm trong layout tree (tuy nhiên, element với `visibility: hidden` vẫn nằm trên cây layout). Tương tự, nếu một lớp giả với nội dung như `p::before{content:"Hi!"}` được áp dụng, nó sẽ nằm trong cây layout mặc dù nó không nằm trong DOM.
 
 <figure markdown>
-![Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout](../../assets/Misc/chrome_blog/inside_browser_3/figure5.avif){:class="centered-img h-300"}
+![Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout](../../assets/misc/chrome_blog/inside_browser_3/figure5.avif){:class="centered-img h-300"}
 <figcaption>Hình 5: Main thread chạy dọc cây DOM với computed style và tạo ra cây layout</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ Xác định layout của trang là một việc khó. Ngay cả layout của tr
 
 <figure markdown>
 <video controls>
-    <source id="mp4" src="../../../assets/Misc/chrome_blog/inside_browser_3/figure6.mp4" type="video/mp4">
+    <source id="mp4" src="../../../assets/misc/chrome_blog/inside_browser_3/figure6.mp4" type="video/mp4">
 </video>
 <figcaption>Hình 6: Box Layout của đoạn văn phải di chuyển vì có dấu xuống dòng mới</figcaption>
 </figure>
@@ -91,21 +91,21 @@ CSS có thể làm cho phần tử nổi sang một bên, che phần mục tràn
 Có DOM, style, và layout vẫn chưa đủ để render trang. Giả sử bạn muốn vẽ lại bức tranh đó. Bạn biết kích thước, hình dáng và vị trí các element, nhưng theo thứ tự nào?
 
 <figure markdown>
-![Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước](../../assets/Misc/chrome_blog/inside_browser_3/figure7.avif){:class="centered-img h-300"}
+![Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước](../../assets/misc/chrome_blog/inside_browser_3/figure7.avif){:class="centered-img h-300"}
 <figcaption>Hình 7: Một người đứng trước một bức vẽ với cọ sơn, tự hỏi xem mình nên vẽ hình tròn hay hình vuông trước</figcaption>
 </figure>
 
 Ví dụ, `z-index` có thể được set cho một số element nhất định, trong trường hợp đó, vẽ theo thứ tự trên HTML sẽ cho ra kết quả sai khi render.
 
 <figure markdown>
-![Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng](../../assets/Misc/chrome_blog/inside_browser_3/figure8.avif){:class="centered-img h-300"}
+![Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng](../../assets/misc/chrome_blog/inside_browser_3/figure8.avif){:class="centered-img h-300"}
 <figcaption>Hình 8: Element của trang xuất hiện theo thứ tự HTML markup, cho ra kết quả sai vì z-index không được sử dụng</figcaption>
 </figure>
 
 Ở bước vẽ này, main thread sẽ đi qua cây layout để tạo ra các bản ghi vẽ. Bản ghi vẽ (paint record) là một ghi chú của quá trình vẽ như "nền trước, rồi chữ, rồi đến hình chữ nhật". Nếu bạn từng vẽ trên element `<canvas>` với JavaScript, bạn sẽ quen với quá trình này.
 
 <figure markdown>
-![Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ](../../assets/Misc/chrome_blog/inside_browser_3/figure9.avif){:class="centered-img h-300"}
+![Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ](../../assets/misc/chrome_blog/inside_browser_3/figure9.avif){:class="centered-img h-300"}
 <figcaption>Hình 9: Main thread đi qua cây layout và cho ra các bản ghi vẽ</figcaption>
 </figure>
 
@@ -115,7 +115,7 @@ Ví dụ, `z-index` có thể được set cho một số element nhất định
 
 <figure markdown>
 <video controls>
-    <source id="mp4" src="../../../assets/Misc/chrome_blog/inside_browser_3/figure10.mp4" type="video/mp4">
+    <source id="mp4" src="../../../assets/misc/chrome_blog/inside_browser_3/figure10.mp4" type="video/mp4">
 </video>
 <figcaption>Hình 10: Các cây DOM + Style, Layout và Paint theo thứ tự chúng được sinh ra</figcaption>
 </figure>
@@ -123,21 +123,21 @@ Ví dụ, `z-index` có thể được set cho một số element nhất định
 Nếu bạn đang tạo hiệu ứng cho các element, trình duyệt phải chạy các thao tác này ở giữa mọi frame. Hầu hết các display sẽ refresh 60 lần một giây (60 frame/giây); hình ảnh động sẽ xuất hiện mượt mà đối với mắt người khi bạn di chuyển mọi thứ trên màn hình ở mọi frame. Tuy nhiên, nếu hoạt ảnh mất đi các frame ở giữa, thì trang sẽ xuất hiện một cách "lộn xộn".
 
 <figure markdown>
-![Hình 11: Các frame hoạt ảnh trên dòng thời gian](../../assets/Misc/chrome_blog/inside_browser_3/figure11.avif){:class="centered-img h-150"}
+![Hình 11: Các frame hoạt ảnh trên dòng thời gian](../../assets/misc/chrome_blog/inside_browser_3/figure11.avif){:class="centered-img h-150"}
 <figcaption>Hình 11: Các frame hoạt ảnh trên dòng thời gian</figcaption>
 </figure>
 
 Ngay cả khi các hoạt động render của bạn theo kịp quá trình refresh màn hình, thì các tính toán này vẫn đang chạy trên main thread, nghĩa là thread này có thể bị chặn khi ứng dụng của bạn đang chạy JavaScript.
 
 <figure markdown>
-![Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript](../../assets/Misc/chrome_blog/inside_browser_3/figure12.avif){:class="centered-img h-150"}
+![Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript](../../assets/misc/chrome_blog/inside_browser_3/figure12.avif){:class="centered-img h-150"}
 <figcaption>Hình 12: Các frame hoạt ảnh trên dòng thời gian, nhưng một frame bị chặn bởi JavaScript</figcaption>
 </figure>
 
 Bạn có thể chia thao tác JavaScript thành các phần nhỏ và lên lịch chạy ở mọi frame bằng cách sử dụng `requestAnimationFrame()`. Để biết thêm về chủ đề này, vui lòng xem [Tối ưu hóa thực thi JavaScript](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution). Bạn cũng có thể chạy [JavaScript trong Web Worker](https://www.youtube.com/watch?v=X57mh8tKkgE) để tránh chặn main thread.
 
 <figure markdown>
-![Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh](../../assets/Misc/chrome_blog/inside_browser_3/figure13.avif){:class="centered-img h-150"}
+![Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh](../../assets/misc/chrome_blog/inside_browser_3/figure13.avif){:class="centered-img h-150"}
 <figcaption>Hình 13: Các đoạn JavaScript nhỏ hơn chạy trên dòng thời gian có frame hoạt ảnh</figcaption>
 </figure>
 
@@ -151,7 +151,7 @@ Có lẽ một cách ngây thơ để xử lý việc này là raster các phầ
 
 <figure markdown>
 <video controls>
-    <source id="mp4" src="../../../assets/Misc/chrome_blog/inside_browser_3/figure14.mp4" type="video/mp4">
+    <source id="mp4" src="../../../assets/misc/chrome_blog/inside_browser_3/figure14.mp4" type="video/mp4">
 </video>
 <figcaption>Hình 14: Hoạt ảnh của rasterizing process</figcaption>
 </figure>
@@ -162,7 +162,7 @@ Compositing là một kỹ thuật để tách các phần của trang thành c�
 
 <figure markdown>
 <video controls>
-    <source id="mp4" src="../../../assets/Misc/chrome_blog/inside_browser_3/figure15.mp4" type="video/mp4">
+    <source id="mp4" src="../../../assets/misc/chrome_blog/inside_browser_3/figure15.mp4" type="video/mp4">
 </video>
 <figcaption>Hình 15: Hoạt ảnh của compositing process</figcaption>
 </figure>
@@ -174,7 +174,7 @@ Bạn có thể xem cách trang web của mình được chia thành các layer 
 Để tìm ra mỗi element nằm trong layer nào, main thread đi qua cây layout để tạo cây layer (phần này được gọi là "Cập nhật cây layer" trong bảng hiệu suất DevTools). Nếu một số phần của trang lẽ ra là layer riêng biệt (như menu bên trượt vào) mà không có layer riêng, thì bạn có thể gợi ý cho trình duyệt bằng cách sử dụng thuộc tính `will-change` trong CSS.
 
 <figure markdown>
-![Hình 16: Main thread đi qua cây layout để tạo ra cây layer](../../assets/Misc/chrome_blog/inside_browser_3/figure16.avif){:class="centered-img h-300"}
+![Hình 16: Main thread đi qua cây layout để tạo ra cây layer](../../assets/misc/chrome_blog/inside_browser_3/figure16.avif){:class="centered-img h-300"}
 <figcaption>Hình 16: Main thread đi qua cây layout để tạo ra cây layer</figcaption>
 </figure>
 
@@ -185,7 +185,7 @@ Bạn có thể muốn cung cấp các layer cho mọi element, nhưng việc co
 Khi cây layer được tạo và thứ tự vẽ được xác định, main thread sẽ commit thông tin đó cho compositor thread. Compositor thread sau đó rasterize từng layer. Một layer có thể lớn bằng toàn bộ chiều dài của một trang, do đó, compositor thread chia chúng thành các ô và gửi từng ô tới các raster thread. Các raster thread sẽ rasterize từng ô và lưu chúng trong bộ nhớ GPU.
 
 <figure markdown>
-![Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU](../../assets/Misc/chrome_blog/inside_browser_3/figure17.avif){:class="centered-img h-300"}
+![Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU](../../assets/misc/chrome_blog/inside_browser_3/figure17.avif){:class="centered-img h-300"}
 <figcaption>Hình 17: Các raster thread tạo bitmap của các ô và gửi chúng đến GPU</figcaption>
 </figure>
 
@@ -201,7 +201,7 @@ Sau khi các ô được raster, compositor thread sẽ thu thập thông tin ô
 Một compositor frame sau đó được gửi tới browser process thông qua IPC. Ở đây, một compositor frame khác có thể được thêm vào từ UI thread để thay đổi UI của trình duyệt hoặc từ các renderer process khác dành cho tiện ích mở rộng. Các compositor frame này được gửi đến GPU để hiển thị trên màn hình. Nếu một sự kiện cuộn xảy ra, compositor thread sẽ tạo một compositor frame khác để gửi tới GPU.
 
 <figure markdown>
-![Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU](../../assets/Misc/chrome_blog/inside_browser_3/figure18.avif){:class="centered-img h-300"}
+![Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU](../../assets/misc/chrome_blog/inside_browser_3/figure18.avif){:class="centered-img h-300"}
 <figcaption>Hình 18: Compositor thread tạo compositing frame. Frame được gửi đến browser process rồi đến GPU</figcaption>
 </figure>
 

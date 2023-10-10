@@ -54,10 +54,10 @@ comment: false
     - [Những hiểu nhầm về Bare Metal, Virtual Machine và Container](ByteByteGo/container_concepts.md)
 - Nguồn khác
     - Chrome Developers Blog
-        - [Bên trong các trình duyệt ngày nay (Phần 1)](Misc/chrome_blog/inside_browser_1.md)
-        - [Bên trong các trình duyệt ngày nay (Phần 2)](Misc/chrome_blog/inside_browser_2.md)
-        - [Bên trong các trình duyệt ngày nay (Phần 3)](Misc/chrome_blog/inside_browser_3.md)
-        - [Bên trong các trình duyệt ngày nay (Phần 4)](Misc/chrome_blog/inside_browser_4.md)
+        - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome_blog/inside_browser_1.md)
+        - [Bên trong các trình duyệt ngày nay (Phần 2)](misc/chrome_blog/inside_browser_2.md)
+        - [Bên trong các trình duyệt ngày nay (Phần 3)](misc/chrome_blog/inside_browser_3.md)
+        - [Bên trong các trình duyệt ngày nay (Phần 4)](misc/chrome_blog/inside_browser_4.md)
     - Discord Blog
-        - [Discord lưu trữ hàng tỉ tin nhắn như thế nào?](Misc/discord_blog/storing_billions_messages.md)
-        - [Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?](Misc/discord_blog/storing_trillions_messages.md)
+        - [Discord lưu trữ hàng tỉ tin nhắn như thế nào?](misc/discord_blog/storing_billions_messages.md)
+        - [Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?](misc/discord_blog/storing_trillions_messages.md)

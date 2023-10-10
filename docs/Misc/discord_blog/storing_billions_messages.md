@@ -108,7 +108,7 @@ Ngay sau khi khởi chạy, chúng tôi bắt đầu gặp lỗi `author_id` b�
 
 Cassandra là một [AP](https://en.wikipedia.org/wiki/CAP_theorem) database (theo định lý CAP), nghĩa là nó đánh đổi strong consistency để có được tính khả dụng, đây là điều chúng tôi muốn. Nó là một kiểu chống đọc trước khi ghi (việc đọc tốn chi phí hơn) trong Cassandra và vì vậy mọi thứ mà Cassandra làm về cơ bản là upsert (update khi có dữ liệu và insert khi không có) ngay cả khi bạn chỉ cung cấp một số cột nhất định. Bạn cũng có thể ghi vào bất kỳ node nào và nó sẽ tự động giải quyết conflict bằng cách cho lần ghi cuối cùng vào database trên cơ sở mỗi cột. *Cái này thì gây nên vấn đề quái gì nhỉ?*
 
-![](../../assets/Misc/discord_blog/storing_billions_messages/figure1.gif){:class="centered-img"}
+![](../../assets/misc/discord_blog/storing_billions_messages/figure1.gif){:class="centered-img"}
 
 Trong trường hợp một người dùng chỉnh sửa một tin nhắn cùng lúc với một người dùng khác xóa cái tin nhắn đó, sẽ xảy ra vấn đề là cái row đó bị mất hết thông tin trừ khoá chỉnh và văn bản vì tất cả các lần ghi của Cassandra đều là upsert. Có hai giải pháp khả thi để xử lý vấn đề này:
 
@@ -125,11 +125,11 @@ Xóa một cột và viết `null` vào một cột về cơ bản là giống n
 
 Cassandra nổi tiếng là có tốc độ ghi nhanh hơn đọc và chúng tôi thấy điều đó chính xác trong thực tế. Thời gian ghi là dưới 1ms và thời gian đọc dưới 5ms. Điều này đã được kiểm nghiệm bất kể dữ liệu nào đang được truy cập và hiệu suất vẫn nhất quán trong suốt một tuần thử nghiệm. Không có gì bất ngờ cả, chúng tôi nhận được thứ mà mình mong đợi.
 
-![](../../assets/Misc/discord_blog/storing_billions_messages/figure2.png){:class="centered-img"}
+![](../../assets/misc/discord_blog/storing_billions_messages/figure2.png){:class="centered-img"}
 
 Để phù hợp với hiệu suất đọc nhanh, nhất quán, đây là ví dụ về việc chuyển đến một tin nhắn từ hơn một năm trước trong một channel có hàng triệu tin nhắn:
 
-![](../../assets/Misc/discord_blog/storing_billions_messages/figure3.gif){:class="centered-img"}
+![](../../assets/misc/discord_blog/storing_billions_messages/figure3.gif){:class="centered-img"}
 
 ## Sự bất ngờ lớn
 
