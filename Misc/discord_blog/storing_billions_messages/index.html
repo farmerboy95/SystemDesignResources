@@ -280,7 +280,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../misc/chrome_blog/inside_browser_1.md" class="md-tabs__link">
+        <a href="../../../misc/chrome_blog/inside_browser_1/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -1431,7 +1431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/chrome_blog/inside_browser_1.md" class="md-nav__link">
+      <a href="../../../misc/chrome_blog/inside_browser_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1451,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/chrome_blog/inside_browser_2.md" class="md-nav__link">
+      <a href="../../../misc/chrome_blog/inside_browser_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1471,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/chrome_blog/inside_browser_3.md" class="md-nav__link">
+      <a href="../../../misc/chrome_blog/inside_browser_3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1491,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/chrome_blog/inside_browser_4.md" class="md-nav__link">
+      <a href="../../../misc/chrome_blog/inside_browser_4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1555,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/discord_blog/storing_billions_messages.md" class="md-nav__link">
+      <a href="../../../misc/discord_blog/storing_billions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1575,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../misc/discord_blog/storing_trillions_messages.md" class="md-nav__link">
+      <a href="../../../misc/discord_blog/storing_trillions_messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1824,7 +1824,7 @@
 <p>Ngay sau khi khởi chạy, chúng tôi bắt đầu gặp lỗi <code>author_id</code> bị <code>null</code>. <em><code>null</code> là <code>null</code> kiểu gì? Nó là trường bắt buộc mà sao <code>null</code>?</em></p>
 <h2 id="eventual-consistency">Eventual Consistency</h2>
 <p>Cassandra là một <a href="https://en.wikipedia.org/wiki/CAP_theorem">AP</a> database (theo định lý CAP), nghĩa là nó đánh đổi strong consistency để có được tính khả dụng, đây là điều chúng tôi muốn. Nó là một kiểu chống đọc trước khi ghi (việc đọc tốn chi phí hơn) trong Cassandra và vì vậy mọi thứ mà Cassandra làm về cơ bản là upsert (update khi có dữ liệu và insert khi không có) ngay cả khi bạn chỉ cung cấp một số cột nhất định. Bạn cũng có thể ghi vào bất kỳ node nào và nó sẽ tự động giải quyết conflict bằng cách cho lần ghi cuối cùng vào database trên cơ sở mỗi cột. <em>Cái này thì gây nên vấn đề quái gì nhỉ?</em></p>
-<p><a class="glightbox" href="../../assets/misc/discord_blog/storing_billions_messages/figure1.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/misc/discord_blog/storing_billions_messages/figure1.gif" /></a></p>
+<p><a class="glightbox" href="../../../assets/misc/discord_blog/storing_billions_messages/figure1.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../../assets/misc/discord_blog/storing_billions_messages/figure1.gif" /></a></p>
 <p>Trong trường hợp một người dùng chỉnh sửa một tin nhắn cùng lúc với một người dùng khác xóa cái tin nhắn đó, sẽ xảy ra vấn đề là cái row đó bị mất hết thông tin trừ khoá chỉnh và văn bản vì tất cả các lần ghi của Cassandra đều là upsert. Có hai giải pháp khả thi để xử lý vấn đề này:</p>
 <ol>
 <li>Viết lại toàn bộ tin nhắn khi chỉnh sửa. Điều này có khả năng phục hồi các tin nhắn bị xoá nhưng lại thêm nhiều khả năng conflict với các lần ghi đồng thời vào các cột khác.</li>
@@ -1835,9 +1835,9 @@
 <p>Xóa một cột và viết <code>null</code> vào một cột về cơ bản là giống nhau. Cả hai đều tạo ra một tombstone. Vì tất cả các lần ghi dữ liệu trong Cassandra đều là upsert, nên bạn sẽ tạo một tombstone ngay cả khi ghi <code>null</code> lần đầu. Trong thực tế, schema tin nhắn của chúng tôi chứa 16 cột, nhưng tin nhắn trung bình chỉ có 4 giá trị được đặt. Chúng tôi đã ghi 12 tombstone cho Cassandra hầu hết thời gian mà không có lý do. Giải pháp cho vấn đề này rất đơn giản: chỉ ghi các giá trị khác <code>null</code> cho Cassandra.</p>
 <h2 id="hieu-suat">Hiệu suất</h2>
 <p>Cassandra nổi tiếng là có tốc độ ghi nhanh hơn đọc và chúng tôi thấy điều đó chính xác trong thực tế. Thời gian ghi là dưới 1ms và thời gian đọc dưới 5ms. Điều này đã được kiểm nghiệm bất kể dữ liệu nào đang được truy cập và hiệu suất vẫn nhất quán trong suốt một tuần thử nghiệm. Không có gì bất ngờ cả, chúng tôi nhận được thứ mà mình mong đợi.</p>
-<p><a class="glightbox" href="../../assets/misc/discord_blog/storing_billions_messages/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/misc/discord_blog/storing_billions_messages/figure2.png" /></a></p>
+<p><a class="glightbox" href="../../../assets/misc/discord_blog/storing_billions_messages/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../../assets/misc/discord_blog/storing_billions_messages/figure2.png" /></a></p>
 <p>Để phù hợp với hiệu suất đọc nhanh, nhất quán, đây là ví dụ về việc chuyển đến một tin nhắn từ hơn một năm trước trong một channel có hàng triệu tin nhắn:</p>
-<p><a class="glightbox" href="../../assets/misc/discord_blog/storing_billions_messages/figure3.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/misc/discord_blog/storing_billions_messages/figure3.gif" /></a></p>
+<p><a class="glightbox" href="../../../assets/misc/discord_blog/storing_billions_messages/figure3.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../../assets/misc/discord_blog/storing_billions_messages/figure3.gif" /></a></p>
 <h2 id="su-bat-ngo-lon">Sự bất ngờ lớn</h2>
 <p>Mọi thứ diễn ra suôn sẻ, nên chúng tôi triển khai nó làm database chính của mình và loại bỏ dần MongoDB trong vòng một tuần. Nó tiếp tục hoạt động tốt trong khoảng 6 tháng cho đến một ngày mà Cassandra không phản hồi.</p>
 <p>Chúng tôi nhận ra Cassandra liên tục chạy GC "stop-the-world" trong 10 giây nhưng không biết tại sao. Chúng tôi bắt đầu tìm hiểu và tìm thấy một channel Discord tốn 20 giây để tải. Máy chủ Discord công khai của <strong>Subreddit Puzzles &amp; Dragons</strong> là thủ phạm. Vì nó công khai nên chúng tôi đã tham gia để kiểm tra. Cái channel này chỉ có 1 tin nhắn, quá sức tưởng tượng. Vào thời điểm đó, rõ ràng là họ đã xóa hàng triệu tin nhắn bằng API của chúng tôi, chỉ để lại 1 tin nhắn trong channel.</p>

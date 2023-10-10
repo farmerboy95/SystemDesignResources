@@ -260,4 +260,34 @@
          <lastmod>2023-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/misc/chrome_blog/inside_browser_1/</loc>
+         <lastmod>2023-10-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/misc/chrome_blog/inside_browser_2/</loc>
+         <lastmod>2023-10-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/misc/chrome_blog/inside_browser_3/</loc>
+         <lastmod>2023-10-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/misc/chrome_blog/inside_browser_4/</loc>
+         <lastmod>2023-10-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/misc/discord_blog/storing_billions_messages/</loc>
+         <lastmod>2023-10-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://farmerboy95.github.io/SystemDesignResources/misc/discord_blog/storing_trillions_messages/</loc>
+         <lastmod>2023-10-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
