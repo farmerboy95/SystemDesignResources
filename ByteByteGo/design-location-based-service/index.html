@@ -1,0 +1,2290 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/design-location-based-service/">
+      
+      
+        <link rel="prev" href="../proxy-vs-reverse-proxy/">
+      
+      
+        <link rel="next" href="../system-patterns/">
+      
+      
+      <link rel="icon" href="../../assets/images/logo.jpg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+    
+    
+      
+        <title>Thiết kế hệ thống: Thiết kế Location Based Service - farmerboy's System Design Resources</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+
+    
+    
+      
+    
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NWZNGRMS0Q"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NWZNGRMS0Q",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NWZNGRMS0Q",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#thiet-ke-he-thong-thiet-ke-location-based-service" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            farmerboy's System Design Resources
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Thiết kế hệ thống: Thiết kế Location Based Service
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/farmerboy95/SystemDesignResources" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/SystemDesignResources
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Trang chủ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../what-happen-when-access-url/" class="md-tabs__link">
+          
+  
+  ByteByteGo
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../misc/chrome-blog/inside-browser-1/" class="md-tabs__link">
+          
+  
+  Nguồn khác
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.jpg" alt="logo">
+
+    </a>
+    farmerboy's System Design Resources
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/farmerboy95/SystemDesignResources" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    farmerboy95/SystemDesignResources
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Trang chủ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Trang chủ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lời chào
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các tài liệu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ByteByteGo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ByteByteGo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-happen-when-access-url/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../latency-numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các mốc độ trễ mà lập trình viên nên biết
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http-versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP/1 đến HTTP/2 đến HTTP/3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rest-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl-tls-https/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSL, TLS và HTTPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scan-to-pay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scan to Pay là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process-vs-thread/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process vs. Thread
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging-techniques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các kĩ thuật debug
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cdn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tìm hiểu về CDN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../top-redis-use-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Top 5 ứng dụng của Redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-redis-fast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vì sao Redis lại nhanh?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing-passwords/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lưu mật khẩu vào database như thế nào cho đúng?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-gateway/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Gateway là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-kafka-fast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tại sao Kafka lại nhanh như vậy?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single Sign-on (SSO) là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../osi-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mô hình OSI là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Những thứ bạn cần biết về DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer-memory-and-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bộ nhớ và ổ cứng trong máy tính
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatgpt-hacks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 cách mà lập trình viên tận dụng ChatGPT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cap-theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Định lý CAP - CAP theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gRPC là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxy-vs-reverse-proxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxy vs. Reverse Proxy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Thiết kế hệ thống: Thiết kế Location Based Service
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Thiết kế hệ thống: Thiết kế Location Based Service
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia-va-yeu-cau" class="md-nav__link">
+    Định nghĩa và yêu cầu
+  </a>
+  
+    <nav class="md-nav" aria-label="Định nghĩa và yêu cầu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    Functional requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-functional-requirements" class="md-nav__link">
+    Non-functional requirements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinh-toan" class="md-nav__link">
+    Tính toán
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thiet-ke" class="md-nav__link">
+    Thiết kế
+  </a>
+  
+    <nav class="md-nav" aria-label="Thiết kế">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-design" class="md-nav__link">
+    API design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-schema" class="md-nav__link">
+    Data schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-level-design" class="md-nav__link">
+    High-level design
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thiet-ke-chuyen-sau" class="md-nav__link">
+    Thiết kế chuyên sâu
+  </a>
+  
+    <nav class="md-nav" aria-label="Thiết kế chuyên sâu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-khong-gian-ia-ly" class="md-nav__link">
+    Database không gian địa lý
+  </a>
+  
+    <nav class="md-nav" aria-label="Database không gian địa lý">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#y-tuong-trau-bo" class="md-nav__link">
+    Ý tưởng trâu bò
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-dua-tren-hash" class="md-nav__link">
+    Index dựa trên hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-dua-tren-cay" class="md-nav__link">
+    Index dựa trên cây
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#them-geohash-vao-thiet-ke" class="md-nav__link">
+    Thêm geohash vào thiết kế
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-bang-tim-kiem" class="md-nav__link">
+    Scale bảng tìm kiếm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    Caching
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tong-ket" class="md-nav__link">
+    Tổng kết
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 kiểu hệ thống phân tán thông dụng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsm-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bí mật đằng sau NoSQL: Cây LSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bloom-filter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloom Filter là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci-cd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../choose-database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Làm sao chọn database cho đúng?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kiến trúc Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microservices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microservices là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-system-design-interview-important/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vì sao phỏng vấn System Design lại quan trọng?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stackoverflow-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hệ thống của Stack Overflow có gì hay?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netflix-architecture-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giải mã sự phát triển trong kiến trúc API của Netflix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oauth2-explained/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giải thích dễ hiểu OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discord-messages-migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord lưu hàng nghìn tỉ tin nhắn như thế nào?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optimize-api-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 cách để tăng hiệu suất API của bạn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-design-interview-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hướng dẫn từng bước phỏng vấn System Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consistent-hashing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consistent Hashing là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-merge-vs-rebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Merge vs Rebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../load-balancing-algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 thuật toán load balancing phổ biến
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql-execution-order/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thứ tự thực thi câu lệnh SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apple-google-pay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apple Pay và Google Pay hoạt động như thế nào?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container-concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Những hiểu nhầm về Bare Metal, Virtual Machine và Container
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Nguồn khác
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Nguồn khác
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chrome Developers Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Chrome Developers Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/chrome-blog/inside-browser-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bên trong các trình duyệt ngày nay (Phần 1)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/chrome-blog/inside-browser-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bên trong các trình duyệt ngày nay (Phần 2)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/chrome-blog/inside-browser-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bên trong các trình duyệt ngày nay (Phần 3)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/chrome-blog/inside-browser-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bên trong các trình duyệt ngày nay (Phần 4)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Discord Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Discord Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/discord-blog/storing-billions-messages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord lưu trữ hàng tỉ tin nhắn như thế nào?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/discord-blog/storing-trillions-messages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    Nguồn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia-va-yeu-cau" class="md-nav__link">
+    Định nghĩa và yêu cầu
+  </a>
+  
+    <nav class="md-nav" aria-label="Định nghĩa và yêu cầu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    Functional requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-functional-requirements" class="md-nav__link">
+    Non-functional requirements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinh-toan" class="md-nav__link">
+    Tính toán
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thiet-ke" class="md-nav__link">
+    Thiết kế
+  </a>
+  
+    <nav class="md-nav" aria-label="Thiết kế">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-design" class="md-nav__link">
+    API design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-schema" class="md-nav__link">
+    Data schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-level-design" class="md-nav__link">
+    High-level design
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thiet-ke-chuyen-sau" class="md-nav__link">
+    Thiết kế chuyên sâu
+  </a>
+  
+    <nav class="md-nav" aria-label="Thiết kế chuyên sâu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-khong-gian-ia-ly" class="md-nav__link">
+    Database không gian địa lý
+  </a>
+  
+    <nav class="md-nav" aria-label="Database không gian địa lý">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#y-tuong-trau-bo" class="md-nav__link">
+    Ý tưởng trâu bò
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-dua-tren-hash" class="md-nav__link">
+    Index dựa trên hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-dua-tren-cay" class="md-nav__link">
+    Index dựa trên cây
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#them-geohash-vao-thiet-ke" class="md-nav__link">
+    Thêm geohash vào thiết kế
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-bang-tim-kiem" class="md-nav__link">
+    Scale bảng tìm kiếm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    Caching
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tong-ket" class="md-nav__link">
+    Tổng kết
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+  
+  
+
+
+<h1 id="thiet-ke-he-thong-thiet-ke-location-based-service">Thiết kế hệ thống: Thiết kế Location Based Service</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=M4lR_Va97cQ">FAANG System Design Interview: Design A Location Based Service (Yelp, Google Places)</a></p>
+<h2 id="inh-nghia-va-yeu-cau">Định nghĩa và yêu cầu</h2>
+<p>Dịch vụ lân cận (proximity service) là gì? Đây là một service thường được thấy trong các thành phần backend của một ứng dụng như Yelp để tìm nhà hàng xịn nhất ở gần vị trí của bạn, hoặc trong ứng dụng bản đồ để tìm trạm xăng gần nhất.</p>
+<h3 id="functional-requirements">Functional requirements</h3>
+<p>Đầu tiên ta hãy đi vào việc hiểu bài toán và thiết lập phạm vi thiết kế ứng dụng. Các ứng dụng khác nhau sẽ có các yêu cầu khác nhau với proximity service. Ta sẽ chỉ xem xét các functional requirement (yêu cầu chức năng) cơ bản nhất.</p>
+<ol>
+<li>Cho vị trí của người dùng và bán kính, trả về tất cả các doanh nghiệp hoạt động trong vòng bán kính đó.</li>
+<li>Người quản lý doanh nghiệp có thể thêm, xoá hoặc sửa thông tin doanh nghiệp của mình. Những thay đổi này không nhất thiết phải xuất hiện trong thời gian thực, có thể ngày hôm sau xuất hiện cũng được.</li>
+<li>Người dùng ứng dụng có thể xem thông tin chi tiết về một doanh nghiệp nào đó.</li>
+</ol>
+<h3 id="non-functional-requirements">Non-functional requirements</h3>
+<p>Tiếp đến là các non-functional requirement (yêu cầu phi chức năng). Các non-functional requirement đặt ra các ràng buộc khác nhau đối với thiết kế. Những yêu cầu này làm cho việc thiết kế trở nên thú vị và có tính thử thách cao. Giả sử ứng dụng đánh giá này có 100 triệu người dùng hằng ngày (DAU - Daily Active Users) và 200 triệu doanh nghiệp. Ta sẽ có những non-functional requirement sau:</p>
+<ol>
+<li>Độ trễ phải thấp (low latency). Người dùng có thể tìm thấy các doanh nghiệp lân cận một cách nhanh chóng.</li>
+<li>Service phải có tính sẵn sàng cao (high availability). Nó có thể xử lý lưu lượng truy cập tăng đột biến trong giờ cao điểm.</li>
+</ol>
+<h2 id="tinh-toan">Tính toán</h2>
+<p>Giờ ta sẽ thực hiện một số tính toán tổng quan dựa trên các requirement ở trên. Nó sẽ cho ta những ý tưởng sơ bộ về những thách thức mà ta có thể gặp và những sự đánh đổi ta có thể làm. Trong này ta có thể đưa ra một số giả định hợp lý để dễ tính toán hơn.</p>
+<p>Giả sử, với một người dùng hàng ngày, trung bình người đó có thể thực hiện 5 truy vấn tìm kiếm. Với 100 triệu người dùng hàng ngày và 5 truy vấn cho một người / ngày, sẽ có tầm 5000 truy vấn một giây. Ta cũng cần biết dung lượng lưu trữ cần để lưu 200 triệu doanh nghiệp. Ta sẽ dừng ở đây một tí để xem ta sẽ lưu data như thế nào đã.</p>
+<h2 id="thiet-ke">Thiết kế</h2>
+<h3 id="api-design">API design</h3>
+<p>Giờ ta hãy xem thiết kế API như thế nào nhé. Ở đây ta sẽ dùng quy ước RESTful API cho đơn giản. Dựa vào functional requirement ở trên, ta sẽ có hai loại API. Loại 1 sẽ là để tìm doanh nghiệp lân cận. Đây là một GET request nhận vào kinh độ và vĩ độ của vị trí người dùng, và một tuỳ chọn bán kính. API này trả về các doanh nghiệp trong một mảng đối tượng doanh nghiệp, cùng tổng số doanh nghiệp trả về. Có hai điểm cần lưu ý:</p>
+<ul>
+<li>Ta sẽ đơn giản hoá API ở đây bằng cách bỏ qua phân trang. Tuy nhiên, trong thực tế, ta nên đưa phân trang vào API</li>
+<li>Các đối tượng doanh nghiệp trong API response chỉ chứa vừa đủ thông tin để cho ra kết quả tìm kiếm. Nó không chứa thông tin để tạo ra được trang chi tiết của doanh nghiệp. Để render trang chi tiết, ta cần một API khác.</li>
+</ul>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure1.png" /></a></p>
+<p>Loại API thứ hai quản lý các đối tượng doanh nghiệp. Nó bao gồm các CRUD endpoint để thêm, đọc, sửa và xoá một doanh nghiệp. Ta không đi vào chi tiết phần này vì nó khá đơn giản.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure2.png" /></a></p>
+<h3 id="data-schema">Data schema</h3>
+<p>Có hai bảng chính ở đây. Đầu tiên là bảng doanh nghiệp, chứa thông tin doanh nghiệp. Khoá chính là business ID. Bảng này hỗ trợ các thao tác CRUD cho API ta vừa nói ở trên.</p>
+<p>Bảng thứ hai thú vị hơn. Nó được dùng bởi API tìm kiếm doanh nghiệp để trả về doanh nghiệp nhanh chóng. Bảng này tối thiểu phải có business ID và vị trí doanh nghiệp. Các vị trí này phải được index theo một cách nào đó để giúp trả về kết quả nhanh chóng. Việc chọn bảng và cơ sở dữ liệu đòi hỏi một số kiến thức về tìm kiếm không gian địa lý (geospatial search).</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure3.png" /></a></p>
+<p>Ta có schema rồi, giờ ta có thể tính toán không gian lưu trữ. Có 200 triệu doanh nghiệp. Với bảng doanh nghiệp này, ta ước tính rằng thông tin một doanh nghiệp sẽ chiếm không quá 10 kilobyte, thực ra trung bình sẽ là tầm 1 kilobyte. Vì vậy nên bảng này sẽ chiếm tầm dưới 1 terabyte gì đấy.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure4.png" /></a></p>
+<p>Còn bảng tìm kiếm vị trí thì sao? Bảng này sẽ lưu business ID, kinh độ vĩ độ của mỗi doanh nghiệp. Mỗi thứ sẽ tầm 8 byte, nghĩa là khoảng 200 triệu lần 24 byte, là khoảng 5 gigabyte. Điều này cho thấy tập dữ liệu tìm kiếm vị trí này rất nhỏ. Khi tập dữ liệu nhỏ như vậy, ta có rất nhiều lựa chọn thiết kế, kể cả những lựa chọn nằm hoàn toàn trong bộ nhớ.</p>
+<h3 id="high-level-design">High-level design</h3>
+<p>Giờ ta đã biết đủ nhiều để có một sơ đồ thiết kế tổng quát. Trong hệ thống này, ta có 2 phần. Mỗi cái thì ánh xạ tới một danh mục API đã nói ở trên. Ta gọi phần đầu tiên là "service dựa trên vị trí" (Location-Based Service - LBS), và phần hai là "service doanh nghiệp" (business service). Ta sẽ xem xét từng thành phần trong thiết kế tổng quát này.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure5.png" /></a></p>
+<p>Đầu tiên là load balancer. Trong thiết kế, load balancer sẽ phân phối lưu lượng truy cập đến hai service trên, dựa vào các tuyến API. Các service này đều là stateless (không trạng thái). Việc triển khai các service phi trạng thái sau load balancer khá là phổ biến và ta sẽ không đi sâu hơn ở đây. Lưu ý rằng trong thực tế, ta có thể có những thiết lập khác để phân phối truy cập đến các service (như API Gateway trên AWS hay envoy trên cụm Kubenetes).</p>
+<p>Sau load balancer, ta có hai service nói trên. LBS là phần cốt lõi của hệ thống. Nó tìm các doanh nghiệp lân cận dựa vào bán kính và vị trí một cách nhanh chóng. LBS có vài điểm thú vị. </p>
+<ol>
+<li>Ta sẽ đọc dữ liệu nhiều hơn ghi dữ liệu rất nhiều. </li>
+<li>QPS cao, khoảng 5000 QPS. </li>
+<li>Service này là stateless. Nó có thể dễ dàng được mở rộng theo chiều ngang.</li>
+</ol>
+<p>Tiếp theo là service doanh nghiệp. Service này xử lý các request CRUD để quản lý các đối tượng doanh nghiệp. QPS cho việc tạo, sửa và xoá ở đây không cao. Và dựa vào functional requirement, các thay đổi không cần phải ngay lập tức. Điều này cho ta nhiều sự linh hoạt trong thiết kế. Tuy nhiên, với thao tác đọc, QPS có thể cao trong giờ cao điểm. Vì dữ liệu này không thay đổi thường xuyên nên nó là một ứng viên tiềm năng để cache nếu cần.</p>
+<p>Tiếp theo là cụm database. Ta chưa nói về loại database nào ta sẽ dùng, nhưng sẽ đi sâu vào sau. Tuy nhiên, dựa trên các pattern truy cập và lưu lượng đọc / ghi, ta đã biết đủ nhiều để quyết định dùng database nào. </p>
+<p>Cơ bản thì ta đã biết rằng: </p>
+<ul>
+<li>Service nặng về đọc dữ liệu. </li>
+<li>QPS đọc sẽ lớn hơn nhiều so với QPS ghi. </li>
+<li>Việc ghi dữ liệu không cần phải ngay lập tức. </li>
+</ul>
+<p>Tập dữ liệu tìm kiếm không lớn lắm. Tập dữ liệu doanh nghiệp to hơn một chút và ta có thể cần phải tối ưu nó. Dựa vào các yếu tố này, việc sử dụng cụm database với primary-secondary setup có thể là một nước đi hay.</p>
+<p>Với setup này, database chính sẽ xử lý tất cả các yêu cầu ghi, và các bản sao sẽ chỉ cho các yêu cầu đọc. Dữ liệu được lưu vào database chính trước và sau đó được sao chép qua các bản sao. Sẽ có một số dữ liệu bị trễ khi đọc do có độ trễ khi sao chép, nhưng cũng không quan trọng lắm vì ta biết rằng thay đổi không cần xuất hiện ngay lập tức.</p>
+<h2 id="thiet-ke-chuyen-sau">Thiết kế chuyên sâu</h2>
+<h3 id="database-khong-gian-ia-ly">Database không gian địa lý</h3>
+<p>Đến đây ta đã có nhiều ý hay về việc hệ thống ban đầu sẽ trông như thế nào. Giờ hãy đi sâu vào một số chi tiết thú vị. Ta hãy cùng xem database nào có thể được dùng để tìm vị trí nhanh. Có một lớp database được gọi là geospatial database (cơ sở dữ liệu về không gian địa lý), nó được tối ưu để lưu và truy vấn data trong không gian hình học như dữ liệu vị trí. Một số ví dụ là Redis GEOHASH và PostgreSQL với PostGIS extension.</p>
+<p>Để hiểu sơ bộ về cách thức hoạt động của các database này, ta sẽ nói về các thuật toán để index không gian địa lý của chúng. Kiến thức này có thể giúp ta chọn đúng thứ ta cần để triển khai.</p>
+<h4 id="y-tuong-trau-bo">Ý tưởng trâu bò</h4>
+<p>Cách đơn giản nhất nhưng cũng kém hiệu quả nhất là vẽ một hình tròn và tìm tất cả doanh nghiệp trong hình tròn đó. Mã SQL giả này cho thấy cách ta có thể cài trong điều kiện WHERE. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure6.png" /></a></p>
+<p>Điều kiện trong WHERE hơi phúc tạp, nhưng về cơ bản, nó tìm tất cả các doạnh nghiệp trong giới hạn của điều kiện đó. Rõ ràng là nó trông không hiệu quả lắm. Truy vấn này cần phải quét bảng. Với 200 triệu doanh nghiệp, quét bảng thực sự rất chậm. </p>
+<p>Vậy ta cải tiến nó như nào? Ý tưởng sẽ là tạo index cho cột kinh độ và vĩ độ. Nhưng chừng đó cũng không cải thiện nhiều độ hiệu quả. Ở đây ta có dữ liệu hai chiều. Tập dữ liệu được trả về cho mỗi chiều là rất lớn. Ta có thể lấy được tất cả doanh nghiệp trong khoảng vĩ độ hoặc khoảng kinh độ. Nhưng để lấy được data trong bán kính, ta cần giao hai khoảng đó lại. Mỗi khoảng không gian lại có rất nhiều data nên điều này thực sự không hiệu quả. Nói cách khác, vấn đề cốt lõi với cách tiếp cận này là index chỉ có thể cải thiện tốc độ truy vấn trên một chiều thôi. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure7.png" /></a></p>
+<p>Như vậy, câu hỏi tiếp theo sẽ là: Ta có thể làm sao để biến không gian hai chiều thành một chiều, từ đó xây dựng index trên một chiều đó được không? Câu trả lời là <strong>CÓ</strong>.</p>
+<p>Có hai cách tiếp cận khi dùng index không gian địa lý. Cách đầu tiên là dựa vào hash. Một số ví dụ ở đây là Even Grid và Geohash. Cách thứ hai là dựa trên cây, bao gồm Quadtree, Google S2 và RTree. Mặc dù cách triển khai cơ bản của hai cách tiếp cận này là khác nhau, nhưng ý tưởng sơ bộ là như nhau. Nó sẽ chia bản đồ thành các khu vực nhỏ hơn và tạo index để tìm nhanh.</p>
+<h4 id="index-dua-tren-hash">Index dựa trên hash</h4>
+<p>Ta đi vào cách tiếp cận dựa trên hash trước. Ta sẽ chia thế giới thành các ô bằng nhau. Một ô có thể có nhiều doanh nghiệp, và một doanh nghiệp nằm trong một ô. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure8.png" /></a></p>
+<p>Cách này có một điểm yếu lớn. Phân bố doanh nghiệp sẽ không đều. Sẽ có nhiều doanh nghiệp ở khu downtown New York, nhưng sẽ có ít ở vùng nông thôn, ví dụ thế. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure9.png" /></a></p>
+<p>Lý tưởng nhất là ta muốn sử dụng các ô nhỏ hơn cho các khu vực dày đặc và các ô lớn hơn cho các khu vực thưa thớt. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure10.png" /></a></p>
+<p>Geohash là một cải tiến với ô chia đều. Cơ chế của Geohash sẽ là biến thông tin địa điểm hai chiều thành một chiều dưới dạng xâu chứa các chữ cái và chữ số. Thế nghĩa là sao? </p>
+<p>Đầu tiên, nó chia thế giới thành 4 góc phần tư dọc theo kinh tuyến gốc và đường xích đạo. Bốn góc phần tư này được biểu diễn bằng hai bit. Với bit đầu tiên, nửa bên trái bằng 0 và nủa bên phải bằng 1. Với bit thứ hai, nửa trên bằng 1 và nửa dưới bằng 0. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure11.png" /></a></p>
+<p>Tiếp theo, nó chia mỗi ô thành 4 ô nhỏ hơn. Mỗi ô nhỏ hơn lại được biểu diễn bằng hai bit khác. Các bit cho các ô con được thêm vào các bit hiện có. Ta lặp lại phần chia nhỏ này và tiếp tục thêm nhiều bit hơn vào geohash. Ta dừng chia khi ô đạt được kích thước mong muốn.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure12.png" /></a></p>
+<p>Ở đây ta có một ví dụ về ô chứa trụ sở chính của Google. Kích thước ô ở đây sẽ là 1200m x 600m. Thay vì dùng xâu dài gồm 0 và 1 để biểu thị geohash, nó được mã hoá dưới dạng xâu base32. Ở đây, số nhị phân dài đó được chuyển thành xâu base32 có 6 chữ cái. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure13.png" /></a></p>
+<p>Nói cách khác, độ dài xâu được mã hoá base32 sẽ xác dịnh kích thước ô. Chúng được gọi là độ chính xác hay level. Có 12 level như vậy. Đối với LBS, ta chỉ cần quan tâm đến độ dài 4 đến 6. Ô lớn hơn 6 sẽ quá nhỏ, còn ô nhỏ hơn 4 sẽ quá to. Lưu ý là bảng ở dưới có vài sai sót về mặt đơn vị.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure14.png" /></a></p>
+<p>Giờ làm sao để chọn level phù hợp với bán kính đây? Ta muốn tìm độ dài geohash tối thiểu để nó bao phủ toàn bộ vòng tròng. Ví dụ, nếu bán kính là 2km, thì độ dài geohash phải là 5. Một cái hay khác của geohash là nó chỉ là một xâu. Tìm tất cả doanh nghiệp trong một geohash rất đơn giản. Nghĩa là dùng database nào cũng ổn. Ta không cần phải sử dụng một database không gian địa lý nào đặc biệt cả. </p>
+<p>Geohash hoạt động tốt trong phần lớn thời gian, nhưng có một vài trường hợp mà ta cần chú ý. Các trường hợp này liên quan đến việc xử lý phần biên của geohash. Nếu hai geohash có cùng tiền tố, ta biết chúng gần nhau. Ví dụ, đây là một số ô có cùng prefix <code>9q8zn</code>. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure15.png" /></a></p>
+<p>Tuy nhiên, điều ngược lại không đúng. Hai ô có thể nằm cạnh nhau nhưng lại không có tiền tố chung. Đó là vì các ô nằm hai bên đường xích đạo hoặc kinh tuyến gốc nằm ở hai nửa khác nhau của thế giới. Ví dụ, hai thành phố Pháp này chỉ cách nhau 30km, nhưng geohash của chúng lại không có tiền tố chung. Một vấn đề khác là hai địa điểm có thể có chung một tiền tố dài, nhưng lại nằm trong các geohash khác nhau. Trong ví dụ này, hai chấm xanh và đỏ có tiền tố chung độ dài 5, nhưng chúng lại nằm trong hai ô khác nhau. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure16.png" /></a></p>
+<p>Một giải pháp để giải quyết cả hai vấn đề này là tìm kết quả không chỉ trong ô hiện tại, mà còn trong 8 ô gần kề nữa. Tìm các geohash lân cận không khó, có nhiều thư viện hỗ trợ tính toán trong thời gian hằng số.</p>
+<h4 id="index-dua-tren-cay">Index dựa trên cây</h4>
+<p>Thế còn cách tiếp cận dựa trên cây thì sao? Ta sẽ không đi sâu vào cài đặt nhưng biết thêm nó hoạt động sương sương ra sao cũng rất tốt. Cách này bao gồm Quadtree và Google S2. Một quadtree là một cấu trúc dữ liệu chia không gian hai chiều bằng chia nó thành 4 góc phần tư. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure17.png" /></a></p>
+<p>Việc chia kết thúc khi ô đáp ứng những tiêu chí nhất định. Trong trường hợp của chúng ta, tiêu chí có thể là chia cho đến khi số doanh nghiệp trong ô không lớn hơn số nào đó, chẳng hạn như 100. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure18.png" /></a></p>
+<p>Mấu chốt của quadtree - hay bất kỳ cách dựa trên cây nào - là nó là một cấu trúc dữ liệu in-memory. Nó không phải là giải pháp với database. Nó có nghĩa là index được tạo ra bởi code của chúng ta và chạy trên các server. Đây là cách tiếp cận rất rất khác với tập triển khai và vận hành cũng rất khác. Với thiết kế của chúng ta, ta sẽ chỉ tập trung vào geohash thôi.</p>
+<h3 id="them-geohash-vao-thiet-ke">Thêm geohash vào thiết kế</h3>
+<p>Ok, quay lại geohash. Ta muốn dùng geohash để index không gian địa lý để tăng tốc tìm kiếm. Ta cấu trúc bảng như thế nào? Về cơ bản, bảng chỉ cần 2 cột - geohash và business ID. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure19.png" /></a></p>
+<p>Bất kỳ database quan hệ nào cũng có thể xử lý geohash. Ta không cần database gì đặc biệt cả. Cột geohash chứa geohash ở level thích hợp cho mỗi doanh nghiệp. Chuyển đổi một toạ độ thành geohash khá đơn giản, có nhiều thư viện làm được điều đó. </p>
+<p>Có hai điều cần chú ý ở đây. </p>
+<ul>
+<li>Nhiều doanh nghiệp có thể nằm trong cùng geohash. Nghĩa là các business ID khác nhau trong một geohash được lưu trên nhiều hàng khác nhau trong database. Và các cột geohash và business ID sẽ tạo ra một khoá ghép. Với khoá ghép này, việc xoá doanh nghiệp khỏi bảng rất dễ dàng. </li>
+<li>Như đã nói ở trên, ta quan tâm đến geohash level 4 đến 6. Chúng tương ứng với bán kính tìm kiếm từ 0.5 km đến 20 km. Cột geohash trong bảng sẽ lưu geohash level 6. Ta sẽ dùng toán tử LIKE trong SQL để tìm geohash level ngắn hơn. Đây là một ví dụ. Với truy vấn này, ta sẽ tìm tất cả doanh nghiệp trong vòng geohash <code>9q8zn</code>.</li>
+</ul>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure20.png" /></a></p>
+<h3 id="scale-bang-tim-kiem">Scale bảng tìm kiếm</h3>
+<p>Tiếp theo, cùng đi vào làm sao để scale cái bảng này. Ta có thực sự cần scale lên hơn 1 database không? Tính nhanh nhé, mỗi geohash dài 6 ký tự, giả sử business ID dài 64 bit, nghĩa là 8 byte đó. Ngoài ra, ta cũng muốn lưu kinh độ vĩ độ cho mỗi doanh nghiệp để tính khoảng cách từ người dùng đến doanh nghiệp, thêm 16 byte vô. Vây mỗi hàng sẽ tốn 30 byte. Với 200 triệu doanh nghiệp, kích thước bảng là khoảng 6GB, khá nhỏ so với phần cứng bây giờ. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure21.png" /></a></p>
+<p>Toàn bộ dataset có thể nằm trong một server database. Tuy nhiên, QPS đọc khá cao, khoảng 5000. Trong giờ cao điểm, một database có lẽ là không đủ. Có hai cách giải quyết, một là thêm bản sao để phục vụ việc đọc, hoặc hai là shard database. Shard khá là phức tạp. Nó cần sharding logic trong code. Thực sự ta không có lý do đủ thuyết phục gì để shard, vì dataset có thể nằm trong một máy. Ta sẽ chọn có một đống bản sao database để phục vụ request đọc, cách này dễ hơn.</p>
+<h3 id="caching">Caching</h3>
+<p>Điểm cuối cùng là caching. Ta có cần caching không? Thiết kế nặng về đọc, và dataset cũng nhỏ. Như đã nói, ta cần scale việc đọc data, và đã thêm bản sao database. Tuy nhiên có một dataset khác nữa, là bảng doanh nghiệp. Bảng này nằm trong phạm vi terabyte, không lớn lắm. Kích thước dataset nằm trên ranh giới mà ta có thể cân nhắc sharding. Vì ta không update cái bảng này nhiều lắm, và nó nặng về đọc, ta có thể tránh sharding nếu ta dùng cache. Nó sẽ chịu nhiều request đọc và cho ta không gian để scale bảng doanh nghiệp. Ta có nhiều lựa chọn cho bảng này, nhưng ta sẽ giữ nó ở 1 database thôi. Ta sẽ thêm monitoring để shard, thêm bản sao hay thêm cache vào sau.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure22.png" /></a></p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure23.png" /></a></p>
+<h2 id="tong-ket">Tổng kết</h2>
+<p>Cuối cùng, ta tóm tắt vòng đời của một request tìm kiếm. </p>
+<p>(1) Bob thử tìm một nhà hàng trong bán kính 500m. Client gửi vị trí và bán kính đến load balancer. </p>
+<p>(2) Load balancer chuyển tiếp request đến LBS. </p>
+<p>(3) Dựa vào thông tin từ request, service tìm geohash level ứng với request tìm kiếm, đó là level 6. </p>
+<p>(4) Service tính toán các geohash lân cận. Sẽ có 9 geohash để truy vấn. </p>
+<p>(5) Service gửi truy vấn đến database để tìm các business ID và kinh độ vĩ độ tương ứng trong các geohash đó. </p>
+<p>(6) Service dùng kinh độ vĩ độ để tính khoảng cách từ người dùng đến các nhà hàng, xếp hạng chúng, và gửi trả kết quả lại client.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/design-location-based-service/figure24.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/design-location-based-service/figure24.png" /></a></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">11/10/2023 (GMT+07)</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">10/05/2023 (GMT+07)</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/SystemDesignResources"
+    data-repo-id="R_kgDOI0Ndtw"
+    data-category="General"
+    data-category-id="DIC_kwDOI0Ndt84CVvKb"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 farmerboy
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/farmerboy95" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+
+    <script
+      data-name="BMC-Widget"
+      data-cfasync="false" 
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+      data-id="farmerboy" 
+      data-description="Support me on Buy me a coffee!" 
+      data-message="" 
+      data-color="#5F7FFF" 
+      data-position="Right" 
+      data-x_margin="18" 
+      data-y_margin="18"
+    ></script>
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
