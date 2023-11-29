@@ -2,7 +2,7 @@
 
 ## Nguồn
 
-<img src="../../../assets/images/discord.ico" width="16" height="16"/> [How Discord stores trillions of messages - Bo Ingram](https://discord.com/blog/how-discord-stores-billions-of-messages)
+<img src="../../../assets/images/discord.ico" width="16" height="16"/> [How Discord stores trillions of messages - Bo Ingram](https://discord.com/blog/how-discord-stores-trillions-of-messages)
 
 ## Lời tựa
 
