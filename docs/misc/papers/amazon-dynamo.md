@@ -73,6 +73,10 @@ Hệ thống lưu trữ cho các kiểu dịch vụ này có các yêu cầu sau
 <figcaption>Hình 1: Kiến trúc hướng dịch vụ của nền tảng Amazon</figcaption>
 </figure>
 
+Trên hạ tầng hướng dịch vụ phi tập trung của Amazon, các SLA đóng vai trò rất quan trong. Ví dụ, một request đến một trong các site thương mại điện tử thường cần công cụ kết xuất trang phải tạo ra response bằng cách gửi các request nhỏ đến hơn 150 dịch vụ. Các dịch vụ này thường phụ thuộc vào một số thành phần khác, thường là các dịch vụ khác nữa, và cũng không có gì lạ khi phải gọi request qua nhiều dịch vụ khác nhau. Để đảm bảo rằng công cụ kết xuất trang có thể duy trì một giới hạn phân phối trang rõ ràng, mỗi dịch vụ trong chuỗi các dịch vụ này phải tuân theo hợp đồng hiệu suất của nó.
+
+Hình 1 ở trên cho ta một cái nhìn toàn cảnh về kiến trúc của nền tảng Amazon, nơi nội dung web động được tạo ra bằng các thành phần kết xuất, các thành phần này lại gọi nhiều dịch vụ khác nhau nữa. Một dịch vụ có thể dùng nhiều kho lưu trữ khác nhau để quản lý trạng thái của chính nó, và các kho dữ liệu này chỉ có thể được truy cập trong ranh giới dịch vụ của dịch vụ đó. Một số dịch vụ hoạt động như một bộ tổng hợp bằng cách sử dụng một số dịch vụ khác để tạo ra phản hồi tổng hợp. Thông thường, các dịch vụ tổng hợp (aggregator service) đi theo hướng stateless, mặc dù chúng dùng caching rất nhiều.
+
 ### 2.3. Các cân nhắc về thiết kế
 
 ## 3. Các công việc liên quan
