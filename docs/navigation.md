@@ -62,4 +62,4 @@ comment: false
         - [Discord lưu trữ hàng tỉ tin nhắn như thế nào?](misc/discord-blog/storing-billions-messages.md)
         - [Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?](misc/discord-blog/storing-trillions-messages.md)
     - Bài báo khoa học
-        - [Amazon DynamoDB](misc/papers/amazon-dynamo.md)
+        - [Amazon Dynamo](misc/papers/amazon-dynamo.md)
