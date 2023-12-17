@@ -40,7 +40,7 @@ Nhưng mất cân bằng tải sẽ xảy ra nếu một số user có nhiều r
 
 ### Weighted Round Robin
 
-Weighted Round Robin là cho phép người vận hành gán trọng số (hay độ ưu tiên) cho mỗi server. Trọng số càng cao thì càng nhận được nhiều request. Cách này giúp ta giải quyết vấn đề khi có một số server mạnh hơn nhóm còn lại. Nhược điểm là trọng số cần phải được cài đặt bằng tay, khiến thuật toán này khong thích nghi được với các thay đổi.
+Weighted Round Robin là cho phép người vận hành gán trọng số (hay độ ưu tiên) cho mỗi server. Trọng số càng cao thì càng nhận được nhiều request. Cách này giúp ta giải quyết vấn đề khi có một số server mạnh hơn nhóm còn lại. Nhược điểm là trọng số cần phải được cài đặt bằng tay, khiến thuật toán này không thích nghi được với các thay đổi.
 
 ![](../assets/ByteByteGo/load-balancing-algorithms/figure4.png){:class="centered-img"}
 
