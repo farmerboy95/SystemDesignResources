@@ -4,7 +4,7 @@ hide:
 comment: false
 ---
 
-# Lời chào
+# Giới thiệu
 
 Xin chào, mình là **farmerboy**.
 

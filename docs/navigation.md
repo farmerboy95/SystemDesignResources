@@ -5,7 +5,7 @@ comment: false
 ---
 
 - Trang chủ
-    - [Lời chào](index.md)
+    - [Giới thiệu](index.md)
     - [Các tài liệu](navigation.md)
 - ByteByteGo
     - [Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?](ByteByteGo/what-happen-when-access-url.md)
