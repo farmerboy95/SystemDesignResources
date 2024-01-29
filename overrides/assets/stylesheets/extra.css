@@ -22,3 +22,13 @@ img.h-400 {
 img.h-500 {
   height: 500px;
 }
+
+.md-header__button.md-logo {
+  margin: 0 0 0 0.6rem;
+  padding: 0;
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo png {
+  height: 2.4rem;
+  width: 2.4rem;
+}
