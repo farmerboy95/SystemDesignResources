@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/latency-numbers/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/back-of-the-envelope-estimation/">
       
       
-        <link rel="prev" href="../what-happen-when-access-url/">
+        <link rel="prev" href="../container-concepts/">
       
       
-        <link rel="next" href="../http-versions/">
+        <link rel="next" href="../../misc/chrome-blog/inside-browser-1/">
       
       
       <link rel="icon" href="../../assets/images/ico-sysdesign.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Các mốc độ trễ mà lập trình viên nên biết - farmerboy's System Design Resources</title>
+        <title>Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning - farmerboy's System Design Resources</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cac-moc-o-tre-ma-lap-trinh-vien-nen-biet" class="md-skip">
+        <a href="#du-toan-cong-suat-cho-ung-dung-back-of-the-envelope-estimation-capacity-planning" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Các mốc độ trễ mà lập trình viên nên biết
+              Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning
             
           </span>
         </div>
@@ -497,30 +497,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Các mốc độ trễ mà lập trình viên nên biết
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../latency-numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,143 +509,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nguồn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tai-sao-nen-noi-ve-o-tre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tại sao nên nói về độ trễ?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 giây
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1557,10 +1400,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../back-of-the-envelope-estimation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1569,6 +1432,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#du-toan-cong-suat-la-gi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dự toán công suất là gì?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-gia-tri-can-du-toan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các giá trị cần dự toán
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các giá trị cần dự toán">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ví dụ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kết luận
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1947,108 +1881,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tai-sao-nen-noi-ve-o-tre" class="md-nav__link">
+  <a href="#du-toan-cong-suat-la-gi" class="md-nav__link">
     <span class="md-ellipsis">
-      Tại sao nên nói về độ trễ?
+      Dự toán công suất là gì?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-nano-giay" class="md-nav__link">
+  <a href="#cac-gia-tri-can-du-toan" class="md-nav__link">
     <span class="md-ellipsis">
-      1 nano giây
+      Các giá trị cần dự toán
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các giá trị cần dự toán">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ví dụ
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 nano giây
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-100-nano-giay" class="md-nav__link">
+  <a href="#ket-luan" class="md-nav__link">
     <span class="md-ellipsis">
-      10-100 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 giây
+      Kết luận
     </span>
   </a>
   
@@ -2073,72 +1941,31 @@
   
 
 
-<h1 id="cac-moc-o-tre-ma-lap-trinh-vien-nen-biet">Các mốc độ trễ mà lập trình viên nên biết</h1>
+<h1 id="du-toan-cong-suat-cho-ung-dung-back-of-the-envelope-estimation-capacity-planning">Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=FqR5vESuKe0">Latency Numbers Programmer Should Know</a></p>
-<h2 id="tai-sao-nen-noi-ve-o-tre">Tại sao nên nói về độ trễ?</h2>
-<p>Độ trễ (latency) là một yếu tố quan trọng trong các hệ thống ngày nay. Thực sự chúng ta không cần biết độ trễ chính xác mà chỉ cần ghi nhớ một số khoảng độ trễ nhất định để hình dung ra thứ ta đang làm sẽ tốn khoảng trễ như thế nào.</p>
-<p>Ta sẽ đi vào từng khoảng thời gian trễ để xem có những ứng dụng nào liên quan đến chúng hay không.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure1.png" /></a></p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-200" src="../../assets/ByteByteGo/latency-numbers/figure2.png" /></a></p>
-<h2 id="1-nano-giay">1 nano giây</h2>
-<p>Truy cập vào các thanh ghi CPU tốn khoảng dưới 1 nano giây. Ta chỉ có vài thanh ghi trong CPU nhưng truy cập chúng lại rất nhanh.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure3.png" /></a></p>
-<p>Chu kỳ xung nhịp (clock cycle) của máy tính cũng tốn khoảng dưới 1 nano giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-200" src="../../assets/ByteByteGo/latency-numbers/figure4.png" /></a></p>
-<h2 id="1-10-nano-giay">1-10 nano giây</h2>
-<p>Truy cập vào bộ nhớ đệm (cache) L1 và L2 của CPU tốn từ 1 đến 10 nano giây. Một số thao tác tốn kém của CPU cũng ở trong khoảng này, ví dụ như branch mispredict penalty, tốn khoảng 20 chu kỳ xung nhịp.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure5.png" /></a></p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure6.png" /></a></p>
-<h2 id="10-100-nano-giay">10-100 nano giây</h2>
-<p>Truy cập vào bộ nhớ đệm L3 của CPU thường tốn khoảng 10 nano giây. </p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure7.png" /></a></p>
-<p>Với các bộ xử lý hiện đại như Apple M1, tham chiếu vào bộ nhớ chính tốn khoảng gần 100 nano giây. Nói cách khác, truy cập vào bộ nhớ chính của máy tính hiện đại sẽ chậm hơn vài trăm lần truy cập vào thanh ghi CPU.</p>
-<h2 id="100-1000-nano-giay">100-1000 nano giây</h2>
-<p>Khoảng này sẽ gồm lệnh gọi hệ thống (system call). Trong Linux, gọi một lệnh hệ thống đơn giản sẽ tốn khoảng vài trăm nano giây. Lưu ý phần lớn thời gian trong này là chi phí để di chuyển vào kernel và đi ra, thời gian thực gọi lệnh hệ thống là rất ít.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure8.png" /></a></p>
-<p>Ngoài ra, ta còn tốn khoảng 200 nano giây để MD5 hash một số 64 bit.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure9.png" /></a></p>
-<h2 id="1-10-micro-giay">1-10 micro giây</h2>
-<p>Context switch giữa các thread trong Linux tốn tầm khoảng vài micro giây. Dù vậy thì đây là trường hợp tốt nhất để có độ trễ này. Tuỳ vào workload, nếu context switch bao gồm việc mang các trang dữ liệu từ bộ nhớ cho luồng mới, nó có thể tốn nhiều thời gian hơn.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure10.png" /></a></p>
-<p>Copy 64KB dữ liệu từ một chỗ trong bộ nhớ chính sang chỗ khác (cũng trong bộ nhớ chính) cũng tốn vài micro giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure11.png" /></a></p>
-<h2 id="10-100-micro-giay">10-100 micro giây</h2>
-<p>Network proxy như Nginx cần khoảng 50 micro giây để xử lý một HTTP request.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure12.png" /></a></p>
-<p>Đọc 1MB liên tiếp từ bộ nhớ chính sẽ tốn khoảng 50 micro giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure13.png" /></a></p>
-<p>Độ trễ đọc của ổ cứng SSD cũng trong khoảng này, tốn tầm 100 micro giây để đọc một trang 8K.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure14.png" /></a></p>
-<h2 id="100-1000-micro-giay">100-1000 micro giây</h2>
-<p>Độ trễ ghi của ở cứng SSD lớn hơn tầm 10 lần so với độ trễ đọc, gần 1000 micro giây để ghi một trang.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure15.png" /></a></p>
-<p>Thời gian trễ trọn vòng của mạng nội vùng (với các nền tảng đám mây hiện nay) là tầm khoảng vài trăm micro giây. Ngày nay độ trễ này có xu hướng giảm, đôi khi về dưới 100 micro giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure16.png" /></a></p>
-<p>Một thao tác thông thường trên Memcache hay Redis tốn khoảng 1000 micro giây, bao gồm cả thời gian trễ trọn vòng ở trên.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure17.png" /></a></p>
-<h2 id="1-10-mili-giay">1-10 mili giây</h2>
-<p>Thời gian trễ trọn vòng của mạng xuyên vùng là vào khoảng 5 mili giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure18.png" /></a></p>
-<p>Thời gian tìm (seek time) của ổ cứng cũng vào khoảng 5 mili giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure19.png" /></a></p>
-<h2 id="10-100-mili-giay">10-100 mili giây</h2>
-<p>Thời gian trễ trọn vòng của bờ đông và bờ tây nước Mỹ, hay bờ đông nước Mỹ và châu Âu nằm trong khoảng này.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure20.png" /></a></p>
-<p>Đọc 1GB liên tiếp từ bộ nhớ chính cũng nằm trong khoảng này.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure21.png" /></a></p>
-<h2 id="100-1000-mili-giay">100-1000 mili giây</h2>
-<p>Mất tầm 300 mili giây để bcrypt một mật khẩu.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure22.png" /></a></p>
-<p>Bắt tay TLS nằm trong khoảng 250 đến 500 mili giây. Nó bao gồm nhiều network round trip nên con số sẽ tuỳ vào khoảng cách giữa 2 máy.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure23.png" /></a></p>
-<p>Thời gian trễ trọn vòng với mạng từ bờ tây nước Mỹ đến Singapore cũng trong khoảng 100 đến 1000 mili giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure24.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure24.png" /></a></p>
-<p>Đọc 1GB liên tiếp từ SSD cũng trong khoảng này.</p>
-<h2 id="1-giay">1 giây</h2>
-<p>Chuyển 1GB trên mạng trong cùng một vùng đám mây tốn khoảng 10 giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure25.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure25.png" /></a></p>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=UC5xf8FbdJc">Back-Of-The-Envelope Estimation / Capacity Planning</a></p>
+<h2 id="du-toan-cong-suat-la-gi">Dự toán công suất là gì?</h2>
+<p>Dự toán công suất (Back-of-the-envelope estimation) là một công cụ rất hữu ích trong thiết kế hệ thống. Trong bài viết này, ta sẽ đi vào tìm hiểu làm thế nào và khi nào nên dự toán công suất, cũng như tìm hiểu một số mẹo để sử dụng công cụ này một cách hiệu quả.</p>
+<p>Các dev với nhiều năm kinh nghiệm sử dụng dự toán công suất để kiểm tra nhanh một thiết kế hệ thống. Trong các trường hợp như vậy, ta không cần các con số phải chính xác tuyệt đối. Thường ta sẽ chỉ cần chính xác đến chục hoặc trăm lần so với con số thực tế thôi.</p>
+<p>Ví dụ, nếu tính toán cho thấy quy mô của web service cần xử lý 1 triệu request mỗi giây, và mỗi web server chỉ có thể xử lý khoảng 10 nghìn request mỗi giây, ta sẽ nhanh chóng nhận ra hai điều: Một, ta cần phải tạo một cụm (cluster) các web server, với một load balancer ở trước cụm đó. Hai, ta cần khoảng 100 web server.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure1.png" /></a></p>
+<p>Một ví dụ khác là khi tính toán cho thấy rằng database cần xử lý khoảng 10 truy vấn trên giây khi cao điểm, nghĩa là một database server duy nhất sẽ có thể xử lý được tải đó trong một thời gian dài, và ta không cần phải tính đến việc sharding hoặc caching trong một khoảng thời gian.</p>
+<h2 id="cac-gia-tri-can-du-toan">Các giá trị cần dự toán</h2>
+<p>Giờ ta sẽ đi vào một số giá trị phổ biến mà ta cần dự toán. Giá trị quan trọng nhất là số request mỗi giây (Requests per second - RPS) ở mức service hoặc số truy vấn mỗi giây (Queries per second - QPS) ở mức database. Một số giá trị con của lớp giá trị RPS này bao gồm như sau. </p>
+<p>Thứ nhất là DAU (hay số người dùng hàng ngày - Daily Active Users), giá trị này khá dễ lấy. Đôi khi thì ta chỉ có thể biết MAU (hay số người dùng hàng tháng - Monthly Active Users). Trong trường hợp này, ta sẽ tính DAU dựa trên một số phần trăm của MAU.</p>
+<p>Giá trị thứ hai là ước lượng về việc sử dụng trên DAU của service mà ta đang thiết kế. Ví dụ, không phải ai hoạt động trên Twitter cũng post bài, chỉ có một số phần trăm làm vậy thôi. 10%-25% có vẻ hợp lý. Một lần nữa, ta không cần phải chính xác tuyệt đối. Chỉ cần chính xác đến chục lần là đủ.</p>
+<p>Giá trị thứ ba là một hệ số scaling. Tần suất sử dụng của một service thường có những lúc cao điểm và thấp điểm trong ngày. Ta cần phải ước lượng xem tần suất sử dụng cao điểm sẽ cao hơn bao nhiêu so với tần suất sử dụng trung bình. Điều này sẽ phản ánh khoảng RPS cao nhất khiến service của ta có thể tê liệt là bao nhiêu. Ví dụ, với một service như Google Maps, tần suất sử dụng trong giờ cao điểm có thể cao hơn trung bình 5 lần. Một ví dụ khác là dịch vụ chia sẻ xe như Uber, tần suất sử dụng vào tối cuối tuần có thể cao hơn trung bình 2 lần.</p>
+<h3 id="vi-du">Ví dụ</h3>
+<p>Ta sẽ ước lượng số Tweet mỗi giây được tạo ra trên Twitter. Lưu ý rằng các con số này chỉ là tính toán thôi, chứ không phải chính thức từ Twitter đâu. Giả sử Twitter có 300 triệu MAU, và 50% MAU dùng Twitter hàng ngày. Nghĩa là sẽ có 150 triệu DAU. Tiếp theo, ta ước tính rằng khoảng 25% DAU đó sẽ viết Tweet. Mỗi người sẽ viết trung bình khoảng 2 tweet chẳng hạn. Nghĩa là <span class="arithmatex">\(25\% * 2 = 0.5\)</span> tweet mỗi DAU. Với hệ số scaling, ta ước tính rằng phần lớn người dùng tweet vào buổi sáng khi ngủ dậy và không thể đợi để chia sẻ về giấc mơ tối hôm trước. Nó sẽ làm tăng mạnh traffic tạo tweet lên gấp đôi so với trung bình khi bờ đông nước Mỹ thức giấc.</p>
+<p>Giờ ta đã có đủ dữ liệu để tính toán số tweet tạo ra mỗi giây. Ta có: 150 triệu DAU nhân 0.5 tweet mỗi DAU, nhân 2 lần hệ số scaling chia cho 86400 giây trong một ngày. Đó sẽ là khoảng 1500 tweet mỗi giây.</p>
+<p>Giờ ta sẽ đi qua các kỹ thuật để đơn giản hóa tính toán. Đầu tiên, ta chuyển tất cả các con số lớn thành dạng kí hiệu khoa học. Tính toán trên các con số lớn thường dễ gây lỗi. Bằng cách chuyển các con số lớn thành kí hiệu khoa học, một phần của phép nhân sẽ trở thành phép cộng đơn giản, và phép chia sẽ trở thành phép trừ. Trong ví dụ trên, 150 triệu DAU sẽ trở thành <span class="arithmatex">\(150 \cdot 10^6\)</span> hay <span class="arithmatex">\(1.5 \cdot 10^8\)</span>. Có <span class="arithmatex">\(86400\)</span> giây trong một ngày, ta sẽ làm tròn lên thành <span class="arithmatex">\(100000\)</span> giây, và nó sẽ trở thành <span class="arithmatex">\(10^5\)</span> giây. Và vì đây là phép chia, <span class="arithmatex">\(10^5\)</span> sẽ trở thành <span class="arithmatex">\(10^{-5}\)</span>. Tiếp theo, ta nhóm tất cả các lũy thừa của 10 lại với nhau, và tất cả các con số khác lại với nhau. Ví dụ, phép toán trên trở thành: <span class="arithmatex">\(1.5 \cdot 0.5 \cdot 2\)</span> và <span class="arithmatex">\(10^8 \cdot 10^{-5} = 10^{8-5} = 10^3\)</span>. Đặt tất cả lại với nhau, ta sẽ có <span class="arithmatex">\(1.5 \cdot 10^3\)</span> hay 1500.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure2.png" /></a></p>
+<p>Ta có thể dễ dàng chuyển đổi qua lại các dạng số lớn và kí hiệu khoa học nhanh chóng. Một số cách chuyển nhanh ta cần nhớ là: <span class="arithmatex">\(10^{12}\)</span> là một triệu tỷ, hay 1TB. và khi ta thấy một số như 50TB, ta sẽ chuyển nó thành <span class="arithmatex">\(5 \cdot 10^1 \cdot 10^{12}\)</span>, hay <span class="arithmatex">\(5 \cdot 10^{13}\)</span>. Ta sẽ bỏ qua việc rằng 1KB thực sự là <span class="arithmatex">\(2^{10}\)</span> bytes, hay 1024 bytes, chứ không phải 1000 bytes. Ta không thực sự cần đến mức độ chính xác đó.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure3.png" /></a></p>
+<p>Tổng kết với một ví dụ cuối. Ta sẽ tính xem cần bao nhiêu dung lượng để lưu file đa phương tiện (hình ảnh, video, ...) cho các tweet. Ta biết từ ví dụ trước rằng sẽ có khoảng 150 triệu tweet một ngày. Giờ ta cần ước tính khoảng bao nhiêu phần trăm số tweet đó sẽ chứa hình ảnh hoặc video, và mấy cái file đó sẽ lớn tầm bao nhiêu. Với sự nghiên cứu kỹ lưỡng, ta ước tính rằng 10% tweet chứa hình ảnh, và mỗi hình ảnh nặng khoảng 100KB, và 1% tweet chứa video, và mỗi video nặng khoảng 100MB. Ta cũng giả sử rằng mỗi file sẽ được lưu làm 3 bản, và Twitter sẽ lưu trữ các file đó trong 5 năm.</p>
+<p>Giờ ta sẽ tính toán. Đối với việc lưu trữ hình ảnh, ta có: 150 triệu tweet x 0.1 số tweet chứa hình ảnh x 100KB mỗi hình ảnh x 400 ngày trong một năm x 5 năm x 3 bản sao, nó sẽ bằng <span class="arithmatex">\(1.5 \cdot 10^8 \cdot 10^{-1} \cdot 10^5 \cdot 4 \cdot 10^2 \cdot 5 \cdot 3\)</span>. Ta nhóm các lũy thừa của 10 lại với nhau, và tất cả các con số khác lại với nhau, cho ra <span class="arithmatex">\(1.5 \cdot 4 \cdot 5 \cdot 3\)</span>, bằng <span class="arithmatex">\(90\)</span> và <span class="arithmatex">\(10^{8-1+5+2}\)</span>, hay <span class="arithmatex">\(10^{14}\)</span>. kết quả là <span class="arithmatex">\(9 \cdot 10^{15}\)</span>, hay 9PB. Đối với việc lưu trữ video, ta tính nhanh chút. Do video trung bình nặng 1000 lần hình ảnh, và chỉ có 1/10 số tweet chứa video so với hình ảnh, nên dung lượng lưu trữ video sẽ là <span class="arithmatex">\(100 \cdot 9\)</span> PB, hay 900PB.</p>
+<h2 id="ket-luan">Kết luận</h2>
+<p>Dự toán công suất là một công cụ rất hữu ích trong hệ thống. Đừng quá chú trọng vào sự chính xác. Chỉ cần chính xác đến mức độ chục lần là đủ để có được đầy đủ thông tin và xác nhận thiết kế hệ thống.</p>
 
 
 
@@ -2161,7 +1988,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">11/10/2023 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">26/02/2024 (GMT+07)</span>
   </span>
 
     
@@ -2171,7 +1998,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">22/01/2023 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">26/02/2024 (GMT+07)</span>
   </span>
 
     
