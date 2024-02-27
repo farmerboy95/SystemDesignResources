@@ -8,29 +8,35 @@
       
       
       
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/how-streaming-platforms-work/">
       
       
+        <link rel="prev" href="../back-of-the-envelope-estimation/">
       
-      <link rel="icon" href="/SystemDesignResources/assets/images/ico-sysdesign.png">
+      
+        <link rel="next" href="../../misc/chrome-blog/inside-browser-1/">
+      
+      
+      <link rel="icon" href="../../assets/images/ico-sysdesign.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
     
       
-        <title>farmerboy's System Design Resources</title>
+        <title>Các nền tảng streaming hoạt động như thế nào? - farmerboy's System Design Resources</title>
       
     
     
     
-      <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="/SystemDesignResources/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="/SystemDesignResources//assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
     
@@ -47,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("/SystemDesignResources/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -64,7 +70,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -82,6 +97,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#cac-nen-tang-streaming-hoat-ong-nhu-the-nao" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,9 +112,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/ico-sysdesign.png" alt="logo">
+  <img src="../../assets/images/ico-sysdesign.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Các nền tảng streaming hoạt động như thế nào?
             
           </span>
         </div>
@@ -220,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -234,11 +254,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/SystemDesignResources/ByteByteGo/what-happen-when-access-url/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../what-happen-when-access-url/" class="md-tabs__link">
           
   
   ByteByteGo
@@ -262,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/SystemDesignResources/misc/chrome-blog/inside-browser-1/" class="md-tabs__link">
+        <a href="../../misc/chrome-blog/inside-browser-1/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -298,9 +320,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/SystemDesignResources/." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="/SystemDesignResources/assets/images/ico-sysdesign.png" alt="logo">
+  <img src="../../assets/images/ico-sysdesign.png" alt="logo">
 
     </a>
     farmerboy's System Design Resources
@@ -365,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -386,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/navigation/" class="md-nav__link">
+      <a href="../../navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -411,23 +433,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -438,7 +465,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ByteByteGo
@@ -452,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/what-happen-when-access-url/" class="md-nav__link">
+      <a href="../what-happen-when-access-url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/latency-numbers/" class="md-nav__link">
+      <a href="../latency-numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -494,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/http-versions/" class="md-nav__link">
+      <a href="../http-versions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -515,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/rest-api/" class="md-nav__link">
+      <a href="../rest-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -536,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ssl-tls-https/" class="md-nav__link">
+      <a href="../ssl-tls-https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -557,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/scan-to-pay/" class="md-nav__link">
+      <a href="../scan-to-pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/process-vs-thread/" class="md-nav__link">
+      <a href="../process-vs-thread/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -599,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/debugging-techniques/" class="md-nav__link">
+      <a href="../debugging-techniques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cdn/" class="md-nav__link">
+      <a href="../cdn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/top-redis-use-cases/" class="md-nav__link">
+      <a href="../top-redis-use-cases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -662,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why-redis-fast/" class="md-nav__link">
+      <a href="../why-redis-fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/storing-passwords/" class="md-nav__link">
+      <a href="../storing-passwords/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/api-gateway/" class="md-nav__link">
+      <a href="../api-gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why-kafka-fast/" class="md-nav__link">
+      <a href="../why-kafka-fast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sso/" class="md-nav__link">
+      <a href="../sso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/osi-model/" class="md-nav__link">
+      <a href="../osi-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/dns/" class="md-nav__link">
+      <a href="../dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/computer-memory-and-storage/" class="md-nav__link">
+      <a href="../computer-memory-and-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/chatgpt-hacks/" class="md-nav__link">
+      <a href="../chatgpt-hacks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/cap-theorem/" class="md-nav__link">
+      <a href="../cap-theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/grpc/" class="md-nav__link">
+      <a href="../grpc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/graphql/" class="md-nav__link">
+      <a href="../graphql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/proxy-vs-reverse-proxy/" class="md-nav__link">
+      <a href="../proxy-vs-reverse-proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -935,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/design-location-based-service/" class="md-nav__link">
+      <a href="../design-location-based-service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -956,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system-patterns/" class="md-nav__link">
+      <a href="../system-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -977,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/lsm-tree/" class="md-nav__link">
+      <a href="../lsm-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -998,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/bloom-filter/" class="md-nav__link">
+      <a href="../bloom-filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1019,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/ci-cd/" class="md-nav__link">
+      <a href="../ci-cd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/choose-database/" class="md-nav__link">
+      <a href="../choose-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1082,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/microservices/" class="md-nav__link">
+      <a href="../microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1103,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/why-system-design-interview-important/" class="md-nav__link">
+      <a href="../why-system-design-interview-important/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1124,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/stackoverflow-architecture/" class="md-nav__link">
+      <a href="../stackoverflow-architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1145,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/netflix-architecture-evolution/" class="md-nav__link">
+      <a href="../netflix-architecture-evolution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1166,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/oauth2-explained/" class="md-nav__link">
+      <a href="../oauth2-explained/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1187,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/discord-messages-migration/" class="md-nav__link">
+      <a href="../discord-messages-migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1208,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/optimize-api-performance/" class="md-nav__link">
+      <a href="../optimize-api-performance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1229,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/system-design-interview-guide/" class="md-nav__link">
+      <a href="../system-design-interview-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1250,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/consistent-hashing/" class="md-nav__link">
+      <a href="../consistent-hashing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/git-merge-vs-rebase/" class="md-nav__link">
+      <a href="../git-merge-vs-rebase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1292,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/load-balancing-algorithms/" class="md-nav__link">
+      <a href="../load-balancing-algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1313,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/sql-execution-order/" class="md-nav__link">
+      <a href="../sql-execution-order/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1334,7 +1361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/apple-google-pay/" class="md-nav__link">
+      <a href="../apple-google-pay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1355,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/container-concepts/" class="md-nav__link">
+      <a href="../container-concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1376,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/back-of-the-envelope-estimation/" class="md-nav__link">
+      <a href="../back-of-the-envelope-estimation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1394,10 +1421,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/SystemDesignResources/ByteByteGo/how-streaming-platforms-work/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Các nền tảng streaming hoạt động như thế nào?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1406,6 +1453,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tu-streamer-en-nguoi-xem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Từ streamer đến người xem
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1501,7 +1586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/misc/chrome-blog/inside-browser-1/" class="md-nav__link">
+      <a href="../../misc/chrome-blog/inside-browser-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1522,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/misc/chrome-blog/inside-browser-2/" class="md-nav__link">
+      <a href="../../misc/chrome-blog/inside-browser-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1543,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/misc/chrome-blog/inside-browser-3/" class="md-nav__link">
+      <a href="../../misc/chrome-blog/inside-browser-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1564,7 +1649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/misc/chrome-blog/inside-browser-4/" class="md-nav__link">
+      <a href="../../misc/chrome-blog/inside-browser-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1631,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/misc/discord-blog/storing-billions-messages/" class="md-nav__link">
+      <a href="../../misc/discord-blog/storing-billions-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1652,7 +1737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/misc/discord-blog/storing-trillions-messages/" class="md-nav__link">
+      <a href="../../misc/discord-blog/storing-trillions-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1719,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SystemDesignResources/misc/papers/amazon-dynamo/" class="md-nav__link">
+      <a href="../../misc/papers/amazon-dynamo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1765,6 +1850,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tu-streamer-en-nguoi-xem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Từ streamer đến người xem
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1776,7 +1889,152 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+  
+                  
+
+  
+  
+
+
+<h1 id="cac-nen-tang-streaming-hoat-ong-nhu-the-nao">Các nền tảng streaming hoạt động như thế nào?</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=7AMRfNKwuYo">How Does Live Streaming Platform Work? (YouTube live, Twitch, TikTok Live)</a></p>
+<h2 id="tu-streamer-en-nguoi-xem">Từ streamer đến người xem</h2>
+<p>Live streaming là một việc không hề dễ dàng về mặt kĩ thuật vì nội dung video sẽ được gửi qua internet trong thời gian gần như là thực. Thêm nữa, Việc xử lý video đòi hỏi nhiều tài nguyên từ máy tính, gửi một lượng lớn nội dung video qua internet sẽ mất thời gian. Những yếu tố này khiến live streaming trở nên khó khăn. Như vậy một video stream đi từ streamer đến người xem như thế nào?</p>
+<p>Đầu tiên, stream sẽ bắt đầu buổi stream. Nguồn nội dung có thể là bất kỳ nguồn video và âm thanh nào được kết nối với một bộ mã hóa (encoder), như phần mềm mã hóa mã nguồn mở phổ biến OBS (Open Broadcaster Software). Một số nền tảng phổ biến như YouTube cung cấp phần mềm đơn giản để stream từ trình duyệt với webcam, hoặc trực tiếp từ camera điện thoại di động. Bộ mã hóa có nhiệm vụ đóng gói video stream và gửi nó qua một giao thức vận chuyển mà nền tảng live streaming có thể nhận để xử lý tiếp.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-streaming-platforms-work/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-streaming-platforms-work/figure1.png" /></a></p>
+<p>Giao thức vận chuyển phổ biến nhất là RTMP (Real-time Messaging Protocol). RTMP là một giao thức dựa trên TCP. Nó được ra mắt từ lâu dưới dạng giao thức video streaming cho Adobe Flash. Các bộ mã hóa đều có thể giao tiếp thông qua RTMP, hoặc qua biến thể an toàn của nó gọi là RTMPS. Có một giao thức mới gọi là SRT (Secure Reliable Transport) có thể sẽ thay thế RTMP. SRT dựa trên UDP, hứa hẹn độ trễ thấp hơn và độ bền tốt hơn trong điều kiện mạng kém. Tuy nhiên, hầu hết các nền tảng streaming phổ biến hiện tại vẫn chưa hỗ trợ SRT.</p>
+<p>Để cung cấp điều kiện upload tốt nhất cho streamer, hầu hết các nền tảng live streaming hiện nay cung cấp cho họ các máy chủ point-of-presence trên toàn thế giới. Streamer sẽ kết nối với máy chủ point-of-presence gần nhất. Việc kết nối này thường là tự động với cả DNS định tuyến dựa trên độ trễ hoặc mạng anycast. </p>
+<p>Khi stream đến máy chủ point-of-presence, nó sẽ được truyền qua một mạng trung gian nhanh và đáng tin cậy đến nền tảng live streaming để xử lý tiếp. Tại đây, mục tiêu chính của việc xử lý thêm này là cung cấp video stream ở các chất lượng và bit-rate khác nhau. Các trình phát video tự động chọn chất lượng video và bit-rate tốt nhất dựa trên chất lượng kết nối internet của người xem và có thể điều chỉnh ngay lập tức bằng cách yêu cầu các bit-rate khác khi điều kiện mạng thay đổi. Đây gọi là adaptive bitrate streaming.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-streaming-platforms-work/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-streaming-platforms-work/figure2.png" /></a></p>
+<p>Các bước xử lý cụ thể sẽ khác nhau tùy theo nền tảng và định dạng streaming đầu ra. Nói chung, các bước xử lý sẽ kiểu như sau.</p>
+<p>Đầu tiên, video stream đầu vào sẽ được chuyển đổi sang các độ phân giải và bit-rate khác nhau - cơ bản là các cấp độ chất lượng khác nhau cho video. Video stream đã chuyển đổi sẽ được chia thành các đoạn video nhỏ tầm vài giây. Quá trình này gọi là segmentation (phân đoạn). Mã hóa video đòi hỏi nhiều tài nguyên máy tính. Video đầu vào thường được mã hóa sang các định dạng khác nhau một cách song song, đòi hỏi sức mạnh tính toán lớn.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-streaming-platforms-work/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-streaming-platforms-work/figure3.png" /></a></p>
+<p>Tiếp theo, các đoạn video từ quá trình mã hóa sẽ được đóng gói thành các định dạng streaming trực tiếp mà trình phát video có thể hiểu. Định dạng streaming trực tiếp phổ biến nhất là HLS (HTTP Live Streaming). HLS được Apple cho ra mắt vào năm 2009. Nó là định dạng streaming phổ biến nhất hiện nay. Một stream HLS bao gồm một file mô tả và một loạt các đoạn video nhỏ, mỗi đoạn dài tầm vài giây. File mô tả là một thư mục để cho trình phát video biết tất cả các định dạng đầu ra và nơi để tải các đoạn video qua HTTP. File mô tả HLS và các đoạn video từ quá trình đóng gói sẽ được cache bởi CDN, giúp giảm độ trễ đến người xem. DASH (Dynamic Adaptive Streaming over HTTP) là một định dạng streaming phổ biến khác. Thiết bị của Apple mặc định không hỗ trợ DASH.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-streaming-platforms-work/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-streaming-platforms-work/figure4.png" /></a></p>
+<p>Cuối cùng, video bắt đầu đến trình phát video của người xem. Độ trễ từ khi streamer gửi video đến khi người xem nhận được video gọi là “glass-to-glass” latency. “Glass-to-glass” latency khoảng 20 giây là bình thường. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-streaming-platforms-work/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-streaming-platforms-work/figure5.png" /></a></p>
+<p>Có nhiều yếu tố mà streamer hoặc nền tảng live streaming có thể điều chỉnh để cải thiện độ trễ này, đó là bằng cách hy sinh các yếu tố của chất lượng video. Một số nền tảng đơn giản hóa quá trình điều chỉnh này bằng cách cung cấp điều chỉnh cho streamer để chọn mức độ tương tác mà họ muốn. Các nền tảng sau đó sẽ điều chỉnh chất lượng của stream dựa trên đầu vào đó. Streamer rõ ràng không cần quan tâm nền tảng làm gì ở bước này. Điều tốt nhất mà streamer có thể làm là tối ưu hóa setup ở máy stream để hỗ trợ độ trễ thấp nhất từ camera đến nền tảng live streaming.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/02/2024 (GMT+07)</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">28/02/2024 (GMT+07)</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:jerry.stone.manutd@gmail.com">farmerboy95</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/SystemDesignResources"
+    data-repo-id="R_kgDOI0Ndtw"
+    data-category="General"
+    data-category-id="DIC_kwDOI0Ndt84CVvKb"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
+  
 
               </article>
             </div>
@@ -1836,11 +2094,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/SystemDesignResources/", "features": ["navigation.tabs", "navigation.top"], "search": "/SystemDesignResources/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
     
-      <script src="/SystemDesignResources/assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1861,5 +2119,5 @@
       data-y_margin="18"
     ></script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
