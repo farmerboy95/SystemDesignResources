@@ -55,6 +55,7 @@ comment: false
     - [Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning](ByteByteGo/back-of-the-envelope-estimation.md)
     - [Các nền tảng streaming hoạt động như thế nào?](ByteByteGo/how-streaming-platforms-work.md)
     - [8 cấu trúc dữ liệu quan trọng trong các hệ thống cơ sở dữ liệu hiện đại](ByteByteGo/key-data-structures-in-modern-databases.md)
+    - [Cloud Native thực sự là gì?](ByteByteGo/cloud-native.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
