@@ -12,7 +12,7 @@ Tưởng tượng rằng bạn là một CEO bận rộn với một trợ lý r
 
 Nó hoạt động như một điểm trung chuyển cho ứng dụng của bạn và các service mà ứng dụng đó giao tiếp, giảm tải các tác vụ như logging, monitoring hay xử lý các lần thử lại.
 
-Ví dụ, Kubenetes sử dụng Envoy làm Ambassador để đơn giản hoá việc giao tiếp giữa các service.
+Ví dụ, Kubernetes sử dụng Envoy làm Ambassador để đơn giản hoá việc giao tiếp giữa các service.
 
 Hệ thống kiểu Ambassador sẽ giúp giảm độ trễ, tăng cường bảo mật và cải thiện kiến trúc tổng thể của các hệ thống phân tán.
 

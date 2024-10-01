@@ -56,7 +56,7 @@ Mặt khác, rất ít team có tài nguyên hoặc niềm tin để dùng CD tr
 
 ![](../assets/ByteByteGo/ci-cd/figure9.png){:class="centered-img"}
 
-Có nhiều công cụ dùng cho CD. Các công cụ ở trên như GitHub Actions, Buildkite và Jenkins được sử dụng nhiều cho các tác vụ CD. Ngoài ra còn có các công cụ dành riêng cho cơ sở hạ tầng để giúp CD dễ bảo trì hơn. Ví dụ, trên Kubenetes, ArgoCD rất hay được dùng.
+Có nhiều công cụ dùng cho CD. Các công cụ ở trên như GitHub Actions, Buildkite và Jenkins được sử dụng nhiều cho các tác vụ CD. Ngoài ra còn có các công cụ dành riêng cho cơ sở hạ tầng để giúp CD dễ bảo trì hơn. Ví dụ, trên Kubernetes, ArgoCD rất hay được dùng.
 
 ![](../assets/ByteByteGo/ci-cd/figure10.png){:class="centered-img"}
 

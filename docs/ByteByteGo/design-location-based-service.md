@@ -64,7 +64,7 @@ Giờ ta đã biết đủ nhiều để có một sơ đồ thiết kế tổng
 
 ![](../assets/ByteByteGo/design-location-based-service/figure5.png){:class="centered-img"}
 
-Đầu tiên là load balancer. Trong thiết kế, load balancer sẽ phân phối lưu lượng truy cập đến hai service trên, dựa vào các tuyến API. Các service này đều là stateless (không trạng thái). Việc triển khai các service phi trạng thái sau load balancer khá là phổ biến và ta sẽ không đi sâu hơn ở đây. Lưu ý rằng trong thực tế, ta có thể có những thiết lập khác để phân phối truy cập đến các service (như API Gateway trên AWS hay envoy trên cụm Kubenetes).
+Đầu tiên là load balancer. Trong thiết kế, load balancer sẽ phân phối lưu lượng truy cập đến hai service trên, dựa vào các tuyến API. Các service này đều là stateless (không trạng thái). Việc triển khai các service phi trạng thái sau load balancer khá là phổ biến và ta sẽ không đi sâu hơn ở đây. Lưu ý rằng trong thực tế, ta có thể có những thiết lập khác để phân phối truy cập đến các service (như API Gateway trên AWS hay envoy trên cụm Kubernetes).
 
 Sau load balancer, ta có hai service nói trên. LBS là phần cốt lõi của hệ thống. Nó tìm các doanh nghiệp lân cận dựa vào bán kính và vị trí một cách nhanh chóng. LBS có vài điểm thú vị. 
 
