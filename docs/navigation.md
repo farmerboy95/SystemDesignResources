@@ -57,6 +57,7 @@ comment: false
     - [8 cấu trúc dữ liệu quan trọng trong các hệ thống cơ sở dữ liệu hiện đại](ByteByteGo/key-data-structures-in-modern-databases.md)
     - [Cloud Native thực sự là gì?](ByteByteGo/cloud-native.md)
     - [Backend Burger cho startup có thể có những gì?](ByteByteGo/backend-burger.md)
+    - [Các hệ thống cache phổ biến](ByteByteGo/caching-systems.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
