@@ -1,4 +1,4 @@
-# 5 chiến lược phát triển phần mềm phổ biến
+# 5 chiến lược triển khai phần mềm phổ biến
 
 ## Nguồn
 
