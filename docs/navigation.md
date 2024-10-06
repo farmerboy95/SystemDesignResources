@@ -62,6 +62,7 @@ comment: false
     - [10 cấu trúc dữ liệu mà chúng ta dùng mỗi ngày](ByteByteGo/key-data-structures.md)
     - [Amazon Prime Video từ bỏ AWS Serverless, tiết kiệm 90% chi phí](ByteByteGo/serverless-ditching.md)
     - [6 kiến trúc phổ biến trong thiết kế API](ByteByteGo/api-architecture-styles.md)
+    - [5 chiến lược phát triển phần mềm phổ biến](ByteByteGo/development-strategies.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)

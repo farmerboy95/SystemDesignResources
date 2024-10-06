@@ -1,7 +1,9 @@
 # SystemDesignResources
 System Design Resources for myself in Vietnamese
 
-Installation guide:
+Visit the live website at: https://system.farmerboy95.com/
+
+Installation guide if you want to run this on your local machine:
 
 ```
 pip3 install mkdocs-material
