@@ -64,6 +64,7 @@ comment: false
     - [6 kiến trúc phổ biến trong thiết kế API](ByteByteGo/api-architecture-styles.md)
     - [5 chiến lược triển khai phần mềm phổ biến](ByteByteGo/development-strategies.md)
     - [DevOps, SRE, và Platform Engineering là gì?](ByteByteGo/devops-sre-platform-engineering.md)
+    - [Vì sao Google và Meta cho cả tỉ dòng code vào một repo lớn?](ByteByteGo/monorepo-vs-microrepo.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
