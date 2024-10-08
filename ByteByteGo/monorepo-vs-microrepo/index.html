@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/navigation/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/monorepo-vs-microrepo/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../devops-sre-platform-engineering/">
       
       
-        <link rel="next" href="../ByteByteGo/what-happen-when-access-url/">
+        <link rel="next" href="../../misc/chrome-blog/inside-browser-1/">
       
       
-      <link rel="icon" href="../assets/images/ico-sysdesign.png">
+      <link rel="icon" href="../../assets/images/ico-sysdesign.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Các tài liệu - farmerboy's System Design Resources</title>
+        <title>Vì sao Google và Meta cho cả tỉ dòng code vào một repo lớn? - farmerboy's System Design Resources</title>
       
     
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
     
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +70,7 @@
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -79,7 +79,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -97,6 +97,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#vi-sao-google-va-meta-cho-ca-ti-dong-code-vao-mot-repo-lon" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,9 +112,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="../assets/images/ico-sysdesign.png" alt="logo">
+  <img src="../../assets/images/ico-sysdesign.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -126,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Các tài liệu
+              Vì sao Google và Meta cho cả tỉ dòng code vào một repo lớn?
             
           </span>
         </div>
@@ -231,13 +236,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href=".." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
           
   
   Trang chủ
@@ -251,11 +254,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../ByteByteGo/what-happen-when-access-url/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../what-happen-when-access-url/" class="md-tabs__link">
           
   
   ByteByteGo
@@ -279,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../misc/chrome-blog/inside-browser-1/" class="md-tabs__link">
+        <a href="../../misc/chrome-blog/inside-browser-1/" class="md-tabs__link">
           
   
   Nguồn khác
@@ -304,8 +309,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -317,9 +320,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
-  <img src="../assets/images/ico-sysdesign.png" alt="logo">
+  <img src="../../assets/images/ico-sysdesign.png" alt="logo">
 
     </a>
     farmerboy's System Design Resources
@@ -343,6 +346,93 @@
       
   
   
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Trang chủ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Trang chủ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giới thiệu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các tài liệu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -361,24 +451,24 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Trang chủ
+    ByteByteGo
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Trang chủ
+            ByteByteGo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -389,11 +479,1166 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../what-happen-when-access-url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Giới thiệu
+    Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../latency-numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các mốc độ trễ mà lập trình viên nên biết
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http-versions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP/1 đến HTTP/2 đến HTTP/3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rest-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl-tls-https/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSL, TLS và HTTPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scan-to-pay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scan to Pay là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process-vs-thread/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process vs. Thread
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging-techniques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các kĩ thuật debug
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cdn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tìm hiểu về CDN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../top-redis-use-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Top 5 ứng dụng của Redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-redis-fast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vì sao Redis lại nhanh?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing-passwords/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lưu mật khẩu vào database như thế nào cho đúng?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-gateway/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Gateway là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-kafka-fast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tại sao Kafka lại nhanh như vậy?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single Sign-on (SSO) là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../osi-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mô hình OSI là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Những thứ bạn cần biết về DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer-memory-and-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bộ nhớ và ổ cứng trong máy tính
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatgpt-hacks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 cách mà lập trình viên tận dụng ChatGPT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cap-theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Định lý CAP - CAP theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gRPC là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxy-vs-reverse-proxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxy vs. Reverse Proxy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design-location-based-service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thiết kế hệ thống: Thiết kế Location Based Service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 kiểu hệ thống phân tán thông dụng
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsm-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bí mật đằng sau NoSQL: Cây LSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bloom-filter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloom Filter là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci-cd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../choose-database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Làm sao chọn database cho đúng?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kiến trúc Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microservices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microservices là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-system-design-interview-important/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vì sao phỏng vấn System Design lại quan trọng?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stackoverflow-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hệ thống của Stack Overflow có gì hay?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netflix-architecture-evolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giải mã sự phát triển trong kiến trúc API của Netflix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oauth2-explained/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giải thích dễ hiểu OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discord-messages-migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord lưu hàng nghìn tỉ tin nhắn như thế nào?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optimize-api-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 cách để tăng hiệu suất API của bạn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-design-interview-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hướng dẫn từng bước phỏng vấn System Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consistent-hashing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consistent Hashing là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-merge-vs-rebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Merge vs Rebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../load-balancing-algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 thuật toán load balancing phổ biến
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql-execution-order/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thứ tự thực thi câu lệnh SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apple-google-pay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apple Pay và Google Pay hoạt động như thế nào?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container-concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Những hiểu nhầm về Bare Metal, Virtual Machine và Container
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../back-of-the-envelope-estimation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-streaming-platforms-work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các nền tảng streaming hoạt động như thế nào?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../key-data-structures-in-modern-databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 cấu trúc dữ liệu quan trọng trong các hệ thống cơ sở dữ liệu hiện đại
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-native/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Native thực sự là gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend-burger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backend Burger cho startup có thể có những gì?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../caching-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Các hệ thống cache phổ biến
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-chatgpt-works/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ChatGPT hoạt động như thế nào?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../key-data-structures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 cấu trúc dữ liệu mà chúng ta dùng mỗi ngày
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serverless-ditching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon Prime Video từ bỏ AWS Serverless, tiết kiệm 90% chi phí
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-architecture-styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 kiến trúc phổ biến trong thiết kế API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development-strategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 chiến lược triển khai phần mềm phổ biến
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops-sre-platform-engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DevOps, SRE, và Platform Engineering là gì?
   </span>
   
 
@@ -416,1251 +1661,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Vì sao Google và Meta cho cả tỉ dòng code vào một repo lớn?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Các tài liệu
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    ByteByteGo
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            ByteByteGo
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/what-happen-when-access-url/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/latency-numbers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Các mốc độ trễ mà lập trình viên nên biết
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/http-versions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    HTTP/1 đến HTTP/2 đến HTTP/3
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/rest-api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    REST API là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/ssl-tls-https/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SSL, TLS và HTTPS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/scan-to-pay/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Scan to Pay là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/process-vs-thread/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Process vs. Thread
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/debugging-techniques/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Các kĩ thuật debug
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/cdn/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tìm hiểu về CDN
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/top-redis-use-cases/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Top 5 ứng dụng của Redis
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/why-redis-fast/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Vì sao Redis lại nhanh?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/storing-passwords/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lưu mật khẩu vào database như thế nào cho đúng?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/api-gateway/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Gateway là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/why-kafka-fast/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tại sao Kafka lại nhanh như vậy?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/sso/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Single Sign-on (SSO) là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/osi-model/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mô hình OSI là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/dns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Những thứ bạn cần biết về DNS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/computer-memory-and-storage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bộ nhớ và ổ cứng trong máy tính
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/chatgpt-hacks/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7 cách mà lập trình viên tận dụng ChatGPT
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/cap-theorem/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Định lý CAP - CAP theorem
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/grpc/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    gRPC là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/graphql/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GraphQL là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/proxy-vs-reverse-proxy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Proxy vs. Reverse Proxy
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/design-location-based-service/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Thiết kế hệ thống: Thiết kế Location Based Service
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/system-patterns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7 kiểu hệ thống phân tán thông dụng
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/lsm-tree/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bí mật đằng sau NoSQL: Cây LSM
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/bloom-filter/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bloom Filter là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/ci-cd/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    CI/CD là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/choose-database/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Làm sao chọn database cho đúng?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/kubernetes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Kiến trúc Kubernetes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/microservices/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Microservices là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/why-system-design-interview-important/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Vì sao phỏng vấn System Design lại quan trọng?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/stackoverflow-architecture/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hệ thống của Stack Overflow có gì hay?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/netflix-architecture-evolution/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Giải mã sự phát triển trong kiến trúc API của Netflix
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/oauth2-explained/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Giải thích dễ hiểu OAuth2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/discord-messages-migration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Discord lưu hàng nghìn tỉ tin nhắn như thế nào?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/optimize-api-performance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7 cách để tăng hiệu suất API của bạn
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/system-design-interview-guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hướng dẫn từng bước phỏng vấn System Design
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/consistent-hashing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Consistent Hashing là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/git-merge-vs-rebase/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Git Merge vs Rebase
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/load-balancing-algorithms/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    6 thuật toán load balancing phổ biến
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/sql-execution-order/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Thứ tự thực thi câu lệnh SQL
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/apple-google-pay/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Apple Pay và Google Pay hoạt động như thế nào?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/container-concepts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Những hiểu nhầm về Bare Metal, Virtual Machine và Container
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/back-of-the-envelope-estimation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/how-streaming-platforms-work/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Các nền tảng streaming hoạt động như thế nào?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/key-data-structures-in-modern-databases/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    8 cấu trúc dữ liệu quan trọng trong các hệ thống cơ sở dữ liệu hiện đại
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/cloud-native/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cloud Native thực sự là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/backend-burger/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Backend Burger cho startup có thể có những gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/caching-systems/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Các hệ thống cache phổ biến
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/how-chatgpt-works/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ChatGPT hoạt động như thế nào?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/key-data-structures/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    10 cấu trúc dữ liệu mà chúng ta dùng mỗi ngày
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/serverless-ditching/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Amazon Prime Video từ bỏ AWS Serverless, tiết kiệm 90% chi phí
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/api-architecture-styles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    6 kiến trúc phổ biến trong thiết kế API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/development-strategies/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    5 chiến lược triển khai phần mềm phổ biến
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/devops-sre-platform-engineering/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    DevOps, SRE, và Platform Engineering là gì?
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ByteByteGo/monorepo-vs-microrepo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1669,6 +1684,119 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giới thiệu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monorepo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monorepo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monorepo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uu-iem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ưu điểm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhuoc-iem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nhược điểm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microrepo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microrepo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microrepo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uu-iem_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ưu điểm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhuoc-iem_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nhược điểm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-nao-ngon-hon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cái nào ngon hơn?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1764,7 +1892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/chrome-blog/inside-browser-1/" class="md-nav__link">
+      <a href="../../misc/chrome-blog/inside-browser-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1785,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/chrome-blog/inside-browser-2/" class="md-nav__link">
+      <a href="../../misc/chrome-blog/inside-browser-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1806,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/chrome-blog/inside-browser-3/" class="md-nav__link">
+      <a href="../../misc/chrome-blog/inside-browser-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1827,7 +1955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/chrome-blog/inside-browser-4/" class="md-nav__link">
+      <a href="../../misc/chrome-blog/inside-browser-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1894,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/discord-blog/storing-billions-messages/" class="md-nav__link">
+      <a href="../../misc/discord-blog/storing-billions-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1915,7 +2043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/discord-blog/storing-trillions-messages/" class="md-nav__link">
+      <a href="../../misc/discord-blog/storing-trillions-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/papers/amazon-dynamo/" class="md-nav__link">
+      <a href="../../misc/papers/amazon-dynamo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2019,8 +2147,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2030,6 +2156,109 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giới thiệu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monorepo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monorepo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monorepo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uu-iem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ưu điểm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhuoc-iem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nhược điểm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microrepo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microrepo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microrepo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uu-iem_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ưu điểm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhuoc-iem_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nhược điểm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cai-nao-ngon-hon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cái nào ngon hơn?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2048,122 +2277,161 @@
   
 
 
-  <h1>Các tài liệu</h1>
-
-<ul>
-<li>Trang chủ<ul>
-<li><a href="../">Giới thiệu</a></li>
-<li><a href="./">Các tài liệu</a></li>
-</ul>
-</li>
-<li>ByteByteGo<ul>
-<li><a href="../ByteByteGo/what-happen-when-access-url/">Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?</a></li>
-<li><a href="../ByteByteGo/latency-numbers/">Các mốc độ trễ mà lập trình viên nên biết</a></li>
-<li><a href="../ByteByteGo/http-versions/">HTTP/1 đến HTTP/2 đến HTTP/3</a></li>
-<li><a href="../ByteByteGo/rest-api/">REST API là gì?</a></li>
-<li><a href="../ByteByteGo/ssl-tls-https/">SSL, TLS và HTTPS</a></li>
-<li><a href="../ByteByteGo/scan-to-pay/">Scan to Pay là gì?</a></li>
-<li><a href="../ByteByteGo/process-vs-thread/">Process vs. Thread</a></li>
-<li><a href="../ByteByteGo/debugging-techniques/">Các kĩ thuật debug</a></li>
-<li><a href="../ByteByteGo/cdn/">Tìm hiểu về CDN</a></li>
-<li><a href="../ByteByteGo/top-redis-use-cases/">Top 5 ứng dụng của Redis</a></li>
-<li><a href="../ByteByteGo/why-redis-fast/">Vì sao Redis lại nhanh?</a></li>
-<li><a href="../ByteByteGo/storing-passwords/">Lưu mật khẩu vào database như thế nào cho đúng?</a></li>
-<li><a href="../ByteByteGo/api-gateway/">API Gateway là gì?</a></li>
-<li><a href="../ByteByteGo/why-kafka-fast/">Tại sao Kafka lại nhanh như vậy?</a></li>
-<li><a href="../ByteByteGo/sso/">Single Sign-on (SSO) là gì?</a></li>
-<li><a href="../ByteByteGo/osi-model/">Mô hình OSI là gì?</a></li>
-<li><a href="../ByteByteGo/dns/">Những thứ bạn cần biết về DNS</a></li>
-<li><a href="../ByteByteGo/computer-memory-and-storage/">Bộ nhớ và ổ cứng trong máy tính</a></li>
-<li><a href="../ByteByteGo/chatgpt-hacks/">7 cách mà lập trình viên tận dụng ChatGPT</a></li>
-<li><a href="../ByteByteGo/cap-theorem/">Định lý CAP - CAP theorem</a></li>
-<li><a href="../ByteByteGo/grpc/">gRPC là gì?</a></li>
-<li><a href="../ByteByteGo/graphql/">GraphQL là gì?</a></li>
-<li><a href="../ByteByteGo/proxy-vs-reverse-proxy/">Proxy vs. Reverse Proxy</a></li>
-<li><a href="../ByteByteGo/design-location-based-service/">Thiết kế hệ thống: Thiết kế Location Based Service</a></li>
-<li><a href="../ByteByteGo/system-patterns/">7 kiểu hệ thống phân tán thông dụng</a></li>
-<li><a href="../ByteByteGo/lsm-tree/">Bí mật đằng sau NoSQL: Cây LSM</a></li>
-<li><a href="../ByteByteGo/bloom-filter/">Bloom Filter là gì?</a></li>
-<li><a href="../ByteByteGo/ci-cd/">CI/CD là gì?</a></li>
-<li><a href="../ByteByteGo/choose-database/">Làm sao chọn database cho đúng?</a></li>
-<li><a href="../ByteByteGo/kubernetes/">Kiến trúc Kubernetes</a></li>
-<li><a href="../ByteByteGo/microservices/">Microservices là gì?</a></li>
-<li><a href="../ByteByteGo/why-system-design-interview-important/">Vì sao phỏng vấn System Design lại quan trọng?</a></li>
-<li><a href="../ByteByteGo/stackoverflow-architecture/">Hệ thống của Stack Overflow có gì hay?</a></li>
-<li><a href="../ByteByteGo/netflix-architecture-evolution/">Giải mã sự phát triển trong kiến trúc API của Netflix</a></li>
-<li><a href="../ByteByteGo/oauth2-explained/">Giải thích dễ hiểu OAuth2</a></li>
-<li><a href="../ByteByteGo/discord-messages-migration/">Discord lưu hàng nghìn tỉ tin nhắn như thế nào?</a></li>
-<li><a href="../ByteByteGo/optimize-api-performance/">7 cách để tăng hiệu suất API của bạn</a></li>
-<li><a href="../ByteByteGo/system-design-interview-guide/">Hướng dẫn từng bước phỏng vấn System Design</a></li>
-<li><a href="../ByteByteGo/consistent-hashing/">Consistent Hashing là gì?</a></li>
-<li><a href="../ByteByteGo/git-merge-vs-rebase/">Git Merge vs Rebase</a></li>
-<li><a href="../ByteByteGo/load-balancing-algorithms/">6 thuật toán load balancing phổ biến</a></li>
-<li><a href="../ByteByteGo/sql-execution-order/">Thứ tự thực thi câu lệnh SQL</a></li>
-<li><a href="../ByteByteGo/apple-google-pay/">Apple Pay và Google Pay hoạt động như thế nào?</a></li>
-<li><a href="../ByteByteGo/container-concepts/">Những hiểu nhầm về Bare Metal, Virtual Machine và Container</a></li>
-<li><a href="../ByteByteGo/back-of-the-envelope-estimation/">Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning</a></li>
-<li><a href="../ByteByteGo/how-streaming-platforms-work/">Các nền tảng streaming hoạt động như thế nào?</a></li>
-<li><a href="../ByteByteGo/key-data-structures-in-modern-databases/">8 cấu trúc dữ liệu quan trọng trong các hệ thống cơ sở dữ liệu hiện đại</a></li>
-<li><a href="../ByteByteGo/cloud-native/">Cloud Native thực sự là gì?</a></li>
-<li><a href="../ByteByteGo/backend-burger/">Backend Burger cho startup có thể có những gì?</a></li>
-<li><a href="../ByteByteGo/caching-systems/">Các hệ thống cache phổ biến</a></li>
-<li><a href="../ByteByteGo/how-chatgpt-works/">ChatGPT hoạt động như thế nào?</a></li>
-<li><a href="../ByteByteGo/key-data-structures/">10 cấu trúc dữ liệu mà chúng ta dùng mỗi ngày</a></li>
-<li><a href="../ByteByteGo/serverless-ditching/">Amazon Prime Video từ bỏ AWS Serverless, tiết kiệm 90% chi phí</a></li>
-<li><a href="../ByteByteGo/api-architecture-styles/">6 kiến trúc phổ biến trong thiết kế API</a></li>
-<li><a href="../ByteByteGo/development-strategies/">5 chiến lược triển khai phần mềm phổ biến</a></li>
-<li><a href="../ByteByteGo/devops-sre-platform-engineering/">DevOps, SRE, và Platform Engineering là gì?</a></li>
-<li><a href="../ByteByteGo/monorepo-vs-microrepo/">Vì sao Google và Meta cho cả tỉ dòng code vào một repo lớn?</a></li>
-</ul>
-</li>
-<li>Nguồn khác<ul>
-<li>Chrome Developers Blog<ul>
-<li><a href="../misc/chrome-blog/inside-browser-1/">Bên trong các trình duyệt ngày nay (Phần 1)</a></li>
-<li><a href="../misc/chrome-blog/inside-browser-2/">Bên trong các trình duyệt ngày nay (Phần 2)</a></li>
-<li><a href="../misc/chrome-blog/inside-browser-3/">Bên trong các trình duyệt ngày nay (Phần 3)</a></li>
-<li><a href="../misc/chrome-blog/inside-browser-4/">Bên trong các trình duyệt ngày nay (Phần 4)</a></li>
-</ul>
-</li>
-<li>Discord Blog<ul>
-<li><a href="../misc/discord-blog/storing-billions-messages/">Discord lưu trữ hàng tỉ tin nhắn như thế nào?</a></li>
-<li><a href="../misc/discord-blog/storing-trillions-messages/">Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?</a></li>
-</ul>
-</li>
-<li>Bài báo khoa học<ul>
-<li><a href="../misc/papers/amazon-dynamo/">Amazon Dynamo</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h1 id="vi-sao-google-va-meta-cho-ca-ti-dong-code-vao-mot-repo-lon">Vì sao Google và Meta cho cả tỉ dòng code vào một repo lớn?</h1>
+<h2 id="nguon">Nguồn</h2>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=x3cANGNPyx0">Why Google and Meta Put Billion Lines of Code In 1 Repository?</a></p>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>Bạn đã bao giờ thắc mắc rằng làm sao những gã khổng lồ công nghệ như Google và Facebook quản lý được đống code khổng lồ của họ không? Hoặc có thể bạn đang cần tìm cách tốt nhất để cấu trúc code cho project của chính mình? Cách ta quản lý code có thể ảnh hưởng lớn đến năng suất team và sự ổn định của sản phẩm. Đó là lý do mà chúng ta sẽ thảo luận về hai cách quản lý code: monorepo và microrepo.</p>
+<p>Trước khi đi vào chi tiết, fun fact cho bạn là, monorepo không phải là một khái niệm mới. Cả Linux và Windows đều được tạo ra bằng cách tiếp cận monorepo.</p>
+<h2 id="monorepo">Monorepo</h2>
+<p>Với monorepo, tưởng tượng rằng đó như một trung tâm chứa tất cả code của chúng ta. Các công ty như Google, Facebook và Uber đã chọn hướng tiếp cận này. Đó là một thư viện khổng lồ, mọi thứ nằm tại đó. Khá ghê đúng không? Vậy cách tiếp cận này có ưu và nhược điểm gì?</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/monorepo-vs-microrepo/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/monorepo-vs-microrepo/figure1.png" /></a></p>
+<h3 id="uu-iem">Ưu điểm</h3>
+<p>Ưu điểm dễ thấy nhất của monorepo là cho phép dễ dàng thay đổi code giữa các project khác nhau. Ví dụ ta có một hàm tiện ích được sử dụng trong 10 service khác nhau, và ta cần thay đổi gì đó trong hàm. Trong monorepo, ta chỉ cần một commit, tại đúng một chỗ.</p>
+<p>Tiếp đến, quản lý dependency cũng hưởng lợi. Thay vì phải xử lý nhiều phiên bản của một package trên nhiều repo khác nhau, ta có một cái nhìn tổng thể về các dependency.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/monorepo-vs-microrepo/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/monorepo-vs-microrepo/figure2.png" /></a></p>
+<p>Tính nhất quán là một ưu điểm lớn khác của monorepo. Code review đôi khi khá thiếu nhất quán, với các quy tắc và tiêu chuẩn khác nhau ở các team khác nhau. Với monorepo, mọi người đều tuân thủ cùng một bộ quy tắc. Và đừng quên việc tái sử dụng code. Bạn cần một chức năng đã được tạo ra cho một cái service khác hả? Xài lại cái code đó thôi. Ta có thể thấy mọi thứ trong monorepo, giúp việc tái sử dụng code trở nên dễ dàng.</p>
+<h3 id="nhuoc-iem">Nhược điểm</h3>
+<p>Monorepo yêu cầu lên kế hoạch cẩn thận và các công cụ phù hợp. Google đã phải xây dựng một công cụ dành riêng cho việc này, gọi là Bazel và cần một team lớn để hỗ trợ cái codebase siêu to khổng lồ này. Facebook dùng Buck cũng vì lý do đó. Khi repo phình to, nếu không quản lý cẩn thận, CI/CD sẽ chạy chậm như rùa. Vì vậy CI/CD cũng cần một đội ngũ lớn tương đương.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/monorepo-vs-microrepo/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/monorepo-vs-microrepo/figure3.png" /></a></p>
+<p>Với các dev mới, một repo siêu to sẽ khiến họ bị choáng. Nếu có một codebase được tài liệu hóa tốt và một quá trình onboarding chuẩn, monorepo nào cũng chơi được.</p>
+<p>Cuối cùng, dù mỗi team sở hữu một phần monorepo, tùy chỉnh có thể khá khó khăn. Team không thể sử dụng các công cụ hoặc thư viện khác nhau một cách độc lập do có thể xảy ra xung đột, và các thay đổi lớn cần xem xét toàn bộ codebase. Nhưng với việc sử dụng các công cụ như Bazel của Google và duy trì giao tiếp tốt, ta có thể cân bằng được trade-off này, cho phép các team phát triển linh hoạt trong các quy tắc chung.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/monorepo-vs-microrepo/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/monorepo-vs-microrepo/figure4.png" /></a></p>
+<h2 id="microrepo">Microrepo</h2>
+<p>Hướng tiếp cận này coi mỗi service hoặc thành phần hệ thống như một thực thể độc lập, với repo riêng. Các công ty như Amazon và Netflix đã chọn hướng tiếp cận phân tán này.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/monorepo-vs-microrepo/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/monorepo-vs-microrepo/figure5.png" /></a></p>
+<h3 id="uu-iem_1">Ưu điểm</h3>
+<p>Rõ ràng là sự độc lập. Mỗi team có thể quản lý và mở rộng repo khi cần. Một ưu điểm khác là cô lập rủi ro. Nếu có vấn đề xảy ra ở một repo, nó sẽ không ảnh hưởng đến các repo khác, giảm thiểu tác động. Hướng tiếp cận này cũng cung cấp sự linh hoạt. Mỗi team có thể chọn công cụ tốt nhất cho repo của mình và tùy chỉnh môi trường theo nhu cầu cụ thể. Thêm nữa, mỗi team sở hữu repo của mình, giúp quản lý trách nhiệm và release dễ dàng hơn.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/monorepo-vs-microrepo/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/monorepo-vs-microrepo/figure6.png" /></a></p>
+<h3 id="nhuoc-iem_1">Nhược điểm</h3>
+<p>Đồng bộ hóa thay đổi qua nhiều repo có thể gặp khó khăn. Nó yêu cầu sự hợp tác chặt chẽ và có thể cần thêm các công cụ chuyên biệt. Quản lý dependency giữa các repo cũng phức tạp, nhưng có thể sử dụng các công cụ như Nexus hoặc Artifactory để hỗ trợ. </p>
+<p>Khi không có tiêu chuẩn chung, code standard có thể thiếu nhất quán, và đôi khi dẫn đến chất lượng code tệ hại. Để tránh điều này, ta cần thiết lập các quy tắc coding cho toàn bộ tổ chức. </p>
+<p>Thêm nữa, microrepo có thể dẫn đến việc trùng lặp code. Sao chép code giữa các repo làm tăng kích thước codebase và có thể dẫn đến lỗi. Để tránh điều này, người ta thường tạo thư viện chung cho code giống nhau.</p>
+<h2 id="cai-nao-ngon-hon">Cái nào ngon hơn?</h2>
+<p>Câu trả lời là tùy vào hoàn cảnh, hay nói chính xác hơn là tùy vào nhu cầu của team, kích thước công ty, tính chất của project, và văn hóa công ty. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/monorepo-vs-microrepo/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/monorepo-vs-microrepo/figure7.png" /></a></p>
+<p>Monorepo mang lại sự nhất quán, làm cho việc thay đổi giữa các project dễ dàng hơn, và khuyến khích tái sử dụng code. Nó phù hợp với các công ty lớn với nhiều team làm việc trên các project liên kết với nhau, nơi yêu cầu sự hợp tác và nhất quán. Tuy nhiên, monorepo yêu cầu việc lên kế hoạch cẩn thận và công cụ phù hợp. Nếu không quản lý tốt, nó có thể ảnh hưởng đến hiệu suất của CI/CD pipelines và giảm bớt sự linh hoạt của mỗi team.</p>
+<p>Ngược lại, microrepo mang lại sự linh hoạt, cô lập rủi ro, và trách nhiệm rõ ràng. Nó có thể là lựa chọn tốt cho các công ty ưa chuộng sự tự chủ của team, đặc biệt nếu các team làm việc trên các project khác nhau. Tuy nhiên, nó cũng mang lại những thách thức riêng. Quản lý phức tạp hơn, đặc biệt là khi thực hiện thay đổi giữa các repo, trùng lặp code nữa, đó là những nguy cơ của microrepo nếu bạn không quản lý tốt.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/monorepo-vs-microrepo/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/monorepo-vs-microrepo/figure8.png" /></a></p>
 
 
 
 
 
-
-
-  
-  
-
-
-
-  
 
 
   
     
   
+  
+    
+  
 
 
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">09/10/2024 (GMT+07)</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">09/10/2024 (GMT+07)</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:tanbaonguyen95@gmail.com">farmerboy95</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
 
 
   
 
 
 
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="farmerboy95/SystemDesignResources"
+    data-repo-id="R_kgDOI0Ndtw"
+    data-category="General"
+    data-category-id="DIC_kwDOI0Ndt84CVvKb"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
                 
 
+  
+    <div class="md-source-date">
+      <small>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:tanbaonguyen95@gmail.com'>farmerboy95</a></span>
+      </small>
+    </div>
   
 
               </article>
@@ -2224,11 +2492,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
     
-      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
