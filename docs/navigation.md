@@ -67,6 +67,7 @@ comment: false
     - [Vì sao Google và Meta cho cả tỉ dòng code vào một repo lớn?](ByteByteGo/monorepo-vs-microrepo.md)
     - [Các thuật toán quan trọng để phỏng vấn System Design](ByteByteGo/algorithms-for-system-design-interviews.md)
     - [5 mô hình kiến trúc phần mềm được ưa chuộng nhất](ByteByteGo/architecture-patterns.md)
+    - [Tóm tắt nhanh về Apache Kafka](ByteByteGo/apache-kafka.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
