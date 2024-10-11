@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/http-versions/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/apache-kafka/">
       
       
-        <link rel="prev" href="../latency-numbers/">
+        <link rel="prev" href="../architecture-patterns/">
       
       
-        <link rel="next" href="../rest-api/">
+        <link rel="next" href="../../misc/chrome-blog/inside-browser-1/">
       
       
       <link rel="icon" href="../../assets/images/ico-sysdesign.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>HTTP/1 đến HTTP/2 đến HTTP/3 - farmerboy's System Design Resources</title>
+        <title>Tóm tắt nhanh về Apache Kafka - farmerboy's System Design Resources</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#http1-en-http2-en-http3" class="md-skip">
+        <a href="#tom-tat-nhanh-ve-apache-kafka" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HTTP/1 đến HTTP/2 đến HTTP/3
+              Tóm tắt nhanh về Apache Kafka
             
           </span>
         </div>
@@ -518,30 +518,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    HTTP/1 đến HTTP/2 đến HTTP/3
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../http-versions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,71 +530,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nguồn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http1" class="md-nav__link">
-    <span class="md-ellipsis">
-      HTTP/1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http11" class="md-nav__link">
-    <span class="md-ellipsis">
-      HTTP/1.1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http2" class="md-nav__link">
-    <span class="md-ellipsis">
-      HTTP/2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http3" class="md-nav__link">
-    <span class="md-ellipsis">
-      HTTP/3
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1800,10 +1715,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../apache-kafka/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tóm tắt nhanh về Apache Kafka
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1812,6 +1747,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giới thiệu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tong-quan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tổng quan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-use-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các use case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#han-che" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hạn chế
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2190,36 +2190,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#http1" class="md-nav__link">
+  <a href="#gioi-thieu" class="md-nav__link">
     <span class="md-ellipsis">
-      HTTP/1
+      Giới thiệu
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http11" class="md-nav__link">
+  <a href="#tong-quan" class="md-nav__link">
     <span class="md-ellipsis">
-      HTTP/1.1
+      Tổng quan
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http2" class="md-nav__link">
+  <a href="#cac-use-case" class="md-nav__link">
     <span class="md-ellipsis">
-      HTTP/2
+      Các use case
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http3" class="md-nav__link">
+  <a href="#han-che" class="md-nav__link">
     <span class="md-ellipsis">
-      HTTP/3
+      Hạn chế
     </span>
   </a>
   
@@ -2244,34 +2244,31 @@
   
 
 
-<h1 id="http1-en-http2-en-http3">HTTP/1 đến HTTP/2 đến HTTP/3</h1>
+<h1 id="tom-tat-nhanh-ve-apache-kafka">Tóm tắt nhanh về Apache Kafka</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=a-sBfyiXysI">HTTP/1 to HTTP/2 to HTTP/3</a></p>
-<h2 id="http1">HTTP/1</h2>
-<p>HTTP/1 ra mắt vào năm 1996, được xây dựng dựa trên TCP. Mỗi request đến cùng một server cần một TCP connection riêng.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/http-versions/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/http-versions/figure1.png" /></a></p>
-<h2 id="http11">HTTP/1.1</h2>
-<p>HTTP/1.1 ra mắt sau HTTP/1 một năm, vào năm 1997. Nó giới thiệu cơ chế <strong>keep-alive</strong> nhằm giúp cho một connection có thể được sử dụng lại cho nhiều request. Duy trì kết nối (persistent connection) sẽ giúp giảm độ trễ khi request vì client sẽ không cần phải khởi tạo lại connection cho các request sau đó (bắt tay 3 bước TCP).</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/http-versions/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/http-versions/figure2.png" /></a></p>
-<p>Một chi tiết đáng chú ý nữa của HTTP/1.1 là chức năng <strong>HTTP pipelining</strong>. Về mặt lý thuyết, chức năng này cho phép client gửi nhiều request lên server trước khi đợi mỗi response. Các response phải được nhận theo thứ tự được request để đảm bảo tính chính xác.</p>
-<p>Lưu ý là HTTP pipelining khá khó để cài đặt và nhiều proxy server ở giữa không thể nào xử lý pipelining chính xác được. Chức năng này vì thế không còn được hỗ trợ bởi nhiều trình duyệt ngày nay.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/http-versions/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/http-versions/figure3.png" /></a></p>
-<p>HTTP/1.1 với pipelining còn có một vấn đề nữa được gọi là <strong>head-of-line blocking</strong> (HOL blocking). Đại khái thì với cùng một connection, các request sau sẽ phải đợi request trước đó xong (nghĩa là request đã được gửi lên server). Nếu một request bị chặn vì một số lý do như mất gói tin (packet loss), các request sau nó trên cùng một connection cũng bị ảnh hưởng.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/http-versions/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/http-versions/figure4.png" /></a></p>
-<p>Để giữ cho kết nối có tốc độ ở mức chấp nhận được, trình duyệt thường giữ nhiều TCP connection đến cùng một server và gửi các request song song với nhau đến server.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/http-versions/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/http-versions/figure5.png" /></a></p>
-<h2 id="http2">HTTP/2</h2>
-<p>HTTP/2 ra đời năm 2015, giới thiệu HTTP streams, giúp ta có thể gửi nhiều stream request đến cùng một server trên chỉ một TCP connection. Khác với HTTP/1.1 pipelining, các stream này độc lập với nhau và không cần phải gửi hay nhận theo bất cứ thứ tự nào. </p>
-<p>HTTP/2 giải quyết được head-of-line blocking của HTTP/1.1 trên tầng ứng dụng nhưng không giải quyết được trên tầng giao vận với TCP.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/http-versions/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/http-versions/figure6.png" /></a></p>
-<p>Một chi tiết đáng lưu ý của HTTP/2 là khả năng push, giúp cho server có thể gửi nội dung mới cho client khi có thể, mà không cần client phải gửi request để poll.</p>
-<h2 id="http3">HTTP/3</h2>
-<p>HTTP/3 ra mắt bản thử nghiệm vào năm 2020 và được ra mắt chính thức vào tháng 6 năm 2022. Nó sử dụng một giao thức tên là <strong>QUIC</strong> thay vì dùng TCP. QUIC dựa trên UDP. Nó giới thiệu các stream đóng vai trò quan trọng trên tầng giao vận. Các QUIC stream dùng chung một connection nhanh nên không cần phải bắt tay để tạo connection mới. Trong hầu hết các trường hợp, mất gói tin ảnh hưởng đến một stream sẽ không ảnh hưởng đến các stream khác, nên nó giải quyết được tình trạng head-of-line blocking trên tầng giao vận.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/http-versions/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/http-versions/figure7.png" /></a></p>
-<p>QUIC được thiết kế cho việc sử dụng nhiều internet trên điện thoại. Người ta thường chuyển mạng trên điện thoại nhiều lần (như từ WiFi sang 4G và ngược lại). Với TCP, việc chuyển mạng này khá là khó chịu và chậm chạp.</p>
-<p>QUIC sử dụng một concept gọi là <strong>connection ID</strong>, giúp cho connection có thể di chuyển giữa các địa chỉ IP và giao diện mạng dễ dàng, nhanh chóng và đáng tin cậy.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/http-versions/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/http-versions/figure8.png" /></a></p>
-<p>Dù HTTP/3 mới chỉ được chuẩn hoá, nó đã được dùng bởi 25% số website và được hỗ trợ bởi nhiều trình duyệt trên thị trường.</p>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=HZklgPkboro">System Design: Apache Kafka In 3 Minutes</a></p>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>Apache Kafka là một nền tảng phân tán chuyên xử lý dữ liệu dòng thời gian thực ở quy mô lớn. Kafka được phát triển tại LinkedIn, để giải quyết vấn đề xử lý lượng lớn dữ liệu event với độ trễ thấp. Nó được phát hành mã nguồn mở vào năm 2011 thông qua Quỹ Apache và nhanh chóng trở thành một trong những nền tảng streaming event phổ biến nhất.</p>
+<h2 id="tong-quan">Tổng quan</h2>
+<p>Dữ liệu event trong Kafka được tổ chức thành các topic (chủ đề), được phân phối trên nhiều server gọi là các broker. Việc này đảm bảo rằng dữ liệu luôn dễ truy cập và có khả năng chịu lỗi khi hệ thống gặp sự cố. Các ứng dụng gửi dữ liệu vào Kafka gọi là các producer (nhà sản xuất), trong khi các ứng dụng tiêu thụ dữ liệu gọi là các consumer (người tiêu thụ). Sức mạnh của Kafka nằm ở khả năng xử lý lượng dữ liệu khổng lồ, tính linh hoạt trong việc tương thích với nhiều ứng dụng khác nhau, và khả năng chịu lỗi tốt. Điều này giúp Kafka khác biệt so với các hệ thống messaging đơn giản hơn.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apache-kafka/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apache-kafka/figure1.png" /></a></p>
+<p>Kafka đã trở thành một thành phần quan trọng trong kiến trúc hệ thống hiện đại nhờ khả năng cung cấp dòng dữ liệu thời gian thực và quy mô lớn. Hãy cùng điểm qua một số use case phổ biến và quan trọng nhất của Kafka.</p>
+<h2 id="cac-use-case">Các use case</h2>
+<p>Trước hết, Kafka có thể hoạt động như một hàng đợi thông điệp có độ tin cậy và khả năng mở rộng cao. Nó tách biệt giữa producer và consumer, cho phép chúng hoạt động độc lập và hiệu quả ở quy mô lớn. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apache-kafka/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apache-kafka/figure2.png" /></a></p>
+<p>Ví dụ như việc theo dõi hoạt động, Kafka rất phù hợp để lấy và lưu trữ các sự kiện thời gian thực như lượt nhấp chuột, lượt xem và giao dịch mua hàng từ các trang web và ứng dụng có lượng truy cập cao. Các công ty như Uber và Netflix sử dụng Kafka để phân tích các hoạt động người dùng trong thời gian thực.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apache-kafka/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apache-kafka/figure3.png" /></a></p>
+<p>Đối với việc thu thập dữ liệu từ nhiều nguồn, Kafka có thể hợp nhất các dòng dữ liệu khác nhau vào một pipeline thời gian thực thống nhất để phân tích và lưu trữ. Điều này cực kỳ hữu ích trong việc tập hợp dữ liệu từ internet of things (IoT) và các cảm biến. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apache-kafka/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apache-kafka/figure4.png" /></a></p>
+<p>Trong kiến trúc microservices, Kafka đóng vai trò là bus dữ liệu thời gian thực giúp các dịch vụ khác nhau liên lạc với nhau.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apache-kafka/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apache-kafka/figure5.png" /></a></p>
+<p>Kafka cũng rất hữu ích trong việc giám sát và quan sát khi được tích hợp với ELK stack. Nó thu thập các số liệu, nhật ký ứng dụng và dữ liệu mạng theo thời gian thực, sau đó có thể được tập hợp và phân tích để theo dõi tình trạng và hiệu suất của hệ thống.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apache-kafka/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apache-kafka/figure6.png" /></a></p>
+<p>Cuối cùng, Kafka cho phép xử lý dòng dữ liệu lớn thông qua kiến trúc phân tán của nó. Kafka có thể xử lý lượng lớn dòng dữ liệu thời gian thực, ví dụ như xử lý dữ liệu nhấp chuột của người dùng để đưa ra đề xuất sản phẩm, phát hiện bất thường trong dữ liệu cảm biến IoT, hoặc phân tích dữ liệu thị trường tài chính.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apache-kafka/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apache-kafka/figure7.png" /></a></p>
+<h2 id="han-che">Hạn chế</h2>
+<p>Tuy nhiên, Kafka cũng có một số hạn chế. Nó khá phức tạp và khó học. Cần có chuyên môn để thiết lập, mở rộng và bảo trì hệ thống. Kafka cũng tiêu tốn nhiều tài nguyên, đòi hỏi phần cứng và đầu tư vận hành đáng kể, có thể không phù hợp cho các công ty khởi nghiệp nhỏ. Ngoài ra, Kafka cũng không phù hợp cho các ứng dụng đòi hỏi độ trễ cực thấp như giao dịch tần suất cao, nơi mà bạn chậm hơn người ta vài mili giây cũng mất một đống tiền.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/apache-kafka/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/apache-kafka/figure8.png" /></a></p>
 
 
 
@@ -2294,7 +2291,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">11/10/2023 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">12/10/2024 (GMT+07)</span>
   </span>
 
     
@@ -2304,7 +2301,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">22/01/2023 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">12/10/2024 (GMT+07)</span>
   </span>
 
     
@@ -2319,7 +2316,7 @@
     </span>
     <nav>
       
-        <a href="mailto:jerry.stone.manutd@gmail.com">farmerboy95</a>
+        <a href="mailto:tanbaonguyen95@gmail.com">farmerboy95</a>
     </nav>
   </span>
 
@@ -2388,7 +2385,7 @@
   
     <div class="md-source-date">
       <small>
-          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:tanbaonguyen95@gmail.com'>farmerboy95</a></span>
       </small>
     </div>
   
