@@ -68,6 +68,7 @@ comment: false
     - [Các thuật toán quan trọng để phỏng vấn System Design](ByteByteGo/algorithms-for-system-design-interviews.md)
     - [5 mô hình kiến trúc phần mềm được ưa chuộng nhất](ByteByteGo/architecture-patterns.md)
     - [Tóm tắt nhanh về Apache Kafka](ByteByteGo/apache-kafka.md)
+    - [Làm thế nào để có kết quả tốt trong phỏng vấn System Design?](ByteByteGo/crack-system-design-interviews.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
