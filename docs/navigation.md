@@ -71,6 +71,7 @@ comment: false
     - [Làm thế nào để có kết quả tốt trong phỏng vấn System Design?](ByteByteGo/crack-system-design-interviews.md)
     - [Docker có còn cần thiết không?](ByteByteGo/docker.md)
     - [Một số HTTP status code thông dụng](ByteByteGo/http-status-codes.md)
+    - [Python vs. C++ vs. Java](ByteByteGo/python-cpp-java.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
