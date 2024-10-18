@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/linux-boot-process/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/vertical-vs-horizontal-scaling/">
       
       
-        <link rel="prev" href="../why-jwt-popular/">
+        <link rel="prev" href="../linux-boot-process/">
       
       
-        <link rel="next" href="../vertical-vs-horizontal-scaling/">
+        <link rel="next" href="../../misc/chrome-blog/inside-browser-1/">
       
       
       <link rel="icon" href="../../assets/images/ico-sysdesign.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Linux khởi động như thế nào? - farmerboy's System Design Resources</title>
+        <title>Vertical vs. Horizontal Scaling - farmerboy's System Design Resources</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux-khoi-ong-nhu-the-nao" class="md-skip">
+        <a href="#vertical-vs-horizontal-scaling" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linux khởi động như thế nào?
+              Vertical vs. Horizontal Scaling
             
           </span>
         </div>
@@ -1904,6 +1904,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-boot-process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux khởi động như thế nào?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1920,7 +1941,7 @@
           
   
   <span class="md-ellipsis">
-    Linux khởi động như thế nào?
+    Vertical vs. Horizontal Scaling
   </span>
   
 
@@ -1931,7 +1952,7 @@
         
   
   <span class="md-ellipsis">
-    Linux khởi động như thế nào?
+    Vertical vs. Horizontal Scaling
   </span>
   
 
@@ -1962,9 +1983,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#qua-trinh-khoi-ong-linux" class="md-nav__link">
+  <a href="#vertical-scaling-nang-cap-scaling-theo-chieu-doc" class="md-nav__link">
     <span class="md-ellipsis">
-      Quá trình khởi động Linux
+      Vertical Scaling (nâng cấp - scaling theo chiều dọc)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizontal-scaling-mo-rong-scaling-theo-chieu-ngang" class="md-nav__link">
+    <span class="md-ellipsis">
+      Horizontal Scaling (mở rộng - scaling theo chiều ngang)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vay-chon-cai-nao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vậy chọn cái nào?
     </span>
   </a>
   
@@ -1974,27 +2013,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vertical-vs-horizontal-scaling/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Vertical vs. Horizontal Scaling
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2373,9 +2391,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#qua-trinh-khoi-ong-linux" class="md-nav__link">
+  <a href="#vertical-scaling-nang-cap-scaling-theo-chieu-doc" class="md-nav__link">
     <span class="md-ellipsis">
-      Quá trình khởi động Linux
+      Vertical Scaling (nâng cấp - scaling theo chiều dọc)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizontal-scaling-mo-rong-scaling-theo-chieu-ngang" class="md-nav__link">
+    <span class="md-ellipsis">
+      Horizontal Scaling (mở rộng - scaling theo chiều ngang)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vay-chon-cai-nao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vậy chọn cái nào?
     </span>
   </a>
   
@@ -2400,33 +2436,48 @@
   
 
 
-<h1 id="linux-khoi-ong-nhu-the-nao">Linux khởi động như thế nào?</h1>
+<h1 id="vertical-vs-horizontal-scaling">Vertical vs. Horizontal Scaling</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=XpFsMB6FoOs">How Does Linux Boot Process Work?</a></p>
-<h2 id="qua-trinh-khoi-ong-linux">Quá trình khởi động Linux</h2>
-<p>Quá trình bắt đầu khi bạn nhấn nút nguồn để bật máy tính. Đầu tiên, một chương trình gọi là BIOS hoặc UEFI sẽ khởi động. Đây về cơ bản là phần mềm giúp chuẩn bị tất cả các phần chính của máy tính sẵn sàng hoạt động - như bàn phím, màn hình, ổ cứng, v.v. UEFI là phiên bản mới hơn, mang lại thời gian khởi động nhanh hơn và các tính năng bảo mật tốt hơn như Secure Boot, so với BIOS truyền thống.</p>
-<p>Một điểm khác biệt chính giữa BIOS và UEFI là cách tiếp cận trong việc lưu trữ đĩa. BIOS gắn liền với hệ thống Master Boot Record (MBR), giới hạn kích thước ổ đĩa ở mức 2TB. Trong khi đó, UEFI sử dụng GUID Partition Table (GPT), loại bỏ các giới hạn kích thước này và cung cấp giải pháp linh hoạt và hiện đại hơn. Ngoài ra, BIOS khởi động chậm hơn và ít an toàn hơn so với UEFI.</p>
-<p>Tiếp theo, BIOS hoặc UEFI chạy một cái check gọi là power-on self-test (POST). Check này đảm bảo tất cả các phần cứng hoạt động đúng trước khi bật hoàn toàn hệ thống. Nếu POST phát hiện vấn đề, thường sẽ có một thông báo lỗi hiện lên màn hình.</p>
-<p>Cuối cùng, nếu mọi thứ đều ổn, BIOS hoặc UEFI cần tìm và tải phần mềm boot loader. Thứ tự boot thường được đặt để kiểm tra ổ cứng trước, sau đó đến USB hoặc CD nếu không tìm thấy gì trên ổ cứng. Bạn có thể tùy chỉnh thứ tự này trong cài đặt BIOS nếu muốn.</p>
-<p>Trên hệ thống BIOS, mã boot loader nằm trong một phần nhỏ của ổ cứng gọi là Master Boot Record. </p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/linux-boot-process/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/linux-boot-process/figure1.png" /></a></p>
-<p>Còn với UEFI, có một phân vùng riêng lưu trữ các file boot loader như <code>.efi</code>. </p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/linux-boot-process/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/linux-boot-process/figure2.png" /></a></p>
-<p>Nhiệm vụ chính của boot loader là:</p>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=dvRFHG2-uYs">Vertical Vs Horizontal Scaling: Key Differences You Should Know</a></p>
+<h2 id="vertical-scaling-nang-cap-scaling-theo-chieu-doc">Vertical Scaling (nâng cấp - scaling theo chiều dọc)</h2>
+<p>Scaling dọc (vertical scaling) có nghĩa là thêm sức mạnh vào server hiện tại, có thể bao gồm việc tăng thêm CPU, RAM, ổ cứng, hoặc băng thông mạng. Ví dụ, nếu cơ sở dữ liệu đám mây của bạn đạt đến giới hạn dung lượng trên một server 8-core ban đầu, bạn có thể nâng cấp lên một server 32-core với ổ SSD nhanh hơn, 96GB RAM và mạng 10 gigabit. Giờ nó có thể chịu tải tốt hơn.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/vertical-vs-horizontal-scaling/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/vertical-vs-horizontal-scaling/figure1.png" /></a></p>
+<p>Ưu điểm:</p>
 <ul>
-<li>Xác định vị trí kernel của hệ điều hành trên đĩa</li>
-<li>Tải kernel vào bộ nhớ máy tính</li>
-<li>Bắt đầu chạy mã kernel</li>
+<li>Đơn giản để thực hiện: Nâng cấp phần cứng hiện có dễ hơn so với việc thiết lập server mới.</li>
+<li>Tiết kiệm chi phí ngắn hạn: Bạn chỉ trả tiền cho các tài nguyên bổ sung cần thiết.</li>
+<li>Tất cả chạy trên một máy, giúp bảo trì và nâng cấp dễ dàng hơn.</li>
 </ul>
-<p>Một số boot loader phổ biến là LILO và GRUB2. LILO (Linux Loader) đã khá lỗi thời và hiếm được sử dụng trong các Linux distro hiện đại. GRUB2 là boot loader đầy đủ tính năng và được sử dụng rộng rãi nhất hiện nay. Nó có thể khởi động nhiều hệ điều hành, có giao diện đẹp mắt với các menu đồ họa hoặc văn bản, và cung cấp nhiều tùy chọn nâng cao cho người dùng chuyên sâu.</p>
-<p>Khi GRUB2 tự tải lên, nó sẽ đưa kernel Linux vào bộ nhớ và chuyển quyền điều khiển cho kernel để hoàn tất quá trình khởi động.</p>
-<p>Sau khi boot loader khởi động kernel, kernel tiếp quản các tài nguyên máy tính và bắt đầu khởi tạo tất cả các tiến trình và dịch vụ nền. Đầu tiên, kernel tự giải nén vào bộ nhớ, kiểm tra phần cứng và tải các driver thiết bị cùng các module kernel khác.</p>
-<p>Tiếp theo, một tiến trình ban đầu gọi là <code>init</code> sẽ khởi động, và trong các hệ thống Linux hiện đại, thường là Systemd. Systemd đã thay thế các hệ thống init cũ như SysVinit và Upstart, và là tiến trình cha của tất cả các tiến trình khác trên Linux. Systemd nhận rất nhiều trách nhiệm để khởi động và chuẩn bị hệ thống sẵn sàng cho người dùng.</p>
-<p>Nó kiểm tra xem phần cứng nào cần driver, gắn các hệ thống tệp và đĩa để chúng có thể truy cập, khởi động tất cả các dịch vụ nền như mạng, âm thanh, quản lý năng lượng, xử lý đăng nhập người dùng, và cuối cùng là tải môi trường desktop với các bảng và menu. </p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/linux-boot-process/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/linux-boot-process/figure3.png" /></a></p>
-<p>Systemd sử dụng các file cấu hình target để quyết định nên khởi động vào chế độ nào - chẳng hạn như chế độ đa người dùng chỉ văn bản hoặc chế độ đồ họa mà hầu hết chúng ta sử dụng hàng ngày. Đa số bây giờ chỉ cần biết Systemd xử lý việc khởi động tất cả những gì cần chạy sau khi khởi động Linux.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/linux-boot-process/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/linux-boot-process/figure4.png" /></a></p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/linux-boot-process/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/linux-boot-process/figure5.png" /></a></p>
+<p>Nhược điểm:</p>
+<ul>
+<li>Single point of failure: Nếu server gặp sự cố, mọi thứ đều bị ngưng trệ.</li>
+<li>Giới hạn mở rộng: Có giới hạn vật lý về việc một server có thể mạnh đến đâu.</li>
+<li>Chi phí cao khi quy mô lớn: Nâng cấp phần cứng cao cấp có thể rất đắt đỏ.</li>
+</ul>
+<h2 id="horizontal-scaling-mo-rong-scaling-theo-chieu-ngang">Horizontal Scaling (mở rộng - scaling theo chiều ngang)</h2>
+<p>Scaling ngang (horizontal scaling) là thêm nhiều server vào hạ tầng và phân phối khối lượng công việc giữa chúng, còn được gọi là "scale out". Thay vì dồn tất cả vào một máy mạnh, bạn có thể trải rộng khả năng trên ba máy 8-core. Với sự phổ biến của dịch vụ đám mây có auto-scaling và serverless computing, cách tiếp cận này đã đơn giản hóa việc mở rộng cho một số khối lượng công việc.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/vertical-vs-horizontal-scaling/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/vertical-vs-horizontal-scaling/figure2.png" /></a></p>
+<p>Ưu điểm:</p>
+<ul>
+<li>Tính sẵn sàng cao: Hệ thống phân tán cung cấp khả năng dự phòng với các server thay thế và cơ chế chuyển đổi dự phòng.</li>
+<li>Dự đoán trước khả năng mở rộng: Bạn có thể thêm nhiều server khi cần, mở rộng khả năng theo nhu cầu.</li>
+<li>Cải thiện hiệu suất: Phân phối khối lượng công việc giúp cải thiện hiệu suất tổng thể.</li>
+<li>Tiết kiệm chi phí dài hạn: Phân phối công việc trên nhiều máy chủ hiệu quả hơn có thể rẻ hơn so với việc nâng cấp phần cứng cao cấp.</li>
+</ul>
+<p>Nhược điểm:</p>
+<ul>
+<li>Phức tạp hơn: Thiết lập và quản lý hệ thống phân tán phức tạp hơn quản lý một máy chủ đơn lẻ, đặc biệt là đối với các hệ thống lưu trữ trạng thái như cơ sở dữ liệu.</li>
+<li>Chi phí ban đầu cao hơn: Việc phân mảnh cơ sở dữ liệu hoặc ứng dụng để phân phối công việc có thể phức tạp và yêu cầu nỗ lực phát triển đáng kể. Đảm bảo tính nhất quán dữ liệu giữa các máy chủ cần cơ chế sao chép dữ liệu, tăng thêm gánh nặng và chi phí vận hành. Việc phân phối lưu lượng truy cập hiệu quả trên nhiều máy chủ yêu cầu một giải pháp cân bằng tải mạnh mẽ, có thể tăng thêm chi phí phần cứng hoặc phần mềm cho hệ thống của bạn.</li>
+</ul>
+<h2 id="vay-chon-cai-nao">Vậy chọn cái nào?</h2>
+<p>Vậy nên chọn scaling dọc hay scaling ngang? Câu trả lời tùy thuộc vào nhiều yếu tố:</p>
+<ul>
+<li>Ngân sách: Scaling dọc thường rẻ hơn trong ngắn hạn, nhưng scaling ngang có thể hiệu quả hơn về chi phí trong dài hạn.</li>
+<li>Khối lượng công việc: Nếu khối lượng công việc của bạn không ổn định hoặc tăng đột biến, scaling ngang có thể giúp bạn xử lý nhu cầu đỉnh điểm.</li>
+<li>Yêu cầu hiệu suất: Nếu ứng dụng của bạn yêu cầu hiệu suất cao, scaling ngang có thể giúp phân phối tải và cải thiện khả năng phản hồi.</li>
+</ul>
+<p>Một yếu tố quan trọng khác là chi phí phát triển và vận hành bổ sung nếu ứng dụng của bạn yêu cầu các cơ chế phức tạp như sharding.</p>
+<p>Dù chọn phương pháp nào, hãy nhớ rằng mở rộng hạ tầng là cả một hành trình, không phải là đích đến. Nhu cầu hạ tầng của bạn sẽ thay đổi theo thời gian khi doanh nghiệp phát triển, vì vậy hãy sẵn sàng điều chỉnh và thay đổi chiến lược mở rộng của mình.</p>
 
 
 
