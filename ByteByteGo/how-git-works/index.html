@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/latency-numbers/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/how-git-works/">
       
       
-        <link rel="prev" href="../what-happen-when-access-url/">
+        <link rel="prev" href="../network-protocols/">
       
       
-        <link rel="next" href="../http-versions/">
+        <link rel="next" href="../../misc/chrome-blog/inside-browser-1/">
       
       
       <link rel="icon" href="../../assets/images/ico-sysdesign.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Các mốc độ trễ mà lập trình viên nên biết - farmerboy's System Design Resources</title>
+        <title>Git hoạt động như thế nào? - farmerboy's System Design Resources</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cac-moc-o-tre-ma-lap-trinh-vien-nen-biet" class="md-skip">
+        <a href="#git-hoat-ong-nhu-the-nao" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Các mốc độ trễ mà lập trình viên nên biết
+              Git hoạt động như thế nào?
             
           </span>
         </div>
@@ -497,30 +497,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Các mốc độ trễ mà lập trình viên nên biết
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../latency-numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,143 +509,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nguồn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tai-sao-nen-noi-ve-o-tre" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tại sao nên nói về độ trễ?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 giây
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2019,10 +1862,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../how-git-works/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git hoạt động như thế nào?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2031,6 +1894,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-trong-git-uoc-luu-o-au" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code trong Git được lưu ở đâu?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hanh-trinh-cua-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hành trình của code
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2409,108 +2319,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tai-sao-nen-noi-ve-o-tre" class="md-nav__link">
+  <a href="#code-trong-git-uoc-luu-o-au" class="md-nav__link">
     <span class="md-ellipsis">
-      Tại sao nên nói về độ trễ?
+      Code trong Git được lưu ở đâu?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-nano-giay" class="md-nav__link">
+  <a href="#hanh-trinh-cua-code" class="md-nav__link">
     <span class="md-ellipsis">
-      1 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-nano-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 nano giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-micro-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 micro giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-10-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1-10 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-100-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      10-100 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#100-1000-mili-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      100-1000 mili giây
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-giay" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 giây
+      Hành trình của code
     </span>
   </a>
   
@@ -2535,72 +2355,35 @@
   
 
 
-<h1 id="cac-moc-o-tre-ma-lap-trinh-vien-nen-biet">Các mốc độ trễ mà lập trình viên nên biết</h1>
+<h1 id="git-hoat-ong-nhu-the-nao">Git hoạt động như thế nào?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=FqR5vESuKe0">Latency Numbers Programmer Should Know</a></p>
-<h2 id="tai-sao-nen-noi-ve-o-tre">Tại sao nên nói về độ trễ?</h2>
-<p>Độ trễ (latency) là một yếu tố quan trọng trong các hệ thống ngày nay. Thực sự chúng ta không cần biết độ trễ chính xác mà chỉ cần ghi nhớ một số khoảng độ trễ nhất định để hình dung ra thứ ta đang làm sẽ tốn khoảng trễ như thế nào.</p>
-<p>Ta sẽ đi vào từng khoảng thời gian trễ để xem có những ứng dụng nào liên quan đến chúng hay không.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure1.png" /></a></p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-200" src="../../assets/ByteByteGo/latency-numbers/figure2.png" /></a></p>
-<h2 id="1-nano-giay">1 nano giây</h2>
-<p>Truy cập vào các thanh ghi CPU tốn khoảng dưới 1 nano giây. Ta chỉ có vài thanh ghi trong CPU nhưng truy cập chúng lại rất nhanh.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure3.png" /></a></p>
-<p>Chu kỳ xung nhịp (clock cycle) của máy tính cũng tốn khoảng dưới 1 nano giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-200" src="../../assets/ByteByteGo/latency-numbers/figure4.png" /></a></p>
-<h2 id="1-10-nano-giay">1-10 nano giây</h2>
-<p>Truy cập vào bộ nhớ đệm (cache) L1 và L2 của CPU tốn từ 1 đến 10 nano giây. Một số thao tác tốn kém của CPU cũng ở trong khoảng này, ví dụ như branch mispredict penalty, tốn khoảng 20 chu kỳ xung nhịp.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure5.png" /></a></p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure6.png" /></a></p>
-<h2 id="10-100-nano-giay">10-100 nano giây</h2>
-<p>Truy cập vào bộ nhớ đệm L3 của CPU thường tốn khoảng 10 nano giây. </p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure7.png" /></a></p>
-<p>Với các bộ xử lý hiện đại như Apple M1, tham chiếu vào bộ nhớ chính tốn khoảng gần 100 nano giây. Nói cách khác, truy cập vào bộ nhớ chính của máy tính hiện đại sẽ chậm hơn vài trăm lần truy cập vào thanh ghi CPU.</p>
-<h2 id="100-1000-nano-giay">100-1000 nano giây</h2>
-<p>Khoảng này sẽ gồm lệnh gọi hệ thống (system call). Trong Linux, gọi một lệnh hệ thống đơn giản sẽ tốn khoảng vài trăm nano giây. Lưu ý phần lớn thời gian trong này là chi phí để di chuyển vào kernel và đi ra, thời gian thực gọi lệnh hệ thống là rất ít.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure8.png" /></a></p>
-<p>Ngoài ra, ta còn tốn khoảng 200 nano giây để MD5 hash một số 64 bit.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure9.png" /></a></p>
-<h2 id="1-10-micro-giay">1-10 micro giây</h2>
-<p>Context switch giữa các thread trong Linux tốn tầm khoảng vài micro giây. Dù vậy thì đây là trường hợp tốt nhất để có độ trễ này. Tuỳ vào workload, nếu context switch bao gồm việc mang các trang dữ liệu từ bộ nhớ cho luồng mới, nó có thể tốn nhiều thời gian hơn.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure10.png" /></a></p>
-<p>Copy 64KB dữ liệu từ một chỗ trong bộ nhớ chính sang chỗ khác (cũng trong bộ nhớ chính) cũng tốn vài micro giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure11.png" /></a></p>
-<h2 id="10-100-micro-giay">10-100 micro giây</h2>
-<p>Network proxy như Nginx cần khoảng 50 micro giây để xử lý một HTTP request.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure12.png" /></a></p>
-<p>Đọc 1MB liên tiếp từ bộ nhớ chính sẽ tốn khoảng 50 micro giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure13.png" /></a></p>
-<p>Độ trễ đọc của ổ cứng SSD cũng trong khoảng này, tốn tầm 100 micro giây để đọc một trang 8K.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure14.png" /></a></p>
-<h2 id="100-1000-micro-giay">100-1000 micro giây</h2>
-<p>Độ trễ ghi của ở cứng SSD lớn hơn tầm 10 lần so với độ trễ đọc, gần 1000 micro giây để ghi một trang.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure15.png" /></a></p>
-<p>Thời gian trễ trọn vòng của mạng nội vùng (với các nền tảng đám mây hiện nay) là tầm khoảng vài trăm micro giây. Ngày nay độ trễ này có xu hướng giảm, đôi khi về dưới 100 micro giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure16.png" /></a></p>
-<p>Một thao tác thông thường trên Memcache hay Redis tốn khoảng 1000 micro giây, bao gồm cả thời gian trễ trọn vòng ở trên.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure17.png" /></a></p>
-<h2 id="1-10-mili-giay">1-10 mili giây</h2>
-<p>Thời gian trễ trọn vòng của mạng xuyên vùng là vào khoảng 5 mili giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure18.png" /></a></p>
-<p>Thời gian tìm (seek time) của ổ cứng cũng vào khoảng 5 mili giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure19.png" /></a></p>
-<h2 id="10-100-mili-giay">10-100 mili giây</h2>
-<p>Thời gian trễ trọn vòng của bờ đông và bờ tây nước Mỹ, hay bờ đông nước Mỹ và châu Âu nằm trong khoảng này.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure20.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure20.png" /></a></p>
-<p>Đọc 1GB liên tiếp từ bộ nhớ chính cũng nằm trong khoảng này.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure21.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure21.png" /></a></p>
-<h2 id="100-1000-mili-giay">100-1000 mili giây</h2>
-<p>Mất tầm 300 mili giây để bcrypt một mật khẩu.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure22.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure22.png" /></a></p>
-<p>Bắt tay TLS nằm trong khoảng 250 đến 500 mili giây. Nó bao gồm nhiều network round trip nên con số sẽ tuỳ vào khoảng cách giữa 2 máy.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure23.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-500" src="../../assets/ByteByteGo/latency-numbers/figure23.png" /></a></p>
-<p>Thời gian trễ trọn vòng với mạng từ bờ tây nước Mỹ đến Singapore cũng trong khoảng 100 đến 1000 mili giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure24.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure24.png" /></a></p>
-<p>Đọc 1GB liên tiếp từ SSD cũng trong khoảng này.</p>
-<h2 id="1-giay">1 giây</h2>
-<p>Chuyển 1GB trên mạng trong cùng một vùng đám mây tốn khoảng 10 giây.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/latency-numbers/figure25.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img h-300" src="../../assets/ByteByteGo/latency-numbers/figure25.png" /></a></p>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=e9lnsKot_SQ">How Git Works: Explained in 4 Minutes</a></p>
+<h2 id="code-trong-git-uoc-luu-o-au">Code trong Git được lưu ở đâu?</h2>
+<p>Trước khi đi vào các lệnh Git, hãy cùng xem Git lưu code của chúng ta như thế nào. Thường mọi người nghĩ rằng chỉ có hai nơi lưu code, nhưng thực tế code không chỉ tồn tại trên GitHub hoặc máy cá nhân của ta. Có 4 vị trí chính mà code của ta tồn tại trong Git:</p>
+<ol>
+<li><strong>Thư mục làm việc (Working Directory)</strong>: Nơi ta chỉnh sửa các file cục bộ. Đây là nơi chúng ta làm việc.</li>
+<li><strong>Khu vực Staging (Staging Area)</strong>: Đây là nơi tạm thời lưu trữ các thay đổi trước khi commit.</li>
+<li><strong>Kho lưu trữ cục bộ (Local Repository)</strong>: Đây là nơi lưu trữ các thay đổi đã commit cục bộ.</li>
+<li><strong>Kho lưu trữ từ xa (Remote Repository)</strong>: Một máy chủ như GitHub để chia sẻ và sao lưu code.</li>
+</ol>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-git-works/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-git-works/figure1.png" /></a></p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-git-works/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-git-works/figure2.png" /></a></p>
+<h2 id="hanh-trinh-cua-code">Hành trình của code</h2>
+<p>Với các vị trí này, hãy cùng hình dung hành trình của code nhé. Hầu hết các lệnh <code>git</code> sẽ di chuyển file giữa 4 vị trí này. Bước đầu tiên là sử dụng lệnh <code>git clone</code> để sao chép một repository đã tồn tại, giúp bạn có một phiên bản cục bộ của project, với tất cả lịch sử git của nó.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-git-works/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-git-works/figure3.png" /></a></p>
+<p>Khi đã có repository cục bộ, cùng xem code được lưu ở đâu. Khi bắt đầu làm việc với một file, bạn đang ở Working Directory. Đây là môi trường phát triển cục bộ của bạn, nơi bạn tạo các thay đổi trên code (thêm file, sửa file, xóa file, ...).</p>
+<p>Khi sẵn sàng commit các thay đổi ở trên, bạn dùng <code>git add</code> để đưa snapshot của các file đó vào Staging Area. Tưởng tượng đây là một checkpoint, nơi các thay đổi của bạn được tập hợp lại và sẵn sàng để hoàn tất.</p>
+<p>Bước tiếp theo là sử dụng <code>git commit</code>, lấy một snapshot của Staging Area và lưu nó vào Local Repository của bạn. Việc này giúp khóa các thay đổi đó bằng cách tạo một bản ghi vĩnh viễn mà bạn có thể tham chiếu lại, giống như một bức ảnh chụp tại một thời điểm.</p>
+<p>Code của bạn không chỉ nằm trên máy cá nhân. Khi sẵn sàng chia sẻ tiến độ với team hoặc muốn sao lưu công việc của mình, bạn dùng lệnh <code>git push</code> để gửi các commit lên Remote Repository. Đây thường là một máy chủ chia sẻ nơi team có thể cùng làm việc, như GitHub hoặc Bitbucket.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-git-works/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-git-works/figure4.png" /></a></p>
+<p>Cộng tác trong Git là một quá trình trao đổi hai chiều. Để tích hợp công việc của đồng nghiệp, bạn dùng <code>git pull</code>, để tải các thay đổi từ Remote Repository và hợp nhất chúng vào Local Repository của bạn. Lệnh này kết hợp hai lệnh: <code>git fetch</code>, để tải các cập nhật mới nhất, và <code>git merge</code>, để hợp nhất các cập nhật này với công việc của bạn. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-git-works/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-git-works/figure5.png" /></a></p>
+<p>Có những lúc bạn cần chuyển đổi ngữ cảnh, có thể để sửa lỗi trên một branch khác, đó là lúc <code>git checkout</code> hoặc <code>git switch</code> giúp bạn. Nó cho phép bạn chuyển đổi giữa các branch khác nhau để làm việc trên các tính năng cụ thể.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-git-works/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-git-works/figure6.png" /></a></p>
+<p>Git branching cho phép bạn tách ra từ code chính để phát triển một tính năng mới mà không ảnh hưởng đến code chính. Một số khái niệm quan trọng bao gồm: tạo nhánh mới với lệnh <code>git branch</code>, chuyển đổi giữa các nhánh với <code>git switch</code>, gộp nhánh bằng <code>git merge</code>, và giải quyết merge conflict khi các thay đổi chồng lấn. Branching hỗ trợ phát triển và cộng tác độc lập. Mình cũng có một bài về <a href="../git-merge-vs-rebase/">Git Merge vs Rebase</a> nếu bạn muốn tìm hiểu thêm.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-git-works/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-git-works/figure7.png" /></a></p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/how-git-works/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/how-git-works/figure8.png" /></a></p>
+<p>Nhiều dev sử dụng các công cụ Git đồ họa như GitHub Desktop và SourceTree. Các công cụ này cung cấp giao diện trực quan và các phím tắt cho các lệnh phổ biến. Chúng có thể giúp người mới bắt đầu dễ dàng làm quen với Git.</p>
 
 
 
@@ -2623,7 +2406,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">11/10/2023 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">18/10/2024 (GMT+07)</span>
   </span>
 
     
@@ -2633,7 +2416,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">22/01/2023 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">18/10/2024 (GMT+07)</span>
   </span>
 
     
@@ -2648,7 +2431,7 @@
     </span>
     <nav>
       
-        <a href="mailto:jerry.stone.manutd@gmail.com">farmerboy95</a>
+        <a href="mailto:tanbaonguyen95@gmail.com">farmerboy95</a>
     </nav>
   </span>
 
@@ -2717,7 +2500,7 @@
   
     <div class="md-source-date">
       <small>
-          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:tanbaonguyen95@gmail.com'>farmerboy95</a></span>
       </small>
     </div>
   
