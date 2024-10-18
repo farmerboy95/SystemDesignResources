@@ -77,6 +77,7 @@ comment: false
     - [Git hoạt động như thế nào?](ByteByteGo/how-git-works.md)
     - [Tại sao JSON Web Token (JWT) phổ biến?](ByteByteGo/why-jwt-popular.md)
     - [Linux khởi động như thế nào?](ByteByteGo/linux-boot-process.md)
+    - [Vertical vs. Horizontal Scaling](ByteByteGo/vertical-vs-horizontal-scaling.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
