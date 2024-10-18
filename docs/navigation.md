@@ -75,6 +75,7 @@ comment: false
     - [Các công ty Big Tech release code như thế nào?](ByteByteGo/big-tech-releases-code.md)
     - [8 giao thức mạng thông dụng](ByteByteGo/network-protocols.md)
     - [Git hoạt động như thế nào?](ByteByteGo/how-git-works.md)
+    - [Tại sao JSON Web Token (JWT) phổ biến?](ByteByteGo/why-jwt-popular.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
