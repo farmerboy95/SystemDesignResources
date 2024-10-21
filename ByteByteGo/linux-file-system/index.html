@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/back-of-the-envelope-estimation/">
+        <link rel="canonical" href="https://farmerboy95.github.io/SystemDesignResources/ByteByteGo/linux-file-system/">
       
       
-        <link rel="prev" href="../container-concepts/">
+        <link rel="prev" href="../client-architecture-patterns/">
       
       
-        <link rel="next" href="../how-streaming-platforms-work/">
+        <link rel="next" href="../../misc/chrome-blog/inside-browser-1/">
       
       
       <link rel="icon" href="../../assets/images/ico-sysdesign.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning - farmerboy's System Design Resources</title>
+        <title>Linux File System có gì? - farmerboy's System Design Resources</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#du-toan-cong-suat-cho-ung-dung-back-of-the-envelope-estimation-capacity-planning" class="md-skip">
+        <a href="#linux-file-system-co-gi" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning
+              Linux File System có gì?
             
           </span>
         </div>
@@ -1400,30 +1400,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../back-of-the-envelope-estimation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,77 +1412,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nguon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nguồn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#du-toan-cong-suat-la-gi" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dự toán công suất là gì?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cac-gia-tri-can-du-toan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Các giá trị cần dự toán
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Các giá trị cần dự toán">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vi-du" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ví dụ
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-luan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kết luận
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2079,10 +1988,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../linux-file-system/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Linux File System có gì?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2091,6 +2020,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nguồn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-directory-quan-trong" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các directory quan trọng
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2469,42 +2436,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#du-toan-cong-suat-la-gi" class="md-nav__link">
+  <a href="#cac-directory-quan-trong" class="md-nav__link">
     <span class="md-ellipsis">
-      Dự toán công suất là gì?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cac-gia-tri-can-du-toan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Các giá trị cần dự toán
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Các giá trị cần dự toán">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vi-du" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ví dụ
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ket-luan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kết luận
+      Các directory quan trọng
     </span>
   </a>
   
@@ -2529,31 +2463,28 @@
   
 
 
-<h1 id="du-toan-cong-suat-cho-ung-dung-back-of-the-envelope-estimation-capacity-planning">Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning</h1>
+<h1 id="linux-file-system-co-gi">Linux File System có gì?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=UC5xf8FbdJc">Back-Of-The-Envelope Estimation / Capacity Planning</a></p>
-<h2 id="du-toan-cong-suat-la-gi">Dự toán công suất là gì?</h2>
-<p>Dự toán công suất (Back-of-the-envelope estimation) là một công cụ rất hữu ích trong thiết kế hệ thống. Trong bài viết này, ta sẽ đi vào tìm hiểu làm thế nào và khi nào nên dự toán công suất, cũng như tìm hiểu một số mẹo để sử dụng công cụ này một cách hiệu quả.</p>
-<p>Các dev với nhiều năm kinh nghiệm sử dụng dự toán công suất để kiểm tra nhanh một thiết kế hệ thống. Trong các trường hợp như vậy, ta không cần các con số phải chính xác tuyệt đối. Thường ta sẽ chỉ cần chính xác đến chục hoặc trăm lần so với con số thực tế thôi.</p>
-<p>Ví dụ, nếu tính toán cho thấy quy mô của web service cần xử lý 1 triệu request mỗi giây, và mỗi web server chỉ có thể xử lý khoảng 10 nghìn request mỗi giây, ta sẽ nhanh chóng nhận ra hai điều: Một, ta cần phải tạo một cụm (cluster) các web server, với một load balancer ở trước cụm đó. Hai, ta cần khoảng 100 web server.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure1.png" /></a></p>
-<p>Một ví dụ khác là khi tính toán cho thấy rằng database cần xử lý khoảng 10 truy vấn trên giây khi cao điểm, nghĩa là một database server duy nhất sẽ có thể xử lý được tải đó trong một thời gian dài, và ta không cần phải tính đến việc sharding hoặc caching trong một khoảng thời gian.</p>
-<h2 id="cac-gia-tri-can-du-toan">Các giá trị cần dự toán</h2>
-<p>Giờ ta sẽ đi vào một số giá trị phổ biến mà ta cần dự toán. Giá trị quan trọng nhất là số request mỗi giây (Requests per second - RPS) ở mức service hoặc số truy vấn mỗi giây (Queries per second - QPS) ở mức database. Một số giá trị con của lớp giá trị RPS này bao gồm như sau. </p>
-<p>Thứ nhất là DAU (hay số người dùng hàng ngày - Daily Active Users), giá trị này khá dễ lấy. Đôi khi thì ta chỉ có thể biết MAU (hay số người dùng hàng tháng - Monthly Active Users). Trong trường hợp này, ta sẽ tính DAU dựa trên một số phần trăm của MAU.</p>
-<p>Giá trị thứ hai là ước lượng về việc sử dụng trên DAU của service mà ta đang thiết kế. Ví dụ, không phải ai hoạt động trên Twitter cũng post bài, chỉ có một số phần trăm làm vậy thôi. 10%-25% có vẻ hợp lý. Một lần nữa, ta không cần phải chính xác tuyệt đối. Chỉ cần chính xác đến chục lần là đủ.</p>
-<p>Giá trị thứ ba là một hệ số scaling. Tần suất sử dụng của một service thường có những lúc cao điểm và thấp điểm trong ngày. Ta cần phải ước lượng xem tần suất sử dụng cao điểm sẽ cao hơn bao nhiêu so với tần suất sử dụng trung bình. Điều này sẽ phản ánh khoảng RPS cao nhất khiến service của ta có thể tê liệt là bao nhiêu. Ví dụ, với một service như Google Maps, tần suất sử dụng trong giờ cao điểm có thể cao hơn trung bình 5 lần. Một ví dụ khác là dịch vụ chia sẻ xe như Uber, tần suất sử dụng vào tối cuối tuần có thể cao hơn trung bình 2 lần.</p>
-<h3 id="vi-du">Ví dụ</h3>
-<p>Ta sẽ ước lượng số Tweet mỗi giây được tạo ra trên Twitter. Lưu ý rằng các con số này chỉ là tính toán thôi, chứ không phải chính thức từ Twitter đâu. Giả sử Twitter có 300 triệu MAU, và 50% MAU dùng Twitter hàng ngày. Nghĩa là sẽ có 150 triệu DAU. Tiếp theo, ta ước tính rằng khoảng 25% DAU đó sẽ viết Tweet. Mỗi người sẽ viết trung bình khoảng 2 tweet chẳng hạn. Nghĩa là <span class="arithmatex">\(25\% * 2 = 0.5\)</span> tweet mỗi DAU. Với hệ số scaling, ta ước tính rằng phần lớn người dùng tweet vào buổi sáng khi ngủ dậy và không thể đợi để chia sẻ về giấc mơ tối hôm trước. Nó sẽ làm tăng mạnh traffic tạo tweet lên gấp đôi so với trung bình khi bờ đông nước Mỹ thức giấc.</p>
-<p>Giờ ta đã có đủ dữ liệu để tính toán số tweet tạo ra mỗi giây. Ta có: 150 triệu DAU nhân 0.5 tweet mỗi DAU, nhân 2 lần hệ số scaling chia cho 86400 giây trong một ngày. Đó sẽ là khoảng 1500 tweet mỗi giây.</p>
-<p>Giờ ta sẽ đi qua các kỹ thuật để đơn giản hóa tính toán. Đầu tiên, ta chuyển tất cả các con số lớn thành dạng kí hiệu khoa học. Tính toán trên các con số lớn thường dễ gây lỗi. Bằng cách chuyển các con số lớn thành kí hiệu khoa học, một phần của phép nhân sẽ trở thành phép cộng đơn giản, và phép chia sẽ trở thành phép trừ. Trong ví dụ trên, 150 triệu DAU sẽ trở thành <span class="arithmatex">\(150 \cdot 10^6\)</span> hay <span class="arithmatex">\(1.5 \cdot 10^8\)</span>. Có <span class="arithmatex">\(86400\)</span> giây trong một ngày, ta sẽ làm tròn lên thành <span class="arithmatex">\(100000\)</span> giây, và nó sẽ trở thành <span class="arithmatex">\(10^5\)</span> giây. Và vì đây là phép chia, <span class="arithmatex">\(10^5\)</span> sẽ trở thành <span class="arithmatex">\(10^{-5}\)</span>. Tiếp theo, ta nhóm tất cả các lũy thừa của 10 lại với nhau, và tất cả các con số khác lại với nhau. Ví dụ, phép toán trên trở thành: <span class="arithmatex">\(1.5 \cdot 0.5 \cdot 2\)</span> và <span class="arithmatex">\(10^8 \cdot 10^{-5} = 10^{8-5} = 10^3\)</span>. Đặt tất cả lại với nhau, ta sẽ có <span class="arithmatex">\(1.5 \cdot 10^3\)</span> hay 1500.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure2.png" /></a></p>
-<p>Ta có thể dễ dàng chuyển đổi qua lại các dạng số lớn và kí hiệu khoa học nhanh chóng. Một số cách chuyển nhanh ta cần nhớ là: <span class="arithmatex">\(10^{12}\)</span> là một triệu tỷ, hay 1TB. và khi ta thấy một số như 50TB, ta sẽ chuyển nó thành <span class="arithmatex">\(5 \cdot 10^1 \cdot 10^{12}\)</span>, hay <span class="arithmatex">\(5 \cdot 10^{13}\)</span>. Ta sẽ bỏ qua việc rằng 1KB thực sự là <span class="arithmatex">\(2^{10}\)</span> bytes, hay 1024 bytes, chứ không phải 1000 bytes. Ta không thực sự cần đến mức độ chính xác đó.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/back-of-the-envelope-estimation/figure3.png" /></a></p>
-<p>Tổng kết với một ví dụ cuối. Ta sẽ tính xem cần bao nhiêu dung lượng để lưu file đa phương tiện (hình ảnh, video, ...) cho các tweet. Ta biết từ ví dụ trước rằng sẽ có khoảng 150 triệu tweet một ngày. Giờ ta cần ước tính khoảng bao nhiêu phần trăm số tweet đó sẽ chứa hình ảnh hoặc video, và mấy cái file đó sẽ lớn tầm bao nhiêu. Với sự nghiên cứu kỹ lưỡng, ta ước tính rằng 10% tweet chứa hình ảnh, và mỗi hình ảnh nặng khoảng 100KB, và 1% tweet chứa video, và mỗi video nặng khoảng 100MB. Ta cũng giả sử rằng mỗi file sẽ được lưu làm 3 bản, và Twitter sẽ lưu trữ các file đó trong 5 năm.</p>
-<p>Giờ ta sẽ tính toán. Đối với việc lưu trữ hình ảnh, ta có: 150 triệu tweet x 0.1 số tweet chứa hình ảnh x 100KB mỗi hình ảnh x 400 ngày trong một năm x 5 năm x 3 bản sao, nó sẽ bằng <span class="arithmatex">\(1.5 \cdot 10^8 \cdot 10^{-1} \cdot 10^5 \cdot 4 \cdot 10^2 \cdot 5 \cdot 3\)</span>. Ta nhóm các lũy thừa của 10 lại với nhau, và tất cả các con số khác lại với nhau, cho ra <span class="arithmatex">\(1.5 \cdot 4 \cdot 5 \cdot 3\)</span>, bằng <span class="arithmatex">\(90\)</span> và <span class="arithmatex">\(10^{8-1+5+2}\)</span>, hay <span class="arithmatex">\(10^{14}\)</span>. kết quả là <span class="arithmatex">\(9 \cdot 10^{15}\)</span>, hay 9PB. Đối với việc lưu trữ video, ta tính nhanh chút. Do video trung bình nặng 1000 lần hình ảnh, và chỉ có 1/10 số tweet chứa video so với hình ảnh, nên dung lượng lưu trữ video sẽ là <span class="arithmatex">\(100 \cdot 9\)</span> PB, hay 900PB.</p>
-<h2 id="ket-luan">Kết luận</h2>
-<p>Dự toán công suất là một công cụ rất hữu ích trong hệ thống. Đừng quá chú trọng vào sự chính xác. Chỉ cần chính xác đến mức độ chục lần là đủ để có được đầy đủ thông tin và xác nhận thiết kế hệ thống.</p>
+<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=bbmWOjuFmgA">Linux File System Explained!</a></p>
+<h2 id="cac-directory-quan-trong">Các directory quan trọng</h2>
+<p><a class="glightbox" href="../../assets/ByteByteGo/linux-file-system/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/linux-file-system/figure1.png" /></a></p>
+<p>Đầu tiên là nơi chưa các file thực thi (executables). Cách bố trí của các thư mục như <code>/bin</code>, <code>/usr/bin</code>, <code>/usr/local/bin</code> và các thư mục <code>sbin</code> của chúng tuân theo một quy ước nhất định.</p>
+<ul>
+<li><code>/bin</code> chứa các chương trình cốt lõi của hệ điều hành, những chương trình khả dụng trước khi <code>/usr</code> được mount khi khởi động. Ví dụ, các lệnh <code>mount</code>, <code>ls</code>, <code>cd</code> đều nằm ở đây.</li>
+<li><code>/usr/bin</code> là nơi chính cho các file thực thi KHÔNG phải là một phần của hệ điều hành cơ bản. Hầu hết các chương trình của người dùng đều nằm ở đây. Factos: <code>usr</code> không phải là user mà là Unix System Resources!</li>
+<li><code>/usr/local/bin</code> chứa các file thực thi được cài đặt bởi admin, thường sau khi biên dịch từ mã nguồn. Điều này giúp giữ cho các bản biên dịch cục bộ tách biệt để tránh ghi đè lên các file hệ thống.</li>
+<li>Các thư mục <code>sbin</code> tuân theo quy tắc tương tự nhưng chứa các tiện ích quản trị hệ thống yêu cầu quyền root như <code>iptables</code> và <code>sshd</code>. Khi có cùng một file thực thi tồn tại trong nhiều thư mục, bạn có thể chỉ định thư mục mặc định bằng cách sắp xếp lại thứ tự ưu tiên của thư mục trong biến <code>PATH</code>.</li>
+</ul>
+<p><code>/lib</code> chứa các file thư viện chia sẻ cần thiết giúp cho các file thực thi trong <code>/bin</code> và <code>/sbin</code> hoạt động chính xác. Những thư viện này cần được truy cập sớm trong quá trình khởi động trước khi mount <code>/usr</code>. Chúng cung cấp các chức năng cốt lõi như các hàm thư viện C (<code>glibc</code>) và runtime của trình biên dịch (<code>libstdc++</code>). </p>
+<p><code>/usr/lib</code> chứa các thư viện cho các file thực thi trong <code>/usr</code> không quan trọng cho việc khởi động hệ thống. Những thứ này bao gồm các thư viện UI như <code>GTK</code> và <code>Qt</code> cũng như các runtime như <code>Python</code>. Bạn cũng có thể điều chỉnh thứ tự tìm kiếm thư viện thông qua biến <code>LD_LIBRARY_PATH</code>.</p>
+<p>Với <code>/etc</code>, nơi chứa các file cấu hình Linux, các file dạng text ở đây điều khiển mọi thứ từ mạng đến dịch vụ xác thực.</p>
+<p>Đối với dữ liệu người dùng, <code>/home</code> lưu trữ tài liệu, media, và các project trong khi admin có thư mục riêng là /root. Dữ liệu thay đổi nhanh như log và cache nằm trong <code>/var</code>. <code>/var/log</code> đặc biệt quan trọng để kiểm tra các sự kiện phần cứng, các vấn đề an ninh, hoặc hiệu suất.</p>
+<p><code>/run</code> /run chứa thông tin runtime biến đổi như các chi tiết của <code>systemd</code>, session người dùng, và các dịch vụ logging. Các dịch vụ hệ thống sử dụng <code>/run</code> để giao tiếp liên tục qua các file socket và lock. Ví dụ, <code>mysql.sock</code> có thể rất quan trọng cho việc truy cập cơ sở dữ liệu.</p>
+<p>Cuối cùng, ta đến với <code>/proc</code> và <code>/sys</code>, các hệ thống file ảo dành cho những người dùng Linux chuyên nghiệp. <code>/proc</code> mở ra các kênh giao tiếp để kiểm tra trạng thái hệ điều hành tổng thể – ta có thể xem các số liệu cấp cao như <code>cpuinfo</code>, kiểm tra filesystem mount, và đi sâu hơn với các công cụ như <code>lsof</code>, <code>strace</code>, và <code>pmap</code>. </p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/linux-file-system/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/linux-file-system/figure2.png" /></a></p>
+<p><code>/sys</code> cung cấp quyền truy cập các đối tượng phần cứng và kernel ở mức low-level hơn, cho phép giám sát và cấu hình chi tiết các thành phần như thiết bị, module, network stack thông qua các file ảo.</p>
+<p><a class="glightbox" href="../../assets/ByteByteGo/linux-file-system/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/linux-file-system/figure3.png" /></a></p>
+<p>Kết hợp lại, <code>/proc</code> và <code>/sys</code> cung cấp khả năng quan sát toàn diện hệ thống, từ các số liệu cấp cao cho đến các tương tác thành phần ở mức low-level. Với <code>/proc</code> hướng đến các thống kê process/runtime, và <code>/sys</code> cung cấp truy cập phần cứng/thiết bị, đây là những điểm kiểm tra rất hữu ích cho việc tối ưu hóa hiệu suất và kiểm tra lỗi.</p>
 
 
 
@@ -2576,7 +2507,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">26/02/2024 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">22/10/2024 (GMT+07)</span>
   </span>
 
     
@@ -2586,7 +2517,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">26/02/2024 (GMT+07)</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">22/10/2024 (GMT+07)</span>
   </span>
 
     
@@ -2601,7 +2532,7 @@
     </span>
     <nav>
       
-        <a href="mailto:jerry.stone.manutd@gmail.com">farmerboy95</a>
+        <a href="mailto:tanbaonguyen95@gmail.com">farmerboy95</a>
     </nav>
   </span>
 
@@ -2670,7 +2601,7 @@
   
     <div class="md-source-date">
       <small>
-          Authors: <span class='git-page-authors git-authors'><a href='mailto:jerry.stone.manutd@gmail.com'>farmerboy95</a></span>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:tanbaonguyen95@gmail.com'>farmerboy95</a></span>
       </small>
     </div>
   
