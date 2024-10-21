@@ -80,6 +80,7 @@ comment: false
     - [Vertical vs. Horizontal Scaling](ByteByteGo/vertical-vs-horizontal-scaling.md)
     - [9 loại API testing phổ biến](ByteByteGo/api-testing.md)
     - [Các mô hình kiến trúc Client phổ biến](ByteByteGo/client-architecture-patterns.md)
+    - [Linux File System có gì?](ByteByteGo/linux-file-system.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
