@@ -83,6 +83,8 @@ comment: false
     - [Linux File System có gì?](ByteByteGo/linux-file-system.md)
     - [Disney Hotstar xử lý cả tỷ react như thế nào?](ByteByteGo/handle-billion-reacts.md)
     - [7 mẹo vặt cho thiết kế API](ByteByteGo/api-design.md)
+    - [6 công cụ vẽ biểu đồ kiến trúc bằng code](ByteByteGo/diagramming-with-code.md)
+    - [Những điều cần biết về Webhook](ByteByteGo/webhooks.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
