@@ -85,6 +85,8 @@ comment: false
     - [7 mẹo vặt cho thiết kế API](ByteByteGo/api-design.md)
     - [6 công cụ vẽ biểu đồ kiến trúc bằng code](ByteByteGo/diagramming-with-code.md)
     - [Những điều cần biết về Webhook](ByteByteGo/webhooks.md)
+    - [Cache có thể sai đến mức nào?](ByteByteGo/caching-pitfalls.md)
+    - [Reserve Proxy vs. API Gateway vs. Load Balancer](ByteByteGo/reverse-proxy-api-gateway-load-balancer.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
