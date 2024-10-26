@@ -87,6 +87,9 @@ comment: false
     - [Những điều cần biết về Webhook](ByteByteGo/webhooks.md)
     - [Cache có thể sai đến mức nào?](ByteByteGo/caching-pitfalls.md)
     - [Reserve Proxy vs. API Gateway vs. Load Balancer](ByteByteGo/reverse-proxy-api-gateway-load-balancer.md)
+    - [5 use case phổ biến của Apache Kafka](ByteByteGo/kafka-use-cases.md)
+    - [ACID trong cơ sở dữ liệu là gì?](ByteByteGo/acid-properties.md)
+    - [Roadmap học SQL](ByteByteGo/sql-roadmap.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
