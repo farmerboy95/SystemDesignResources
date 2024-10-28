@@ -91,6 +91,7 @@ comment: false
     - [ACID trong cơ sở dữ liệu là gì?](ByteByteGo/acid-properties.md)
     - [Roadmap học SQL](ByteByteGo/sql-roadmap.md)
     - [12 mẹo bảo mật API](ByteByteGo/api-security-tips.md)
+    - [Bạn nên theo dõi các Engineering Blogs nào?](ByteByteGo/engineering-blogs.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
