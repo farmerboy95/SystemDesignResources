@@ -90,6 +90,7 @@ comment: false
     - [5 use case phổ biến của Apache Kafka](ByteByteGo/kafka-use-cases.md)
     - [ACID trong cơ sở dữ liệu là gì?](ByteByteGo/acid-properties.md)
     - [Roadmap học SQL](ByteByteGo/sql-roadmap.md)
+    - [12 mẹo bảo mật API](ByteByteGo/api-security-tips.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
