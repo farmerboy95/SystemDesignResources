@@ -96,6 +96,10 @@ comment: false
     - [Các giao thức API phổ biến](ByteByteGo/api-protocols.md)
     - [Các ứng dụng di động được phát hành như thế nào?](ByteByteGo/mobile-app-release.md)
     - [KISS, SOLID, CAP, BASE là gì?](ByteByteGo/kiss-solid-cap-base.md)
+    - [Data Pipeline là gì?](ByteByteGo/data-pipeline.md)
+    - [Kafka vs. RabbitMQ vs. Messaging Middleware vs. Pulsar](ByteByteGo/kafka-rabbitmq-messaging-pulsar.md)
+    - [Các chiến lược scale database phổ biến](ByteByteGo/database-scaling-strategies.md)
+    - [Concurrency vs. Parallelism](ByteByteGo/concurrency-vs-parallelism.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
