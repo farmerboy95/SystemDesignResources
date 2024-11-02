@@ -100,6 +100,11 @@ comment: false
     - [Kafka vs. RabbitMQ vs. Messaging Middleware vs. Pulsar](ByteByteGo/kafka-rabbitmq-messaging-pulsar.md)
     - [Các chiến lược scale database phổ biến](ByteByteGo/database-scaling-strategies.md)
     - [Concurrency vs. Parallelism](ByteByteGo/concurrency-vs-parallelism.md)
+    - [File Permission trong Linux](ByteByteGo/linux-file-permissions.md)
+    - [Session vs. JWT](ByteByteGo/session-vs-jwt.md)
+    - [Các bài báo khoa học máy tính nên đọc](ByteByteGo/computer-papers.md)
+    - [Các công cụ hiệu suất trong Linux](ByteByteGo/linux-performance-tools.md)
+    - [Các ứng dụng web có gì?](ByteByteGo/web-applications.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
