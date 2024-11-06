@@ -107,6 +107,7 @@ comment: false
     - [Các ứng dụng web có gì?](ByteByteGo/web-applications.md)
     - [SSH hoạt động như thế nào?](ByteByteGo/how-ssh-works.md)
     - [Scalability là gì?](ByteByteGo/scalability.md)
+    - [AI tạo sinh là gì?](ByteByteGo/generative-ai.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
