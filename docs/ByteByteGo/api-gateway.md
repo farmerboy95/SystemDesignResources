@@ -6,7 +6,7 @@
 
 ## Khái niệm
 
-Một API gateway là một điểm truy cập duy nhất của các client vào một ứng dụng. Nó nằm giữa client và một tập các backend service của ứng dụng. Một API gateway thường cung cấp một số chức năng quan trọng như:
+API gateway là một điểm truy cập duy nhất của các client vào một ứng dụng. Nó nằm giữa client và một tập các backend service của ứng dụng. Một API gateway thường cung cấp một số chức năng quan trọng như:
 
 - Xác thực người dùng và thực thi các chính sách bảo mật của ứng dụng.
 - Cân bằng tải và ngắt mạch (circuit breaking).
@@ -38,11 +38,11 @@ Ta hãy xem xét một quy trình thông thường của một request từ clie
 
 Khi response trở lại từ backend service, API gateway sẽ chuyển đổi response lại thành giao thức cũ (trước bước 8) và trả lại response này cho client.
 
-Một API gateway chuẩn cũng cung cấp các dịch vụ quan trọng khác. Ví dụ, một API gateway sẽ theo dõi lỗi và cung cấp chức năng ngắt mạch để bào vệ service khỏi bị quá tải. API gateway cũng cần cung cấp logging, giám sát, và dịch vụ phân tích để phục vụ mục đích theo dõi.
+API gateway chuẩn cũng cung cấp các dịch vụ quan trọng khác. Ví dụ, một API gateway sẽ theo dõi lỗi và cung cấp chức năng ngắt mạch để bào vệ service khỏi bị quá tải. API gateway cũng cần cung cấp logging, giám sát, và dịch vụ phân tích để phục vụ mục đích theo dõi.
 
 ![](../assets/ByteByteGo/api-gateway/figure3.png){:class="centered-img"}
 
-Một API gateway là một yếu tố quan trọng trong cơ sở hạ tầng. Nó nên được triển khai cho nhiều khu vực để cải thiện tính khả dụng. Với nhiều dịch vụ đám mây từ các nhà cung cấp, API gateway được triển khai trên toàn thế giới để gần với khách hàng hơn.
+API gateway là một yếu tố quan trọng trong cơ sở hạ tầng. Nó nên được triển khai cho nhiều khu vực để cải thiện tính khả dụng. Với nhiều dịch vụ đám mây từ các nhà cung cấp, API gateway được triển khai trên toàn thế giới để gần với khách hàng hơn.
 
 ![](../assets/ByteByteGo/api-gateway/figure4.png){:class="centered-img"}
 
