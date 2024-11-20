@@ -112,6 +112,7 @@ comment: false
     - [Các công cụ tìm kiếm hoạt động như thế nào?](ByteByteGo/how-search-engines-work.md)
     - [Kubernetes là gì?](ByteByteGo/kubernetes-explained.md)
     - [Big-O Notation là gì?](ByteByteGo/big-o-notation.md)
+    - [Những cách phân trang API](ByteByteGo/api-pagination.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
