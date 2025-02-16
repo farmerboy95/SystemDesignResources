@@ -16,7 +16,7 @@ Hiệu suất của Kafka được đóng góp lớn bởi thiết kế đặc b
 
 **Tính chất đầu tiên** là sự phụ thuộc của Kafka vào I/O tuần tự. Mà I/O tuần tự (sequential I/O) là cái gì? Ta sẽ cùng nhau tìm hiểu.
 
-Có một quan niện sai lầm phổ biến là truy cập vào ổ đĩa thì chậm hơn truy cập vào bộ nhớ, nhưng thực ra thì điều này phần nhiều phụ thuộc vào các kiểu truy cập dữ liệu. Có hai kiểu như vậy: ngẫu nhiên (random) và tuần tự (sequential).
+Có một quan niệm sai lầm phổ biến là truy cập vào ổ đĩa thì chậm hơn truy cập vào bộ nhớ, nhưng thực ra thì điều này phần nhiều phụ thuộc vào các kiểu truy cập dữ liệu. Có hai kiểu như vậy: ngẫu nhiên (random) và tuần tự (sequential).
 
 Đối với ổ cứng, nó cần thời gian để điều chỉnh con chạy (arm), theo nghĩa đen, đến các vị trí khác nhau trên đĩa từ. Đây là nguyên nhân khiến truy cập ngẫu nhiên bị chậm. Tuy nhiên, đối với truy cập tuần tự, con chạy không cần chạy nhiều như thế, nên việc đọc và ghi từng khối dữ liệu một sẽ nhanh hơn nhiều.
 

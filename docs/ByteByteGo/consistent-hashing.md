@@ -69,7 +69,7 @@ Tóm tắt lại nhé.
 1. Ta ánh xạ cả server và object vào cùng một phạm vi giá trị.
 2. Để xác định một server cho object, ta đi theo chiều kim đồng hồ từ vị trí của object trên vòng tròn cho đến khi gặp một server.
 
-Giờ ta hãy xem thử cái thiết kế này có những vấn đề gì. Việc phân phối các object vào các server trên vòng tròn khả năng là sẽ không đều. Về mặt khái niện, khi ta chọn N điểm ngẫu nhiêu trên vòng tròn, sẽ rất khó để chia vòng tròn ra thành các phần bằng nhau. Ví dụ, nếu các server được ánh xạ vào vòng tròn như thế này, phần lớn các object sẽ được lưu trên s2, trong khi s1 và s3 bị ế. 
+Giờ ta hãy xem thử cái thiết kế này có những vấn đề gì. Việc phân phối các object vào các server trên vòng tròn khả năng là sẽ không đều. Về mặt khái niệm, khi ta chọn N điểm ngẫu nhiêu trên vòng tròn, sẽ rất khó để chia vòng tròn ra thành các phần bằng nhau. Ví dụ, nếu các server được ánh xạ vào vòng tròn như thế này, phần lớn các object sẽ được lưu trên s2, trong khi s1 và s3 bị ế. 
 
 ![](../assets/ByteByteGo/consistent-hashing/figure13.png){:class="centered-img"}
 
