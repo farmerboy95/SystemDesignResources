@@ -44,9 +44,17 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 
+extra_css:
+  - assets/vendor/codemirror/codemirror.css
+
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - assets/vendor/codemirror/codemirror.js
+  - assets/vendor/codemirror/mode/javascript/javascript.js
+  - assets/vendor/codemirror/mode/xml/xml.js
+  - assets/vendor/codemirror/mode/jsx/jsx.js
+  - assets/vendor/apprun/apprun-play.js
 
 copyright: Copyright &copy; 2025 farmerboy
 
