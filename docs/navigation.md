@@ -114,6 +114,15 @@ comment: false
     - [Big-O Notation là gì?](ByteByteGo/big-o-notation.md)
     - [Những cách phân trang API](ByteByteGo/api-pagination.md)
 - Frontend
+    - HTML
+        - [Cơ bản về HTML](frontend/html/html-basics.md)
+        - [Semantic HTML](frontend/html/semantic-html.md)
+        - [Các thẻ HTML cơ bản](frontend/html/html-tags.md)
+        - [Bảng trong HTML](frontend/html/tables.md)
+        - [Form trong HTML](frontend/html/forms.md)
+        - [DOM là gì?](frontend/html/dom.md)
+        - [Accessibility trong HTML](frontend/html/accessibility.md)
+        - [Các thẻ meta trong HTML](frontend/html/meta-tags.md)
     - CSS
         - [Cơ bản về CSS](frontend/css/css-basics.md)
         - [CSS Selector](frontend/css/selectors.md)
