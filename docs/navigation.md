@@ -126,6 +126,7 @@ comment: false
     - CSS
         - [Cơ bản về CSS](frontend/css/css-basics.md)
         - [CSS Selector](frontend/css/selectors.md)
+        - [Pseudo Class và Pseudo Element](frontend/css/pseudo-class-element.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
