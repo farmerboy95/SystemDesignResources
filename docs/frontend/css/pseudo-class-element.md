@@ -547,7 +547,7 @@ Ta tiếp tục với ví dụ trước đó. Với Pseudo element thì ta dùng
 
 Ngoài ra ta còn có `::first-line` để chọn dòng đầu tiên, nhưng ở đây thẻ nào cũng có một dòng nên ta sẽ không dùng.
 
-Với pseudo element, ta rất hay sử dụng hai pseudo element `::before` và `::after` để thêm nội dung vào trước và sau một phần tử. Ví dụ, ta muốn thêm dấu mũi tên vào trước mỗi thẻ `<p>`, ta sẽ làm như sau
+Với pseudo element, ta rất hay sử dụng hai pseudo element `::before` và `::after` để thêm nội dung vào trước và sau một phần tử. Ví dụ, ta muốn thêm dấu `->` vào trước mỗi thẻ `<p>`, ta sẽ làm như sau
 
 ```html
 <!DOCTYPE html>
@@ -556,7 +556,7 @@ Với pseudo element, ta rất hay sử dụng hai pseudo element `::before` và
     <title>Document</title>
     <style>
         p::before {
-            content: "🡆";
+            content: "->";
         }
         p::first-letter {
             font-size: 2em;
@@ -594,7 +594,7 @@ Với pseudo element, ta rất hay sử dụng hai pseudo element `::before` và
 ```
 <apprun-play style="height:300px" hide_button="true"></apprun-play>
 
-Mũi tên này có vẻ to. Lý do là vì cái `::first-letter` sau đó đã làm cho chữ cái đầu tiên của thẻ, ở đây là dẫu mũi tên nằm trong `::before`, to lên. Tiếp theo ta dùng pseudo element `::after` để thêm một dấu chấm than vào sau mỗi thẻ `<p>`
+Dấu gạch có vẻ to. Lý do là vì cái `::first-letter` sau đó đã làm cho chữ cái đầu tiên của thẻ, ở đây là dẫu gạch nằm trong `::before`, to lên. Tiếp theo ta dùng pseudo element `::after` để thêm một dấu chấm than vào sau mỗi thẻ `<p>`
 
 ```html
 <!DOCTYPE html>
@@ -603,7 +603,7 @@ Mũi tên này có vẻ to. Lý do là vì cái `::first-letter` sau đó đã l
     <title>Document</title>
     <style>
         p::before {
-            content: "🡆";
+            content: "->";
         }
         p::after {
             content: "!";
@@ -653,7 +653,7 @@ Ta thấy rằng có một khoảng trống nhỏ nằm sau cái link, đây là
     <title>Document</title>
     <style>
         p::before {
-            content: "🡆";
+            content: "->";
         }
         p::after {
             content: "!";
