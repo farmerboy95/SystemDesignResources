@@ -132,6 +132,8 @@ comment: false
         - [Block vs. Inline](frontend/css/block-vs-inline.md)
         - [Box Model](frontend/css/box-model.md)
         - [Box Sizing](frontend/css/box-sizing.md)
+        - [Position trong CSS](frontend/css/position.md)
+        - [Stacking Context](frontend/css/stacking-context.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
