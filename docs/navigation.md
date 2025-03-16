@@ -134,6 +134,15 @@ comment: false
         - [Box Sizing](frontend/css/box-sizing.md)
         - [Position trong CSS](frontend/css/position.md)
         - [Stacking Context](frontend/css/stacking-context.md)
+        - [Flexbox](frontend/css/flexbox.md)
+        - [Grid trong CSS](frontend/css/grid.md)
+        - [Làm việc với hình ảnh trong CSS](frontend/css/working-with-images.md)
+        - [Kế thừa trong CSS](frontend/css/inheritance.md)
+        - [Thiết kế responsive với CSS](frontend/css/responsive-design.md)
+        - [Hoạt ảnh trong CSS](frontend/css/css-animation.md)
+        - [Biến trong CSS](frontend/css/css-variables.md)
+        - [Các framework và preprocessor CSS phổ biến](frontend/css/css-frameworks.md)
+        - [CSS Methodology và các Best Practice với CSS](frontend/css/css-methodology.md)
 - Nguồn khác
     - Chrome Developers Blog
         - [Bên trong các trình duyệt ngày nay (Phần 1)](misc/chrome-blog/inside-browser-1.md)
