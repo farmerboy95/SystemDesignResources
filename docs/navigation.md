@@ -113,6 +113,7 @@ comment: false
     - [Kubernetes là gì?](ByteByteGo/kubernetes-explained.md)
     - [Big-O Notation là gì?](ByteByteGo/big-o-notation.md)
     - [Những cách phân trang API](ByteByteGo/api-pagination.md)
+    - [8 concept thiết kế hệ thống phổ biến](ByteByteGo/system-design-concepts.md)
 - Frontend
     - HTML
         - [Cơ bản về HTML](frontend/html/html-basics.md)
