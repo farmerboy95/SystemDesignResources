@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -17,8 +14,11 @@
         <link rel="next" href="../big-o-notation/">
       
       
+        
+      
+      
       <link rel="icon" href="../../assets/images/ico-sysdesign.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
@@ -27,10 +27,10 @@
     
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -48,7 +48,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -71,17 +71,17 @@
 
     
     
-    
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -114,14 +114,14 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy's System Design Resources" class="md-header__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
   <img src="../../assets/images/ico-sysdesign.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -146,20 +146,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
       </label>
     
   
@@ -175,7 +175,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -184,15 +184,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -216,7 +216,7 @@
         <a href="https://github.com/farmerboy95/SystemDesignResources" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     farmerboy95/SystemDesignResources
@@ -351,7 +351,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -362,7 +362,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="farmerboy&#39;s System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
+    <a href="../.." title="farmerboy's System Design Resources" class="md-nav__button md-logo" aria-label="farmerboy's System Design Resources" data-md-component="logo">
       
   <img src="../../assets/images/ico-sysdesign.png" alt="logo">
 
@@ -374,7 +374,7 @@
       <a href="https://github.com/farmerboy95/SystemDesignResources" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     farmerboy95/SystemDesignResources
@@ -402,7 +402,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -410,9 +410,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Trang chủ
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -421,7 +426,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
-            Trang chủ
+            
+  
+    Trang chủ
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -437,9 +446,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Giới thiệu
+  
+
     
   </span>
+  
   
 
       </a>
@@ -460,9 +474,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các tài liệu
+  
+
     
   </span>
+  
   
 
       </a>
@@ -509,9 +528,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     ByteByteGo
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -520,7 +544,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            ByteByteGo
+            
+  
+    ByteByteGo
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -536,9 +564,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Chuyện gì sẽ xảy ra khi ta truy cập vào một đường dẫn (URL) trên trình duyệt?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -559,9 +592,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các mốc độ trễ mà lập trình viên nên biết
+  
+
     
   </span>
+  
   
 
       </a>
@@ -582,9 +620,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     HTTP/1 đến HTTP/2 đến HTTP/3
+  
+
     
   </span>
+  
   
 
       </a>
@@ -605,9 +648,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     REST API là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -628,9 +676,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     SSL, TLS và HTTPS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -651,9 +704,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Scan to Pay là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -674,9 +732,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Process vs. Thread
+  
+
     
   </span>
+  
   
 
       </a>
@@ -697,9 +760,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các kĩ thuật debug
+  
+
     
   </span>
+  
   
 
       </a>
@@ -720,9 +788,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tìm hiểu về CDN
+  
+
     
   </span>
+  
   
 
       </a>
@@ -743,9 +816,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Top 5 ứng dụng của Redis
+  
+
     
   </span>
+  
   
 
       </a>
@@ -766,9 +844,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Vì sao Redis lại nhanh?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -789,9 +872,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Lưu mật khẩu vào database như thế nào cho đúng?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -812,9 +900,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     API Gateway là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -835,9 +928,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tại sao Kafka lại nhanh như vậy?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -858,9 +956,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Single Sign-on (SSO) là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -881,9 +984,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Mô hình OSI là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -904,9 +1012,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Những thứ bạn cần biết về DNS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -927,9 +1040,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bộ nhớ và ổ cứng trong máy tính
+  
+
     
   </span>
+  
   
 
       </a>
@@ -950,9 +1068,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     7 cách mà lập trình viên tận dụng ChatGPT
+  
+
     
   </span>
+  
   
 
       </a>
@@ -973,9 +1096,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Định lý CAP - CAP theorem
+  
+
     
   </span>
+  
   
 
       </a>
@@ -996,9 +1124,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     gRPC là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1019,9 +1152,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     GraphQL là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1042,9 +1180,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Proxy vs. Reverse Proxy
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1065,9 +1208,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Thiết kế hệ thống: Thiết kế Location Based Service
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1088,9 +1236,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     7 kiểu hệ thống phân tán thông dụng
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1111,9 +1264,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bí mật đằng sau NoSQL: Cây LSM
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1134,9 +1292,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bloom Filter là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1157,9 +1320,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     CI/CD là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1180,9 +1348,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Làm sao chọn database cho đúng?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1203,9 +1376,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Kiến trúc Kubernetes
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1226,9 +1404,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Microservices là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1249,9 +1432,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Vì sao phỏng vấn System Design lại quan trọng?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1272,9 +1460,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Hệ thống của Stack Overflow có gì hay?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1295,9 +1488,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Giải mã sự phát triển trong kiến trúc API của Netflix
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1318,9 +1516,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Giải thích dễ hiểu OAuth2
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1341,9 +1544,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Discord lưu hàng nghìn tỉ tin nhắn như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1364,9 +1572,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     7 cách để tăng hiệu suất API của bạn
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1387,9 +1600,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Hướng dẫn từng bước phỏng vấn System Design
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1410,9 +1628,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Consistent Hashing là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1433,9 +1656,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Git Merge vs Rebase
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1456,9 +1684,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     6 thuật toán load balancing phổ biến
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1479,9 +1712,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Thứ tự thực thi câu lệnh SQL
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1502,9 +1740,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Apple Pay và Google Pay hoạt động như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1525,9 +1768,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Những hiểu nhầm về Bare Metal, Virtual Machine và Container
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1548,9 +1796,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Dự toán công suất cho ứng dụng - Back-of-the-envelope Estimation / Capacity planning
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1571,9 +1824,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các nền tảng streaming hoạt động như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1594,9 +1852,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     8 cấu trúc dữ liệu quan trọng trong các hệ thống cơ sở dữ liệu hiện đại
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1617,9 +1880,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Cloud Native thực sự là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1640,9 +1908,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Backend Burger cho startup có thể có những gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1663,9 +1936,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các hệ thống cache phổ biến
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1686,9 +1964,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     ChatGPT hoạt động như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1709,9 +1992,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     10 cấu trúc dữ liệu mà chúng ta dùng mỗi ngày
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1732,9 +2020,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Amazon Prime Video từ bỏ AWS Serverless, tiết kiệm 90% chi phí
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1755,9 +2048,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     6 kiến trúc phổ biến trong thiết kế API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1778,9 +2076,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     5 chiến lược triển khai phần mềm phổ biến
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1801,9 +2104,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     DevOps, SRE, và Platform Engineering là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1824,9 +2132,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Vì sao Google và Meta cho cả tỉ dòng code vào một repo lớn?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1847,9 +2160,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các thuật toán quan trọng để phỏng vấn System Design
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1870,9 +2188,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     5 mô hình kiến trúc phần mềm được ưa chuộng nhất
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1893,9 +2216,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tóm tắt nhanh về Apache Kafka
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1916,9 +2244,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Làm thế nào để có kết quả tốt trong phỏng vấn System Design?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1939,9 +2272,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Docker có còn cần thiết không?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1962,9 +2300,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Một số HTTP status code thông dụng
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1985,9 +2328,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Python vs. C++ vs. Java
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2008,9 +2356,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các công ty Big Tech release code như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2031,9 +2384,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     8 giao thức mạng thông dụng
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2054,9 +2412,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Git hoạt động như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2077,9 +2440,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tại sao JSON Web Token (JWT) phổ biến?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2100,9 +2468,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Linux khởi động như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2123,9 +2496,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Vertical vs. Horizontal Scaling
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2146,9 +2524,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     9 loại API testing phổ biến
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2169,9 +2552,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các mô hình kiến trúc Client phổ biến
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2192,9 +2580,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Linux File System có gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2215,9 +2608,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Disney Hotstar xử lý cả tỷ react như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2238,9 +2636,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     7 mẹo vặt cho thiết kế API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2261,9 +2664,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     6 công cụ vẽ biểu đồ kiến trúc bằng code
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2284,9 +2692,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Những điều cần biết về Webhook
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2307,9 +2720,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Cache có thể sai đến mức nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2330,9 +2748,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reserve Proxy vs. API Gateway vs. Load Balancer
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2353,9 +2776,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     5 use case phổ biến của Apache Kafka
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2376,9 +2804,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     ACID trong cơ sở dữ liệu là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2399,9 +2832,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Roadmap học SQL
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2422,9 +2860,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     12 mẹo bảo mật API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2445,9 +2888,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bạn nên theo dõi các Engineering Blogs nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2468,9 +2916,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     10 nguyên tắc coding bạn nên biết
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2491,9 +2944,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các giao thức API phổ biến
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2514,9 +2972,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các ứng dụng di động được phát hành như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2537,9 +3000,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     KISS, SOLID, CAP, BASE là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2560,9 +3028,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Data Pipeline là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2583,9 +3056,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Kafka vs. RabbitMQ vs. Messaging Middleware vs. Pulsar
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2606,9 +3084,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các chiến lược scale database phổ biến
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2629,9 +3112,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Concurrency vs. Parallelism
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2652,9 +3140,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     File Permission trong Linux
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2675,9 +3168,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Session vs. JWT
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2698,9 +3196,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các bài báo khoa học máy tính nên đọc
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2721,9 +3224,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các công cụ hiệu suất trong Linux
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2744,9 +3252,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các ứng dụng web có gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2767,9 +3280,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     SSH hoạt động như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2790,9 +3308,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Scalability là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2813,9 +3336,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     AI tạo sinh là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2836,9 +3364,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Internet hoạt động như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2859,9 +3392,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các công cụ tìm kiếm hoạt động như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2891,9 +3429,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Kubernetes là gì?
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -2904,9 +3447,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Kubernetes là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2929,7 +3477,9 @@
         <li class="md-nav__item">
   <a href="#nguon" class="md-nav__link">
     <span class="md-ellipsis">
-      Nguồn
+      
+        Nguồn
+      
     </span>
   </a>
   
@@ -2938,7 +3488,9 @@
         <li class="md-nav__item">
   <a href="#kubernetes-la-gi_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Kubernetes là gì?
+      
+        Kubernetes là gì?
+      
     </span>
   </a>
   
@@ -2947,7 +3499,9 @@
         <li class="md-nav__item">
   <a href="#loi-ich-cua-kubernetes" class="md-nav__link">
     <span class="md-ellipsis">
-      Lợi ích của Kubernetes
+      
+        Lợi ích của Kubernetes
+      
     </span>
   </a>
   
@@ -2956,7 +3510,9 @@
         <li class="md-nav__item">
   <a href="#kien-truc-cua-kubernetes" class="md-nav__link">
     <span class="md-ellipsis">
-      Kiến trúc của Kubernetes
+      
+        Kiến trúc của Kubernetes
+      
     </span>
   </a>
   
@@ -2965,7 +3521,9 @@
         <li class="md-nav__item">
   <a href="#vi-du" class="md-nav__link">
     <span class="md-ellipsis">
-      Ví dụ.
+      
+        Ví dụ.
+      
     </span>
   </a>
   
@@ -2974,7 +3532,9 @@
         <li class="md-nav__item">
   <a href="#khi-nao-nen-su-dung-kubernetes" class="md-nav__link">
     <span class="md-ellipsis">
-      Khi nào nên sử dụng Kubernetes?
+      
+        Khi nào nên sử dụng Kubernetes?
+      
     </span>
   </a>
   
@@ -3001,9 +3561,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Big-O Notation là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3024,9 +3589,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Những cách phân trang API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3047,9 +3617,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     8 concept thiết kế hệ thống phổ biến
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3083,7 +3658,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -3091,9 +3666,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Frontend
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3102,7 +3682,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Frontend
+            
+  
+    Frontend
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3124,7 +3708,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -3132,9 +3716,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     HTML
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3143,7 +3732,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
-            HTML
+            
+  
+    HTML
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3159,9 +3752,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Cơ bản về HTML
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3182,9 +3780,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Semantic HTML
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3205,9 +3808,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các thẻ HTML cơ bản
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3228,9 +3836,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bảng trong HTML
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3251,9 +3864,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Form trong HTML
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3274,9 +3892,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     DOM là gì?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3297,9 +3920,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Accessibility trong HTML
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3320,9 +3948,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các thẻ meta trong HTML
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3357,7 +3990,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -3365,9 +3998,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     CSS
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3376,7 +4014,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
-            CSS
+            
+  
+    CSS
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3392,9 +4034,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Cơ bản về CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3415,9 +4062,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     CSS Selector
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3438,9 +4090,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Pseudo Class và Pseudo Element
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3461,9 +4118,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Selector Specificity
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3484,9 +4146,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các loại đơn vị trong CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3507,9 +4174,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Block vs. Inline
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3530,9 +4202,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Box Model
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3553,9 +4230,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Box Sizing
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3576,9 +4258,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Position trong CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3599,9 +4286,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Stacking Context
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3622,9 +4314,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Flexbox
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3645,9 +4342,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Grid trong CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3668,9 +4370,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Làm việc với hình ảnh trong CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3691,9 +4398,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Kế thừa trong CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3714,9 +4426,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Thiết kế responsive với CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3737,9 +4454,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Hoạt ảnh trong CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3760,9 +4482,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Biến trong CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3783,9 +4510,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Các framework và preprocessor CSS phổ biến
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3806,9 +4538,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     CSS Methodology và các Best Practice với CSS
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3850,7 +4587,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -3858,9 +4595,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Nguồn khác
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3869,7 +4611,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Nguồn khác
+            
+  
+    Nguồn khác
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3891,7 +4637,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -3899,9 +4645,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Chrome Developers Blog
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3910,7 +4661,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
-            Chrome Developers Blog
+            
+  
+    Chrome Developers Blog
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3926,9 +4681,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bên trong các trình duyệt ngày nay (Phần 1)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3949,9 +4709,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bên trong các trình duyệt ngày nay (Phần 2)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3972,9 +4737,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bên trong các trình duyệt ngày nay (Phần 3)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -3995,9 +4765,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bên trong các trình duyệt ngày nay (Phần 4)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -4032,7 +4807,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -4040,9 +4815,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Discord Blog
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4051,7 +4831,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
-            Discord Blog
+            
+  
+    Discord Blog
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4067,9 +4851,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Discord lưu trữ hàng tỉ tin nhắn như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -4090,9 +4879,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Discord lưu trữ hàng nghìn tỉ tin nhắn như thế nào?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -4127,7 +4921,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -4135,9 +4929,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Bài báo khoa học
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4146,7 +4945,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
-            Bài báo khoa học
+            
+  
+    Bài báo khoa học
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4162,9 +4965,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Amazon Dynamo
+  
+
     
   </span>
+  
   
 
       </a>
@@ -4196,7 +5004,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -4217,7 +5025,9 @@
         <li class="md-nav__item">
   <a href="#nguon" class="md-nav__link">
     <span class="md-ellipsis">
-      Nguồn
+      
+        Nguồn
+      
     </span>
   </a>
   
@@ -4226,7 +5036,9 @@
         <li class="md-nav__item">
   <a href="#kubernetes-la-gi_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Kubernetes là gì?
+      
+        Kubernetes là gì?
+      
     </span>
   </a>
   
@@ -4235,7 +5047,9 @@
         <li class="md-nav__item">
   <a href="#loi-ich-cua-kubernetes" class="md-nav__link">
     <span class="md-ellipsis">
-      Lợi ích của Kubernetes
+      
+        Lợi ích của Kubernetes
+      
     </span>
   </a>
   
@@ -4244,7 +5058,9 @@
         <li class="md-nav__item">
   <a href="#kien-truc-cua-kubernetes" class="md-nav__link">
     <span class="md-ellipsis">
-      Kiến trúc của Kubernetes
+      
+        Kiến trúc của Kubernetes
+      
     </span>
   </a>
   
@@ -4253,7 +5069,9 @@
         <li class="md-nav__item">
   <a href="#vi-du" class="md-nav__link">
     <span class="md-ellipsis">
-      Ví dụ.
+      
+        Ví dụ.
+      
     </span>
   </a>
   
@@ -4262,7 +5080,9 @@
         <li class="md-nav__item">
   <a href="#khi-nao-nen-su-dung-kubernetes" class="md-nav__link">
     <span class="md-ellipsis">
-      Khi nào nên sử dụng Kubernetes?
+      
+        Khi nào nên sử dụng Kubernetes?
+      
     </span>
   </a>
   
@@ -4278,6 +5098,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
   
@@ -4290,62 +5111,62 @@
 
 <h1 id="kubernetes-la-gi">Kubernetes là gì?</h1>
 <h2 id="nguon">Nguồn</h2>
-<p><a class="glightbox" href="../../assets/images/bytebytego.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"/></a> <a href="https://www.youtube.com/watch?v=lv0DdVLZuHc">Why is Kubernetes Popular | What is Kubernetes?</a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/images/bytebytego.png" data-desc-position="bottom"><img src="../../assets/images/bytebytego.png" width="16" height="16"></a> <a href="https://www.youtube.com/watch?v=lv0DdVLZuHc">Why is Kubernetes Popular | What is Kubernetes?</a></p>
 <h2 id="kubernetes-la-gi_1">Kubernetes là gì?</h2>
 <p>Kubernetes là một nền tảng mã nguồn mở được thiết kế để tự động hóa việc triển khai, mở rộng và quản lý các ứng dụng được đóng gói trong container. Hãy tưởng tượng Kubernetes như một người chỉ huy cho các ứng dụng, đặc biệt là những ứng dụng được tạo ra từ hàng trăm, thậm chí hàng nghìn thành phần container độc lập.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure1.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure1.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure1.png"></a></p>
 <p>Kubernetes được tạo ra bởi Google và hiện nay là một giải pháp phổ biến để quản lý các ứng dụng phân tán phức tạp trên nhiều môi trường từ máy vật lý đến máy ảo và từ các môi trường on-premise đến các nền tảng Cloud.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure2.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure2.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure2.png"></a></p>
 <p>Tại sao Kubernetes trở nên quan trọng? Điều này đến từ sự gia tăng của kiến trúc microservices. Khi ứng dụng trở nên phức tạp hơn, các dev đã bắt đầu chia nhỏ chúng thành các service độc lập nhau. Những microservices này thường được đóng gói trong container, cung cấp môi trường lý tưởng để chạy chúng. Nhưng đây là điểm quan trọng: khi ứng dụng mở rộng, việc quản lý tất cả các container này bằng tay trở thành một cơn ác mộng. Đó là lúc Kubernetes xuất hiện. Nó cung cấp một cách tiếp cận mạch lạc cho việc triển khai container.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure3.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure3.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure3.png"></a></p>
 <h2 id="loi-ich-cua-kubernetes">Lợi ích của Kubernetes</h2>
 <p>Đầu tiên, nó có tính sẵn sàng cao. Thời gian chết lấy đi rất nhiều thứ. Kubernetes giúp ứng dụng của chúng ta luôn có thể truy cập với sự gián đoạn tối thiểu. Nó làm điều này bằng cách tự động khởi động lại container bị lỗi, phân phối tải trên nhiều máy và cung cấp khả năng tự sửa chữa.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure4.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure4.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure4.png"></a></p>
 <p>Tiếp theo, chúng ta có khả năng mở rộng. Khi số người dùng tăng, ứng dụng cần xử lý tải tăng tương ywnsg. Kubernetes giúp việc mở rộng hoặc thu hẹp quy mô ứng dụng một cách dễ dàng để phản ứng với nhu cầu thay đổi. Sự linh hoạt này đảm bảo hiệu suất và sử dụng tài nguyên một cách tối ưu.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure5.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure5.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure5.png"></a></p>
 <h2 id="kien-truc-cua-kubernetes">Kiến trúc của Kubernetes</h2>
 <p>Một cụm Kubernetes bao gồm control plane và nhiều worker nodes. Các worker nodes là lao động chính của cụm. Chúng chịu trách nhiệm chạy các container tạo nên ứng dụng của chúng ta. Số lượng container trên mỗi worker node phụ thuộc vào các yếu tố như yêu cầu tài nguyên và phân phối công việc tổng thể.</p>
 <p>Mỗi worker node chạy một tiến trình gọi là Kubelet, đóng vai trò là một local agent, cho phép giao tiếp và phối hợp trong cụm. Control plane, ngược lại, là trung tâm điều khiển. Nó quản lý toàn bộ cụm, chạy một số tiến trình quan trọng của Kubernetes.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure6.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure6.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure6.png"></a></p>
 <p>Đầu tiên, chúng ta có API server. API server là cổng giao tiếp chính của cụm. Nó là entry point cho các client khác nhau, bao gồm các API cho client, API cho tự động hóa và các công cụ dòng lệnh.</p>
 <p>Tiếp theo, ta có controller manager. Controller manager duy trì trạng thái mong muốn của cụm. Nó liên tục theo dõi sức khỏe của cụm, xác định bất kỳ sự chênh lệch nào so với trạng thái mong muốn và thực hiện các hành động sửa chữa.</p>
 <p>Sau đó, ta có scheduler. Scheduler phân phối các container đến các worker node dựa trên sự sẵn có của tài nguyên và yêu cầu cụ thể.</p>
 <p>Cuối cùng, ta có etcd. Etcd là một kho lưu trữ key-value phân tán được sử dụng để lưu trữ trạng thái của cụm. Nó chịu trách nhiệm lưu trữ một cách an toàn các thông tin cấu hình và trạng thái của mỗi node và container trong cụm.</p>
 <p>Để đảm bảo giao tiếp mượt mà giữa các thành phần, Kubernetes sử dụng một mô hình mạng ảo, kết nối tất cả các node trong cụm với nhau. Mô hình mạng ảo này ẩn đi cơ sở hạ tầng vật lý và cung cấp một môi trường đồng nhất cho việc triển khai ứng dụng.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure7.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure7.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure7.png"></a></p>
 <p>Về mặt phân bố tài nguyên, worker nodes thường có nhiều CPU, bộ nhớ và lưu trữ hơn so với control plane nodes, bởi chúng chịu trách nhiệm chính cho công việc chạy nhiều container ứng dụng. Control plane nodes, mặc dù chạy ít tiến trình hơn, nhưng lại quan trọng cho hoạt động của cụm. Trong môi trường live, người ta thường triển khai nhiều control plane để đảm bảo dự phòng và khả năng chịu lỗi.</p>
 <h2 id="vi-du">Ví dụ.</h2>
 <p>Bây giờ hãy hình dung cách các thành phần này hoạt động cùng nhau bằng một ví dụ thực tế của một ứng dụng web sử dụng cơ sở dữ liệu. Trung tâm của mô hình tài nguyên Kubernetes là pod. Pod là đơn vị triển khai nhỏ nhất trong Kubernetes. Nó là một lớp trừu tượng trên một hoặc nhiều container mà logic của chúng liên quan đến nhau. Trong một ứng dụng web, chúng ta có một pod chứa web server và một pod chứa cơ sở dữ liệu. </p>
 <p>Các pod trong Kubernetes là tạm thời. Nếu một pod bị lỗi, Kubernetes sẽ tạo một pod mới để thay thế nó. Tuy nhiên, pod mới có thể có địa chỉ IP khác, điều này có thể tạo ra thách thức cho việc giao tiếp giữa các ứng dụng.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure8.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure8.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure8.png"></a></p>
 <p>Để giải quyết vấn đề này, Kubernetes giới thiệu khái niệm services. Một service cung cấp một địa chỉ IP và tên DNS ổn định như một load balancer nội bộ cho một nhóm pod. Ngay cả khi các pod được tạo lại, địa chỉ IP của service vẫn không đổi, đảm bảo giao tiếp ổn định.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure9.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure9.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure9.png"></a></p>
 <p>Để cho phép ứng dụng web của chúng ta có thể truy cập từ bên ngoài cụm, chúng ta cần expose nó ra bên ngoài. Kubernetes cung cấp external services cho mục đích này. Nó mở một cổng cụ thể trên mạng của cụm và định tuyến lưu lượng đến các pod backend.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure10.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure10.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure10.png"></a></p>
 <p>Tuy nhiên, các URL mặc định mà external services cung cấp có thể phức tạp và không thân thiện với người dùng. Đây là lúc Ingress của Kubernetes xuất hiện. Ingress là một reverse proxy thông minh cho phép bạn định nghĩa quy tắc định tuyến lưu lượng bên ngoài đến các services cụ thể trong cụm dựa trên URL yêu cầu.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure11.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure11.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure11.png"></a></p>
 <p>Kubernetes còn cung cấp cơ chế để quản lý dữ liệu cấu hình. Config Maps lưu trữ dữ liệu cấu hình như URL kết nối cơ sở dữ liệu hoặc API endpoint, trong khi Secret lưu trữ dữ liệu nhạy cảm như mật khẩu và API key.</p>
 <p>Để tăng cường sự linh hoạt và sẵn sàng của ứng dụng web, chúng ta có thể tận dụng khả năng của Kubernetes để tạo nhiều bản sao của các pod. Kubernetes cung cấp hai cơ chế chính để quản lý bản sao của các pod: Deployments và StatefulSets.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure12.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure12.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure12.png"></a></p>
 <p>Deployments lý tưởng cho các ứng dụng stateless như web server, nơi mỗi bản sao có thể thay thế lẫn nhau. Chúng ta có thể định nghĩa một deployment để chỉ định số lượng bản sao mong muốn cho phần ứng dụng của chúng ta và Kubernetes sẽ đảm bảo ta luôn có số lượng đó.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure13.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure13.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure13.png"></a></p>
 <p>Giờ hãy nói về việc giữ dữ liệu an toàn trong Kubernetes. Volumes của Kubernetes cung cấp một cơ chế để trừu tượng hóa lưu trữ khỏi vòng đời của pod. Nó cho phép chúng ta gắn lưu trữ ngoại vi trực tiếp vào các pod. Điều này hữu ích cho các trường hợp cần lưu trữ dữ liệu dù pod bị xóa hoặc tạo lại.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure14.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure14.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure14.png"></a></p>
 <p>Với các ứng dụng stateful như cơ sở dữ liệu, Kubernetes cung cấp StatefulSets. StatefulSets xây dựng trên chức năng của Deployments nhưng cung cấp các tính năng bổ sung được tùy chỉnh cho các ứng dụng cần lưu trữ và quản lý dữ liệu nhất quán trên các bản sao một cách cẩn thận.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure15.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure15.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure15.png"></a></p>
 <p>Trong khi StatefulSets cung cấp một cách để quản lý ứng dụng stateful như cơ sở dữ liệu trong môi trường Kubernetes, việc thiết lập và vận hành cơ sở dữ liệu trong Kubernetes có thể phức tạp và đòi hỏi kiến thức chuyên sâu. Nhiều tổ chức chọn cách kết hợp giữa việc chạy cơ sở dữ liệu ngoài Kubernetes, có thể trên các nền tảng dịch vụ cơ sở dữ liệu chuyên biệt. Họ sau đó kết nối các ứng dụng chạy trong Kubernetes với cơ sở dữ liệu ngoài. </p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure16.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure16.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure16.png"></a></p>
 <p>Cách phối hợp này cân bằng giữa việc tận dụng lợi ích của orchestration cho ứng dụng và tránh sự phức tạp của việc quản lý ứng dụng stateful trong môi trường Kubernetes. Đây là một giải pháp thực tế mà nhiều tổ chức thấy hiệu quả, đặc biệt khi họ có yêu cầu cụ thể về cơ sở dữ liệu.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure17.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure17.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure17.png"></a></p>
 <h2 id="khi-nao-nen-su-dung-kubernetes">Khi nào nên sử dụng Kubernetes?</h2>
 <p>Trong phát triển phần mềm, ta sẽ luôn có sự đánh đổi.</p>
 <p>Về mặt lợi, Kubernetes có khả năng mở rộng và sẵn sàng cao. Nó cung cấp các tính năng như tự phục hồi, tự động rollback và mở rộng theo chiều ngang. Nó giúp dễ dàng mở rộng hoặc thu hẹp quy mô ứng dụng nếu cần, cho phép ta phản ứng nhanh chóng với các thay đổi về nhu cầu. </p>
 <p>Kubernetes cũng có tính di động. Nó giúp ta triển khai và quản lý các ứng dụng một cách nhất quán và đáng tin cậy bất kể cơ sở hạ tầng bên dưới có ra sao. Nó chạy tại chỗ, trên đám mây công cộng, hoặc trong môi trường kết hợp cả hai. Nó cung cấp một cách thức thống nhất để đóng gói, triển khai và quản lý ứng dụng.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure18.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure18.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure18.png"></a></p>
 <p>Về mặt hại, sự phức tạp là điểm yếu lớn nhất của Kubernetes. Kubernetes rất phức tạp để thiết lập và vận hành. Chi phí trả trước cao, đặc biệt với các tổ chức mới sử dụng bộ điều phối container như thế này. Nó đòi hỏi trình độ chuyên môn và nguồn lực cao để thiết lập và quản lý môi trường live Kubernetes. </p>
 <p>Chi phí cũng là một điểm yếu, vì Kubernetes đòi hỏi một mức tài nguyên tối thiểu nhất định để chạy để hỗ trợ tất cả các tính năng của nó, có thể làm cho nó quá khủng đối với nhiều tổ chức nhỏ. </p>
 <p>Một cách cân bằng hợp lý là chuyển việc quản lý control plane cho một dịch vụ Kubernetes quản lý, các nhà cung cấp đám mây đôi khi cũng có thể làm việc này cho bạn. Một số dịch vụ phổ biến là Amazon EKS, Google GKE và Azure AKS. Những dịch vụ này cho phép tổ chức chạy ứng dụng Kubernetes mà không cần lo lắng về cơ sở hạ tầng bên dưới. Dịch vụ này cung cấp các tính năng như cấu hình control plane, mở rộng cụm và cung cấp bảo trì và hỗ trợ liên tục. Điều này có thể là một lựa chọn hợp lý cho các tổ chức vừa và nhỏ, với điều kiện rằng sự phức tạp và yêu cầu tài nguyên của Kubernetes không vượt quá lợi ích mà nó mang lại.</p>
-<p><a class="glightbox" href="../../assets/ByteByteGo/kubernetes-explained/figure19.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure19.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../assets/ByteByteGo/kubernetes-explained/figure19.png" data-desc-position="bottom"><img alt="" class="centered-img" src="../../assets/ByteByteGo/kubernetes-explained/figure19.png"></a></p>
 
 
 
@@ -4366,7 +5187,7 @@
       
   <span class="md-source-file__fact">
     <span class="md-icon" title="Last update">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
     <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom" title="7 tháng 11, 2024 05:53:00 +07">07/11/2024 (SCN11T+0700)</span>
   </span>
@@ -4376,7 +5197,7 @@
       
   <span class="md-source-file__fact">
     <span class="md-icon" title="Created">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
     </span>
     <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom" title="7 tháng 11, 2024 05:53:00 +07">07/11/2024 (SCN11T+0700)</span>
   </span>
@@ -4388,7 +5209,7 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"></path></svg>
       
     </span>
     <nav>
@@ -4412,20 +5233,7 @@
 
   <h2 id="__comments">Comments</h2>
   <!-- Insert generated snippet here -->
-  <script src="https://giscus.app/client.js"
-    data-repo="farmerboy95/SystemDesignResources"
-    data-repo-id="R_kgDOI0Ndtw"
-    data-category="General"
-    data-category-id="DIC_kwDOI0Ndt84CVvKb"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="en"
-    crossorigin="anonymous"
-    async>
+  <script src="https://giscus.app/client.js" data-repo="farmerboy95/SystemDesignResources" data-repo-id="R_kgDOI0Ndtw" data-category="General" data-category-id="DIC_kwDOI0Ndt84CVvKb" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async>
   </script>
   <!-- Synchronize Giscus theme with palette -->
   <script>
@@ -4462,7 +5270,7 @@
   
     <div class="md-source-date">
       <small>
-          Authors: <span class='git-page-authors git-authors'><a href='mailto:tanbaonguyen95@gmail.com'>farmerboy95</a></span>
+          Authors: <span class="git-page-authors git-authors"><a href="mailto:tanbaonguyen95@gmail.com">farmerboy95</a></span>
       </small>
     </div>
   
@@ -4476,7 +5284,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -4489,7 +5297,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2025 farmerboy
+      Copyright © 2026 farmerboy
     </div>
   
   
@@ -4500,7 +5308,8 @@
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
@@ -4510,7 +5319,7 @@
       
     
     <a href="https://github.com/farmerboy95" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
     </a>
   
 </div>
@@ -4527,13 +5336,14 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-    
-    
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
@@ -4549,20 +5359,9 @@
       
     
 
-    <script
-      data-name="BMC-Widget"
-      data-cfasync="false" 
-      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
-      data-id="farmerboy" 
-      data-description="Support me on Buy me a coffee!" 
-      data-message="" 
-      data-color="#5F7FFF" 
-      data-position="Right" 
-      data-x_margin="18" 
-      data-y_margin="18"
-    ></script>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="farmerboy" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
